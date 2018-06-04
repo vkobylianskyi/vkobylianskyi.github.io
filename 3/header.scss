@@ -123,9 +123,7 @@ i.fa.fa-phone {
   background-repeat: no-repeat;
   background-position: top center;
   padding-top: 245px;
-  padding-bottom: 53px;
-
-}
+  }
 
 .header-main-text {
   font-size: 60px;
@@ -215,7 +213,7 @@ i.fa.fa-angle-down {
   background-repeat: no-repeat;
   background-position: top center;
   position: relative;
-  margin-top: 48px;
+  margin-top: 110px;
 p {
   font-size: $font-xs-small;
   text-transform: uppercase;
@@ -240,38 +238,26 @@ p {
       }
 }
 
-.container-fluid .row {
+.welcome .col {
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
 
-
-  :nth-child(1) {
+  &:nth-child(1) {
     background-image: url("img/Events.png");
     margin-right: 30px;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
   }
 
-  :nth-child(2) {
+  &:nth-child(2) {
     background-image: url("img/Food&Drinks.png");
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
+    margin-right: 30px;
   }
-  :nth-child(3) {
+  &:nth-child(3) {
     background-image: url("img/Venues.png");
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    margin-left: 30px
   }
 }
-
 
 
 .welcome {
@@ -280,37 +266,9 @@ p {
   font-weight: 400;
   line-height: 35px;
   text-align: center;
-  color:  #ffffff;
+  color:  #fff;
   margin-top: 106px;
   height: 473px;
-
-  :nth-child(1) {
-    background-image: url("img/Events.png");
-    margin-right: 30px;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-  }
-
-  :nth-child(2) {
-    background-image: url("img/Food&Drinks.png");
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-  }
-  :nth-child(3) {
-    background-image: url("img/Venues.png");
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    margin-left: 30px
-  }
 }
 
 .app-button-main {

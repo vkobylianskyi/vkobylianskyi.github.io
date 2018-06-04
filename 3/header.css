@@ -89,8 +89,7 @@ i.fa.fa-phone {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-position: top center;
-  padding-top: 245px;
-  padding-bottom: 53px; }
+  padding-top: 245px; }
 
 .header-main-text {
   font-size: 60px;
@@ -164,7 +163,7 @@ i.fa.fa-angle-down {
   background-repeat: no-repeat;
   background-position: top center;
   position: relative;
-  margin-top: 48px; }
+  margin-top: 110px; }
   .under-header p {
     font-size: 14px;
     text-transform: uppercase;
@@ -184,29 +183,20 @@ i.fa.fa-angle-down {
     left: 50%;
     margin-left: -55px; }
 
-.container-fluid .row :nth-child(1) {
-  background-image: url("img/Events.png");
-  margin-right: 30px;
+.welcome .col {
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   background-size: cover; }
-.container-fluid .row :nth-child(2) {
-  background-image: url("img/Food&Drinks.png");
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover; }
-.container-fluid .row :nth-child(3) {
-  background-image: url("img/Venues.png");
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  margin-left: 30px; }
+  .welcome .col:nth-child(1) {
+    background-image: url("img/Events.png");
+    margin-right: 30px; }
+  .welcome .col:nth-child(2) {
+    background-image: url("img/Food&Drinks.png");
+    margin-right: 30px; }
+  .welcome .col:nth-child(3) {
+    background-image: url("img/Venues.png"); }
 
 .welcome {
   font-family: "yellowtailregular", Verdana, serif, sans-serif;
@@ -214,32 +204,9 @@ i.fa.fa-angle-down {
   font-weight: 400;
   line-height: 35px;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   margin-top: 106px;
   height: 473px; }
-  .welcome :nth-child(1) {
-    background-image: url("img/Events.png");
-    margin-right: 30px;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover; }
-  .welcome :nth-child(2) {
-    background-image: url("img/Food&Drinks.png");
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover; }
-  .welcome :nth-child(3) {
-    background-image: url("img/Venues.png");
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    margin-left: 30px; }
 
 .app-button-main {
   font-family: "pt_serifbold", Verdana, serif, sans-serif;
