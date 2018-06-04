@@ -307,10 +307,14 @@ p {
 
 
 .app-title {
-
+  font-family: 'pt_serifbold', $font-fallback;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 106px;
+  background-image: url("img/Vector Smart Object copy 9.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: relative;
+
 
   &.dark {
     color: black;
@@ -322,10 +326,27 @@ p {
 
   &-section {
 
+    font-size: $font-xs-small;
+    text-transform: uppercase;
+    padding-top: 110px;
   }
 
   &-description {
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: 700;
+  }
 
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 111px;
+    height: 2px;
+    background-color: #a7a99a;
+    bottom: -42px;
+    left: 50%;
+    margin-left: -55px;
   }
 }
 
@@ -335,7 +356,6 @@ p {
   min-height: 100vh;
   background-repeat: no-repeat;
   background-position: top center;
-  padding-top: 245px;
   position: relative;
 }
 
@@ -348,4 +368,15 @@ p {
   background-position: center center;
   background-size: cover;
   height: 541px;
+}
+
+.card-title {
+  font-family: 'pt_serifbold', $font-fallback;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 33px;
+  text-align: left;
+  padding-left: 86px;
+  padding-top: 94px;
+  color:  #808369;
 }
