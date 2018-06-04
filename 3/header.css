@@ -1,0 +1,271 @@
+@charset "UTF-8";
+@import url(fonts.css);
+header {
+  color: #808369; }
+
+.container {
+  width: 1170px;
+  /*ширина блока*/
+  margin: 0 auto;
+  /*вирівнює по центру*/ }
+
+.header-top-line {
+  position: relative;
+  background-color: #f3f1ec; }
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "pt_serifbold", Verdana, serif, sans-serif;
+  text-transform: uppercase;
+  height: 56px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer; }
+  ul li {
+    border-left: 1px solid #d0ceca;
+    padding: 0 25px; }
+    ul li:hover {
+      color: black; }
+    ul li:first-child {
+      border: none; }
+
+.header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 51px;
+  height: 110px;
+  background-image: url("img/Vector Smart Object.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  letter-spacing: 1px; }
+
+.header-title-left {
+  text-align: right;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-weight: 700;
+  width: 160px; }
+
+i.fa.fa-shopping-cart {
+  padding-right: 5px; }
+
+.header-title-center {
+  text-align: center; }
+  .header-title-center h1 {
+    font-family: "yellowtailregular", Verdana, serif, sans-serif;
+    font-size: 45px;
+    color: #434343;
+    line-height: .7; }
+  .header-title-center p {
+    font-size: 12px;
+    font-family: "pt_serifbold", Verdana, serif, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 14px; }
+
+.header-title-right {
+  text-align: right;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-weight: 700;
+  width: 160px; }
+
+i.fa.fa-phone {
+  padding-left: 5px;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  filter: flipH();
+  -ms-filter: "FlipH"; }
+
+.header-main {
+  background-image: url("img/test.png");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 245px;
+  padding-bottom: 53px; }
+
+.header-main-text {
+  font-size: 60px;
+  font-family: "pt_serifbold", Verdana, serif, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  position: relative; }
+  .header-main-text:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 111px;
+    height: 2px;
+    background-color: white;
+    top: -53px;
+    left: 50%;
+    margin-left: -55px; }
+  .header-main-text:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 111px;
+    height: 2px;
+    background-color: white;
+    bottom: -53px;
+    left: 50%;
+    margin-left: -55px; }
+
+.app-button {
+  display: block;
+  box-sizing: border-box;
+  margin: 113px auto;
+  text-transform: uppercase;
+  font-family: "pt_serifbold", Verdana, serif, sans-serif;
+  font-size: 14px;
+  color: white;
+  padding: 31px 65px;
+  background-color: #ffb18b;
+  transition: .5s; }
+  .app-button:hover {
+    color: black;
+    border-radius: 15px;
+    background-color: #808369; }
+
+.circles {
+  display: flex;
+  justify-content: space-between;
+  width: 84px;
+  margin: 89px auto 0; }
+  .circles div {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer; }
+    .circles div.active {
+      background-color: #4e5b61; }
+    .circles div:hover:not(.active) {
+      background-color: #ffffff; }
+
+i.fa.fa-angle-down {
+  display: block;
+  width: 10px;
+  margin: 60px auto 0; }
+
+.under-header {
+  text-align: center;
+  font-family: "pt_serifbold", Verdana, serif, sans-serif;
+  background-image: url("img/Vector Smart Object1.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  margin-top: 48px; }
+  .under-header p {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #808369;
+    margin-bottom: 15px; }
+  .under-header h2 {
+    color: #434343;
+    font-size: 35px; }
+  .under-header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 111px;
+    height: 2px;
+    background-color: #a7a99a;
+    bottom: -42px;
+    left: 50%;
+    margin-left: -55px; }
+
+.container-fluid .row :nth-child(1) {
+  background-image: url("img/Events.png");
+  margin-right: 30px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover; }
+.container-fluid .row :nth-child(2) {
+  background-image: url("img/Food&Drinks.png");
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover; }
+.container-fluid .row :nth-child(3) {
+  background-image: url("img/Venues.png");
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  margin-left: 30px; }
+
+.welcome {
+  font-family: "yellowtailregular", Verdana, serif, sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 106px;
+  height: 473px; }
+  .welcome :nth-child(1) {
+    background-image: url("img/Events.png");
+    margin-right: 30px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; }
+  .welcome :nth-child(2) {
+    background-image: url("img/Food&Drinks.png");
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover; }
+  .welcome :nth-child(3) {
+    background-image: url("img/Venues.png");
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    margin-left: 30px; }
+
+.app-button-main {
+  font-family: "pt_serifbold", Verdana, serif, sans-serif;
+  font-size: 14px;
+  color: white;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  background-color: #ffb18b;
+  transition: .5s;
+  width: 243px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 103px auto; }
+  .app-button-main:hover {
+    color: black;
+    border-radius: 15px;
+    background-color: #808369; }
+
+.main {
+  background-image: url("img/About bg.png");
+  background-color: #f3f1ec;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding-top: 245px; }
+
+/*# sourceMappingURL=header.css.map */

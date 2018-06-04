@@ -1,0 +1,43 @@
+.header-top-line {
+	height: 48px;
+	background-color: rgb(225, 171, 77, .8);
+	color:  #ffffff;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 48px;
+	padding-right: 34px;
+}
+
+.header-top-line-left {
+	width: 190px;
+	display: inline-block;
+}
+
+.header-top-line-left h3 {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 44px;
+}
+
+nav {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 490px;
+}
+
+nav ul li {
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	transition: .5s;
+	display: inline-block;
+}
+
+nav ul li:not(:last-child) {
+	margin-right: 20px;
+}
+
+nav ul li:hover {
+	background-color: white;
+	color: black;
+}

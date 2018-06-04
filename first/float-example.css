@@ -1,0 +1,41 @@
+
+.header-top-line {
+	height: 48px;
+	background-color: rgb(225, 171, 77, .8);
+	color:  #ffffff;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 48px;
+	padding-right: 34px;
+}
+
+ul {
+	float: right;
+}
+
+
+.header-top-line-left {
+	width: 184px;
+	float: left;
+}
+
+.header-top-line-left h3 {
+	float: right;
+	
+	}
+nav ul li {
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	transition: .5s;
+}
+
+nav ul li:not(:last-child) {
+	margin-right: 20px;
+}
+
+nav ul li:hover {
+	background-color: white;
+	color: black;
+}

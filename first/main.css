@@ -1,0 +1,263 @@
+body {
+	font-family: verdana;
+}
+
+header {
+	background-image: url(https://location4film.com.ua/uploads/media/location_photo/0001/02/thumb_1079_location_photo_big.jpeg);
+	height: 100vh;
+	background-size: cover;
+}
+
+
+.container {
+	width: 1024px;
+	margin: 0 auto; /*вирівнює по центру*/
+	padding-top: 30px; /*отступ зверху*/
+}
+
+.description {
+	background-color: rgba(225, 171, 77, .8);
+	height: 250px;
+	width: 500px;
+	margin-left: 450px;
+	padding: 20px;
+	padding-top: 40px;
+	color: white;
+	border-radius: 10px;
+	font-weight: 400;
+	margin-top: 40px;
+}
+
+.title {
+	font-size: 36px;
+	text-align: center;
+}
+
+.langs {
+	font-size: 16.05px;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+
+.app-button-default {
+	width: 200px;
+	height: 40px;
+	font-size: 16px;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+.app-button-default:hover { 
+	width: 250px;
+	margin-left: 25px;
+	height: 80px;
+	margin-top: 30px;
+}
+
+.app-button {
+	box-sizing: border-box;
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 0;
+	background-color: transparent;
+	color: white;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.app-button:hover {
+	background-color: white;
+	color: black;
+}
+
+/*navigation block*/
+
+.header-top-line {
+	height: 48px;
+	background-color: rgb(225, 171, 77, .8);
+	color:  #ffffff;
+	font-size: 14px;
+	text-transform: uppercase; /*текст у верхньому регістрі*/
+	line-height: 48px;
+	padding-right: 34px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header-top-line-left {
+	width: 190px;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	width: 340px;
+}
+
+nav ul li {
+	padding-left: 5px;
+	padding-right: 5px;
+	cursor: pointer;
+	transition: .5s;
+}
+
+nav ul li:hover {
+	background-color: white;
+	color: black;
+}
+
+.second-container {
+	width: 857px;
+	padding-top: 87px;
+	margin: 0 auto;
+}
+
+.title-main {
+	text-transform: uppercase;
+	font-size: 30.05px;
+	padding-bottom: 30px
+}
+
+.second-text {
+	text-align: justify;
+	font-size: 14.05px;
+	line-height: 24.72px;
+}
+
+.palitra {
+	background-image: -webkit-linear-gradient(left, #ee732f 20%,
+	                                          #f74c55 0,
+	                                          #f74c55 40%,
+	                                          #2d5f3b 0,
+	                                          #2d5f3b 60%,
+	                                          #404040 0,
+	                                          #404040 80%,
+	                                          #fb636b 0);
+	height: 30px;
+	width: 175px;
+	margin-top: 57px;
+
+}
+
+.benefits {
+	display: flex;
+	justify-content: flex-start;
+	align-items: stretch;
+	margin-top: 104px;
+}
+
+.benefits .grey,
+.benefits .green {
+	width: 38%;
+}
+
+.benefits .pink {
+	background-color: rgb(247, 76, 85);
+	width: 24%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+}
+
+.benefits .grey {
+	padding-left: 12.5%;
+	padding-right: 2.5%;
+	background-color: rgb(64, 64, 64);
+}
+
+.benefits .green {
+	padding-left: 2.5%;
+	padding-right: 12.5%;
+	background-color: rgb(45, 95, 59);
+}
+
+.item-benefit {
+	padding-top: 40px;
+	padding-bottom: 58px;
+	color: white;
+}
+
+.benefit-title-block {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+.benefit-title-text {
+	margin-left: 17px;
+	font-size: 22px;
+
+}
+
+.benefit-description {
+	line-height: 24.72px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.discount-block {
+	background-color: rgba(0,0,0, .8);
+	position: relative;
+	height: 600px;
+	box-sizing: border-box;
+	padding-top: 180px;
+	text-align: center;
+	padding-bottom: 138px;
+	color: white;
+}
+
+.discount-block:before {
+	display: block;
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url(footer-bg.png);
+	background-position: center center;
+	background-size: cover;
+}
+
+.discount-title {
+	font-size: 42.05px;
+	line-height: 53.72px;
+	width: 600px;
+	margin: 0 auto 40px;
+}
+
+.app-button-large {
+	font-size: 24px;
+	width: 222px;
+	box-sizing: content-box;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 45px;
+}
+
+.footer-gradient {
+	height: 9px;
+	width: 100%;
+	background-image: -webkit-linear-gradient(left, rgb(45, 95, 59) 20%,
+	                                          rgb(64, 64, 64) 0,
+	                                          rgb(64, 64, 64) 40%,
+	                                          rgb(251, 99, 107) 0,
+	                                          rgb(251, 99, 107) 60%,
+	                                          rgb(238, 115, 47) 0,
+	                                          rgb(238, 115, 47) 80%,
+	                                          rgb(247, 76, 85) 0);
+	background-position: -18px 0;
+	background-size: 178px 9px;
+}
+
+.copyright {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	color: black;
+	font-size: 16.05px;
+	text-transform: uppercase;
+}

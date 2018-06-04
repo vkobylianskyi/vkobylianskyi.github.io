@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@import url(header.css);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body, html {
+  height: auto; }
+
+img, fieldset, a img {
+  border: none; }
+
+input[type="submit"],
+button {
+  cursor: pointer; }
+  input[type="submit"]::-moz-focus-inner,
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+
+textarea {
+  overflow: auto; }
+
+input, button {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+input:active, textarea:active, select:active, button:active,
+h1:active, h2:active, h3:active, h4:active, h5:active, h6:active, span:active, input:hover, textarea:hover, select:hover, button:hover,
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, span:hover, input:focus, textarea:focus, select:focus, button:focus,
+h1:focus, h2:focus, h3:focus, h4:focus, h5:focus, h6:focus, span:focus, input:visited, textarea:visited, select:visited, button:visited,
+h1:visited, h2:visited, h3:visited, h4:visited, h5:visited, h6:visited, span:visited {
+  outline: none; }
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+@media print {
+  * {
+    background: none !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  img {
+    filter: Gray();
+    filter: url("desaturate.svg#grayscale");
+    filter: grayscale(100%); }
+
+  a {
+    text-decoration: underline;
+    page-break-inside: avoid; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  a:link,
+  a:visited {
+    color: #781351; }
+
+  a[href="#"],
+  a[href="javascript:"] {
+    content: ""; }
+
+  body {
+    font-family: Georgia, ‘Times New Roman’, serif; }
+
+  .entry iframe, ins {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    line-height: 0pt !important;
+    white-space: nowrap; }
+
+  @page :left {
+    margin: 1cm; }
+  @page :right {
+    margin: 1cm; }
+  .embed-youtube,
+  .embed-responsive {
+    position: absolute;
+    height: 0;
+    overflow: hidden; }
+
+  blockquote, table, pre, ul, ol, dl,
+  h1, h2, h3, h4, h5, h6, img {
+    page-break-inside: avoid; }
+
+  h1, h2, h3, h4, h5, h6, img {
+    page-break-after: avoid; } }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body, html {
+  height: auto; }
+
+img, fieldset, a img {
+  border: none; }
+
+input[type="submit"],
+button {
+  cursor: pointer; }
+  input[type="submit"]::-moz-focus-inner,
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0; }
+
+textarea {
+  overflow: auto; }
+
+input, button {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+/*# sourceMappingURL=main.css.map */
