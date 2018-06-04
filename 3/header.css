@@ -84,6 +84,11 @@ i.fa.fa-phone {
   filter: flipH();
   -ms-filter: "FlipH"; }
 
+header i.fa.fa-angle-down {
+  display: block;
+  width: 10px;
+  margin: 60px auto 0; }
+
 .header-main {
   background-image: url("img/test.png");
   min-height: 100vh;
@@ -151,11 +156,6 @@ i.fa.fa-phone {
     .circles div:hover:not(.active) {
       background-color: #ffffff; }
 
-i.fa.fa-angle-down {
-  display: block;
-  width: 10px;
-  margin: 60px auto 0; }
-
 .under-header {
   text-align: center;
   font-family: "pt_serifbold", Verdana, serif, sans-serif;
@@ -188,7 +188,16 @@ i.fa.fa-angle-down {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover; }
+  background-size: cover;
+  position: relative; }
+  .welcome .col .fa-angle-down {
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    color: #808369;
+    font-size: 16px;
+    cursor: pointer; }
   .welcome .col:nth-child(1) {
     background-image: url("img/Events.png");
     margin-right: 30px; }
@@ -227,12 +236,31 @@ i.fa.fa-angle-down {
     border-radius: 15px;
     background-color: #808369; }
 
+.app-title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .app-title.dark {
+    color: black; }
+  .app-title.white {
+    color: white; }
+
 .main {
   background-image: url("img/About bg.png");
   background-color: #f3f1ec;
   min-height: 100vh;
   background-repeat: no-repeat;
   background-position: top center;
-  padding-top: 245px; }
+  padding-top: 245px;
+  position: relative; }
+
+.card {
+  background-color: #fff; }
+
+.left-picture {
+  background-image: url("img/about-us-im.png");
+  background-position: center center;
+  background-size: cover;
+  height: 541px; }
 
 /*# sourceMappingURL=header.css.map */
