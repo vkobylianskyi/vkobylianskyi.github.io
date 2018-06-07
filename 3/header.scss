@@ -16,18 +16,14 @@ header {
 
 }
 
-
 .container {
   width: 1170px;
-  /*ширина блока*/
   margin: 0 auto;
-  /*вирівнює по центру*/
 }
 
 .header-top-line {
-    position:relative;
+  position: relative;
   background-color: $light-brown;
-    }
 
   ul {
     display: flex;
@@ -53,6 +49,7 @@ header {
       }
     }
   }
+}
 
 .header-title {
   display: flex;
@@ -64,56 +61,56 @@ header {
   background-repeat: no-repeat;
   background-position: bottom center;
   letter-spacing: 1px;
-}
 
-.header-title-left {
-  text-align: right;
-  font-size: $font-xs-small;
-  text-transform: uppercase;
-  line-height: 20px;
-  font-weight: 700;
-  width: 160px;
-}
-
-i.fa.fa-shopping-cart {
-  padding-right: 5px;
-}
-
-.header-title-center {
-  text-align: center;
-h1 {
-  font-family: 'yellowtailregular', $font-fallback;
-  font-size: 45px;
-  color: #434343;
-  line-height: .7;
-  }
-
-  p {
-    font-size: 12px;
-    font-family: 'pt_serifbold', $font-fallback;
+  &-left {
+    text-align: right;
+    font-size: $font-xs-small;
     text-transform: uppercase;
-    text-align: center;
-    margin-top: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    width: 170px;
+
+    i.fa.fa-phone {
+      padding-left: 5px;
+      -moz-transform: scale(-1, 1);
+      -webkit-transform: scale(-1, 1);
+      -o-transform: scale(-1, 1);
+      transform: scale(-1, 1);
+      filter: flipH();
+      -ms-filter: "FlipH";
+    }
   }
-}
 
-.header-title-right {
-  text-align: right;
-  font-size: $font-xs-small;
-  text-transform: uppercase;
-  line-height: 20px;
-  font-weight: 700;
-  width: 160px;
-}
+  &-center {
+    text-align: center;
+    h1 {
+      font-family: 'yellowtailregular', $font-fallback;
+      font-size: 45px;
+      color: #434343;
+      line-height: .7;
+    }
 
-i.fa.fa-phone {
-  padding-left: 5px;
-  -moz-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-  filter: flipH();
-  -ms-filter: "FlipH";
+    p {
+      font-size: 12px;
+      font-family: 'pt_serifbold', $font-fallback;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 14px;
+    }
+  }
+
+  &-right {
+    text-align: right;
+    font-size: $font-xs-small;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-weight: 700;
+    width: 170px;
+
+    i.fa.fa-shopping-cart {
+      padding-right: 5px;
+    }
+  }
 }
 
 header i.fa.fa-angle-down {
@@ -125,10 +122,14 @@ header i.fa.fa-angle-down {
 
 .header-main {
   background-image: url("img/test.png");
-  min-height: 100vh;
-  background-repeat: no-repeat;
-  background-position: top center;
+  min-height: 773px;
+    background: {
+    repeat: no-repeat;
+    position: top center;
+    size: contain;
+  }
   padding-top: 245px;
+  margin-bottom: 110px;
   }
 
 .header-main-text {
@@ -214,7 +215,6 @@ header i.fa.fa-angle-down {
   background-repeat: no-repeat;
   background-position: top center;
   position: relative;
-  margin-top: 110px;
 p {
   font-size: $font-xs-small;
   text-transform: uppercase;
@@ -310,25 +310,34 @@ p {
   font-family: 'pt_serifbold', $font-fallback;
   text-align: center;
   margin-bottom: 106px;
-  background-image: url("img/Vector Smart Object copy 9.png");
-  background-repeat: no-repeat;
-  background-position: bottom center;
+  background: {
+    repeat: no-repeat;
+    position: center 110px;
+  }
   position: relative;
 
+    &.dark {
+    background-image: url("img/Vector Smart Object copy 10.png");
 
-  &.dark {
-    color: black;
+    .app-title-section {
+      color: #808369;
+    }
+
+    .app-title-description {
+      color: #434343;
+    }
   }
 
   &.white {
     color: white;
+    background-image: url("img/Vector Smart Object copy 9.png");
   }
 
   &-section {
-
     font-size: $font-xs-small;
     text-transform: uppercase;
     padding-top: 110px;
+    padding-bottom: 26px;
   }
 
   &-description {
@@ -351,22 +360,36 @@ p {
 }
 
 .main {
-  background-image: url("img/About bg.png");
-  background-color: #f3f1ec;
+  background: {
+    image: url("img/About bg.png");
+    color: #f3f1ec;
+    repeat: no-repeat;
+    position: top center;
+  }
   min-height: 100vh;
-  background-repeat: no-repeat;
-  background-position: top center;
   position: relative;
+
+  .quote {
+    text-align: center;
+    font-family: 'pt_serifbold', $font-fallback;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 33px;
+    color:  #808369;
+    padding-top: 56px;
+  }
 }
 
 .card {
   background-color: #fff;
-}
+  }
 
 .left-picture {
-  background-image: url('img/about-us-im.png');
-  background-position: center center;
-  background-size: cover;
+  background: {
+    image: url('img/about-us-im.png');
+    position: center center;
+    size: cover;
+  }
   height: 541px;
 }
 
@@ -380,3 +403,96 @@ p {
   padding-top: 94px;
   color:  #808369;
 }
+
+.card-text {
+  padding-top: 36px;
+  color: #929292;
+  font-family: 'pt_serifregular', $font-fallback;
+  font-size: $font-xs-small;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 86px;
+  width: 385px;
+  box-sizing: content-box;
+
+  span {
+    font-family: 'pt_serifbold', $font-fallback;
+    font-size: 22px;
+    color: #434343;
+
+  }
+}
+
+.btn-primary {
+text-transform: uppercase;
+  width: 243px;
+  height: 60px;
+  color: white;
+  font-family: 'pt_serifbold', $font-fallback;
+  font-size: $font-xs-small;
+  background-color: $vanil;
+  box-sizing: border-box;
+  margin-left: 86px;
+  margin-top: 60px;
+}
+
+.menu {
+  font-family: 'pt_serifbold', $font-fallback;
+  font-size: 16px;
+  font-weight: 700;
+
+  margin-top: 106px;
+  text-transform: uppercase;
+  color: #808369;
+  }
+
+.menu .col {
+  background-repeat: no-repeat;
+  background-color: white;
+  position: relative;
+  background-position: center 15px;
+  border-bottom: none ;
+  width: 240px;
+  height: 270px;
+  margin-right: 20px;
+
+  p {
+    background-image: radial-gradient(at top, #f5f5f3 19px, white 19px, white 240px);
+    height: 95px;
+    width: 240px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding-top: 27px;
+
+
+    }
+
+  &:nth-child(1) {
+    background-image: url("img/canapes.png");
+  }
+
+  &:nth-child(2) {
+    background-image: url("img/small_plates.png");
+  }
+
+  &:nth-child(3) {
+    background-image: url("img/sweets.png");
+  }
+
+  &:nth-child(4) {
+    background-image: url("img/drinks.png");
+    margin-right: 0;
+  }
+  }
+
+  .fa-angle-down {
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -4px;
+    color: #808369;
+    font-size: 16px;
+    cursor: pointer;
+  }
