@@ -124,12 +124,24 @@ header i.fa.fa-angle-down {
   font-family: "pt_serifbold", Verdana, serif, sans-serif;
   color: white;
   background-color: #ffb18b;
-  transition: .5s; }
+  transition: .5s;
+  width: 243px;
+  height: 60px; }
   .app-button.large {
     font-size: 14px;
     width: 273px;
     height: 72px;
     margin: 113px auto; }
+  .app-button.mas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 103px auto; }
+  .app-button.rfs {
+    margin-left: 86px;
+    margin-top: 60px; }
+  .app-button.vfm {
+    margin: 58px auto; }
   .app-button:hover {
     color: black;
     border-radius: 15px;
@@ -211,29 +223,9 @@ header i.fa.fa-angle-down {
   margin-top: 106px;
   height: 473px; }
 
-.app-button-main {
-  font-family: "pt_serifbold", Verdana, serif, sans-serif;
-  font-size: 14px;
-  color: white;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  background-color: #ffb18b;
-  transition: .5s;
-  width: 243px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 103px auto; }
-  .app-button-main:hover {
-    color: black;
-    border-radius: 15px;
-    background-color: #808369; }
-
 .app-title {
   font-family: "pt_serifbold", Verdana, serif, sans-serif;
   text-align: center;
-  margin-bottom: 106px;
   background-repeat: no-repeat;
   background-position: center 110px;
   position: relative; }
@@ -243,13 +235,14 @@ header i.fa.fa-angle-down {
       color: #808369; }
     .app-title.dark .app-title-description {
       color: #434343; }
+    .app-title.dark.dark.one {
+      background-image: url("img/Vector Smart Object1.png"); }
   .app-title.white {
     color: white;
     background-image: url("img/Vector Smart Object copy 9.png"); }
   .app-title-section {
     font-size: 14px;
     text-transform: uppercase;
-    padding-top: 110px;
     padding-bottom: 26px; }
   .app-title-description {
     text-transform: capitalize;
@@ -272,7 +265,8 @@ header i.fa.fa-angle-down {
   background-repeat: no-repeat;
   background-position: top center;
   min-height: 100vh;
-  position: relative; }
+  position: relative;
+  padding-bottom: 120px; }
   .main .quote {
     text-align: center;
     font-family: "pt_serifbold", Verdana, serif, sans-serif;
@@ -315,18 +309,6 @@ header i.fa.fa-angle-down {
     font-family: "pt_serifbold", Verdana, serif, sans-serif;
     font-size: 22px;
     color: #434343; }
-
-.btn-primary {
-  text-transform: uppercase;
-  width: 243px;
-  height: 60px;
-  color: white;
-  font-family: "pt_serifbold", Verdana, serif, sans-serif;
-  font-size: 14px;
-  background-color: #ffb18b;
-  box-sizing: border-box;
-  margin-left: 86px;
-  margin-top: 60px; }
 
 .menu {
   font-family: "pt_serifbold", Verdana, serif, sans-serif;

@@ -57,9 +57,11 @@ header {
   align-items: flex-start;
   margin-top: 51px;
   height: 110px;
-  background-image: url("img/Vector Smart Object.png");
-  background-repeat: no-repeat;
-  background-position: bottom center;
+  background: {
+    image: url("img/Vector Smart Object.png");
+    repeat: no-repeat;
+    position: bottom center;
+  }
   letter-spacing: 1px;
 
   &-left {
@@ -173,6 +175,8 @@ header i.fa.fa-angle-down {
   color: white;
   background-color: $vanil;
   transition: .5s;
+  width: 243px;
+  height: 60px;
 
 &.large {
   font-size: $font-xs-small;
@@ -180,6 +184,21 @@ header i.fa.fa-angle-down {
   height: 72px;
   margin: 113px auto;
 }
+
+&.mas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 103px auto;
+}
+  &.rfs {
+    margin-left: 86px;
+    margin-top: 60px;
+  }
+
+  &.vfm {
+    margin: 58px auto;
+  }
 
   &:hover {
     color: black;
@@ -215,16 +234,18 @@ header i.fa.fa-angle-down {
 .under-header {
   text-align: center;
   font-family: 'pt_serifbold', $font-fallback;
-  background-image: url("img/Vector Smart Object1.png");
-  background-repeat: no-repeat;
-  background-position: top center;
+  background: {
+    image: url("img/Vector Smart Object1.png");
+    repeat: no-repeat;
+    position: top center;
+  }
   position: relative;
-p {
-  font-size: $font-xs-small;
-  text-transform: uppercase;
-  color: $brown;
-  margin-bottom: 15px;
-}
+  p {
+    font-size: $font-xs-small;
+    text-transform: uppercase;
+   color: $brown;
+    margin-bottom: 15px;
+  }
   h2 {
  color: #434343;
     font-size: 35px;
@@ -286,33 +307,10 @@ p {
   height: 473px;
 }
 
-.app-button-main {
-  font-family: 'pt_serifbold', $font-fallback;
-  font-size: $font-xs-small;
-  color: white;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  background-color: $vanil;
-  transition: .5s;
-  width: 243px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 103px auto;
-
-  &:hover {
-    color: black;
-    border-radius: 15px;
-    background-color: $brown;
-  }
-}
-
-
 .app-title {
   font-family: 'pt_serifbold', $font-fallback;
   text-align: center;
-  margin-bottom: 106px;
+  //margin-bottom: 106px;
   background: {
     repeat: no-repeat;
     position: center 110px;
@@ -329,6 +327,9 @@ p {
     .app-title-description {
       color: #434343;
     }
+      &.dark.one {
+        background-image: url("img/Vector Smart Object1.png");
+      }
   }
 
   &.white {
@@ -339,7 +340,7 @@ p {
   &-section {
     font-size: $font-xs-small;
     text-transform: uppercase;
-    padding-top: 110px;
+    //padding-top: 110px;
     padding-bottom: 26px;
   }
 
@@ -371,6 +372,7 @@ p {
   }
   min-height: 100vh;
   position: relative;
+  padding-bottom: 120px;
 
   .quote {
     text-align: center;
@@ -424,19 +426,6 @@ p {
     color: #434343;
 
   }
-}
-
-.btn-primary {
-text-transform: uppercase;
-  width: 243px;
-  height: 60px;
-  color: white;
-  font-family: 'pt_serifbold', $font-fallback;
-  font-size: $font-xs-small;
-  background-color: $vanil;
-  box-sizing: border-box;
-  margin-left: 86px;
-  margin-top: 60px;
 }
 
 .menu {
@@ -502,7 +491,8 @@ text-transform: uppercase;
     line-height: 30px;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     transform: translateX(-50%);
-
   }
 }
+
+
 
