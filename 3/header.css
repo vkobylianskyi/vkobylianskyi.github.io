@@ -142,6 +142,8 @@ header i.fa.fa-angle-down {
     margin-top: 60px; }
   .app-button.vfm {
     margin: 58px auto; }
+  .app-button.ms {
+    margin: 65px auto 0; }
   .app-button:hover {
     color: black;
     border-radius: 15px;
@@ -231,6 +233,8 @@ header i.fa.fa-angle-down {
   position: relative; }
   .app-title.dark {
     background-image: url("img/Vector Smart Object1.png"); }
+    .app-title.dark.one {
+      margin-bottom: 112px; }
     .app-title.dark .app-title-section {
       color: #808369; }
     .app-title.dark .app-title-description {
@@ -365,5 +369,35 @@ header i.fa.fa-angle-down {
     line-height: 30px;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     transform: translateX(-50%); }
+
+.event h4 {
+  text-transform: uppercase;
+  font-family: "pt_serifbold", Verdana, serif, sans-serif;
+  font-size: 14px;
+  color: #808369;
+  margin-bottom: 55px;
+  margin-top: 55px;
+  position: relative; }
+  .event h4:first-child {
+    margin-top: 0; }
+  .event h4:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 111px;
+    height: 2px;
+    background-color: #a7a99a;
+    bottom: -21px; }
+.event .left-text {
+  text-align: right; }
+  .event .left-text h4:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 111px;
+    height: 2px;
+    background-color: #a7a99a;
+    bottom: -21px;
+    right: 0; }
 
 /*# sourceMappingURL=header.css.map */

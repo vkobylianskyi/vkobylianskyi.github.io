@@ -200,6 +200,10 @@ header i.fa.fa-angle-down {
     margin: 58px auto;
   }
 
+  &.ms {
+    margin: 65px auto 0;
+  }
+
   &:hover {
     color: black;
     border-radius: 15px;
@@ -318,7 +322,10 @@ header i.fa.fa-angle-down {
 
     &.dark {
       background-image: url("img/Vector Smart Object1.png");
-    .app-title-section {
+      &.one {
+        margin-bottom: 112px;
+      }
+      .app-title-section {
       color: #808369;
     }
 
@@ -501,9 +508,51 @@ header i.fa.fa-angle-down {
   }
 }
 
-.center-picture {
+.event {
+  h4 {
+    text-transform: uppercase;
+    font-family: 'pt_serifbold', $font-fallback;
+    font-size: $font-xs-small;
+    color: $brown;
+    margin-bottom: 55px;
+    margin-top: 55px;
+    position: relative;
 
-  //height: 431px;
-}
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 111px;
+      height: 2px;
+      background-color: #a7a99a;
+      bottom: -21px;
+     }
+  }
+
+  p {
+
+  }
+
+  .left-text {
+
+    h4 {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 111px;
+        height: 2px;
+        background-color: #a7a99a;
+        bottom: -21px;
+        right: 0;
+        }
+    }
+    text-align: right;
+    }
+  }
 
 
