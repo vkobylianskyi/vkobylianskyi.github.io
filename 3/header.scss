@@ -4,7 +4,6 @@
 $light-brown: #f3f1ec;
 $brown: #808369;
 $vanil:#ffb18b;
-$light-black:#434343;
 $font-fallback: Verdana, serif, sans-serif;
 $font-xs-small: 14px;
 $font-sm-small: 20px;
@@ -183,7 +182,7 @@ header i.fa.fa-angle-down {
   font-size: $font-xs-small;
   width: 273px;
   height: 72px;
-  margin: 113px auto 0;
+  margin: 113px auto;
 }
 
 &.mas {
@@ -317,35 +316,39 @@ header i.fa.fa-angle-down {
   }
   position: relative;
 
-  p {
-    font-size: $font-xs-small;
-    text-transform: uppercase;
-    padding-bottom: 26px;
-  }
-
-  h2 {
-    text-transform: capitalize;
-    font-size: 35px;
-    font-weight: 700;
-  }
-
-  &.dark {
-    p {
-      color: $brown;
+    &.dark {
+      background-image: url("img/Vector Smart Object1.png");
+    .app-title-section {
+      color: #808369;
     }
 
-    h2 {
-      color: $light-black;
-    }
-
-    &.one {
-      background-image: url("img/Vector Smart Object.png");;
+    .app-title-description {
+      color: #434343;
     }
   }
 
   &.white {
     color: white;
-    background-image: url("img/Vector Smart Object copy 9.png");
+
+    &.one {
+      background: {
+        image: url("img/Vector Smart Object copy 9.png");
+        position: center 110px;
+      }
+      padding-top: 110px;
+    }
+  }
+
+  &-section {
+    font-size: $font-xs-small;
+    text-transform: uppercase;
+    padding-bottom: 26px;
+  }
+
+  &-description {
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: 700;
   }
 
   &:after {
@@ -361,6 +364,11 @@ header i.fa.fa-angle-down {
   }
 }
 
+.story {
+  margin-top: 106px;
+  margin-bottom: 110px;
+}
+
 .main {
   background: {
     image: url("img/About bg.png");
@@ -371,6 +379,7 @@ header i.fa.fa-angle-down {
   min-height: 100vh;
   position: relative;
   padding-bottom: 120px;
+  margin-bottom: 110px;
 
   .quote {
     text-align: center;
@@ -492,5 +501,9 @@ header i.fa.fa-angle-down {
   }
 }
 
+.center-picture {
+
+  //height: 431px;
+}
 
 

@@ -131,7 +131,7 @@ header i.fa.fa-angle-down {
     font-size: 14px;
     width: 273px;
     height: 72px;
-    margin: 113px auto 0; }
+    margin: 113px auto; }
   .app-button.mas {
     display: flex;
     align-items: center;
@@ -229,23 +229,26 @@ header i.fa.fa-angle-down {
   background-repeat: no-repeat;
   background-position: center top;
   position: relative; }
-  .app-title p {
+  .app-title.dark {
+    background-image: url("img/Vector Smart Object1.png"); }
+    .app-title.dark .app-title-section {
+      color: #808369; }
+    .app-title.dark .app-title-description {
+      color: #434343; }
+  .app-title.white {
+    color: white; }
+    .app-title.white.one {
+      background-image: url("img/Vector Smart Object copy 9.png");
+      background-position: center 110px;
+      padding-top: 110px; }
+  .app-title-section {
     font-size: 14px;
     text-transform: uppercase;
     padding-bottom: 26px; }
-  .app-title h2 {
+  .app-title-description {
     text-transform: capitalize;
     font-size: 35px;
     font-weight: 700; }
-  .app-title.dark p {
-    color: #808369; }
-  .app-title.dark h2 {
-    color: #434343; }
-  .app-title.dark.one {
-    background-image: url("img/Vector Smart Object.png"); }
-  .app-title.white {
-    color: white;
-    background-image: url("img/Vector Smart Object copy 9.png"); }
   .app-title:after {
     content: '';
     display: block;
@@ -257,6 +260,10 @@ header i.fa.fa-angle-down {
     left: 50%;
     margin-left: -55px; }
 
+.story {
+  margin-top: 106px;
+  margin-bottom: 110px; }
+
 .main {
   background-image: url("img/About bg.png");
   background-color: #f3f1ec;
@@ -264,7 +271,8 @@ header i.fa.fa-angle-down {
   background-position: top center;
   min-height: 100vh;
   position: relative;
-  padding-bottom: 120px; }
+  padding-bottom: 120px;
+  margin-bottom: 110px; }
   .main .quote {
     text-align: center;
     font-family: "pt_serifbold", Verdana, serif, sans-serif;
