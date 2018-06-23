@@ -235,16 +235,21 @@ header i.fa.fa-angle-down {
     background-image: url("img/Vector Smart Object1.png"); }
     .app-title.dark.one {
       margin-bottom: 112px; }
+    .app-title.dark.two {
+      margin-top: 293px; }
     .app-title.dark .app-title-section {
       color: #808369; }
     .app-title.dark .app-title-description {
       color: #434343; }
   .app-title.white {
-    color: white; }
+    color: white;
+    background-image: url("img/Vector Smart Object copy 9.png"); }
     .app-title.white.one {
-      background-image: url("img/Vector Smart Object copy 9.png");
       background-position: center 110px;
       padding-top: 110px; }
+    .app-title.white.two {
+      background-position: center 193px;
+      padding-top: 193px; }
   .app-title-section {
     font-size: 14px;
     text-transform: uppercase;
@@ -370,34 +375,53 @@ header i.fa.fa-angle-down {
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
     transform: translateX(-50%); }
 
-.event h4 {
-  text-transform: uppercase;
-  font-family: "pt_serifbold", Verdana, serif, sans-serif;
-  font-size: 14px;
-  color: #808369;
-  margin-bottom: 55px;
-  margin-top: 55px;
-  position: relative; }
-  .event h4:first-child {
-    margin-top: 0; }
-  .event h4:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 111px;
-    height: 2px;
-    background-color: #a7a99a;
-    bottom: -21px; }
-.event .left-text {
-  text-align: right; }
-  .event .left-text h4:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 111px;
-    height: 2px;
-    background-color: #a7a99a;
-    bottom: -21px;
-    right: 0; }
+.event {
+  font-family: "pt_serifbold", Verdana, serif, sans-serif; }
+  .event h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #808369;
+    margin-bottom: 55px;
+    margin-top: 55px;
+    position: relative; }
+    .event h4:first-child {
+      margin-top: 0; }
+    .event h4:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 111px;
+      height: 2px;
+      background-color: #a7a99a;
+      bottom: -21px; }
+  .event p {
+    font-size: 14px;
+    color: #929292;
+    font-weight: 400;
+    line-height: 24px; }
+  .event .left-text {
+    counter-reset: section;
+    text-align: right; }
+    .event .left-text h4:after {
+      content: "0" counter(section);
+      counter-increment: section;
+      display: block;
+      position: absolute;
+      width: 111px;
+      height: 2px;
+      background-color: #a7a99a;
+      bottom: -21px;
+      right: 0; }
+
+.under-main {
+  background-image: url("img/Depositphotos_24590415_original copy.png");
+  background-color: #f3f1ec;
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  margin-bottom: 110px;
+  margin-top: 110px; }
 
 /*# sourceMappingURL=header.css.map */

@@ -4,6 +4,7 @@
 $light-brown: #f3f1ec;
 $brown: #808369;
 $vanil:#ffb18b;
+$grey: #929292;
 $font-fallback: Verdana, serif, sans-serif;
 $font-xs-small: 14px;
 $font-sm-small: 20px;
@@ -325,6 +326,9 @@ header i.fa.fa-angle-down {
       &.one {
         margin-bottom: 112px;
       }
+      &.two {
+        margin-top: 293px;
+      }
       .app-title-section {
       color: #808369;
     }
@@ -336,13 +340,17 @@ header i.fa.fa-angle-down {
 
   &.white {
     color: white;
+    background-image: url("img/Vector Smart Object copy 9.png");
 
     &.one {
       background: {
-        image: url("img/Vector Smart Object copy 9.png");
         position: center 110px;
       }
       padding-top: 110px;
+    }
+    &.two {
+      background-position: center 193px;
+      padding-top: 193px;
     }
   }
 
@@ -509,10 +517,11 @@ header i.fa.fa-angle-down {
 }
 
 .event {
+  font-family: 'pt_serifbold', $font-fallback;
+
   h4 {
     text-transform: uppercase;
-    font-family: 'pt_serifbold', $font-fallback;
-    font-size: $font-xs-small;
+    font-size: $font-sm-small;
     color: $brown;
     margin-bottom: 55px;
     margin-top: 55px;
@@ -534,14 +543,19 @@ header i.fa.fa-angle-down {
   }
 
   p {
-
+    font-size: $font-xs-small;
+    color: $grey;
+    font-weight: 400;
+    line-height: 24px;
   }
 
   .left-text {
 
+    counter-reset: section;
     h4 {
       &:after {
-        content: '';
+        content: "0" counter(section);
+        counter-increment: section;
         display: block;
         position: absolute;
         width: 111px;
@@ -549,10 +563,25 @@ header i.fa.fa-angle-down {
         background-color: #a7a99a;
         bottom: -21px;
         right: 0;
-        }
-    }
+      }
+      }
     text-align: right;
     }
   }
+
+.under-main {
+  background: {
+    image: url("img/Depositphotos_24590415_original copy.png");
+    color: #f3f1ec;
+    repeat: no-repeat;
+    position: top center;
+  }
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 120px;
+  margin-bottom: 110px;
+  margin-top: 110px;
+}
+
 
 
