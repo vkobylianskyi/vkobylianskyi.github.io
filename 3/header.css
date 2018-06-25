@@ -243,6 +243,9 @@ header i.fa.fa-angle-down {
       margin-bottom: 112px; }
     .app-title.dark.two {
       margin-top: 293px; }
+    .app-title.dark.three {
+      padding-top: 110px;
+      background-position: center 110px; }
     .app-title.dark .app-title-section {
       color: #808369; }
     .app-title.dark .app-title-description {
@@ -652,5 +655,8 @@ header i.fa.fa-angle-down {
 
 .second-row {
   margin-top: 30px; }
+
+.form-item {
+  background-color: #f3f1ec; }
 
 /*# sourceMappingURL=header.css.map */

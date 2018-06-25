@@ -343,6 +343,11 @@ header i.fa.fa-angle-down {
         margin-top: 293px;
       }
 
+      &.three {
+        padding-top: 110px;
+        background-position: center 110px;
+      }
+
       .app-title-section {
       color: #808369;
     }
@@ -904,4 +909,7 @@ header i.fa.fa-angle-down {
   margin-top: 30px;
 }
 
+.form-item {
+  background-color: $light-brown;
+}
 
