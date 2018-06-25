@@ -210,6 +210,14 @@ header i.fa.fa-angle-down {
     margin: 74px auto 0;
   }
 
+  &.vat{
+  margin-top: 57px;
+  }
+
+  &.vmp {
+    margin: 57px auto 110px;
+  }
+
   &:hover {
     color: black;
     border-radius: 15px;
@@ -334,6 +342,7 @@ header i.fa.fa-angle-down {
       &.two {
         margin-top: 293px;
       }
+
       .app-title-section {
       color: #808369;
     }
@@ -769,8 +778,9 @@ header i.fa.fa-angle-down {
   }
   min-height: 100vh;
   position: relative;
-  padding-bottom: 120px;
+  padding-bottom: 109px;
   margin-bottom: 110px;
+
 
 .pre-footer {
   margin-top: 106px;
@@ -783,19 +793,115 @@ header i.fa.fa-angle-down {
       size: cover;
     }
     height: 541px;
-  }}
+  }
 
+  .pre-footer-text {
+    padding-top: 94px;
+    padding-left: 71px;
+    font-family: 'pt_serifregular', $font-fallback;
+    font-size: $font-xs-small;
+    font-weight: 400;
+    line-height: 24px;
+    color: $grey;
 
-  .quote {
-    text-align: center;
-    font-family: 'pt_serifbold', $font-fallback;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 33px;
-    color:  #808369;
-    padding-top: 56px;
+    .card-text-one {
+      width: 412px;
+      box-sizing: content-box;
+      position: relative;
+
+      &:before {
+        content: '';
+        background: url('img/cov.png');;
+        display: block;
+        position: absolute;
+        height: 45px;
+        width: 62px;
+        top: -12px;
+        left: -2px;
+    }
+    }
+    .card-text-two {
+    padding-top: 82px;
+      text-transform: capitalize;
+      position: relative;
+
+      span {
+        font-family: 'pt_serifbold', $font-fallback;
+        font-size: $font-sm-small;
+        color: $brown;
+        font-weight: 700;
+        line-height: 35px;
+        padding-right: 14px;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 111px;
+        height: 2px;
+        background-color: #a7a99a;
+        top: 39px;
+
+      }
+        }
+  }
   }
 }
 
+.staff .col {
+  text-transform: capitalize;
+  background: {
+    repeat: no-repeat;
+    position: top center;
+  }
+  margin-top: 113px;
+  text-align: center;
+
+  h3 {
+    font-family: 'pt_serifbold', $font-fallback;
+    font-size: $font-sm-small;
+    color: $brown;
+    padding-top: 291px;
+
+  }
+
+  p {
+    font-family: 'pt_serifregular', $font-fallback;
+    font-size: $font-xs-small;
+    color: $grey;
+    margin-top: 14px;
+  }
+
+  &:nth-child(1) {
+    background-image: url("img/Amanda_Finch.png");
+  }
+
+  &:nth-child(2) {
+    background-image: url("img/Joseph_Verder.png");
+  }
+
+  &:nth-child(3) {
+    background-image: url("img/Anthony_Mann.png");
+  }
+
+  &:nth-child(4) {
+    background-image: url("img/Julia_Green.png");
+  }
+}
+
+.picture-item {
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.second-row {
+  margin-top: 30px;
+}
 
 
