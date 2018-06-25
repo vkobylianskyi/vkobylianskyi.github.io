@@ -1,0 +1,111 @@
+[33mcommit bd2d11a93261a1139eef9241f28512bddd81d920[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Admin <you@example.com>
+Date:   Sun Jun 24 18:13:12 2018 +0300
+
+    24/06/18
+
+[33mcommit 381f5dc0ca85b5f9f39ef4e50e9ac6708aea89be[m
+Author: Admin <you@example.com>
+Date:   Sat Jun 23 16:13:29 2018 +0300
+
+    test
+
+[33mcommit f30b3eb385d6d854fa7c31ce1583bc519d9ba73e[m
+Author: Admin <you@example.com>
+Date:   Fri Jun 22 18:21:07 2018 +0300
+
+    test
+
+[33mcommit fe3481a276e601e360f21c6f837edde54afdf622[m
+Author: Admin <you@example.com>
+Date:   Fri Jun 22 17:30:39 2018 +0300
+
+    test
+
+[33mcommit 47fefdc0559fd2d506c08e0ea3bb2edc5fcd180e[m
+Author: Admin <you@example.com>
+Date:   Fri Jun 22 17:30:18 2018 +0300
+
+    22/06/2018
+
+[33mcommit 8565798040ee3365d4e6debedb8d438f57c3f3f1[m
+Author: admin <volodymyr_kobylianskiy@ukr.net>
+Date:   Wed Jun 20 21:20:21 2018 +0300
+
+    test2
+
+[33mcommit 421fc0b96ccf3eaef64b23b771e8eb9438cfa1d5[m
+Merge: 1fcb2f2 fbf9790
+Author: admin <volodymyr_kobylianskiy@ukr.net>
+Date:   Mon Jun 11 10:39:14 2018 +0300
+
+    Merge branch 'master' of https://github.com/VKobylianskyi/Task3
+
+[33mcommit 1fcb2f2eb8f579846694f9689d19620e68d20e76[m
+Author: admin <volodymyr_kobylianskiy@ukr.net>
+Date:   Mon Jun 11 10:39:06 2018 +0300
+
+    tets1231231
+
+[33mcommit fbf9790646c0edbf886c2a157fdc6149357ed715[m
+Author: Admin <you@example.com>
+Date:   Fri Jun 8 14:36:07 2018 +0300
+
+    07/06/18
+
+[33mcommit 26d3bb7fde40cfe5a0cbe2ec2b09ef82a5a952ad[m
+Author: Admin <you@example.com>
+Date:   Thu Jun 7 18:30:55 2018 +0300
+
+    07/06/18
+
+[33mcommit 6b1a0d8914deb3fcce00cc54e2a283edeee74813[m
+Author: Admin <you@example.com>
+Date:   Thu Jun 7 15:41:57 2018 +0300
+
+    check
+
+[33mcommit 96eaa8570357de44dd233edf7c35024a7190da63[m
+Author: admin <volodymyr_kobylianskiy@ukr.net>
+Date:   Tue Jun 5 00:11:20 2018 +0300
+
+    test1
+
+[33mcommit 7efd67f46aa71db859d14371bd32ae21279ee573[m
+Author: admin <volodymyr_kobylianskiy@ukr.net>
+Date:   Mon Jun 4 21:27:37 2018 +0300
+
+    test1
+
+[33mcommit 8472deb2074ef884e2446e25c5e436eebaf5e5d6[m
+Author: admin <volodymyr_kobylianskiy@ukr.net>
+Date:   Mon Jun 4 21:26:39 2018 +0300
+
+    dhjgjfhjgjk
+
+[33mcommit 58761e6e81b849ac5dd868406ec659411ac1e8bf[m
+Author: admin <volodymyr_kobylianskiy@ukr.net>
+Date:   Mon Jun 4 20:50:53 2018 +0300
+
+    clean code
+
+[33mcommit 9905482f96c1ae926440ef49c5a12cfb5ec3d8d2[m
+Merge: f6339e3 58bfc32
+Author: VKobylianskyi <39917891+VKobylianskyi@users.noreply.github.com>
+Date:   Mon Jun 4 20:22:29 2018 +0300
+
+    Merge pull request #1 from mikerudenko/master
+    
+    Changes
+
+[33mcommit 58bfc32691150fec78adf7cef5c82abb7f44e3cc[m
+Author: Mihailo <9803200+mikerudenko@users.noreply.github.com>
+Date:   Mon Jun 4 20:17:01 2018 +0300
+
+    Update index.html
+
+[33mcommit f6339e3511f0224d900ad5011716e0a5c8bab05a[m
+Author: admin <volodymyr_kobylianskiy@ukr.net>
+Date:   Mon Jun 4 19:49:00 2018 +0300
+
+    first commit
