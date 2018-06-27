@@ -8,58 +8,62 @@
     <title>Hello Vova!</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="../second/main.scss">
 </head>
 <body>
-<header class="container-fluid">
-        <div class="header-top-line container-fluid">
-            <ul>
-                <li><i class="fa fa-home"></i></li>
-                <li>about us</li>
-                <li>pages</li>
-                <li>services</li>
-                <li>menu</li>
-                <li>gallery</li>
-                <li>blog</li>
-                <li>contact</li>
-            </ul>
+<header class="container-fluid header">
+    <div class="header-top-line">
+        <ul class="header-top-line__menu">
+            <!--todo add class-->
+            <li class="header-top-line__menu-item"><i class="fa fa-home"></i></li>
+            <li class="header-top-line__menu-item">about us</li>
+            <li class="header-top-line__menu-item">pages</li>
+            <li class="header-top-line__menu-item">services</li>
+            <li class="header-top-line__menu-item">menu</li>
+            <li class="header-top-line__menu-item">gallery</li>
+            <li class="header-top-line__menu-item">blog</li>
+            <li class="header-top-line__menu-item">contact</li>
+        </ul>
+    </div>
+    <div class="container header-title-section">
+        <div class="header-title-section__contacts">
+            <p><i class="fa fa-phone"></i>123-456-7890</p>
+            <p>info@yoursite.com</p>
         </div>
-        <div class="header-title container">
-            <div class="header-title-left">
-                <p><i class="fa fa-phone"></i>123-456-7890</p>
-                <p>info@yoursite.com</p>
-            </div>
-            <div class="header-title-center">
-                <h1>Royal<br>events<br></h1>
-                <p>catering</p>
-            </div>
-            <div class="header-title-right">
-                <p><i class="fa fa-shopping-cart"></i>your cart:</p>
-                <p>0 items - $0.00</p>
-            </div>
+        <div class="header-title-section__title">
+            <h1>Royal<br>events<br></h1>
+            <p>catering</p>
         </div>
-        <div class="header-main container-fluid">
-            <div class="header-main-text">
-                a perfect blend of <br>sensational food<br>
-            </div>
-            <button class="app-button large">
-                order servise
-            </button>
-            <div class="circles">
-                <div class="active"></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <i class="fa fa-angle-down"></i>
+        <div class="header-title-section__basket">
+            <p><i class="fa fa-shopping-cart"></i>your cart:</p>
+            <p>0 items - $0.00</p>
         </div>
+    </div>
+
+
+    <div class="header-main container-fluid">
+        <div class="header-main-text">
+            a perfect blend of <br>sensational food<br>
+        </div>
+        <button class="app-button large">
+            order servise
+        </button>
+        <div class="circles">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <i class="fa fa-angle-down"></i>
+    </div>
 </header>
 <div class="container">
-        <div class="app-title dark">
-            <p class="app-title-section">catering</p>
-            <h2 class="app-title-description">Welcome to the Best<br>Catering Company<br></h2>
-        </div>
+    <div class="app-title dark">
+        <p class="app-title-section">catering</p>
+        <h2 class="app-title-description">Welcome to the Best<br>Catering Company<br></h2>
+    </div>
     <div class="row welcome">
         <div class="col">
             Events
@@ -87,8 +91,13 @@
         <div class="row">
             <div class="col p-0 left-picture"></div>
             <div class="col card p-0">
-                <h5 class="card-title">A Perfect Blend of Sensational Food,<br>Inspiring Ideas and Professional Staff<br></h5>
-                <p class="card-text"><span>1997</span> - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cupiditate deleniti dolores dolorum eligendi exercitationem facilis illum in itaque minus necessitatibus nobis non quam quia, repellat reprehenderit soluta voluptatem! Asperiores delectus distinctio dolore dolorum est, eum in ipsam laboriosam magnam odit officia officiis possimus praesentium quaerat quasi quisquam sed totam, vel veniam, veritatis vitae?</p>
+                <h5 class="card-title">A Perfect Blend of Sensational Food,<br>Inspiring Ideas and Professional
+                    Staff<br></h5>
+                <p class="card-text"><span>1997</span> - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                    cupiditate deleniti dolores dolorum eligendi exercitationem facilis illum in itaque minus
+                    necessitatibus nobis non quam quia, repellat reprehenderit soluta voluptatem! Asperiores delectus
+                    distinctio dolore dolorum est, eum in ipsam laboriosam magnam odit officia officiis possimus
+                    praesentium quaerat quasi quisquam sed totam, vel veniam, veritatis vitae?</p>
                 <button class="app-button rfs">read full story</button>
             </div>
         </div>
@@ -98,24 +107,24 @@
         <h2 class="app-title-description">our menu</h2>
     </div>
     <div class="container">
-    <div class="row menu">
-        <div class="col">
-            <p>canapes</p>
-            <i class="fa fa-angle-down"></i>
+        <div class="row menu">
+            <div class="col">
+                <p>canapes</p>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="col">
+                <p>small plates</p>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="col">
+                <p>sweets</p>
+                <i class="fa fa-angle-down"></i>
+            </div>
+            <div class="col">
+                <p>drinks</p>
+                <i class="fa fa-angle-down"></i>
+            </div>
         </div>
-        <div class="col">
-            <p>small plates</p>
-            <i class="fa fa-angle-down"></i>
-        </div>
-        <div class="col">
-            <p>sweets</p>
-            <i class="fa fa-angle-down"></i>
-        </div>
-        <div class="col">
-            <p>drinks</p>
-            <i class="fa fa-angle-down"></i>
-        </div>
-    </div>
     </div>
     <div class="quote">& mush more sensational food & drinks...</div>
     <button class="app-button vfm">view full menu</button>
@@ -146,7 +155,7 @@
             <h4>private paties</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum ducimus quis vero?</p>
         </div>
-            </div>
+    </div>
 </div>
 <div class="container-fluid under-main">
     <div class="app-title white two">
@@ -161,7 +170,8 @@
     <div class="container testimonials">
         <div class="row">
             <div class="col content">
-                <p>“Having worked with a number of caterers over the years, their level of service was notably<br>high and they were integral to making the day a success"<br></p>
+                <p>“Having worked with a number of caterers over the years, their level of service was notably<br>high
+                    and they were integral to making the day a success"<br></p>
                 <i class="fa fa-angle-down left"></i>
                 <i class="fa fa-angle-down right"></i>
                 <div class="quote">laura & Adam Ashley, NY</div>
@@ -200,7 +210,11 @@
             <div class="row">
                 <div class="col p-0 pre-footer-picture"></div>
                 <div class="col card p-0 pre-footer-text">
-                    <p class="card-text-one">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat  nulla facilisis at vero eros.”</p>
+                    <p class="card-text-one">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
+                        veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                        consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                        consequat, vel illum dolore eu feugiat nulla facilisis at vero eros.”</p>
                     <p class="card-text-two"><span>andreo moreno,</span>master-chef</p>
                     <button class="app-button vat">view all team</button>
                 </div>
@@ -237,18 +251,22 @@
     </div>
     <div class="container-fluid ">
         <div class="row">
-        <div class="col-md-8">
-            <div class="row">
-                <div class="col picture-item"><img src="img/gallery/Depositphotos_12475271_original.png" alt=""></div>
-                <div class="col picture-item"><img src="img/gallery/Depositphotos_58523849_original.png" alt=""></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col picture-item"><img src="img/gallery/Depositphotos_12475271_original.png" alt="">
+                    </div>
+                    <div class="col picture-item"><img src="img/gallery/Depositphotos_58523849_original.png" alt="">
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col picture-item"><img src="img/gallery/Depositphotos_92197920_original.png" alt="">
+                    </div>
+                    <div class="col picture-item"><img src="img/gallery/Depositphotos_69659075_original.png" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="row second-row">
-                <div class="col picture-item"><img src="img/gallery/Depositphotos_92197920_original.png" alt=""></div>
-                <div class="col picture-item"><img src="img/gallery/Depositphotos_69659075_original.png" alt=""></div>
-            </div>
-        </div>
             <div class="col-md-4 picture-item"><img src="img/gallery/Depositphotos_94164600_original.png" alt=""></div>
-    </div>
+        </div>
     </div>
     <button class="app-button vmp">view more projects</button>
     <div class="container-fluid form-item">
@@ -256,18 +274,35 @@
             <p class="app-title-section">contact us</p>
             <h2 class="app-title-description">leave a feadback or<br>pask a question<br></h2>
         </div>
-        <form>
-            <form>
-                <div class="row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="First name">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name">
-                    </div>
-                </div>
-            </form>
-        </form>
+        <div class="container app-contact-container">
+            <input type="text" class="app-form-control" placeholder="your name:">
+            <input type="email" class="app-form-control" placeholder="e-mail address:">
+            <textarea class="app-form-control" placeholder="send a message:"></textarea>
+        </div>
+        <button class="app-button vmp">send message</button>
+        <i class="fa fa-angle-down bottom"></i>
+    </div>
+    <div class="header-title container">
+        <div class="header-title-left">
+            <p>123-456-7890</p>
+            <p>info@yoursite.com</p>
+        </div>
+        <div class="header-title-center">
+            <h1>Royal<br>events<br></h1>
+            <p>catering</p>
+        </div>
+        <div class="header-title-right">
+            <p>123, new lenox</p>
+            <p>chicago, il 60606</p>
+        </div>
+    </div>
+    <div class="under-footer">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-tumblr"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+    <div class="copyright">ancora © 2016 all rights reserved <span>terms of use</span> and <span>privacy policy</span>
     </div>
 </footer>
 </body>

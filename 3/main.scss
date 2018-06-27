@@ -1,5 +1,47 @@
 @import "base/reset.scss";
 @import "base/index.scss";
+@import "components";
 @import "header.css";
 
 $font-fallback: Verdana, serif, sans-serif;
+
+//BLOCK
+//ELEMENT
+//MODIFICATOR
+
+
+//
+//.header-title-section {
+//    &__contacts {
+//        &--active {
+//
+//        }
+//    }
+//
+//  &--active {
+//
+//  }
+//}
+//
+//
+//.header-title-section {
+//
+//}
+//
+//.header-title-section__contacts {
+//
+//}
+//
+//.header-title-section__contacts {
+//
+//}
+//
+//.header-top-line {
+//  &__menu {
+//
+//  }
+//
+//  &__menu-item {
+//
+//  }
+//}

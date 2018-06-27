@@ -1,44 +1,27 @@
 @import "fonts.css";
-
-
-$light-brown: #f3f1ec;
-$brown: #808369;
-$vanil:#ffb18b;
-$grey: #929292;
-$light-black: #434343;
-$font-fallback: Verdana, serif, sans-serif;
-$font-xs-small: 14px;
-$font-sm-small: 20px;
-$font-md-small: 30px;
-$font-lg-small: 40px;
-
+@import "var";
 
 header {
   color: $brown;
-
-}
-
-.container {
-  width: 1170px;
-  margin: 0 auto;
+  font-family: 'pt_serifbold', $font-fallback;
+  text-transform: uppercase;
 }
 
 .header-top-line {
   position: relative;
   background-color: $light-brown;
 
-  ul {
+  &__menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'pt_serifbold', $font-fallback;
     text-transform: uppercase;
     height: 56px;
     font-size: $font-xs-small;
     font-weight: 700;
     cursor: pointer;
 
-    li {
+    &-item {
       border-left: 1px solid #d0ceca;
       padding: 0 25px;
 
@@ -53,7 +36,7 @@ header {
   }
 }
 
-.header-title {
+.header-title-section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -64,49 +47,39 @@ header {
     repeat: no-repeat;
     position: bottom center;
   }
+  font-size: $font-xs-small;
   letter-spacing: 1px;
 
-  &-left {
+  &__contacts {
     text-align: right;
-    font-size: $font-xs-small;
-    text-transform: uppercase;
     line-height: 20px;
     font-weight: 700;
     width: 180px;
 
     i.fa.fa-phone {
       padding-left: 5px;
-      -moz-transform: scale(-1, 1);
-      -webkit-transform: scale(-1, 1);
-      -o-transform: scale(-1, 1);
       transform: scale(-1, 1);
       filter: flipH();
-      -ms-filter: "FlipH";
     }
   }
 
-  &-center {
+  &__contacts {
     text-align: center;
     h1 {
       font-family: 'yellowtailregular', $font-fallback;
       font-size: 45px;
       color: #434343;
       line-height: .7;
+      text-transform: none;
     }
 
     p {
-      font-size: 12px;
-      font-family: 'pt_serifbold', $font-fallback;
-      text-transform: uppercase;
-      text-align: center;
       margin-top: 14px;
     }
   }
 
-  &-right {
+  &__basket {
     text-align: right;
-    font-size: $font-xs-small;
-    text-transform: uppercase;
     line-height: 20px;
     font-weight: 700;
     width: 180px;
@@ -117,45 +90,35 @@ header {
   }
 }
 
-header i.fa.fa-angle-down {
-  display: block;
-  width: 10px;
-  margin: 62px auto 0;
-}
-
-
 .header-main {
-  background-image: url("img/test.png");
   min-height: 773px;
-    background: {
+  background: {
     repeat: no-repeat;
     position: top center;
     size: contain;
+    image: url("img/test.png");
   }
-  padding-top: 245px;
   margin-bottom: 110px;
+  padding-top: 245px;
+  position: relative;
+
+  i.fa.fa-angle-down {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
   }
+}
 
 .header-main-text {
   font-size: 60px;
-  font-family: 'pt_serifbold', $font-fallback;
-  text-transform: uppercase;
-  color: white;
+  color: #fff;
   text-align: center;
   position: relative;
 
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 111px;
-    height: 2px;
-    background-color: white;
-    top: -53px;
-    left: 50%;
-    margin-left: -55px;
-
-  }
+  &:before,
   &:after {
     content: '';
     display: block;
@@ -163,65 +126,16 @@ header i.fa.fa-angle-down {
     width: 111px;
     height: 2px;
     background-color: white;
-    bottom: -53px;
     left: 50%;
-    margin-left: -55px;
-  }
-}
-
-.app-button {
-  display: block;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  font-family: 'pt_serifbold', $font-fallback;
-  color: white;
-  background-color: $vanil;
-  transition: .5s;
-  width: 243px;
-  height: 60px;
-
-&.large {
-  font-size: $font-xs-small;
-  width: 273px;
-  height: 72px;
-  margin: 113px auto;
-}
-
-&.mas {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 103px auto;
-}
-  &.rfs {
-    margin-left: 86px;
-    margin-top: 60px;
+    transform: translate(-50%);
   }
 
-  &.vfm {
-    margin: 58px auto;
-  }
+  &:before {
+    top: -50px;
 
-  &.ms {
-    margin: 65px auto 0;
   }
-
-  &.ma {
-    margin: 74px auto 0;
-  }
-
-  &.vat{
-  margin-top: 57px;
-  }
-
-  &.vmp {
-    margin: 57px auto 110px;
-  }
-
-  &:hover {
-    color: black;
-    border-radius: 15px;
-    background-color: $brown;
+  &:after {
+    bottom: -50px;
   }
 }
 
@@ -235,7 +149,7 @@ header i.fa.fa-angle-down {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(#fff, .5);
     cursor: pointer;
 
     &.active {
@@ -243,43 +157,9 @@ header i.fa.fa-angle-down {
     }
 
     &:hover:not(.active) {
-      background-color: #ffffff;
+      background-color: #fff;
     }
   }
-}
-
-
-.under-header {
-  text-align: center;
-  font-family: 'pt_serifbold', $font-fallback;
-  background: {
-    image: url("img/Vector Smart Object1.png");
-    repeat: no-repeat;
-    position: top center;
-  }
-  position: relative;
-  p {
-    font-size: $font-xs-small;
-    text-transform: uppercase;
-   color: $brown;
-    margin-bottom: 15px;
-  }
-  h2 {
- color: #434343;
-    font-size: 35px;
- }
-
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 111px;
-    height: 2px;
-    background-color: #a7a99a;
-    bottom: -42px;
-    left: 50%;
-    margin-left: -55px;
-      }
 }
 
 .welcome .col {
@@ -300,7 +180,7 @@ header i.fa.fa-angle-down {
     cursor: pointer;
   }
 
-  &:nth-child(1) {
+  &:first-child {
     background-image: url("img/Events.png");
     margin-right: 30px;
   }
@@ -315,87 +195,16 @@ header i.fa.fa-angle-down {
 }
 
 .welcome {
-  font-family: 'yellowtailregular', $font-fallback;
-  font-size: 45px;
-  font-weight: 400;
+  font: {
+    family: 'yellowtailregular', $font-fallback;
+    size: 45px;
+    weight: 400;
+  }
   line-height: 35px;
   text-align: center;
-  color:  #fff;
+  color: #fff;
   margin-top: 106px;
   height: 473px;
-}
-
-.app-title {
-  font-family: 'pt_serifbold', $font-fallback;
-  text-align: center;
-  background: {
-    repeat: no-repeat;
-    position: center top;
-  }
-  position: relative;
-
-    &.dark {
-      background-image: url("img/Vector Smart Object1.png");
-      &.one {
-        margin-bottom: 112px;
-      }
-      &.two {
-        margin-top: 293px;
-      }
-
-      &.three {
-        padding-top: 110px;
-        background-position: center 110px;
-      }
-
-      .app-title-section {
-      color: #808369;
-    }
-
-    .app-title-description {
-      color: #434343;
-    }
-  }
-
-  &.white {
-    color: white;
-    background-image: url("img/Vector Smart Object copy 9.png");
-
-    &.one {
-      background: {
-        position: center 110px;
-      }
-      padding-top: 110px;
-    }
-    &.two {
-      background-position: center 193px;
-      padding-top: 193px;
-    }
-  }
-
-  &-section {
-    font-size: $font-xs-small;
-    text-transform: uppercase;
-    padding-bottom: 25px;
-  }
-
-  &-description {
-    text-transform: capitalize;
-    font-size: 35px;
-    font-weight: 700;
-  }
-
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 111px;
-    height: 2px;
-    background-color: #a7a99a;
-    bottom: -42px;
-    left: 50%;
-    margin-left: -55px;
-  }
 }
 
 .story {
@@ -406,29 +215,29 @@ header i.fa.fa-angle-down {
 .main {
   background: {
     image: url("img/About bg.png");
-    color: #f3f1ec;
+    color: $light-brown;
     repeat: no-repeat;
     position: top center;
   }
-  min-height: 100vh;
   position: relative;
   padding-bottom: 120px;
   margin-bottom: 110px;
 
   .quote {
     text-align: center;
+    //todo refactor
     font-family: 'pt_serifbold', $font-fallback;
     font-size: 20px;
     font-weight: 700;
     line-height: 33px;
-    color:  #808369;
+    color: #808369;
     padding-top: 56px;
   }
 }
 
 .card {
   background-color: #fff;
-  }
+}
 
 .left-picture {
   background: {
@@ -440,6 +249,7 @@ header i.fa.fa-angle-down {
 }
 
 .card-title {
+  //todo refactor
   font-family: 'pt_serifbold', $font-fallback;
   font-size: 22px;
   font-weight: 700;
@@ -447,12 +257,13 @@ header i.fa.fa-angle-down {
   text-align: left;
   padding-left: 86px;
   padding-top: 94px;
-  color:  #808369;
+  color: #808369;
 }
 
 .card-text {
   padding-top: 36px;
   color: #929292;
+  //todo refactor
   font-family: 'pt_serifregular', $font-fallback;
   font-size: $font-xs-small;
   font-weight: 400;
@@ -465,11 +276,11 @@ header i.fa.fa-angle-down {
     font-family: 'pt_serifbold', $font-fallback;
     font-size: 22px;
     color: #434343;
-
   }
 }
 
 .menu {
+  //todo refactor
   font-family: 'pt_serifbold', $font-fallback;
   font-size: 16px;
   font-weight: 700;
@@ -477,7 +288,7 @@ header i.fa.fa-angle-down {
   margin-top: 106px;
   text-transform: uppercase;
   color: #808369;
-  }
+}
 
 .menu .col {
   background: {
@@ -486,22 +297,22 @@ header i.fa.fa-angle-down {
     position: center 15px;
   }
   position: relative;
-  border-bottom: none ;
+  border-bottom: none;
   width: 240px;
   height: 270px;
   margin-right: 20px;
 
   p {
-    background-image: radial-gradient(at top, #f5f5f3 19px, white 120px, white 240px);
+    background-image: radial-gradient(at top, #f5f5f3 19px,
+            white 120px,
+            white 240px);
     height: 95px;
     width: 240px;
     position: absolute;
     bottom: 0;
     text-align: center;
     padding-top: 27px;
-
-
-    }
+  }
 
   &:nth-child(1) {
     background-image: url("img/canapes.png");
@@ -580,20 +391,22 @@ header i.fa.fa-angle-down {
         content: "0" counter(section);
         counter-increment: section;
         position: absolute;
+
+        //todo refactor
         font-size: $font-lg-small;
         line-height: 28px;
         font-weight: 700;
-        color:  #eae8e0;
+        color: #eae8e0;
         display: block;
         right: -62px;
         top: 2px;
         box-sizing: border-box;
       }
-      }
+    }
   }
 
   &-picture {
-  display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -619,10 +432,11 @@ header i.fa.fa-angle-down {
         content: "0" counter(list);
         counter-increment: list;
         position: absolute;
+        //todo refactor
         font-size: $font-lg-small;
         line-height: 28px;
         font-weight: 700;
-        color:  #eae8e0;
+        color: #eae8e0;
         display: block;
         left: -62px;
         top: 2px;
@@ -630,7 +444,7 @@ header i.fa.fa-angle-down {
       }
     }
   }
-  }
+}
 
 .under-main {
   background: {
@@ -639,7 +453,7 @@ header i.fa.fa-angle-down {
     repeat: no-repeat;
     position: top center;
   }
-  min-height: 100vh;
+  //todo refactor
   position: relative;
   padding-bottom: 119px;
   margin-bottom: 110px;
@@ -647,8 +461,7 @@ header i.fa.fa-angle-down {
   font-family: 'pt_serifbold', $font-fallback;
 
   .testimonials {
-  margin-top: 159px;
-
+    margin-top: 159px;
 
     .content {
       height: 259px;
@@ -679,7 +492,7 @@ header i.fa.fa-angle-down {
         }
       }
 
-       .fa-angle-down {
+      .fa-angle-down {
         display: block;
         position: absolute;
         bottom: 50%;
@@ -691,8 +504,9 @@ header i.fa.fa-angle-down {
         height: 52px;
         text-align: center;
         line-height: 30px;
-         border-radius: 50%;
+        border-radius: 50%;
 
+        //todo use another icon and remove this stuff
         &.left {
           transform: rotate(90deg) translateX(50%) translateY(100%);
         }
@@ -700,26 +514,31 @@ header i.fa.fa-angle-down {
           transform: rotate(-90deg) translateX(-50%);
           right: -37px;
         }
-      }}
-      .quote {
-        font-size: $font-xs-small;
-        color: $grey;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 711px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 68px;
-        margin: 0 auto;
-        background: {
-          color: #fbfbfa;
-          image: repeating-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(247, 247, 245) 50%, rgb(255, 255, 255) 100%);
-        }
       }
-    }}
+    }
+    .quote {
+      font-size: $font-xs-small;
+      color: $grey;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 711px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 68px;
+      margin: 0 auto;
+      background: {
+        color: #fbfbfa;
+        image: repeating-linear-gradient(90deg,
+                rgb(255, 255, 255) 0%,
+                rgb(247, 247, 245) 50%,
+                rgb(255, 255, 255) 100%);
+      }
+    }
+  }
+}
 
 .articles .col {
   background: {
@@ -741,14 +560,15 @@ header i.fa.fa-angle-down {
   }
 
   h6 {
-   font-size: $font-sm-small;
+    font-size: $font-sm-small;
     font-weight: 700;
     line-height: 33px;
-   color: $light-black;
+    color: $light-black;
     text-transform: capitalize;
     position: relative;
 
     &:after {
+      //todo use mixin @include pseudo()
       content: '';
       display: block;
       position: absolute;
@@ -772,7 +592,12 @@ header i.fa.fa-angle-down {
   &:nth-child(3) {
     background-image: url("img/Depositphotos_10888700_original.png");
   }
-  }
+}
+
+footer {
+  color: $brown;
+  font-family: 'pt_serifbold', $font-fallback;
+}
 
 .footer {
   background: {
@@ -781,76 +606,76 @@ header i.fa.fa-angle-down {
     repeat: no-repeat;
     position: top center;
   }
-  min-height: 100vh;
   position: relative;
   padding-bottom: 109px;
   margin-bottom: 110px;
 
+  .pre-footer {
+    margin-top: 106px;
+    margin-bottom: 110px;
 
-.pre-footer {
-  margin-top: 106px;
-  margin-bottom: 110px;
-
-  .pre-footer-picture {
-    background: {
-      image: url('img/Depositphotos_42938439_original.png');
-      position: center center;
-      size: cover;
-    }
-    height: 541px;
-  }
-
-  .pre-footer-text {
-    padding-top: 94px;
-    padding-left: 71px;
-    font-family: 'pt_serifregular', $font-fallback;
-    font-size: $font-xs-small;
-    font-weight: 400;
-    line-height: 24px;
-    color: $grey;
-
-    .card-text-one {
-      width: 412px;
-      box-sizing: content-box;
-      position: relative;
-
-      &:before {
-        content: '';
-        background: url('img/cov.png');;
-        display: block;
-        position: absolute;
-        height: 45px;
-        width: 62px;
-        top: -12px;
-        left: -2px;
-    }
-    }
-    .card-text-two {
-    padding-top: 82px;
-      text-transform: capitalize;
-      position: relative;
-
-      span {
-        font-family: 'pt_serifbold', $font-fallback;
-        font-size: $font-sm-small;
-        color: $brown;
-        font-weight: 700;
-        line-height: 35px;
-        padding-right: 14px;
+    .pre-footer-picture {
+      background: {
+        image: url('img/Depositphotos_42938439_original.png');
+        position: center center;
+        size: cover;
       }
+      height: 541px;
+    }
 
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 111px;
-        height: 2px;
-        background-color: #a7a99a;
-        top: 39px;
+    .pre-footer-text {
+      padding-top: 94px;
+      padding-left: 71px;
+      font-family: 'pt_serifregular', $font-fallback;
+      font-size: $font-xs-small;
+      font-weight: 400;
+      line-height: 24px;
+      color: $grey;
 
-      }
+      .card-text-one {
+        width: 412px;
+        box-sizing: content-box;
+        position: relative;
+
+        &:before {
+          content: '';
+          background: url('img/cov.png');;
+          display: block;
+          position: absolute;
+          height: 45px;
+          width: 62px;
+          top: -12px;
+          left: -2px;
         }
-  }
+      }
+      .card-text-two {
+        padding-top: 82px;
+        text-transform: capitalize;
+        position: relative;
+
+        span {
+          font-family: 'pt_serifbold', $font-fallback;
+          font-size: $font-sm-small;
+          color: $brown;
+          font-weight: 700;
+          line-height: 35px;
+          padding-right: 14px;
+        }
+
+        &:before {
+
+          //todo mixin
+          content: '';
+          display: block;
+          position: absolute;
+          width: 111px;
+          height: 2px;
+          background-color: #a7a99a;
+          top: 39px;
+
+        }
+      }
+    }
   }
 }
 
@@ -868,7 +693,6 @@ header i.fa.fa-angle-down {
     font-size: $font-sm-small;
     color: $brown;
     padding-top: 291px;
-
   }
 
   p {
@@ -911,5 +735,117 @@ header i.fa.fa-angle-down {
 
 .form-item {
   background-color: $light-brown;
+  position: relative;
+  padding-bottom: 110px;
+  height: 100%;
+  font-size: $font-xs-small;
+  font-family: 'pt_serifbold', $font-fallback;
+  color: $brown;
+  margin-bottom: 152px;
+
+  .bottom {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    background-color: #fff;
+    width: 117px;
+    height: 85px;
+    text-align: center;
+    border-radius: 50%;
+    left: 50%;
+    //todo refactor
+    transform: rotate(180deg) translateY(-50%) translateX(50%);
+    line-height: 104px;
+    overflow: hidden;
+
+  }
+  &:after {
+    content: 'top';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    text-transform: uppercase;
+  }
 }
 
+.app-contact-container {
+  display: flex;
+  //todo refactor
+  padding-right: 200px;
+  padding-left: 200px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  textarea {
+    resize: none;
+    width: 100%;
+    height: 208px;
+    padding: {
+      top: 20px;
+      right: 20px;
+    }
+  }
+}
+
+.app-form-control {
+  //todo refactor
+  font-family: 'pt_serifbold', $font-fallback;
+  font-size: $font-xs-small;
+  outline: none;
+  border: none;
+  color: $brown;
+  padding-left: 43px;
+  text-transform: uppercase;
+}
+
+input[type=text],
+input[type=email] {
+  width: 48%;
+  height: 66px;
+  line-height: 66px;
+  margin-bottom: 30px;
+  margin-top: 107px;
+}
+
+.under-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  //todo refactor
+  padding-right: 8px;
+  padding-bottom: 42px;
+
+  i {
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: $light-grey;
+    text-align: center;
+    color: #ffffff;
+    font-size: $font-xs-small;
+    line-height: 42px;
+    cursor: pointer;
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  text-transform: capitalize;
+  color: $grey;
+  font-size: $font-xs-small;
+  font-family: 'pt_serifregular', $font-fallback;
+  padding-bottom: 42px;
+
+  span {
+    text-decoration: underline;
+  }
+}
