@@ -40,7 +40,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 51px;
+  padding-top: 51px;
   height: 110px;
   background: {
     image: url("img/Vector Smart Object.png");
@@ -63,7 +63,7 @@ header {
     }
   }
 
-  &__contacts {
+  &__title {
     text-align: center;
     h1 {
       font-family: 'yellowtailregular', $font-fallback;
@@ -102,6 +102,55 @@ header {
   padding-top: 245px;
   position: relative;
 
+  &-text {
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 111px;
+      height: 2px;
+      background-color: white;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    &:before {
+      top: -50px;
+
+    }
+    &:after {
+      bottom: -50px;
+    }
+  }
+
+  &-circles {
+    display: flex;
+    justify-content: space-between;
+    width: 84px;
+    margin: 89px auto 0;
+
+    &-item {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgba(#fff, .5);
+      cursor: pointer;
+
+      .active {
+        background-color: #4e5b61;
+      }
+
+      &:hover:not(active) {
+        background-color: #fff;
+      }
+    }
+  }
   i.fa.fa-angle-down {
     display: block;
     position: absolute;
@@ -112,107 +161,7 @@ header {
   }
 }
 
-.header-main-text {
-  font-size: 60px;
-  color: #fff;
-  text-align: center;
-  position: relative;
-
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 111px;
-    height: 2px;
-    background-color: white;
-    left: 50%;
-    transform: translate(-50%);
-  }
-
-  &:before {
-    top: -50px;
-
-  }
-  &:after {
-    bottom: -50px;
-  }
-}
-
-.circles {
-  display: flex;
-  justify-content: space-between;
-  width: 84px;
-  margin: 89px auto 0;
-
-  div {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgba(#fff, .5);
-    cursor: pointer;
-
-    &.active {
-      background-color: #4e5b61;
-    }
-
-    &:hover:not(.active) {
-      background-color: #fff;
-    }
-  }
-}
-
-.welcome .col {
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  position: relative;
-
-  .fa-angle-down {
-    display: block;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    color: #808369;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  &:first-child {
-    background-image: url("img/Events.png");
-    margin-right: 30px;
-  }
-
-  &:nth-child(2) {
-    background-image: url("img/Food&Drinks.png");
-    margin-right: 30px;
-  }
-  &:nth-child(3) {
-    background-image: url("img/Venues.png");
-  }
-}
-
-.welcome {
-  font: {
-    family: 'yellowtailregular', $font-fallback;
-    size: 45px;
-    weight: 400;
-  }
-  line-height: 35px;
-  text-align: center;
-  color: #fff;
-  margin-top: 106px;
-  height: 473px;
-}
-
-.story {
-  margin-top: 106px;
-  margin-bottom: 110px;
-}
-
-.main {
+.app-about {
   background: {
     image: url("img/About bg.png");
     color: $light-brown;
@@ -223,130 +172,209 @@ header {
   padding-bottom: 120px;
   margin-bottom: 110px;
 
-  .quote {
-    text-align: center;
-    //todo refactor
-    font-family: 'pt_serifbold', $font-fallback;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 33px;
+  &-section {
+    padding: {
+      top: 106px;
+      bottom: 110px;
+    }
+
+    &-picture {
+      background: {
+        image: url('img/about-us-im.png');
+        position: center center;
+        size: cover;
+      }
+      height: 541px;
+    }
+
+    .card {
+      background-color: #fff;
+    }
+
+    &-card__title {
+      font: {
+        family: 'pt_serifbold', $font-fallback;
+        size: 22px;
+        weight: 700;
+      }
+      line-height: 33px;
+      text-align: left;
+      padding: {
+        left: 86px;
+        top: 94px;
+      }
+      color: #808369;
+    }
+
+    &-card__text {
+      padding-top: 36px;
+      color: #929292;
+      font: {
+        family: 'pt_serifregular', $font-fallback;
+        size: $font-xs-small;
+        weight: 400;
+      }
+      line-height: 24px;
+      padding-left: 86px;
+      width: 385px;
+      box-sizing: content-box;
+
+      span {
+        font-family: 'pt_serifbold', $font-fallback;
+        font-size: 22px;
+        color: #434343;
+      }
+    }
+  }
+  .app-menu {
+    font: {
+      family: 'pt_serifbold', $font-fallback;
+      size: 16px;
+      weight: 700;
+    }
+    margin-top: 106px;
+    text-transform: uppercase;
     color: #808369;
-    padding-top: 56px;
+
+    .col {
+      background: {
+        repeat: no-repeat;
+        color: #fff;
+        position: center 15px;
+      }
+      position: relative;
+      border-bottom: none;
+      width: 240px;
+      height: 270px;
+      margin-right: 20px;
+
+      p {
+        background-image: radial-gradient(at top, #f5f5f3 19px,
+                white 120px,
+                white 240px);
+        height: 95px;
+        width: 240px;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        padding-top: 27px;
+      }
+
+      &:nth-child(1) {
+        background-image: url("img/canapes.png");
+      }
+
+      &:nth-child(2) {
+        background-image: url("img/small_plates.png");
+      }
+
+      &:nth-child(3) {
+        background-image: url("img/sweets.png");
+      }
+
+      &:nth-child(4) {
+        background-image: url("img/drinks.png");
+        margin-right: 0;
+      }
+      .fa-angle-down {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        color: #808369;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #f3f2ed;
+        width: 38px;
+        height: 19px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        transform: translateX(-50%);
+      }
+    }
   }
 }
 
-.card {
-  background-color: #fff;
-}
-
-.left-picture {
-  background: {
-    image: url('img/about-us-im.png');
-    position: center center;
-    size: cover;
-  }
-  height: 541px;
-}
-
-.card-title {
+.quote {
+  text-align: center;
   //todo refactor
   font-family: 'pt_serifbold', $font-fallback;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 33px;
-  text-align: left;
-  padding-left: 86px;
-  padding-top: 94px;
   color: #808369;
+  padding-top: 56px;
 }
 
-.card-text {
-  padding-top: 36px;
-  color: #929292;
-  //todo refactor
-  font-family: 'pt_serifregular', $font-fallback;
-  font-size: $font-xs-small;
-  font-weight: 400;
-  line-height: 24px;
-  padding-left: 86px;
-  width: 385px;
-  box-sizing: content-box;
-
-  span {
-    font-family: 'pt_serifbold', $font-fallback;
-    font-size: 22px;
-    color: #434343;
-  }
-}
-
-.menu {
-  //todo refactor
-  font-family: 'pt_serifbold', $font-fallback;
-  font-size: 16px;
-  font-weight: 700;
-
-  margin-top: 106px;
-  text-transform: uppercase;
-  color: #808369;
-}
-
-.menu .col {
-  background: {
-    repeat: no-repeat;
-    color: #fff;
-    position: center 15px;
-  }
-  position: relative;
-  border-bottom: none;
-  width: 240px;
-  height: 270px;
-  margin-right: 20px;
-
-  p {
-    background-image: radial-gradient(at top, #f5f5f3 19px,
-            white 120px,
-            white 240px);
-    height: 95px;
-    width: 240px;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    padding-top: 27px;
-  }
-
-  &:nth-child(1) {
-    background-image: url("img/canapes.png");
-  }
-
-  &:nth-child(2) {
-    background-image: url("img/small_plates.png");
-  }
-
-  &:nth-child(3) {
-    background-image: url("img/sweets.png");
-  }
-
-  &:nth-child(4) {
-    background-image: url("img/drinks.png");
-    margin-right: 0;
-  }
-  .fa-angle-down {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    color: #808369;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #f3f2ed;
-    width: 38px;
-    height: 19px;
-    text-align: center;
-    line-height: 30px;
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    transform: translateX(-50%);
-  }
-}
+//.app-menu {
+//  //todo refactor
+//  font-family: 'pt_serifbold', $font-fallback;
+//  font-size: 16px;
+//  font-weight: 700;
+//
+//  margin-top: 106px;
+//  text-transform: uppercase;
+//  color: #808369;
+//}
+//
+//.app-menu .col {
+//  background: {
+//    repeat: no-repeat;
+//    color: #fff;
+//    position: center 15px;
+//  }
+//  position: relative;
+//  border-bottom: none;
+//  width: 240px;
+//  height: 270px;
+//  margin-right: 20px;
+//
+//  p {
+//    background-image: radial-gradient(at top, #f5f5f3 19px,
+//            white 120px,
+//            white 240px);
+//    height: 95px;
+//    width: 240px;
+//    position: absolute;
+//    bottom: 0;
+//    text-align: center;
+//    padding-top: 27px;
+//  }
+//
+//  &:nth-child(1) {
+//    background-image: url("img/canapes.png");
+//  }
+//
+//  &:nth-child(2) {
+//    background-image: url("img/small_plates.png");
+//  }
+//
+//  &:nth-child(3) {
+//    background-image: url("img/sweets.png");
+//  }
+//
+//  &:nth-child(4) {
+//    background-image: url("img/drinks.png");
+//    margin-right: 0;
+//  }
+//  .fa-angle-down {
+//    display: block;
+//    position: absolute;
+//    bottom: 0;
+//    left: 50%;
+//    color: #808369;
+//    font-size: 16px;
+//    cursor: pointer;
+//    background-color: #f3f2ed;
+//    width: 38px;
+//    height: 19px;
+//    text-align: center;
+//    line-height: 30px;
+//    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+//    transform: translateX(-50%);
+//  }
+//}
 
 .event {
   font-family: 'pt_serifbold', $font-fallback;

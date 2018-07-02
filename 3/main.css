@@ -163,12 +163,12 @@ ul, ol {
     width: 273px;
     height: 72px;
     margin: 113px auto; }
-  .app-button.mas {
+  .app-button.catering {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 103px auto; }
-  .app-button.rfs {
+  .app-button.about {
     margin-left: 86px;
     margin-top: 60px; }
   .app-button.vfm {
@@ -208,7 +208,7 @@ ul, ol {
   .app-title.white {
     color: white;
     background-image: url("img/Vector Smart Object copy 9.png"); }
-    .app-title.white.one {
+    .app-title.white.about {
       background-position: center 110px;
       padding-top: 110px; }
     .app-title.white.two {
