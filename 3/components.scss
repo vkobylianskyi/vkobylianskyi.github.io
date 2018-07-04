@@ -1,4 +1,5 @@
 @import "var";
+@import "base/api.scss";
 
 .container {
   width: 1170px;
@@ -72,10 +73,10 @@
 
   &.dark {
     background-image: url("img/Vector Smart Object1.png");
-    &.one {
+    &.blog {
       margin-bottom: 112px;
     }
-    &.two {
+    &.book {
       margin-top: 293px;
     }
 
@@ -97,15 +98,19 @@
     color: white;
     background-image: url("img/Vector Smart Object copy 9.png");
 
-    &.one {
+    &.about {
       background: {
         position: center 110px;
       }
       padding-top: 110px;
     }
-    &.two {
+    &.book {
       background-position: center 193px;
       padding-top: 193px;
+
+      .app-title-description {
+      font-size: 50px;
+      }
     }
   }
 
@@ -122,9 +127,7 @@
   }
 
   &:after {
-    content: '';
-    display: block;
-    position: absolute;
+    @include pseudo;
     width: 111px;
     height: 2px;
     background-color: #a7a99a;

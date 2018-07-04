@@ -1,5 +1,6 @@
 @import "fonts.css";
 @import "var";
+@import "base/api.scss";
 
 header {
   color: $brown;
@@ -40,7 +41,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 51px;
+  padding-top: 51px;
   height: 110px;
   background: {
     image: url("img/Vector Smart Object.png");
@@ -63,7 +64,7 @@ header {
     }
   }
 
-  &__contacts {
+  &__title {
     text-align: center;
     h1 {
       font-family: 'yellowtailregular', $font-fallback;
@@ -90,7 +91,7 @@ header {
   }
 }
 
-.header-main {
+.header-catering {
   min-height: 773px;
   background: {
     repeat: no-repeat;
@@ -102,6 +103,54 @@ header {
   padding-top: 245px;
   position: relative;
 
+  &__text {
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+
+    &:before,
+    &:after {
+      @include pseudo;
+      width: 111px;
+      height: 2px;
+      background-color: white;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    &:before {
+      top: -50px;
+
+    }
+    &:after {
+      bottom: -50px;
+    }
+  }
+
+  &-circles {
+    display: flex;
+    justify-content: space-between;
+    width: 84px;
+    margin: 89px auto 0;
+
+    &__item {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: rgba(#fff, .5);
+      cursor: pointer;
+
+      .active {
+        background-color: #4e5b61;
+      }
+
+      &:hover:not(active) {
+        background-color: #fff;
+      }
+    }
+  }
+
   i.fa.fa-angle-down {
     display: block;
     position: absolute;
@@ -112,89 +161,7 @@ header {
   }
 }
 
-.header-main-text {
-  font-size: 60px;
-  color: #fff;
-  text-align: center;
-  position: relative;
-
-  &:before,
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 111px;
-    height: 2px;
-    background-color: white;
-    left: 50%;
-    transform: translate(-50%);
-  }
-
-  &:before {
-    top: -50px;
-
-  }
-  &:after {
-    bottom: -50px;
-  }
-}
-
-.circles {
-  display: flex;
-  justify-content: space-between;
-  width: 84px;
-  margin: 89px auto 0;
-
-  div {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgba(#fff, .5);
-    cursor: pointer;
-
-    &.active {
-      background-color: #4e5b61;
-    }
-
-    &:hover:not(.active) {
-      background-color: #fff;
-    }
-  }
-}
-
-.welcome .col {
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  position: relative;
-
-  .fa-angle-down {
-    display: block;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    color: #808369;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  &:first-child {
-    background-image: url("img/Events.png");
-    margin-right: 30px;
-  }
-
-  &:nth-child(2) {
-    background-image: url("img/Food&Drinks.png");
-    margin-right: 30px;
-  }
-  &:nth-child(3) {
-    background-image: url("img/Venues.png");
-  }
-}
-
-.welcome {
+.app-catering {
   font: {
     family: 'yellowtailregular', $font-fallback;
     size: 45px;
@@ -205,14 +172,41 @@ header {
   color: #fff;
   margin-top: 106px;
   height: 473px;
+
+  .col {
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    position: relative;
+
+    .fa-angle-down {
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      color: #808369;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    &:first-child {
+      background-image: url("img/Events.png");
+      margin-right: 30px;
+    }
+
+    &:nth-child(2) {
+      background-image: url("img/Food&Drinks.png");
+      margin-right: 30px;
+    }
+    &:nth-child(3) {
+      background-image: url("img/Venues.png");
+    }
+  }
 }
 
-.story {
-  margin-top: 106px;
-  margin-bottom: 110px;
-}
-
-.main {
+.app-about {
   background: {
     image: url("img/About bg.png");
     color: $light-brown;
@@ -223,140 +217,154 @@ header {
   padding-bottom: 120px;
   margin-bottom: 110px;
 
-  .quote {
+  &-section {
+    padding: {
+      bottom: 110px;
+      top: 110px;
+    }
+
+    &-picture {
+      background: {
+        image: url('img/about-us-im.png');
+        position: center center;
+        size: cover;
+      }
+      height: 541px;
+    }
+
+    &-story {
+      background-color: #fff;
+
+      &__title {
+        font: {
+          family: 'pt_serifbold', $font-fallback;
+          size: 22px;
+          weight: 700;
+        }
+        line-height: 33px;
+        text-align: left;
+        padding-left: 86px;
+        padding-top: 94px;
+        color: #808369;
+      }
+
+      &__text {
+        padding-top: 36px;
+        color: #929292;
+        font: {
+          family: 'pt_serifregular', $font-fallback;
+          size: $font-xs-small;
+          weight: 400;
+        }
+        line-height: 24px;
+        padding-left: 86px;
+        width: 385px;
+        box-sizing: content-box;
+
+        span {
+          font: {
+            family: 'pt_serifbold', $font-fallback;
+            size: 22px;
+          }
+          color: #434343;
+        }
+      }
+    }
+  }
+
+  .app-menu {
+    font: {
+      family: 'pt_serifbold', $font-fallback;
+      size: 16px;
+      weight: 700;
+    }
+    margin-top: 106px;
+    text-transform: uppercase;
+    color: #808369;
+
+    &-item {
+      background: {
+        repeat: no-repeat;
+        color: #fff;
+        position: center 15px;
+      }
+      position: relative;
+      border-bottom: none;
+      width: 240px;
+      height: 270px;
+      margin-right: 20px;
+
+      p {
+        background-image: radial-gradient(at top, #f5f5f3 19px,
+                white 120px,
+                white 240px);
+        height: 95px;
+        width: 240px;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        padding-top: 27px;
+      }
+
+      &:nth-child(1) {
+        background-image: url("img/canapes.png");
+      }
+
+      &:nth-child(2) {
+        background-image: url("img/small_plates.png");
+      }
+
+      &:nth-child(3) {
+        background-image: url("img/sweets.png");
+      }
+
+      &:nth-child(4) {
+        background-image: url("img/drinks.png");
+        margin-right: 0;
+      }
+      .fa-angle-down {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        color: #808369;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #f3f2ed;
+        width: 38px;
+        height: 19px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &-quote {
     text-align: center;
-    //todo refactor
-    font-family: 'pt_serifbold', $font-fallback;
-    font-size: 20px;
-    font-weight: 700;
+    font: {
+      family: 'pt_serifbold', $font-fallback;
+      size: 20px;
+      weight: 700;
+    }
     line-height: 33px;
     color: #808369;
     padding-top: 56px;
   }
 }
 
-.card {
-  background-color: #fff;
-}
-
-.left-picture {
-  background: {
-    image: url('img/about-us-im.png');
-    position: center center;
-    size: cover;
-  }
-  height: 541px;
-}
-
-.card-title {
-  //todo refactor
-  font-family: 'pt_serifbold', $font-fallback;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 33px;
-  text-align: left;
-  padding-left: 86px;
-  padding-top: 94px;
-  color: #808369;
-}
-
-.card-text {
-  padding-top: 36px;
-  color: #929292;
-  //todo refactor
-  font-family: 'pt_serifregular', $font-fallback;
-  font-size: $font-xs-small;
-  font-weight: 400;
-  line-height: 24px;
-  padding-left: 86px;
-  width: 385px;
-  box-sizing: content-box;
-
-  span {
-    font-family: 'pt_serifbold', $font-fallback;
-    font-size: 22px;
-    color: #434343;
-  }
-}
-
-.menu {
-  //todo refactor
-  font-family: 'pt_serifbold', $font-fallback;
-  font-size: 16px;
-  font-weight: 700;
-
-  margin-top: 106px;
-  text-transform: uppercase;
-  color: #808369;
-}
-
-.menu .col {
-  background: {
-    repeat: no-repeat;
-    color: #fff;
-    position: center 15px;
-  }
-  position: relative;
-  border-bottom: none;
-  width: 240px;
-  height: 270px;
-  margin-right: 20px;
-
-  p {
-    background-image: radial-gradient(at top, #f5f5f3 19px,
-            white 120px,
-            white 240px);
-    height: 95px;
-    width: 240px;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    padding-top: 27px;
-  }
-
-  &:nth-child(1) {
-    background-image: url("img/canapes.png");
-  }
-
-  &:nth-child(2) {
-    background-image: url("img/small_plates.png");
-  }
-
-  &:nth-child(3) {
-    background-image: url("img/sweets.png");
-  }
-
-  &:nth-child(4) {
-    background-image: url("img/drinks.png");
-    margin-right: 0;
-  }
-  .fa-angle-down {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    color: #808369;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #f3f2ed;
-    width: 38px;
-    height: 19px;
-    text-align: center;
-    line-height: 30px;
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    transform: translateX(-50%);
-  }
-}
-
-.event {
+.app-services {
   font-family: 'pt_serifbold', $font-fallback;
 
   h4 {
     text-transform: uppercase;
     font-size: $font-sm-small;
     color: $brown;
-    margin-bottom: 55px;
-    margin-top: 55px;
+    margin: {
+      bottom: 55px;
+      top: 55px;
+    }
     position: relative;
 
     &:first-child {
@@ -371,15 +379,13 @@ header {
     line-height: 24px;
   }
 
-  .left-text {
+  &-left-text {
     counter-reset: section;
     text-align: right;
 
     h4 {
       &:before {
-        content: '';
-        display: block;
-        position: absolute;
+        @include pseudo;
         width: 111px;
         height: 2px;
         background-color: #a7a99a;
@@ -391,11 +397,11 @@ header {
         content: "0" counter(section);
         counter-increment: section;
         position: absolute;
-
-        //todo refactor
-        font-size: $font-lg-small;
+        font: {
+          size: $font-lg-small;
+          weight: 700;
+        }
         line-height: 28px;
-        font-weight: 700;
         color: #eae8e0;
         display: block;
         right: -62px;
@@ -412,7 +418,7 @@ header {
     flex-direction: column;
   }
 
-  .right-text {
+  &-right-text {
     counter-reset: list 3;
     text-align: left;
 
@@ -432,10 +438,11 @@ header {
         content: "0" counter(list);
         counter-increment: list;
         position: absolute;
-        //todo refactor
-        font-size: $font-lg-small;
+        font: {
+          size: $font-lg-small;
+          weight: 700;
+        }
         line-height: 28px;
-        font-weight: 700;
         color: #eae8e0;
         display: block;
         left: -62px;
@@ -446,24 +453,25 @@ header {
   }
 }
 
-.under-main {
+.app-book {
   background: {
     image: url("img/Depositphotos_24590415_original copy.png");
     color: #f3f1ec;
     repeat: no-repeat;
     position: top center;
   }
-  //todo refactor
   position: relative;
+  margin: {
+    bottom: 110px;
+    top: 110px;
+  }
   padding-bottom: 119px;
-  margin-bottom: 110px;
-  margin-top: 110px;
   font-family: 'pt_serifbold', $font-fallback;
 
-  .testimonials {
+  .app-testimonials {
     margin-top: 159px;
 
-    .content {
+    &-description {
       height: 259px;
       position: relative;
       background-color: white;
@@ -492,31 +500,32 @@ header {
         }
       }
 
-      .fa-angle-down {
+      .fa-angle-left,
+      .fa-angle-right {
         display: block;
+        top: 50%;
         position: absolute;
-        bottom: 50%;
         color: #808369;
         font-size: 16px;
         cursor: pointer;
         background-color: #f3f2ed;
-        width: 62px;
+        width: 52px;
         height: 52px;
         text-align: center;
-        line-height: 30px;
+        line-height: 52px;
         border-radius: 50%;
 
-        //todo use another icon and remove this stuff
         &.left {
-          transform: rotate(90deg) translateX(50%) translateY(100%);
+          transform: translateX(-50%) translateY(-50%);
+          left: 0;
         }
         &.right {
-          transform: rotate(-90deg) translateX(-50%);
-          right: -37px;
+          transform: translateX(50%) translateY(-50%);
+          right: 0;
         }
       }
     }
-    .quote {
+    &-quote {
       font-size: $font-xs-small;
       color: $grey;
       position: absolute;
@@ -540,7 +549,7 @@ header {
   }
 }
 
-.articles .col {
+.app-blog {
   background: {
     repeat: no-repeat;
     position: top center;
@@ -568,10 +577,7 @@ header {
     position: relative;
 
     &:after {
-      //todo use mixin @include pseudo()
-      content: '';
-      display: block;
-      position: absolute;
+      @include pseudo;
       width: 111px;
       height: 2px;
       background-color: #a7a99a;
@@ -599,7 +605,7 @@ footer {
   font-family: 'pt_serifbold', $font-fallback;
 }
 
-.footer {
+.app-chef {
   background: {
     image: url("img/Depositphotos_58523849_original.png");
     color: #f3f1ec;
@@ -610,11 +616,11 @@ footer {
   padding-bottom: 109px;
   margin-bottom: 110px;
 
-  .pre-footer {
-    margin-top: 106px;
-    margin-bottom: 110px;
+  &-description {
+    padding-top: 106px;
+    padding-bottom: 110px;
 
-    .pre-footer-picture {
+   &-picture {
       background: {
         image: url('img/Depositphotos_42938439_original.png');
         position: center center;
@@ -623,7 +629,7 @@ footer {
       height: 541px;
     }
 
-    .pre-footer-text {
+    &-text {
       padding-top: 94px;
       padding-left: 71px;
       font-family: 'pt_serifregular', $font-fallback;
@@ -631,24 +637,23 @@ footer {
       font-weight: 400;
       line-height: 24px;
       color: $grey;
+      background-color: #fff;
 
-      .card-text-one {
+      &__item1 {
         width: 412px;
         box-sizing: content-box;
         position: relative;
 
         &:before {
-          content: '';
+          @include pseudo;
           background: url('img/cov.png');;
-          display: block;
-          position: absolute;
           height: 45px;
           width: 62px;
           top: -12px;
           left: -2px;
         }
       }
-      .card-text-two {
+      &__item2 {
         padding-top: 82px;
         text-transform: capitalize;
         position: relative;
@@ -663,11 +668,7 @@ footer {
         }
 
         &:before {
-
-          //todo mixin
-          content: '';
-          display: block;
-          position: absolute;
+          @include pseudo;
           width: 111px;
           height: 2px;
           background-color: #a7a99a;
