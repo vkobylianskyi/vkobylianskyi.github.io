@@ -4,7 +4,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    div {
+        width: 495px;
+        height: 495px;
+        margin: 50px auto;
+        background: repeating-conic-gradient(#aaa 0, #aaa 25%, #eee 0, #eee 50%);
+        /* border-radius: 50%; */
+        transition: .5s;
+        background-size: 30px 30px;
+        background-position: center center;
+    }
+
+    div:hover {
+        background-size: 60px 60px;
+        border-radius: 50%;
+    }
+</style>
 <body>
-<p>Lorem ipsum dolor</p>
+<div>
+
+</div>
 </body>
 </html>
