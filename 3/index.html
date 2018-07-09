@@ -6,30 +6,42 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello Vova!</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
           crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 <header class="container-fluid header">
     <div class="header-top-line">
-        <ul class="header-top-line__menu">
-            <li class="header-top-line__menu-item"><i class="fa fa-home"></i></li>
-            <li class="header-top-line__menu-item">about us</li>
-            <li class="header-top-line__menu-item">pages</li>
-            <li class="header-top-line__menu-item">services</li>
-            <li class="header-top-line__menu-item">menu</li>
-            <li class="header-top-line__menu-item">gallery</li>
-            <li class="header-top-line__menu-item">blog</li>
-            <li class="header-top-line__menu-item">contact</li>
-        </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav header-top-line__menu">
+                    <li class="nav-linkheader-top-line__menu-item"><i class="fa fa-home"></i></li>
+                    <li class="header-top-line__menu-item">about us</li>
+                    <li class="header-top-line__menu-item">pages</li>
+                    <li class="header-top-line__menu-item">services</li>
+                    <li class="header-top-line__menu-item">menu</li>
+                    <li class="header-top-line__menu-item">gallery</li>
+                    <li class="header-top-line__menu-item">blog</li>
+                    <li class="header-top-line__menu-item">contact</li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--<ul class="">-->
+
+        <!--</ul>-->
     </div>
-    <div class="container header-title-section">
-        <div class="header-title-section__contacts">
-            <p><i class="fa fa-phone"></i>123-456-7890</p>
+            <div class="container header-title-section">
+                <div class="header-title-section__contacts">
+                    <p><i class="fa fa-phone"></i>123-456-7890</p>
             <p>info@yoursite.com</p>
         </div>
         <div class="header-title-section__title">
@@ -314,5 +326,8 @@
     <div class="copyright">ancora © 2016 all rights reserved <span>terms of use</span> and <span>privacy policy</span>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 </body>
 </html>
