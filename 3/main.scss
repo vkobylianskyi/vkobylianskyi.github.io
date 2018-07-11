@@ -12,21 +12,31 @@
   text-align: center;
   color: #fff;
   margin-top: 106px;
-  height: 473px;
 
-  .col {
+  &-item {
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     position: relative;
+    background: {
+      clip: content-box;
+      position: center center;
+      size: cover;
+    }
+    height: 473px;
+
+    @include mq("tablet-wide",  "max") {
+      margin-bottom: 20px;
+    }
 
     .fa-angle-down {
       display: block;
       position: absolute;
       bottom: -5px;
       left: 50%;
+      transform: translate(-50%,0);
       color: #808369;
       font-size: 16px;
       cursor: pointer;
@@ -34,12 +44,10 @@
 
     &:first-child {
       background-image: url("img/Events.png");
-      margin-right: 30px;
     }
 
     &:nth-child(2) {
       background-image: url("img/Food&Drinks.png");
-      margin-right: 30px;
     }
     &:nth-child(3) {
       background-image: url("img/Venues.png");

@@ -6,30 +6,35 @@
   line-height: 35px;
   text-align: center;
   color: #fff;
-  margin-top: 106px;
-  height: 473px; }
-  .app-catering .col {
+  margin-top: 106px; }
+  .app-catering-item {
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
-    position: relative; }
-    .app-catering .col .fa-angle-down {
+    position: relative;
+    background-clip: content-box;
+    background-position: center center;
+    background-size: cover;
+    height: 473px; }
+    @media only screen and (max-width: 1023px) {
+      .app-catering-item {
+        margin-bottom: 20px; } }
+    .app-catering-item .fa-angle-down {
       display: block;
       position: absolute;
       bottom: -5px;
       left: 50%;
+      transform: translate(-50%, 0);
       color: #808369;
       font-size: 16px;
       cursor: pointer; }
-    .app-catering .col:first-child {
-      background-image: url("img/Events.png");
-      margin-right: 30px; }
-    .app-catering .col:nth-child(2) {
-      background-image: url("img/Food&Drinks.png");
-      margin-right: 30px; }
-    .app-catering .col:nth-child(3) {
+    .app-catering-item:first-child {
+      background-image: url("img/Events.png"); }
+    .app-catering-item:nth-child(2) {
+      background-image: url("img/Food&Drinks.png"); }
+    .app-catering-item:nth-child(3) {
       background-image: url("img/Venues.png"); }
 
 .app-about {

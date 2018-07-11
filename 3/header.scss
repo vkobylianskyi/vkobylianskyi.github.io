@@ -1,23 +1,29 @@
 @import "fonts.css";
 @import "var";
-@import "base/api.scss";
+@import "base/_api.scss";
 
-header {
+header.header {
   color: $brown;
   font-family: 'pt_serifbold', $font-fallback;
   text-transform: uppercase;
+
+  padding: 0;
 }
 
 .header-top-line {
   position: relative;
   background-color: $light-brown;
 
+  .app-nav {
+    justify-content: center;
+  }
+
   &__menu {
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    height: 56px;
+    min-height: 56px;
     font-size: $font-xs-small;
     font-weight: 700;
     cursor: pointer;
@@ -35,27 +41,60 @@ header {
       }
     }
   }
+
+  @include mq(992,  "max") {
+    .header-top-line__menu-item {
+      border-left: none;
+      padding: 0;
+    }
+
+    .header-top-line__menu {
+      li:first-of-type {
+        display: none;
+      }
+
+      li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+      }
+
+    }
+
+    .navbar-expand-lg {
+
+    }
+  }
 }
+
+
 
 .header-title-section {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 51px;
-  height: 110px;
-  background: {
-    image: url("img/Vector Smart Object.png");
-    repeat: no-repeat;
-    position: bottom center;
-  }
+  min-height: 110px;
+
   font-size: $font-xs-small;
   letter-spacing: 1px;
+
+  @include mq("tablet-wide",  "max") {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__contacts {
     text-align: right;
     line-height: 20px;
     font-weight: 700;
     width: 180px;
+
+    @include mq("tablet-wide",  "max") {
+      text-align: center;
+      margin-bottom: 20px;
+      order: 2
+    }
 
     i.fa.fa-phone {
       padding-left: 5px;
@@ -66,6 +105,25 @@ header {
 
   &__title {
     text-align: center;
+    position: relative;
+
+    @include mq("tablet-wide",  "max") {
+      order: 1
+    }
+
+    &:before {
+      width: 283px;
+      height: 81px;
+      @include pseudo();
+      background: {
+        image: url("img/Vector Smart Object.png");
+        repeat: no-repeat;
+        position: bottom center;
+      }
+      bottom: 10px;
+      left: -92px;
+    }
+
     h1 {
       font-family: 'yellowtailregular', $font-fallback;
       font-size: 45px;
@@ -86,10 +144,20 @@ header {
     font-weight: 700;
     width: 180px;
 
+    @include mq("tablet-wide",  "max") {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      order: 3
+    }
+
     i.fa.fa-shopping-cart {
       padding-right: 5px;
     }
   }
+
+
+
 }
 
 .header-catering {
@@ -97,7 +165,7 @@ header {
   background: {
     repeat: no-repeat;
     position: top center;
-    size: contain;
+    size: cover;
     image: url("img/test.png");
   }
   margin-bottom: 110px;
@@ -162,15 +230,9 @@ header {
   }
 }
 
-////media
-//@media screen and (max-width: 1024px) {
-//  .header-title-section {
-//    display: flex;
-//    justify-content: space-between;
+//media
 //
-//}
+//  //mobile
+//  @media screen and (max-width: 768px) {
 //
-////mobile
-//@media screen and (max-width: 768px) {
-//
-//}
+//  }
