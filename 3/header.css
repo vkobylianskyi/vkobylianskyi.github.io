@@ -56,8 +56,8 @@ header.header {
     width: 180px; }
     @media only screen and (max-width: 1023px) {
       .header-title-section__contacts {
+        margin-top: 20px;
         text-align: center;
-        margin-bottom: 20px;
         order: 2; } }
     .header-title-section__contacts i.fa.fa-phone {
       padding-left: 5px;
@@ -134,7 +134,7 @@ header.header {
     display: flex;
     justify-content: space-between;
     width: 84px;
-    margin: 89px auto 0; }
+    margin: 0 auto; }
     .header-catering-circles__item {
       width: 8px;
       height: 8px;
@@ -148,7 +148,7 @@ header.header {
   .header-catering i.fa.fa-angle-down {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -6px;
     left: 50%;
     cursor: pointer;
     transform: translateX(-50%); }

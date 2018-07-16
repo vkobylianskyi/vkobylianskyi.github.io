@@ -18,7 +18,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
     position: relative;
     background: {
       clip: content-box;
@@ -27,7 +26,7 @@
     }
     height: 473px;
 
-    @include mq("tablet-wide",  "max") {
+    @include mq("tablet-wide", "max") {
       margin-bottom: 20px;
     }
 
@@ -36,7 +35,7 @@
       position: absolute;
       bottom: -5px;
       left: 50%;
-      transform: translate(-50%,0);
+      transform: translate(-50%, 0);
       color: #808369;
       font-size: 16px;
       cursor: pointer;
@@ -95,6 +94,10 @@
         padding-left: 86px;
         padding-top: 94px;
         color: #808369;
+
+        //@include mq("tablet-wide", "max") {
+        //  margin: 94px auto 0;
+        //}
       }
 
       &__text {
@@ -117,6 +120,10 @@
           }
           color: #434343;
         }
+
+        //@include mq("tablet-wide", "max") {
+        //  padding: 94px auto;
+        //}
       }
     }
   }
@@ -131,45 +138,33 @@
     text-transform: uppercase;
     color: #808369;
 
-    &-item {
-      background: {
-        repeat: no-repeat;
-        color: #fff;
-        position: center 15px;
-      }
+    &-section {
+
       position: relative;
-      border-bottom: none;
-      width: 240px;
-      height: 270px;
-      margin-right: 20px;
 
-      p {
-        background-image: radial-gradient(at top, #f5f5f3 19px,
-                white 120px,
-                white 240px);
-        height: 95px;
-        width: 240px;
-        position: absolute;
-        bottom: 0;
-        text-align: center;
-        padding-top: 27px;
+      @include mq("tablet-wide", "max") {
+        margin-bottom: 20px;
       }
 
-      &:nth-child(1) {
-        background-image: url("img/canapes.png");
-      }
+      &-item {
+        background-color: #fff;
+        position: relative;
+        border-bottom: none;
+        max-width: 270px;
+        height: 270px;
+        padding: 15px;
 
-      &:nth-child(2) {
-        background-image: url("img/small_plates.png");
-      }
-
-      &:nth-child(3) {
-        background-image: url("img/sweets.png");
-      }
-
-      &:nth-child(4) {
-        background-image: url("img/drinks.png");
-        margin-right: 0;
+        figcaption {
+          background-image: radial-gradient(at top, #f5f5f3 19px,
+                  white 120px,
+                  white 240px);
+          height: 95px;
+          width: 240px;
+          position: absolute;
+          bottom: 0;
+          text-align: center;
+          padding-top: 27px;
+        }
       }
       .fa-angle-down {
         display: block;
@@ -232,6 +227,10 @@
     counter-reset: section;
     text-align: right;
 
+    @include mq("tablet-wide", "max") {
+      text-align: center;
+    }
+
     h4 {
       &:before {
         @include pseudo;
@@ -240,6 +239,12 @@
         background-color: #a7a99a;
         top: 34px;
         right: 0;
+
+        @include mq("tablet-wide", "max") {
+          left: 0;
+          right: 50%;
+          transform: translateX(-50%);
+        }
       }
 
       &:after {
@@ -256,6 +261,10 @@
         right: -62px;
         top: 2px;
         box-sizing: border-box;
+
+        @include mq("tablet-wide", "max") {
+          left: -50%;
+        }
       }
     }
   }
@@ -271,6 +280,10 @@
     counter-reset: list 3;
     text-align: left;
 
+    @include mq("tablet-wide", "max") {
+      text-align: center;
+    }
+
     h4 {
       &:before {
         content: '';
@@ -281,6 +294,12 @@
         background-color: #a7a99a;
         top: 34px;
         left: 0;
+
+        @include mq("tablet-wide", "max") {
+          left: 0;
+          right: 50%;
+          transform: translateX(-50%);
+        }
       }
 
       &:after {
@@ -297,6 +316,10 @@
         left: -62px;
         top: 2px;
         box-sizing: border-box;
+
+        @include mq("tablet-wide", "max") {
+          right: 50%;
+        }
       }
     }
   }
