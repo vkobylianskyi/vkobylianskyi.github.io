@@ -180,12 +180,15 @@ h1:visited, h2:visited, h3:visited, h4:visited, h5:visited, h6:visited, span:vis
   .app-button.rfs {
     margin-left: 86px;
     margin-top: 60px; }
+    @media only screen and (max-width: 1023px) {
+      .app-button.rfs {
+        margin: 60px auto; } }
   .app-button.vfm {
     margin: 58px auto; }
   .app-button.ms {
     margin: 65px auto 0; }
   .app-button.ma {
-    margin: 74px auto 0; }
+    margin: 0 auto 110px; }
   .app-button.vat {
     margin-top: 57px; }
   .app-button.vmp {
