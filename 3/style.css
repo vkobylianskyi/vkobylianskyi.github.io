@@ -179,7 +179,8 @@ h1:visited, h2:visited, h3:visited, h4:visited, h5:visited, h6:visited, span:vis
     margin: 103px auto; }
   .app-button.rfs {
     margin-left: 86px;
-    margin-top: 60px; }
+    margin-top: 60px;
+    margin-bottom: 30px; }
     @media only screen and (max-width: 1023px) {
       .app-button.rfs {
         margin: 60px auto; } }
