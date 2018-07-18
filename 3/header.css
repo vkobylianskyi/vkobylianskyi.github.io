@@ -112,11 +112,17 @@ header.header {
   margin-bottom: 110px;
   padding-top: 245px;
   position: relative; }
+  @media only screen and (max-width: 1023px) {
+    .header-catering {
+      margin-bottom: 60px; } }
   .header-catering__text {
     font-size: 60px;
     color: #fff;
     text-align: center;
     position: relative; }
+    @media only screen and (max-width: 479px) {
+      .header-catering__text {
+        font-size: 25px; } }
     .header-catering__text:before, .header-catering__text:after {
       content: "";
       display: block;

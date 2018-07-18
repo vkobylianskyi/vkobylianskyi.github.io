@@ -11,9 +11,16 @@ footer {
   position: relative;
   padding-bottom: 109px;
   margin-bottom: 110px; }
+  @media only screen and (max-width: 1023px) {
+    .app-chef {
+      padding-bottom: 70px;
+      margin-bottom: 70px; } }
   .app-chef-description {
     padding-top: 106px;
     padding-bottom: 110px; }
+    @media only screen and (max-width: 1023px) {
+      .app-chef-description {
+        padding-bottom: 70px; } }
     .app-chef-description-picture {
       background-image: url("img/Depositphotos_42938439_original.png");
       background-position: center center;
@@ -30,10 +37,17 @@ footer {
       line-height: 24px;
       color: #929292;
       background-color: #fff; }
+      @media only screen and (max-width: 1023px) {
+        .app-chef-description-text {
+          padding-left: 0; } }
       .app-chef-description-text__item1 {
         width: 412px;
         box-sizing: content-box;
         position: relative; }
+        @media only screen and (max-width: 1023px) {
+          .app-chef-description-text__item1 {
+            margin: 0 auto;
+            text-align: justify; } }
         .app-chef-description-text__item1:before {
           content: "";
           display: block;
@@ -46,7 +60,11 @@ footer {
       .app-chef-description-text__item2 {
         padding-top: 82px;
         text-transform: capitalize;
-        position: relative; }
+        position: relative;
+        width: 250px; }
+        @media only screen and (max-width: 1023px) {
+          .app-chef-description-text__item2 {
+            margin: 0 auto; } }
         .app-chef-description-text__item2 span {
           font-family: "pt_serifbold", Verdana, serif, sans-serif;
           font-size: 20px;
@@ -62,6 +80,10 @@ footer {
           height: 2px;
           background-color: #a7a99a;
           top: 39px; }
+          @media only screen and (max-width: 1023px) {
+            .app-chef-description-text__item2:before {
+              left: 0;
+              transform: translateX(50%); } }
 
 .app-staff {
   text-transform: capitalize;
@@ -69,6 +91,9 @@ footer {
   background-position: top center;
   margin-top: 113px;
   text-align: center; }
+  @media only screen and (max-width: 1023px) {
+    .app-staff {
+      margin-top: 30px; } }
   .app-staff h3 {
     font-family: "pt_serifbold", Verdana, serif, sans-serif;
     font-size: 20px;
@@ -81,8 +106,14 @@ footer {
     margin-top: 14px; }
   .app-staff:nth-child(1) {
     background-image: url("img/Amanda_Finch.png"); }
+    @media only screen and (max-width: 1023px) {
+      .app-staff:nth-child(1) {
+        margin-top: 113px; } }
   .app-staff:nth-child(2) {
     background-image: url("img/Joseph_Verder.png"); }
+    @media only screen and (max-width: 1023px) {
+      .app-staff:nth-child(2) {
+        margin-top: 113px; } }
   .app-staff:nth-child(3) {
     background-image: url("img/Anthony_Mann.png"); }
   .app-staff:nth-child(4) {
@@ -112,6 +143,10 @@ footer {
   font-family: "pt_serifbold", Verdana, serif, sans-serif;
   color: #808369;
   margin-bottom: 152px; }
+  @media only screen and (max-width: 1023px) {
+    .app-form-item {
+      padding-bottom: 0;
+      margin-bottom: 19px; } }
   .app-form-item .fa-angle-up {
     display: block;
     position: absolute;
@@ -141,6 +176,11 @@ footer {
   padding-left: 200px;
   flex-wrap: wrap;
   justify-content: space-between; }
+  @media only screen and (max-width: 1023px) {
+    .app-contact-container {
+      flex-direction: column;
+      padding-left: 50px;
+      padding-right: 50px; } }
   .app-contact-container textarea {
     resize: none;
     width: 100%;
@@ -164,6 +204,14 @@ input[type=email] {
   line-height: 66px;
   margin-bottom: 30px;
   margin-top: 107px; }
+  @media only screen and (max-width: 1023px) {
+    input[type=text],
+    input[type=email] {
+      width: 100%; } }
+
+@media only screen and (max-width: 1023px) {
+  input[type=email] {
+    margin-top: 0; } }
 
 .under-footer {
   display: flex;
@@ -171,6 +219,9 @@ input[type=email] {
   margin-top: 75px;
   padding-right: 8px;
   padding-bottom: 42px; }
+  @media only screen and (max-width: 1023px) {
+    .under-footer {
+      margin-top: 25px; } }
   .under-footer i {
     display: block;
     width: 42px;

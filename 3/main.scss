@@ -59,6 +59,11 @@
         image: url("img/Venues.png");
         size: 370px;
       }
+
+      @include mq("tablet-wide", "max") {
+        margin-bottom: 0;
+      }
+
     }
   }
 }
@@ -74,10 +79,19 @@
   padding-bottom: 120px;
   margin-bottom: 110px;
 
+  @include mq("tablet-wide", "max") {
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+  }
+
   &-section {
     padding: {
       bottom: 110px;
       top: 110px;
+    }
+
+    @include mq("tablet-wide", "max") {
+      padding-bottom: 60px;
     }
 
     &-picture {
@@ -178,7 +192,7 @@
         height: 270px;
         padding: 15px;
 
-        @media (min-width: 991.98px)  and (max-width: 1199.98px) {
+        @media (min-width: 991.98px) and (max-width: 1199.98px) {
           height: 240px;
         }
 
@@ -387,6 +401,14 @@
   }
   padding-bottom: 119px;
   font-family: 'pt_serifbold', $font-fallback;
+
+  @include mq("tablet-wide", "max") {
+    margin: {
+      top: 60px;
+      bottom: 60px;
+    }
+    padding-bottom: 70px;
+  }
 
   .app-testimonials {
     margin-top: 159px;

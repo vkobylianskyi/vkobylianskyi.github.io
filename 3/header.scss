@@ -172,11 +172,19 @@ header.header {
   padding-top: 245px;
   position: relative;
 
+  @include mq("tablet-wide", "max") {
+    margin-bottom: 60px;
+  }
+
   &__text {
     font-size: 60px;
     color: #fff;
     text-align: center;
     position: relative;
+
+    @include mq("phone-wide", "max") {
+      font-size: 25px;
+    }
 
     &:before,
     &:after {
@@ -229,10 +237,3 @@ header.header {
     transform: translateX(-50%);
   }
 }
-
-//media
-//
-//  //mobile
-//  @media screen and (max-width: 768px) {
-//
-//  }

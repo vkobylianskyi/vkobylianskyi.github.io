@@ -153,10 +153,6 @@ h1:focus, h2:focus, h3:focus, h4:focus, h5:focus, h6:focus, span:focus, input:vi
 h1:visited, h2:visited, h3:visited, h4:visited, h5:visited, h6:visited, span:visited {
   outline: none; }
 
-.container {
-  width: 1170px;
-  margin: 0 auto; }
-
 .app-button {
   display: block;
   box-sizing: border-box;
@@ -177,6 +173,9 @@ h1:visited, h2:visited, h3:visited, h4:visited, h5:visited, h6:visited, span:vis
     align-items: center;
     justify-content: center;
     margin: 103px auto; }
+    @media only screen and (max-width: 1023px) {
+      .app-button.mas {
+        margin: 60px auto; } }
   .app-button.rfs {
     margin-left: 86px;
     margin-top: 60px;
@@ -190,10 +189,19 @@ h1:visited, h2:visited, h3:visited, h4:visited, h5:visited, h6:visited, span:vis
     margin: 65px auto 0; }
   .app-button.ma {
     margin: 0 auto 110px; }
+    @media only screen and (max-width: 1023px) {
+      .app-button.ma {
+        margin-bottom: 70px; } }
   .app-button.vat {
     margin-top: 57px; }
+    @media only screen and (max-width: 1023px) {
+      .app-button.vat {
+        margin: 57px auto; } }
   .app-button.vmp {
     margin: 57px auto 110px; }
+    @media only screen and (max-width: 1023px) {
+      .app-button.vmp {
+        margin: 70px auto; } }
   .app-button:hover {
     color: black;
     border-radius: 15px;
@@ -211,9 +219,15 @@ h1:visited, h2:visited, h3:visited, h4:visited, h5:visited, h6:visited, span:vis
       margin-bottom: 112px; }
     .app-title.dark.book {
       margin-top: 293px; }
+      @media only screen and (max-width: 1023px) {
+        .app-title.dark.book {
+          margin-top: 240px; } }
     .app-title.dark.form {
       padding-top: 110px;
       background-position: center 110px; }
+      @media only screen and (max-width: 1023px) {
+        .app-title.dark.form {
+          padding-top: 70px; } }
     .app-title.dark .app-title-section {
       color: #808369; }
     .app-title.dark .app-title-description {
@@ -224,11 +238,25 @@ h1:visited, h2:visited, h3:visited, h4:visited, h5:visited, h6:visited, span:vis
     .app-title.white.about {
       background-position: center 110px;
       padding-top: 110px; }
+      @media only screen and (max-width: 1023px) {
+        .app-title.white.about {
+          padding-top: 70px; } }
     .app-title.white.book {
       background-position: center 193px;
       padding-top: 193px; }
+      @media only screen and (max-width: 1023px) {
+        .app-title.white.book {
+          background-position: center 60px;
+          padding-top: 60px;
+          margin-bottom: 260px; } }
       .app-title.white.book .app-title-description {
         font-size: 50px; }
+        @media only screen and (max-width: 1023px) {
+          .app-title.white.book .app-title-description {
+            font-size: 35px; } }
+        @media only screen and (max-width: 479px) {
+          .app-title.white.book .app-title-description {
+            font-size: 24px; } }
   .app-title-section {
     font-size: 14px;
     text-transform: uppercase;
@@ -237,6 +265,9 @@ h1:visited, h2:visited, h3:visited, h4:visited, h5:visited, h6:visited, span:vis
     text-transform: capitalize;
     font-size: 35px;
     font-weight: 700; }
+    @media only screen and (max-width: 479px) {
+      .app-title-description {
+        font-size: 24px; } }
   .app-title:after {
     content: "";
     display: block;

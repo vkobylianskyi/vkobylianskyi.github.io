@@ -18,9 +18,18 @@ footer {
   padding-bottom: 109px;
   margin-bottom: 110px;
 
+  @include mq("tablet-wide", "max") {
+    padding-bottom: 70px;
+    margin-bottom: 70px;
+  }
+
   &-description {
     padding-top: 106px;
     padding-bottom: 110px;
+
+    @include mq("tablet-wide", "max") {
+      padding-bottom: 70px;
+    }
 
     &-picture {
       background: {
@@ -43,10 +52,19 @@ footer {
       color: $grey;
       background-color: #fff;
 
+      @include mq("tablet-wide", "max") {
+        padding-left: 0;
+      }
+
       &__item1 {
         width: 412px;
         box-sizing: content-box;
         position: relative;
+
+        @include mq("tablet-wide", "max") {
+          margin: 0 auto;
+          text-align: justify;
+        }
 
         &:before {
           @include pseudo;
@@ -61,6 +79,11 @@ footer {
         padding-top: 82px;
         text-transform: capitalize;
         position: relative;
+        width: 250px;
+
+        @include mq("tablet-wide", "max") {
+          margin: 0 auto;
+        }
 
         span {
           font-family: 'pt_serifbold', $font-fallback;
@@ -78,6 +101,11 @@ footer {
           background-color: #a7a99a;
           top: 39px;
 
+          @include mq("tablet-wide", "max") {
+            left: 0;
+            transform: translateX(50%);
+          }
+
         }
       }
     }
@@ -92,6 +120,10 @@ footer {
   }
   margin-top: 113px;
   text-align: center;
+
+  @include mq("tablet-wide", "max") {
+    margin-top: 30px;
+  }
 
   h3 {
     font-family: 'pt_serifbold', $font-fallback;
@@ -109,10 +141,18 @@ footer {
 
   &:nth-child(1) {
     background-image: url("img/Amanda_Finch.png");
+
+    @include mq("tablet-wide", "max") {
+      margin-top: 113px;
+    }
+
   }
 
   &:nth-child(2) {
     background-image: url("img/Joseph_Verder.png");
+    @include mq("tablet-wide", "max") {
+      margin-top: 113px;
+    }
   }
 
   &:nth-child(3) {
@@ -160,6 +200,11 @@ footer {
   color: $brown;
   margin-bottom: 152px;
 
+  @include mq("tablet-wide", "max") {
+    padding-bottom: 0;
+    margin-bottom: 19px;
+  }
+
   .fa-angle-up {
     display: block;
     position: absolute;
@@ -196,6 +241,12 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @include mq("tablet-wide", "max") {
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   textarea {
     resize: none;
     width: 100%;
@@ -226,6 +277,17 @@ input[type=email] {
   line-height: 66px;
   margin-bottom: 30px;
   margin-top: 107px;
+
+  @include mq("tablet-wide", "max") {
+    width: 100%;
+  }
+}
+
+input[type=email] {
+
+  @include mq("tablet-wide", "max") {
+    margin-top: 0;
+  }
 }
 
 .under-footer {
@@ -235,6 +297,10 @@ input[type=email] {
   padding: {
     right: 8px;
     bottom: 42px;
+  }
+
+  @include mq("tablet-wide", "max") {
+    margin-top: 25px;
   }
 
   i {
