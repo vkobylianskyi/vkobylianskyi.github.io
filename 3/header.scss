@@ -42,7 +42,7 @@ header.header {
     }
   }
 
-  @include mq(992,  "max") {
+  @include mq(992, "max") {
     .header-top-line__menu-item {
       border-left: none;
       padding: 0;
@@ -67,8 +67,6 @@ header.header {
   }
 }
 
-
-
 .header-title-section {
   display: flex;
   justify-content: space-between;
@@ -79,7 +77,7 @@ header.header {
   font-size: $font-xs-small;
   letter-spacing: 1px;
 
-  @include mq("tablet-wide",  "max") {
+  @include mq(992, "max") {
     flex-direction: column;
     align-items: center;
   }
@@ -90,7 +88,7 @@ header.header {
     font-weight: 700;
     width: 180px;
 
-    @include mq("tablet-wide",  "max") {
+    @include mq(992, "max") {
       margin-top: 20px;
       text-align: center;
       order: 2
@@ -107,7 +105,7 @@ header.header {
     text-align: center;
     position: relative;
 
-    @include mq("tablet-wide",  "max") {
+    @include mq(992, "max") {
       order: 1
     }
 
@@ -144,7 +142,7 @@ header.header {
     font-weight: 700;
     width: 180px;
 
-    @include mq("tablet-wide",  "max") {
+    @include mq(992, "max") {
       text-align: center;
       margin-top: 20px;
       margin-bottom: 20px;
@@ -155,8 +153,6 @@ header.header {
       padding-right: 5px;
     }
   }
-
-
 
 }
 
@@ -172,7 +168,7 @@ header.header {
   padding-top: 245px;
   position: relative;
 
-  @include mq("tablet-wide", "max") {
+  @include mq(992, "max") {
     margin-bottom: 60px;
   }
 
@@ -181,6 +177,10 @@ header.header {
     color: #fff;
     text-align: center;
     position: relative;
+
+    @include mq(992, "max") {
+      font-size: 40px;
+    }
 
     @include mq("phone-wide", "max") {
       font-size: 25px;

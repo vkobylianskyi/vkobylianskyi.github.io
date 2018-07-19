@@ -18,7 +18,7 @@ footer {
   padding-bottom: 109px;
   margin-bottom: 110px;
 
-  @include mq("tablet-wide", "max") {
+  @include mq("992-wide", "max") {
     padding-bottom: 70px;
     margin-bottom: 70px;
   }
@@ -27,7 +27,7 @@ footer {
     padding-top: 106px;
     padding-bottom: 110px;
 
-    @include mq("tablet-wide", "max") {
+    @include mq(992, "max") {
       padding-bottom: 70px;
     }
 
@@ -51,7 +51,7 @@ footer {
       color: $grey;
       background-color: #fff;
 
-      @include mq("tablet-wide", "max") {
+      @include mq(992, "max") {
         padding-left: 0;
       }
 
@@ -67,7 +67,7 @@ footer {
         box-sizing: content-box;
         position: relative;
 
-        @include mq("tablet-wide", "max") {
+        @include mq(992, "max") {
           margin: 0 auto;
           text-align: justify;
         }
@@ -98,7 +98,7 @@ footer {
         position: relative;
         width: 250px;
 
-        @include mq("tablet-wide", "max") {
+        @include mq(992, "max") {
           margin: 0 auto;
         }
 
@@ -118,7 +118,7 @@ footer {
           background-color: #a7a99a;
           top: 39px;
 
-          @include mq("tablet-wide", "max") {
+          @include mq(992, "max") {
             left: 50%;
             transform: translateX(-50%);
           }
@@ -138,11 +138,19 @@ footer {
   margin-top: 113px;
   text-align: center;
 
-  @include mq("tablet-wide", "max") {
+  @include mq(992, "max") {
     margin-top: 30px;
   }
+  @include mq(1200, "max") {
+    width: 200px;
+  }
 
-  h3 {
+  img {
+    width: 100%;
+  }
+
+
+  figcaption {
     font-family: 'pt_serifbold', $font-fallback;
     font-size: $font-sm-small;
     color: $brown;
@@ -157,27 +165,31 @@ footer {
   }
 
   &:nth-child(1) {
-    background-image: url("img/Amanda_Finch.png");
+    //background-image: url("img/Amanda_Finch.png");
 
-    @include mq("tablet-wide", "max") {
+    @include mq(992, "max") {
       margin-top: 113px;
     }
 
   }
 
   &:nth-child(2) {
-    background-image: url("img/Joseph_Verder.png");
-    @include mq("tablet-wide", "max") {
+    //background-image: url("img/Joseph_Verder.png");
+
+    @include mq(992, "max") {
       margin-top: 113px;
     }
+
   }
 
   &:nth-child(3) {
-    background-image: url("img/Anthony_Mann.png");
+    //background-image: url("img/Anthony_Mann.png");
+
   }
 
   &:nth-child(4) {
-    background-image: url("img/Julia_Green.png");
+    //background-image: url("img/Julia_Green.png");
+
   }
 }
 
@@ -217,7 +229,7 @@ footer {
   color: $brown;
   margin-bottom: 152px;
 
-  @include mq("tablet-wide", "max") {
+  @include mq(992, "max") {
     padding-bottom: 0;
     margin-bottom: 19px;
   }
@@ -258,7 +270,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  @include mq("tablet-wide", "max") {
+  @include mq(992, "max") {
     flex-direction: column;
     padding-left: 50px;
     padding-right: 50px;
@@ -295,14 +307,14 @@ input[type=email] {
   margin-bottom: 30px;
   margin-top: 107px;
 
-  @include mq("tablet-wide", "max") {
+  @include mq(992, "max") {
     width: 100%;
   }
 }
 
 input[type=email] {
 
-  @include mq("tablet-wide", "max") {
+  @include mq(992, "max") {
     margin-top: 0;
   }
 }
@@ -316,7 +328,7 @@ input[type=email] {
     bottom: 42px;
   }
 
-  @include mq("tablet-wide", "max") {
+  @include mq(992, "max") {
     margin-top: 25px;
   }
 

@@ -11,14 +11,14 @@ footer {
   position: relative;
   padding-bottom: 109px;
   margin-bottom: 110px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: "992-wide" (-1px)) {
     .app-chef {
       padding-bottom: 70px;
       margin-bottom: 70px; } }
   .app-chef-description {
     padding-top: 106px;
     padding-bottom: 110px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .app-chef-description {
         padding-bottom: 70px; } }
     .app-chef-description-picture {
@@ -36,7 +36,7 @@ footer {
       line-height: 24px;
       color: #929292;
       background-color: #fff; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 991px) {
         .app-chef-description-text {
           padding-left: 0; } }
       @media only screen and (max-width: 479px) {
@@ -47,7 +47,7 @@ footer {
         width: 412px;
         box-sizing: content-box;
         position: relative; }
-        @media only screen and (max-width: 1023px) {
+        @media only screen and (max-width: 991px) {
           .app-chef-description-text__item1 {
             margin: 0 auto;
             text-align: justify; } }
@@ -76,7 +76,7 @@ footer {
         text-transform: capitalize;
         position: relative;
         width: 250px; }
-        @media only screen and (max-width: 1023px) {
+        @media only screen and (max-width: 991px) {
           .app-chef-description-text__item2 {
             margin: 0 auto; } }
         .app-chef-description-text__item2 span {
@@ -94,7 +94,7 @@ footer {
           height: 2px;
           background-color: #a7a99a;
           top: 39px; }
-          @media only screen and (max-width: 1023px) {
+          @media only screen and (max-width: 991px) {
             .app-chef-description-text__item2:before {
               left: 50%;
               transform: translateX(-50%); } }
@@ -105,10 +105,15 @@ footer {
   background-position: top center;
   margin-top: 113px;
   text-align: center; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     .app-staff {
       margin-top: 30px; } }
-  .app-staff h3 {
+  @media only screen and (max-width: 1199px) {
+    .app-staff {
+      width: 200px; } }
+  .app-staff img {
+    width: 100%; }
+  .app-staff figcaption {
     font-family: "pt_serifbold", Verdana, serif, sans-serif;
     font-size: 20px;
     color: #808369;
@@ -118,20 +123,12 @@ footer {
     font-size: 14px;
     color: #929292;
     margin-top: 14px; }
-  .app-staff:nth-child(1) {
-    background-image: url("img/Amanda_Finch.png"); }
-    @media only screen and (max-width: 1023px) {
-      .app-staff:nth-child(1) {
-        margin-top: 113px; } }
-  .app-staff:nth-child(2) {
-    background-image: url("img/Joseph_Verder.png"); }
-    @media only screen and (max-width: 1023px) {
-      .app-staff:nth-child(2) {
-        margin-top: 113px; } }
-  .app-staff:nth-child(3) {
-    background-image: url("img/Anthony_Mann.png"); }
-  .app-staff:nth-child(4) {
-    background-image: url("img/Julia_Green.png"); }
+  @media only screen and (max-width: 991px) {
+    .app-staff:nth-child(1) {
+      margin-top: 113px; } }
+  @media only screen and (max-width: 991px) {
+    .app-staff:nth-child(2) {
+      margin-top: 113px; } }
 
 .app-gallery-row {
   margin-top: 30px; }
@@ -157,7 +154,7 @@ footer {
   font-family: "pt_serifbold", Verdana, serif, sans-serif;
   color: #808369;
   margin-bottom: 152px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     .app-form-item {
       padding-bottom: 0;
       margin-bottom: 19px; } }
@@ -190,7 +187,7 @@ footer {
   padding-left: 200px;
   flex-wrap: wrap;
   justify-content: space-between; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     .app-contact-container {
       flex-direction: column;
       padding-left: 50px;
@@ -218,12 +215,12 @@ input[type=email] {
   line-height: 66px;
   margin-bottom: 30px;
   margin-top: 107px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     input[type=text],
     input[type=email] {
       width: 100%; } }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 991px) {
   input[type=email] {
     margin-top: 0; } }
 
@@ -233,7 +230,7 @@ input[type=email] {
   margin-top: 75px;
   padding-right: 8px;
   padding-bottom: 42px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     .under-footer {
       margin-top: 25px; } }
   .under-footer i {

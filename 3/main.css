@@ -17,7 +17,7 @@
     background-position: center center;
     background-size: cover;
     height: 473px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .app-catering-item {
         margin-bottom: 20px; } }
     .app-catering-item .fa-angle-down {
@@ -38,7 +38,7 @@
     .app-catering-item:nth-child(3) {
       background-image: url("img/Venues.png");
       background-size: 370px; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 991px) {
         .app-catering-item:nth-child(3) {
           margin-bottom: 0; } }
 
@@ -50,14 +50,14 @@
   position: relative;
   padding-bottom: 120px;
   margin-bottom: 110px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     .app-about {
       padding-bottom: 20px;
       margin-bottom: 60px; } }
   .app-about-section {
     padding-bottom: 110px;
     padding-top: 110px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .app-about-section {
         padding-bottom: 60px; } }
     .app-about-section-picture {
@@ -79,7 +79,7 @@
         color: #808369;
         max-width: 397px;
         box-sizing: content-box; }
-        @media only screen and (max-width: 1023px) {
+        @media only screen and (max-width: 991px) {
           .app-about-section-story__title {
             margin: 0 auto;
             padding-top: 94px;
@@ -109,7 +109,7 @@
           font-family: "pt_serifbold", Verdana, serif, sans-serif;
           font-size: 22px;
           color: #434343; }
-        @media only screen and (max-width: 1023px) {
+        @media only screen and (max-width: 991px) {
           .app-about-section-story__text {
             margin: 0 auto;
             padding-top: 36px;
@@ -133,7 +133,7 @@
     color: #808369; }
     .app-about .app-menu-section {
       position: relative; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 991px) {
         .app-about .app-menu-section {
           margin-bottom: 20px;
           max-width: 300px; } }
@@ -190,7 +190,7 @@
     position: relative; }
     .app-services h4:first-child {
       margin-top: 0; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .app-services h4 {
         margin-top: 40px;
         margin-bottom: 30px; } }
@@ -202,7 +202,7 @@
   .app-services-left-text {
     counter-reset: section;
     text-align: right; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .app-services-left-text {
         text-align: center;
         order: 1; } }
@@ -215,7 +215,7 @@
       background-color: #a7a99a;
       top: 34px;
       right: 0; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 991px) {
         .app-services-left-text h4:before {
           right: 50%;
           transform: translateX(50%); } }
@@ -231,7 +231,7 @@
       right: -62px;
       top: 2px;
       box-sizing: border-box; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 991px) {
         .app-services-left-text h4:after {
           right: 50%;
           transform: translateX(-200%); } }
@@ -240,16 +240,19 @@
     justify-content: center;
     align-items: center;
     flex-direction: column; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 1199px) {
+      .app-services-picture-img {
+        width: 350px; } }
+    @media only screen and (max-width: 991px) {
       .app-services-picture-img {
         display: none; } }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .app-services-picture {
         order: 3; } }
   .app-services-right-text {
     counter-reset: list 3;
     text-align: left; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .app-services-right-text {
         text-align: center;
         order: 2;
@@ -263,7 +266,7 @@
       background-color: #a7a99a;
       top: 34px;
       left: 0; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 991px) {
         .app-services-right-text h4:before {
           left: 50%;
           transform: translateX(-50%); } }
@@ -279,7 +282,7 @@
       left: -62px;
       top: 2px;
       box-sizing: border-box; }
-      @media only screen and (max-width: 1023px) {
+      @media only screen and (max-width: 991px) {
         .app-services-right-text h4:after {
           left: 50%;
           transform: translateX(-300%); } }
@@ -294,7 +297,7 @@
   margin-top: 110px;
   padding-bottom: 119px;
   font-family: "pt_serifbold", Verdana, serif, sans-serif; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     .app-book {
       margin-top: 60px;
       margin-bottom: 60px;
@@ -315,7 +318,7 @@
         position: relative;
         width: 870px;
         margin: 0 auto; }
-        @media only screen and (max-width: 1023px) {
+        @media only screen and (max-width: 991px) {
           .app-book .app-testimonials-description p {
             width: inherit;
             font-size: 18px;
@@ -391,7 +394,7 @@
   height: 384px;
   font-family: "pt_serifbold", Verdana, serif, sans-serif;
   text-align: center; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     .app-blog {
       margin-bottom: 30px; } }
   .app-blog p {

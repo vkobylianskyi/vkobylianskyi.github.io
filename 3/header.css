@@ -45,7 +45,7 @@ header.header {
   min-height: 110px;
   font-size: 14px;
   letter-spacing: 1px; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     .header-title-section {
       flex-direction: column;
       align-items: center; } }
@@ -54,7 +54,7 @@ header.header {
     line-height: 20px;
     font-weight: 700;
     width: 180px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .header-title-section__contacts {
         margin-top: 20px;
         text-align: center;
@@ -66,7 +66,7 @@ header.header {
   .header-title-section__title {
     text-align: center;
     position: relative; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .header-title-section__title {
         order: 1; } }
     .header-title-section__title:before {
@@ -94,7 +94,7 @@ header.header {
     line-height: 20px;
     font-weight: 700;
     width: 180px; }
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 991px) {
       .header-title-section__basket {
         text-align: center;
         margin-top: 20px;
@@ -112,7 +112,7 @@ header.header {
   margin-bottom: 110px;
   padding-top: 245px;
   position: relative; }
-  @media only screen and (max-width: 1023px) {
+  @media only screen and (max-width: 991px) {
     .header-catering {
       margin-bottom: 60px; } }
   .header-catering__text {
@@ -120,6 +120,9 @@ header.header {
     color: #fff;
     text-align: center;
     position: relative; }
+    @media only screen and (max-width: 991px) {
+      .header-catering__text {
+        font-size: 40px; } }
     @media only screen and (max-width: 479px) {
       .header-catering__text {
         font-size: 25px; } }
