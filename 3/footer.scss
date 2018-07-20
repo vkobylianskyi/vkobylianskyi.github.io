@@ -139,22 +139,20 @@ footer {
   text-align: center;
 
   @include mq(992, "max") {
-    margin-top: 30px;
-  }
-  @include mq(1200, "max") {
-    width: 200px;
+    margin-top: 60px;
   }
 
   img {
-    width: 100%;
+    @include mq(1200, "max") {
+      height: 210px;
+    }
   }
-
 
   figcaption {
     font-family: 'pt_serifbold', $font-fallback;
     font-size: $font-sm-small;
     color: $brown;
-    padding-top: 291px;
+    padding-top: 49px;
   }
 
   p {
@@ -165,31 +163,17 @@ footer {
   }
 
   &:nth-child(1) {
-    //background-image: url("img/Amanda_Finch.png");
 
     @include mq(992, "max") {
       margin-top: 113px;
     }
-
   }
 
   &:nth-child(2) {
-    //background-image: url("img/Joseph_Verder.png");
 
     @include mq(992, "max") {
       margin-top: 113px;
     }
-
-  }
-
-  &:nth-child(3) {
-    //background-image: url("img/Anthony_Mann.png");
-
-  }
-
-  &:nth-child(4) {
-    //background-image: url("img/Julia_Green.png");
-
   }
 }
 
@@ -197,6 +181,10 @@ footer {
 
   &-row {
     margin-top: 30px;
+
+    @include mq(992, "max") {
+      margin-top: 0;
+    }
   }
 
   &-picture-item {
@@ -215,6 +203,16 @@ footer {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @include mq(992, "max") {
+        margin-top: 50px;
+        width: 70%;
+        height: 70%;
+      }
+    }
+
+    @include mq(992, "max") {
+      margin-top: 50px;
     }
   }
 }
