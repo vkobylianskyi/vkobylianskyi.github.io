@@ -1,0 +1,31 @@
+@import "fonts.css";
+@import "var";
+@import "base/_api.scss";
+
+.header-title {
+  height: 76px;
+  background-color: $light-grey;
+
+  &-section {
+
+    &__name {
+      font-family: 'ralewaylight' $font-fallback;
+      color: $grey;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 24.003px;
+
+      span {
+        font-family: 'ralewaysemibold' $font-fallback;
+        color: $dark-grey;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: flex-end;
+      text-transform: uppercase;
+
+    }
+  }
+}

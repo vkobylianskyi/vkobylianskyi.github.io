@@ -1,0 +1,19 @@
+@import url(fonts.css);
+.header-title {
+  height: 76px;
+  background-color: #f8f8f8; }
+  .header-title-section__name {
+    font-family: "ralewaylight" Verdana, serif, sans-serif;
+    color: #63656a;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 24.003px; }
+    .header-title-section__name span {
+      font-family: "ralewaysemibold" Verdana, serif, sans-serif;
+      color: #63656a; }
+  .header-title-section__nav {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase; }
+
+/*# sourceMappingURL=style.css.map */
