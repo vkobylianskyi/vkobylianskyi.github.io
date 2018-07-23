@@ -425,10 +425,16 @@
   .app-blog:nth-child(1) {
     background-image: url("img/Depositphotos_92197920_original.png");
     padding-left: 0; }
+    @media only screen and (max-width: 991px) {
+      .app-blog:nth-child(1) {
+        padding-left: 15px; } }
   .app-blog:nth-child(2) {
     background-image: url("img/Depositphotos_70224577_original.png"); }
   .app-blog:nth-child(3) {
     background-image: url("img/Depositphotos_10888700_original.png");
     padding-right: 0; }
+    @media only screen and (max-width: 991px) {
+      .app-blog:nth-child(3) {
+        padding-right: 15px; } }
 
 /*# sourceMappingURL=main.css.map */

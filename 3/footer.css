@@ -127,6 +127,9 @@ footer {
   @media only screen and (max-width: 991px) {
     .app-staff:nth-child(2) {
       margin-top: 113px; } }
+  @media only screen and (max-width: 767px) {
+    .app-staff:nth-child(2) {
+      margin-top: 60px; } }
 
 .app-gallery-row {
   margin-top: 30px; }
@@ -145,11 +148,6 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover; }
-    @media only screen and (max-width: 991px) {
-      .app-gallery-picture-item img {
-        margin-top: 50px;
-        width: 70%;
-        height: 70%; } }
   @media only screen and (max-width: 991px) {
     .app-gallery-picture-item {
       margin-top: 50px; } }

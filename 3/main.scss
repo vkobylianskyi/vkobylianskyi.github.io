@@ -358,60 +358,60 @@
         display: none;
       }
     }
-  @include mq(992, "max") {
-    order: 3
-  }
-}
-
-&-right-text {
-  counter-reset: list 3;
-  text-align: left;
-
-  @include mq(992, "max") {
-    text-align: center;
-    order: 2;
-    margin-top: 40px;
-  }
-
-  h4 {
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 111px;
-      height: 2px;
-      background-color: #a7a99a;
-      top: 34px;
-      left: 0;
-
-      @include mq(992, "max") {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-
-    &:after {
-      content: "0" counter(list);
-      counter-increment: list;
-      position: absolute;
-      font: {
-        size: $font-lg-small;
-        weight: 700;
-      }
-      line-height: 28px;
-      color: #eae8e0;
-      display: block;
-      left: -62px;
-      top: 2px;
-      box-sizing: border-box;
-
-      @include mq(992, "max") {
-        left: 50%;
-        transform: translateX(-300%);
-      }
+    @include mq(992, "max") {
+      order: 3
     }
   }
-}
+
+  &-right-text {
+    counter-reset: list 3;
+    text-align: left;
+
+    @include mq(992, "max") {
+      text-align: center;
+      order: 2;
+      margin-top: 40px;
+    }
+
+    h4 {
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 111px;
+        height: 2px;
+        background-color: #a7a99a;
+        top: 34px;
+        left: 0;
+
+        @include mq(992, "max") {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &:after {
+        content: "0" counter(list);
+        counter-increment: list;
+        position: absolute;
+        font: {
+          size: $font-lg-small;
+          weight: 700;
+        }
+        line-height: 28px;
+        color: #eae8e0;
+        display: block;
+        left: -62px;
+        top: 2px;
+        box-sizing: border-box;
+
+        @include mq(992, "max") {
+          left: 50%;
+          transform: translateX(-300%);
+        }
+      }
+    }
+  }
 
 }
 
@@ -593,6 +593,10 @@
   &:nth-child(1) {
     background-image: url("img/Depositphotos_92197920_original.png");
     padding-left: 0;
+
+    @include mq(992, "max") {
+      padding-left: 15px;
+    }
   }
 
   &:nth-child(2) {
@@ -602,5 +606,9 @@
   &:nth-child(3) {
     background-image: url("img/Depositphotos_10888700_original.png");
     padding-right: 0;
+
+    @include mq(992, "max") {
+      padding-right: 15px;
+    }
   }
 }
