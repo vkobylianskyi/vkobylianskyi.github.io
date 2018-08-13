@@ -5,6 +5,8 @@
 .header-title {
   height: 76px;
   background-color: $light-grey;
+  display: flex;
+  align-items: center;
 
   &-section {
 
@@ -14,10 +16,10 @@
       font-size: 32px;
       font-weight: 300;
       line-height: 24.003px;
-
       span {
         font-family: 'ralewaysemibold' $font-fallback;
         color: $dark-grey;
+        font-weight: 600;
       }
     }
 
@@ -25,7 +27,124 @@
       display: flex;
       justify-content: flex-end;
       text-transform: uppercase;
+      color: $dark-grey;
+      font-weight: 600;
 
+      .navbar-nav :last-child {
+        padding-right: 0;
+      }
+
+      .nav-item {
+        padding-right: 20px;
+        cursor: pointer;
+      }
+      .active {
+        color: $light-green;
+      }
+    }
+  }
+}
+
+.header-content {
+  background: {
+    repeat: no-repeat;
+    position: top center;
+    size: cover;
+    image: url("img/baner.png");
+  }
+  height: 514px;
+  position: relative;
+
+  &__text {
+    font-size: $font-lg-small;
+    position: absolute;
+    top: 33px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 11px 6px;
+    width: 353px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(99, 101, 106, .7);
+    color: white;
+  }
+
+  &__right {
+    position: absolute;
+    top: 156px;
+    left: 830px;
+  }
+  &__center {
+    position: absolute;
+    top: 89px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  &__iphone {
+    position: absolute;
+    top: 177px;
+    left: 1124px;
+    z-index: 2;
+  }
+
+  &__ipad {
+    position: absolute;
+    top: 108px;
+    left: 487px;
+    z-index: 2;
+  }
+
+  i {
+    display: flex;
+    color: white;
+    position: absolute;
+    font-size: $font-md-small;
+    padding: 17px;
+    background-color: rgba(99, 101, 106, .7);
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    align-items: center;
+    transform: translateY(-50%);
+  }
+
+  .fa-angle-left {
+    top: 50%;
+  }
+  .fa-angle-right {
+    top: 50%;
+    right: 15px;
+
+  }
+}
+
+.main {
+  height: 544px;
+  background-color: #fafafa;
+  color: $dark-grey;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: $font-lg-small;
+    text-align: center;
+    padding-top: 50px;
+  }
+  .main-section-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+
+  &-left {
+
+    h2 {
+      font-size: 22px;
     }
   }
 }
