@@ -1,6 +1,6 @@
-@import "fonts.css";
+@import "fonts";
 @import "var";
-@import "base/_api.scss";
+@import "base/api";
 
 .header-title {
   background-color: $light-grey;
@@ -50,7 +50,7 @@
     repeat: no-repeat;
     position: top center;
     size: cover;
-    image: url("img/baner.png");
+    image: url("/img/baner2.png");
   }
   height: 514px;
   position: relative;

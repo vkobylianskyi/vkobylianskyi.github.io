@@ -1,14 +1,39 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Document</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>GAme!!</title>
+    <meta charset="UTF-8">
 </head>
-<script src="main.js">
-</script>
 <body>
-<div>
+<h1>ЗЕ бест ґейм</h1>
+<script>
+    var words = ["довбойоб", "косяк", "приватбанк", "дотер"];
+    var word = words[Math.floor(Math.random() * words.length)];
+    var answerArray = [];
+    for (var i = 0; i < word.length; i++) {
+        answerArray[i] = "_";
+    }
+    var remainingLetters = word.length;
 
-</div>
+    while (remainingLetters > 0) {
+        alert(answerArray.join(" "));
+        var guess = prompt("Угадайте букву или нажмите Отмена для выхода из игры.");
+        if (guess === null) {
+            break;
+        } else if (guess.length !== 1) {
+            alert("Пожалуйста, введите только одну букву.");
+        } else {
+            for (var j = 0; j < word.length; j++) {
+                if (word[j] === guess) {
+                    answerArray[j] = guess;
+                    remainingLetters--;
+                }
+            }
+        }
+    }
+    alert(answerArray.join(" "));
+    alert("Отлично! Было загадано слово " + word);
+
+</script>
 </body>
 </html>
