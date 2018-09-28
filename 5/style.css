@@ -1,6 +1,5 @@
 @import url(fonts.css);
 .header-title {
-  height: 76px;
   background-color: #f8f8f8;
   display: flex;
   align-items: center; }
@@ -19,7 +18,8 @@
     justify-content: flex-end;
     text-transform: uppercase;
     color: #63656a;
-    font-weight: 600; }
+    font-weight: 600;
+    line-height: 4em; }
     .header-title-section__nav .navbar-nav :last-child {
       padding-right: 0; }
     .header-title-section__nav .nav-item {
@@ -54,7 +54,8 @@
   .header-content__right {
     position: absolute;
     top: 156px;
-    left: 830px; }
+    left: 50%;
+    transform: translateX(-19%); }
   .header-content__center {
     position: absolute;
     top: 89px;
@@ -64,13 +65,15 @@
   .header-content__iphone {
     position: absolute;
     top: 177px;
-    left: 1124px;
-    z-index: 2; }
+    z-index: 2;
+    left: 50%;
+    transform: translateX(88%); }
   .header-content__ipad {
     position: absolute;
     top: 108px;
-    left: 487px;
-    z-index: 2; }
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-127%); }
   .header-content i {
     display: flex;
     color: white;
@@ -327,7 +330,7 @@ main {
     justify-content: center;
     position: relative; }
     .app-testimonials__signature:before {
-      left: 840px;
+      left: 50%;
       content: "\f406";
       font-style: normal;
       font-weight: 600;
@@ -335,7 +338,8 @@ main {
       font-family: 'Font Awesome 5 Free';
       position: absolute;
       color: #63656a;
-      font-size: 12px; }
+      font-size: 12px;
+      transform: translateX(-750%); }
 
 footer {
   font-family: "open_sansregular", Verdana, serif, sans-serif; }

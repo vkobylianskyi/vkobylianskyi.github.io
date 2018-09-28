@@ -3,7 +3,6 @@
 @import "base/_api.scss";
 
 .header-title {
-  height: 76px;
   background-color: $light-grey;
   display: flex;
   align-items: center;
@@ -29,6 +28,7 @@
       text-transform: uppercase;
       color: $dark-grey;
       font-weight: 600;
+      line-height: 4em;
 
       .navbar-nav :last-child {
         padding-right: 0;
@@ -76,7 +76,8 @@
   &__right {
     position: absolute;
     top: 156px;
-    left: 830px;
+    left: 50%;
+    transform: translateX(-19%);
   }
   &__center {
     position: absolute;
@@ -88,15 +89,17 @@
   &__iphone {
     position: absolute;
     top: 177px;
-    left: 1124px;
     z-index: 2;
+    left: 50%;
+    transform: translateX(88%);
   }
 
   &__ipad {
     position: absolute;
     top: 108px;
-    left: 487px;
     z-index: 2;
+    left: 50%;
+    transform: translateX(-127%);
   }
 
   i {
@@ -436,7 +439,7 @@ main {
     position: relative;
 
     &:before {
-      left: 840px;
+      left: 50%;
       content: "\f406";
       font-style: normal;
       font-weight: 600;
@@ -445,6 +448,7 @@ main {
       position: absolute;
       color: $title-color;
       font-size: 12px;
+      transform: translateX(-750%);
     }
   }
 }
