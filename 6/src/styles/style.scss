@@ -1,6 +1,6 @@
-@import "fonts.css";
+@import "fonts";
 @import "var";
-@import "base/_api.scss";
+@import "base/api";
 
 body {
   background-color: $bg-color;
@@ -8,7 +8,7 @@ body {
 
 .header {
   background: {
-    image: url("img/mountains header.png");
+    image: url("/img/mountains header.png");
     size: cover;
     repeat: no-repeat;
   }
@@ -61,7 +61,7 @@ body {
     right: 0;
     bottom: 0;
     background: {
-      image: url("img/projects background.png");
+      image: url("/img/projects background.png");
       repeat: no-repeat;
       position: top center;
     }
@@ -356,7 +356,7 @@ body {
 .footer {
   margin-top: 200px;
   background: {
-    image: url("img/footer.png");
+    image: url("/img/footer.png");
     repeat: no-repeat;
     position: bottom center;
     size: contain;
