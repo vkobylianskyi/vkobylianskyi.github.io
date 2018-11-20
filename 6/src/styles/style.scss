@@ -132,9 +132,10 @@ body {
   }
 
   &.e {
-    margin-top: 355px;
-    margin-left: 355px;
-    //position: absolute;
+    position: absolute;
+    line-height: 1000px;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -355,11 +356,13 @@ body {
 
 .footer {
   margin-top: 200px;
+  height: 500px;
+  position: relative;
   background: {
     image: url("/img/footer.png");
     repeat: no-repeat;
     position: bottom center;
-    size: contain;
+    size: cover;
   }
   z-index: -1;
 
@@ -367,7 +370,7 @@ body {
   &-content {
 
     &-title {
-      position: relative;
+
     }
 
 

@@ -1,0 +1,95 @@
+.app-btn {
+  background: {
+    color: transparent;
+  }
+  height: 40px;
+  display: block;
+  color: white;
+  font-size: 24px;
+  outline: none;
+  text-align: center;
+  border: 2px solid currentColor;
+  border-radius: 4.5px;
+  transition: .5s;
+
+  &-big {
+    width: 150px;
+    margin: 0 auto;
+
+    &:hover {
+      color: #f74c55;
+      background: white;
+      cursor: pointer;
+      box-shadow: 0 0 3px 0 rgba(255, 255, 255, .8);
+      transform: skewX(10deg);
+      transform-origin: center center;
+    }
+  }
+
+  &-plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    font-size: $font-sm-small;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+      color: black;
+      background: white;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  }
+
+  &-btn-dark {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 140px;
+    width: 180px;
+    display: block;
+  }
+
+}
+
+.app-palitra {
+  background: -webkit-linear-gradient(left, #ee732f 20%,
+          #f74c55 0,
+          #f74c55 40%,
+          #2d5f3b 0,
+          #2d5f3b 60%,
+          #404040 0,
+          #404040 80%,
+          #fb636b 0);
+  height: 30px;
+  width: 175px;
+}
+
+.app-multi-line {
+  background: -webkit-linear-gradient(left, #ee732f 20%,
+          #f74c55 0,
+          #f74c55 40%,
+          #2d5f3b 0,
+          #2d5f3b 60%,
+          #404040 0,
+          #404040 80%,
+          #fb636b 0);
+  background-size: 178px;
+  height: 10px;
+  width: 100%;
+  background-position: -43% 0;
+}
+
+.app-title {
+  font-size: $font-sm-small;
+  text-align: center;
+  line-height: 42px;
+  margin-bottom: 40px;
+
+  @include mq("tablet") {
+    font-size: 25px;
+  }
+}

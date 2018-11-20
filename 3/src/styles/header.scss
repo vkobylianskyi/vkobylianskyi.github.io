@@ -1,4 +1,4 @@
-@import "fonts.css";
+@import "fonts";
 @import "var";
 @import "base/_api.scss";
 
@@ -27,9 +27,17 @@ header.header {
     font-weight: 700;
     cursor: pointer;
 
+    li {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+    }*взято з респонсіва*
+
     &-item {
-      border-left: 1px solid #d0ceca;
-      padding: 0 25px;
+      //border-left: 1px solid #d0ceca; оригінал
+      border-left: none;
+      padding: 0;
+      //padding: 0 25px;
 
       &:hover {
         color: black;
@@ -37,26 +45,29 @@ header.header {
 
       &:first-child {
         border: none;
+        display: none;
       }
     }
   }
 
-  @include mq(992, "max") {
+  @include mq("tablet-wide") {
     .header-top-line__menu-item {
-      border-left: none;
-      padding: 0;
+      //border-left: none;
+      border-left: 1px solid #d0ceca;
+      //padding: 0;
+      padding: 0 25px;
     }
 
     .header-top-line__menu {
-      li:first-of-type {
-        display: none;
-      }
+      //li:first-of-type {
+      //  display: none;
+      //}
 
-      li {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-      }
+      //li {
+      //  padding-top: 10px;
+      //  padding-bottom: 10px;
+      //  padding-left: 10px;
+      //}
     }
   }
 }
