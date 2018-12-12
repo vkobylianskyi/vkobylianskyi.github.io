@@ -2,6 +2,16 @@
 @import "var";
 @import "base/_api.scss";
 
+// TABLE CONTENTS
+//
+// Header
+// Header-title
+// Header-catering
+
+//------------------------------------
+//Header
+//------------------------------------
+
 header.header {
   color: $brown;
   font-family: 'pt_serifbold', $font-fallback;
@@ -27,17 +37,17 @@ header.header {
     font-weight: 700;
     cursor: pointer;
 
-    li {
+
+    li a {
       padding-top: 10px;
       padding-bottom: 10px;
       padding-left: 10px;
-    }*взято з респонсіва*
+      text-decoration: none; color: inherit;
+    }
 
     &-item {
-      //border-left: 1px solid #d0ceca; оригінал
       border-left: none;
       padding: 0;
-      //padding: 0 25px;
 
       &:hover {
         color: black;
@@ -52,51 +62,50 @@ header.header {
 
   @include mq("tablet-wide") {
     .header-top-line__menu-item {
-      //border-left: none;
       border-left: 1px solid #d0ceca;
-      //padding: 0;
       padding: 0 25px;
     }
 
     .header-top-line__menu {
-      //li:first-of-type {
-      //  display: none;
-      //}
-
-      //li {
-      //  padding-top: 10px;
-      //  padding-bottom: 10px;
-      //  padding-left: 10px;
-      //}
+      li:first-of-type {
+        display: block;
+        border: none;
+      }
     }
   }
 }
 
+//------------------------------------
+//Header-title
+//------------------------------------
+
 .header-title-section {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 51px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
   min-height: 110px;
   text-transform: uppercase;
   font-size: $font-xs-small;
   letter-spacing: 1px;
 
-  @include mq(992, "max") {
-    flex-direction: column;
-    align-items: center;
+  @include mq("tablet-wide") {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   &__contacts {
-    text-align: right;
     line-height: 20px;
     font-weight: 700;
     width: 180px;
+    text-align: center;
+    order: 2;
+    padding-bottom: 20px;
 
-    @include mq(992, "max") {
-      margin-top: 20px;
-      text-align: center;
-      order: 2
+    @include mq("tablet-wide") {
+      text-align: right;
+      order: 1;
     }
 
     i.fa.fa-phone {
@@ -110,8 +119,8 @@ header.header {
     text-align: center;
     position: relative;
 
-    @include mq(992, "max") {
-      order: 1
+    @include mq("tablet-wide") {
+      order: 2
     }
 
     &:before {
@@ -142,15 +151,15 @@ header.header {
   }
 
   &__basket {
-    text-align: right;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
     line-height: 20px;
     font-weight: 700;
     width: 180px;
 
-    @include mq(992, "max") {
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
+    @include mq("tablet-wide") {
+      text-align: right;
       order: 3
     }
 
@@ -158,8 +167,11 @@ header.header {
       padding-right: 5px;
     }
   }
-
 }
+
+//------------------------------------
+//Header-catering
+//------------------------------------
 
 .header-catering {
   min-height: 773px;
@@ -169,26 +181,26 @@ header.header {
     size: cover;
     image: url("img/test.png");
   }
-  margin-bottom: 110px;
+  //margin-bottom: 60px;
   padding-top: 245px;
   position: relative;
 
-  @include mq(992, "max") {
-    margin-bottom: 60px;
-  }
+  //@include mq("tablet-wide") {
+  //  margin-bottom: 110px;
+  //}
 
   &__text {
-    font-size: 60px;
+    font-size: 25px;
     color: #fff;
     text-align: center;
     position: relative;
 
-    @include mq(992, "max") {
+    @include mq("tablet") {
       font-size: 40px;
     }
 
-    @include mq("phone-wide", "max") {
-      font-size: 25px;
+    @include mq("tablet-wide") {
+      font-size: 60px;
     }
 
     &:before,

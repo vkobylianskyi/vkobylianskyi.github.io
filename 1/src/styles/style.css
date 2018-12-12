@@ -220,6 +220,26 @@ ul, ol {
       .menu-list__item:nth-child(2n) {
         padding-left: 20px;
         padding-right: 20px; } }
+    .menu-list__item:first-child {
+      position: relative;
+      perspective: 600px; }
+      .menu-list__item:first-child:hover .animation {
+        transform: rotateX(0deg); }
+    .menu-list__item .animation {
+      backface-visibility: hidden;
+      transform-origin: top center;
+      position: absolute;
+      width: 100%;
+      background-color: #2d5f3b;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      transform: rotateX(-100deg);
+      transition: .5s linear 0s; }
+      .menu-list__item .animation__item {
+        padding-bottom: 10px; }
+        .menu-list__item .animation__item:first-child {
+          padding-top: 10px; }
 
 .description {
   padding-top: 45px;

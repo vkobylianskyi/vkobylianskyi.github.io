@@ -14,7 +14,6 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 <header class="container-fluid header">
     <div class="header-top-line">
@@ -31,13 +30,27 @@
             <div class="collapse navbar-collapse app-nav" id="navbarNavDropdown">
                 <ul class="navbar-nav header-top-line__menu">
                     <li class="nav-link header-top-line__menu-item"><i class="fa fa-home"></i></li>
-                    <li class="header-top-line__menu-item">about us</li>
-                    <li class="header-top-line__menu-item">pages</li>
-                    <li class="header-top-line__menu-item">services</li>
-                    <li class="header-top-line__menu-item">menu</li>
-                    <li class="header-top-line__menu-item">gallery</li>
-                    <li class="header-top-line__menu-item">blog</li>
-                    <li class="header-top-line__menu-item">contact</li>
+                    <li class="header-top-line__menu-item">
+                        <a href="#about_us">about us</a>
+                    </li>
+                    <li class="header-top-line__menu-item">
+                        <a href="#pages">pages</a></li>
+                    <li class="header-top-line__menu-item">
+                        <a href="#menu">menu</a></li>
+                    </li>
+                    <li class="header-top-line__menu-item">
+                        <a href="#services">services</a></li>
+                    </li>
+                    <li class="header-top-line__menu-item">
+                        <a href="#blog">blog</a></li>
+                    </li>
+                    <li class="header-top-line__menu-item">
+                        <a href="#gallery">gallery</a>
+                    </li>
+                    </li>
+                    <li class="header-top-line__menu-item">
+                        <a href="#contact">contact</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -73,8 +86,8 @@
     </div>
 </header>
 <main>
-    <div class="container">
-        <div class="app-title dark">
+    <div class="container about-block" id="about_us">
+        <div class="app-title dark about">
             <p class="app-title-section">catering</p>
             <h2 class="app-title-description">Welcome to the Best<br>Catering Company<br></h2>
         </div>
@@ -96,7 +109,7 @@
             More about us
         </div>
     </div>
-    <div class="container-fluid app-about">
+    <div class="container-fluid app-about" id="pages">
         <div class="app-title white about">
             <p class="app-title-section">about us</p>
             <h2 class="app-title-description">a shot story about<br>our company<br></h2>
@@ -119,46 +132,48 @@
                 </div>
             </div>
         </div>
-        <div class="app-title dark">
-            <p class="app-title-section">catering</p>
-            <h2 class="app-title-description">our menu</h2>
-        </div>
-        <div class="container">
-            <div class="row d-flex justify-content-center app-menu">
-                <div class="col-md-6 col-lg-3 justify-content-center app-menu-section">
-                    <figure class="app-menu-section-item">
-                        <img src="img/canapes.png" alt="">
-                        <figcaption>canapes</figcaption>
-                    </figure>
-                    <i class="fa fa-angle-down"></i>
-                </div>
-                <div class="col-md-6 col-lg-3 justify-content-center app-menu-section">
-                    <figure class="app-menu-section-item">
-                        <img src="img/small_plates.png" alt="">
-                        <figcaption>small plates</figcaption>
-                    </figure>
-                    <i class="fa fa-angle-down"></i>
-                </div>
-                <div class="col-md-6 col-lg-3 justify-content-center app-menu-section">
-                    <figure class="app-menu-section-item">
-                        <img src="img/sweets.png" alt="">
-                        <figcaption>sweets</figcaption>
-                    </figure>
-                    <i class="fa fa-angle-down"></i>
-                </div>
-                <div class="col-md-6 col-lg-3 justify-content-center app-menu-section">
-                    <figure class="app-menu-section-item">
-                        <img src="img/drinks.png" alt="">
-                        <figcaption>drinks</figcaption>
-                    </figure>
-                    <i class="fa fa-angle-down"></i>
+        <div class="menu-block" id="menu">
+            <div class="app-title dark">
+                <p class="app-title-section">catering</p>
+                <h2 class="app-title-description">our menu</h2>
+            </div>
+            <div class="container">
+                <div class="row d-flex justify-content-center app-menu">
+                    <div class="col-md-6 col-lg-3 justify-content-center app-menu-section">
+                        <figure class="app-menu-section-item">
+                            <img src="img/canapes.png" alt="">
+                            <figcaption>canapes</figcaption>
+                        </figure>
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="col-md-6 col-lg-3 justify-content-center app-menu-section">
+                        <figure class="app-menu-section-item">
+                            <img src="img/small_plates.png" alt="">
+                            <figcaption>small plates</figcaption>
+                        </figure>
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="col-md-6 col-lg-3 justify-content-center app-menu-section">
+                        <figure class="app-menu-section-item">
+                            <img src="img/sweets.png" alt="">
+                            <figcaption>sweets</figcaption>
+                        </figure>
+                        <i class="fa fa-angle-down"></i>
+                    </div>
+                    <div class="col-md-6 col-lg-3 justify-content-center app-menu-section">
+                        <figure class="app-menu-section-item">
+                            <img src="img/drinks.png" alt="">
+                            <figcaption>drinks</figcaption>
+                        </figure>
+                        <i class="fa fa-angle-down"></i>
+                    </div>
                 </div>
             </div>
+            <div class="app-about-quote">& mush more sensational food & drinks...</div>
+            <button class="app-button vfm">view full menu</button>
         </div>
-        <div class="app-about-quote">& mush more sensational food & drinks...</div>
-        <button class="app-button vfm">view full menu</button>
     </div>
-    <div class="container">
+    <div class="container services-block" id="services">
         <div class="app-title dark blog">
             <p class="app-title-section">services</p>
             <h2 class="app-title-description">Planning a Fabulous<br>Event?<br></h2>
@@ -208,7 +223,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container blog-block" id="blog">
         <div class="app-title dark blog">
             <p class="app-title-section">blog</p>
             <h2 class="app-title-description">recent articles</h2>
@@ -288,41 +303,43 @@
             </div>
         </div>
     </div>
-    <div class="app-title dark blog">
-        <p class="app-title-section">gallery</p>
-        <h2 class="app-title-description">check out recent<br>projects<br></h2>
-    </div>
-    <div class="container-fluid app-gallery">
-        <div class="row">
-            <div class="col-lg-8 col-md-12">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img
-                            src="img/gallery/Depositphotos_12475271_original.png"
-                            alt="">
-                    </div>
-                    <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img
-                            src="img/gallery/Depositphotos_58523849_original.png"
-                            alt="">
-                    </div>
-                </div>
-                <div class="row app-gallery-row">
-                    <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img
-                            src="img/gallery/Depositphotos_92197920_original.png"
-                            alt="">
-                    </div>
-                    <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img
-                            src="img/gallery/Depositphotos_69659075_original.png"
-                            alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 app-gallery-picture-item"><img
-                    src="img/gallery/Depositphotos_94164600_original.png"
-                    alt=""></div>
+    <div class="gallery-block" id="gallery">
+        <div class="app-title dark blog">
+            <p class="app-title-section">gallery</p>
+            <h2 class="app-title-description">check out recent<br>projects<br></h2>
         </div>
+        <div class="container-fluid app-gallery">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img
+                                src="img/gallery/Depositphotos_12475271_original.png"
+                                alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img
+                                src="img/gallery/Depositphotos_58523849_original.png"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="row app-gallery-row">
+                        <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img
+                                src="img/gallery/Depositphotos_92197920_original.png"
+                                alt="">
+                        </div>
+                        <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img
+                                src="img/gallery/Depositphotos_69659075_original.png"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 app-gallery-picture-item"><img
+                        src="img/gallery/Depositphotos_94164600_original.png"
+                        alt=""></div>
+            </div>
+        </div>
+        <button class="app-button vmp">view more projects</button>
     </div>
-    <button class="app-button vmp">view more projects</button>
-    <div class="container-fluid app-form-item">
+    <div class="container-fluid app-form-item" id="contact">
         <div class="app-title dark form">
             <p class="app-title-section">contact us</p>
             <h2 class="app-title-description">leave a feadback or<br>pask a question<br></h2>
@@ -358,6 +375,9 @@
     <div class="copyright">ancora © 2016 all rights reserved <span>terms of use</span> and <span>privacy policy</span>
     </div>
 </footer>
+<button class="top-button">
+    <i class="fa fa-angle-up"></i>
+</button>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -367,5 +387,23 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1000) {
+                $('.top-button').fadeIn();
+            } else {
+                $('.top-button').fadeOut();
+            }
+        });
+        $('.top-button').click(function () {
+            $('html,body').animate({scrollTop: 0}, 1000)
+        })
+    });
+</script>
+<!--<script src="main.js"></script>-->
 </body>
 </html>

@@ -2,6 +2,19 @@
 @import "var";
 @import "base/api.scss";
 
+// TABLE CONTENTS
+//
+// App-chef
+// App-staff
+// App-gallery
+// App-form-item
+// App-contact-container
+// Top-button
+
+//------------------------------------
+//// App-chef
+//------------------------------------
+
 footer {
   color: $brown;
   font-family: 'pt_serifbold', $font-fallback;
@@ -15,20 +28,18 @@ footer {
     position: top center;
   }
   position: relative;
-  padding-bottom: 109px;
-  margin-bottom: 110px;
+  padding-bottom: 70px;
 
-  @include mq("992-wide", "max") {
-    padding-bottom: 70px;
-    margin-bottom: 70px;
+  @include mq("tablet-wide") {
+    padding-bottom: 110px;
   }
 
   &-description {
     padding-top: 106px;
-    padding-bottom: 110px;
+    padding-bottom: 70px;
 
-    @include mq(992, "max") {
-      padding-bottom: 70px;
+    @include mq("tablet-wide") {
+      padding-bottom: 110px;
     }
 
     &-picture {
@@ -42,8 +53,11 @@ footer {
 
     &-text {
       box-sizing: border-box;
-      padding-top: 94px;
-      padding-left: 71px;
+      padding: {
+        left: 0;
+        right: 0;
+        top: 84px;
+      }
       font-family: 'pt_serifregular', $font-fallback;
       font-size: $font-xs-small;
       font-weight: 400;
@@ -51,55 +65,63 @@ footer {
       color: $grey;
       background-color: #fff;
 
-      @include mq(992, "max") {
-        padding-left: 0;
-      }
-
-      @include mq("phone-wide", "max") {
+      @include mq("tablet") {
         padding: {
           left: 0;
-          right: 0;
+        }
+      }
+
+      @include mq("tablet-wide") {
+        padding: {
+          left: 71px;
         }
       }
 
       &__item1 {
-        width: 412px;
-        box-sizing: content-box;
         position: relative;
+        box-sizing: border-box;
+        text-align: justify;
+        padding: {
+          left: 40px;
+          right: 40px;
+        }
 
-        @include mq(992, "max") {
-          margin: 0 auto;
-          text-align: justify;
+        @include mq("tablet-wide") {
+          text-align: left;
+          box-sizing: content-box;
+          margin: 0;
+          padding: {
+            left: 0;
+            right: 20px;
+          }
         }
-        @include mq("phone-wide", "max") {
-          text-align: justify;
-          box-sizing: border-box;
-          width: 290px;
-          margin: 0 auto;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
+
         &:before {
           @include pseudo;
           background: url('img/cov.png');;
           height: 45px;
           width: 62px;
-          top: -12px;
-          left: -2px;
+          top: 0;
+          left: 40px;
+          transform: translateY(-25%);
 
-          @include mq("phone-wide", "max") {
-            left: 20px;
+          @include mq("tablet-wide") {
+            left: 0;
           }
         }
       }
+
       &__item2 {
         padding-top: 82px;
         text-transform: capitalize;
         position: relative;
-        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        @include mq(992, "max") {
-          margin: 0 auto;
+        @include mq("tablet-wide") {
+          margin: 0;
+          justify-content: flex-start;
         }
 
         span {
@@ -116,18 +138,23 @@ footer {
           width: 111px;
           height: 2px;
           background-color: #a7a99a;
+          left: 50%;
+          transform: translateX(-50%);
           top: 39px;
 
-          @include mq(992, "max") {
-            left: 50%;
-            transform: translateX(-50%);
+          @include mq("tablet-wide") {
+            left: 0;
+            transform: none;
           }
-
         }
       }
     }
   }
 }
+
+//------------------------------------
+//// App-staff
+//------------------------------------
 
 .app-staff {
   text-transform: capitalize;
@@ -135,11 +162,11 @@ footer {
     repeat: no-repeat;
     position: top center;
   }
-  margin-top: 113px;
+  margin-top: 60px;
   text-align: center;
 
-  @include mq(992, "max") {
-    margin-top: 60px;
+  @include mq("tablet-wide") {
+    margin-top: 113px;
   }
 
   img {
@@ -161,73 +188,72 @@ footer {
     color: $grey;
     margin-top: 14px;
   }
-
-  &:nth-child(1) {
-
-    @include mq(992, "max") {
-      margin-top: 113px;
-    }
-  }
-
-  &:nth-child(2) {
-
-    @include mq(992, "max") {
-      margin-top: 113px;
-    }
-
-    @include mq(768, "max") {
-      margin-top: 60px;
-    }
-  }
 }
 
-.app-gallery {
+//------------------------------------
+//// App-gallery
+//------------------------------------
 
-  &-row {
-    margin-top: 30px;
+.gallery-block {
+padding-top: 60px;
 
-    @include mq(992, "max") {
-      margin-top: 0;
-    }
+  @include mq("tablet-wide") {
+    padding-top: 110px;
   }
 
-  &-picture-item {
-    overflow: hidden;
-    transition: all .5s;
-    &:hover {
-      filter: blur(5px);
+  .app-gallery {
 
-      img {
-        transform: scale(1.4);
+    &-row {
+      margin-top: 0;
+
+      @include mq("tablet-wide") {
+        margin-top: 30px;
       }
     }
 
-    img {
+    &-picture-item {
+      overflow: hidden;
       transition: all .5s;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    @include mq(992, "max") {
       margin-top: 50px;
+      &:hover {
+        filter: blur(5px);
+
+        img {
+          transform: scale(1.4);
+        }
+      }
+
+      img {
+        transition: all .5s;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @include mq("tablet-wide") {
+        margin: 0;
+      }
     }
   }
 }
+
+//------------------------------------
+//// App-form-item
+//------------------------------------
 
 .app-form-item {
   background-color: $light-brown;
   position: relative;
-  padding-bottom: 110px;
+  padding-bottom: 0;
+  margin-bottom: 19px;
   height: 100%;
   font-size: $font-xs-small;
   font-family: 'pt_serifbold', $font-fallback;
   color: $brown;
-  margin-bottom: 152px;
 
-  @include mq(992, "max") {
-    padding-bottom: 0;
-    margin-bottom: 19px;
+  @include mq("tablet-wide") {
+    padding-bottom: 110px;
+    margin-bottom: 152px;
   }
 
   .fa-angle-up {
@@ -257,19 +283,26 @@ footer {
   }
 }
 
+//------------------------------------
+//// App-contact-container
+//------------------------------------
+
 .app-contact-container {
   display: flex;
-  padding: {
-    right: 200px;
-    left: 200px;
-  }
   flex-wrap: wrap;
   justify-content: space-between;
+  flex-direction: column;
+  padding: {
+    right: 50px;
+    left: 50px;
+  }
 
-  @include mq(992, "max") {
-    flex-direction: column;
-    padding-left: 50px;
-    padding-right: 50px;
+  @include mq("tablet-wide") {
+    flex-direction: row;
+    padding: {
+      right: 200px;
+      left: 200px;
+    }
   }
 
   textarea {
@@ -297,35 +330,36 @@ footer {
 
 input[type=text],
 input[type=email] {
-  width: 48%;
+  width: 100%;
   height: 66px;
   line-height: 66px;
   margin-bottom: 30px;
   margin-top: 107px;
 
-  @include mq(992, "max") {
-    width: 100%;
+  @include mq("tablet-wide") {
+    width: 48%;
   }
 }
 
 input[type=email] {
+  margin-top: 0;
 
-  @include mq(992, "max") {
-    margin-top: 0;
+  @include mq("tablet-wide") {
+    margin-top: 107px;
   }
 }
 
 .under-footer {
   display: flex;
   justify-content: center;
-  margin-top: 75px;
+  margin-top: 25px;
   padding: {
     right: 8px;
     bottom: 42px;
   }
 
-  @include mq(992, "max") {
-    margin-top: 25px;
+  @include mq("tablet-wide") {
+    margin-top: 75px;
   }
 
   i {
@@ -357,5 +391,67 @@ input[type=email] {
 
   span {
     text-decoration: underline;
+  }
+}
+
+//------------------------------------
+//// Top-button
+//------------------------------------
+
+.top-button {
+  right: 5%;
+  border-radius: 50%;
+  font-size: $font-lg-small;
+  line-height: 60px;
+  cursor: pointer;
+  text-align: center;
+  transition: .3s ease-out;
+  display: none;
+  color: $grey;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 15%;
+
+  @include mq("tablet-wide") {
+    right: 3%;
+
+    &:before, &:after {
+      @include pseudo;
+      border: 1.5px solid rgb(221, 221, 221);
+      left: -20px;
+      right: -20px;
+      top: -20px;
+      bottom: -20px;
+      border-radius: 50%;
+      animation: top-button 1.8s linear infinite;
+    }
+
+    &:after {
+      animation-delay: .3s;
+    }
+
+    &:hover {
+      will-change: transform;
+      transform: scale(0.9, 0.9);
+      transition: .3s ease-out;
+    }
+  }
+}
+
+@keyframes top-button {
+  0% {
+    will-change: transform;
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    will-change: opacity;
+    opacity: 1;
+  }
+  100% {
+    will-change: transform;
+    transform: scale(1.2);
+    opacity: 0;
   }
 }

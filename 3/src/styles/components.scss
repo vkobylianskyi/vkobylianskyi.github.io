@@ -23,19 +23,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 103px auto;
+    margin: 60px auto;
 
-    @include mq(992, "max") {
-      margin: 60px auto;
+    @include mq("tablet-wide") {
+      margin: 103px auto;
     }
   }
-  &.rfs {
-    margin-left: 86px;
-    margin-top: 60px;
-    margin-bottom: 30px;
 
-    @include mq(992, "max") {
-      margin: 60px auto;
+  &.rfs {
+    margin: 60px auto;
+
+    @include mq("tablet-wide") {
+      margin: {
+        left: 86px;
+        top: 60px;
+        bottom: 30px;
+      }
     }
   }
 
@@ -48,26 +51,35 @@
   }
 
   &.ma {
-    margin: 0 auto 110px;
+    margin-bottom: 70px;
+    margin: {
+      top: 0;
+      left: auto;
+      right: auto;
+      bottom: 70px;
+    }
 
-    @include mq(992, "max") {
-      margin-bottom: 70px;
+    @include mq("tablet-wide") {
+      margin-bottom: 110px;
     }
   }
 
   &.vat {
-    margin-top: 57px;
+    margin: 57px auto;
 
-    @include mq(992, "max") {
-      margin: 57px auto;
+    @include mq("tablet-wide") {
+      margin: {
+        top: 57px;
+        left: 0;
+      }
     }
   }
 
   &.vmp {
-    margin: 57px auto 110px;
+    margin: 70px auto;
 
-    @include mq(992, "max") {
-      margin: 70px auto;
+    @include mq("tablet-wide") {
+      margin: 57px auto 110px;
     }
   }
 
@@ -89,23 +101,24 @@
 
   &.dark {
     background-image: url("img/Vector Smart Object1.png");
+
     &.blog {
       margin-bottom: 112px;
     }
     &.book {
-      margin-top: 293px;
+      margin-top: 240px;
 
-      @include mq(992, "max") {
-        margin-top: 240px;
+      @include mq("tablet-wide") {
+        margin-top: 193px;
       }
     }
 
     &.form {
-      padding-top: 110px;
+      padding-top: 70px;
       background-position: center 110px;
 
-      @include mq(992, "max") {
-        padding-top: 70px;
+      @include mq("tablet-wide") {
+        padding-top: 110px;
       }
     }
 
@@ -126,31 +139,31 @@
       background: {
         position: center 110px;
       }
-      padding-top: 110px;
+      padding-top: 70px;
 
-      @include mq(992, "max") {
-        padding-top: 70px;
+      @include mq("tablet-wide") {
+        padding-top: 110px;
       }
     }
     &.book {
-      background-position: center 193px;
-      padding-top: 193px;
+      background-position: center 60px;
+      padding-top: 60px;
+      margin-bottom: 260px;
 
-      @include mq(992, "max") {
-        background-position: center 60px;
-        padding-top: 60px;
-        margin-bottom: 260px;
+      @include mq("tablet-wide") {
+        background-position: center 193px;
+        padding-top: 193px;
       }
 
       .app-title-description {
-        font-size: 50px;
+        font-size: 24px;
 
-        @include mq(992, "max") {
-          font-size: 35px;
+        @include mq("tablet-wide") {
+          font-size: 50px;
         }
 
-        @include mq("phone-wide", "max") {
-          font-size: 24px;
+        @include mq("tablet") {
+          font-size: 35px;
         }
       }
     }
@@ -164,11 +177,11 @@
 
   &-description {
     text-transform: capitalize;
-    font-size: 35px;
+    font-size: 24px;
     font-weight: 700;
 
-    @include mq("phone-wide", "max") {
-      font-size: 24px;
+    @include mq("tablet") {
+      font-size: 35px;
     }
   }
 

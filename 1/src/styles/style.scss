@@ -71,17 +71,51 @@
 
   &__item {
     margin-bottom: 10px;
+
     &:hover {
       text-decoration: underline;
       cursor: pointer;
       color: yellow;
     }
+
     &:nth-child(2n) {
+
       @include mq("tablet") {
         padding: {
           left: 20px;
           right: 20px;
-        };
+        }
+      }
+    }
+
+    &:first-child {
+      position: relative;
+      perspective: 600px;
+
+      &:hover .animation {
+        transform: rotateX(0deg);
+      }
+    }
+
+    .animation {
+      backface-visibility: hidden;
+      transform-origin: top center;
+      position: absolute;
+      width: 100%;
+      background-color: #2d5f3b;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      transform: rotateX(-100deg);
+      transition: .5s linear 0s;
+
+      &__item {
+        padding-bottom: 10px;
+
+        &:first-child {
+          padding-top: 10px;
+        }
       }
     }
   }
@@ -120,7 +154,7 @@
     margin: 0 auto;
 
     @include mq("tablet") {
-     margin-left: 0;
+      margin-left: 0;
     }
   }
 }
@@ -154,20 +188,20 @@
       background: #2d5f3b;
     }
     &__title {
-         display: flex;
-         align-items: center;
-         justify-content: flex-start;
-         font-size: 22px;
-         padding-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 22px;
+      padding-bottom: 20px;
 
-         img {
-           margin-right: 10px;
-         }
+      img {
+        margin-right: 10px;
+      }
 
-         &-text {
-           font-size: $font-sm-small;
-         }
-       }
+      &-text {
+        font-size: $font-sm-small;
+      }
+    }
 
     @include mq("tablet-wide") {
       padding: {
