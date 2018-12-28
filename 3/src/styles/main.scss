@@ -1,3 +1,4 @@
+@import "swiper.min";
 @import "fonts";
 @import "var";
 @import "base/api.scss";
@@ -99,11 +100,9 @@
   }
   position: relative;
   padding-bottom: 20px;
-  //margin-bottom: 60px;
 
   @include mq("tablet-wide") {
     padding-bottom: 120px;
-    //margin-bottom: 110px;
   }
 
   &-section {
@@ -379,7 +378,7 @@
         }
       }
     }
-  }
+  
 
   &-picture {
     display: flex;
@@ -457,7 +456,7 @@
       }
     }
   }
-
+}
 }
 
 //------------------------------------

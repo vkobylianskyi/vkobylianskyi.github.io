@@ -1,14 +1,34 @@
-// alert( "Привет" );
+const DELAY = 1000;
 
-$(document).ready(function () {
-    $(window).scroll(function(){
-        if($(this).scrollTop() > 1000) {
-            $('.top-button').fadeIn();
-        } else {
-            $('.top-button').fadeOut();
+function startApp() {
+    $(window).scroll(onScrollWindow);
+    $('.top-button, .fa-angle-up').click(onTopBtnClick);
+
+    $('.header-top-line__menu-item a').click(onLinkClick);
+
+    const swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            type: 'bullets',
         }
-    });
-    $('.top-button').click(function () {
-        $('html,body').animate({scrollTop: 0}, 1000)
-    })
-});
+      });
+}
+
+function onLinkClick() {
+    $('html, body').animate({
+        scrollTop: $(this.hash).offset().top
+    }, DELAY);
+}
+
+function onTopBtnClick() {
+    $('html,body').animate({ scrollTop: 0 }, DELAY)
+}
+
+function onScrollWindow() {
+    $(this).scrollTop() > 1000 
+        ?  $('.top-button').fadeIn()
+        :  $('.top-button').fadeOut();
+}
+
+$(document).ready(startApp);

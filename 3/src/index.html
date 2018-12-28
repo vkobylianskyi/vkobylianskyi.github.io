@@ -12,6 +12,7 @@
           href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
           crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/css/swiper.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -70,18 +71,43 @@
         </div>
     </div>
     <div class="container-fluid header-catering">
-        <div class="header-catering__text">
-            a perfect blend of <br>sensational food<br>
-        </div>
-        <button class="app-button large">
-            order servise
-        </button>
-        <div class="header-catering-circles">
-            <div class="header-catering-circles__item active"></div>
-            <div class="header-catering-circles__item"></div>
-            <div class="header-catering-circles__item"></div>
-            <div class="header-catering-circles__item"></div>
-        </div>
+            <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <div class="swiper-slide__text">
+                            a perfect blend of <br>sensational food<br>
+                        </div>
+                        <button class="app-button large">
+                            order servise
+                        </button>
+                    </div>
+                      <div class="swiper-slide">
+                            <div class="swiper-slide__text">
+                                    a perfect blend of <br>sensational food<br>
+                                </div>
+                                <button class="app-button large">
+                                    order servise
+                                </button>
+                      </div>
+                      <div class="swiper-slide">
+                            <div class="swiper-slide__text">
+                                    a perfect blend of <br>sensational food<br>
+                                </div>
+                                <button class="app-button large">
+                                    order servise
+                                </button>
+                      </div>
+                      <div class="swiper-slide">
+                            <div class="swiper-slide__text">
+                                    a perfect blend of <br>sensational food<br>
+                                </div>
+                                <button class="app-button large">
+                                    order servise
+                                </button>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+             </div>
         <i class="fa fa-angle-down"></i>
     </div>
 </header>
@@ -378,32 +404,15 @@
 <button class="top-button">
     <i class="fa fa-angle-up"></i>
 </button>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
-<script
-        src="https://code.jquery.com/jquery-3.3.1.js"></script>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 1000) {
-                $('.top-button').fadeIn();
-            } else {
-                $('.top-button').fadeOut();
-            }
-        });
-        $('.top-button').click(function () {
-            $('html,body').animate({scrollTop: 0}, 1000)
-        })
-    });
-</script>
-<!--<script src="main.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/js/swiper.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

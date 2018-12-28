@@ -31,6 +31,12 @@ gulp.task('copy:libs', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('copy:js', function() {
+    gulp.src('src/**/*.js')
+    .pipe(gulp.dest('./dist'))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('serve', () => {
     livereload.listen();
 
@@ -43,6 +49,7 @@ gulp.task('serve', () => {
     gulp.watch('src/styles/*.scss', ['build-styles']);
     gulp.watch('src/index.html', ['copy-html']);
     gulp.watch('src/assets/**/*', ['copy-assets']);
+    gulp.watch('src/**/*.js', ['copy:js']);
     gulp.watch('./node_modules', ['copy:libs']);
 
 });
@@ -57,5 +64,5 @@ gulp.task('clear:dist', ()=> {
 
 });
 
-gulp.task('watch', ['build-styles', 'copy-html', 'copy-assets', 'copy:libs', 'serve']);
+gulp.task('watch', ['build-styles', 'copy-html', 'copy-assets', 'copy:js','copy:libs', 'serve']);
 gulp.task('build', ['build-styles', 'copy-html', 'copy-assets', 'copy:libs']);
