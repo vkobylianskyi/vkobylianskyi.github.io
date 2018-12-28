@@ -1,0 +1,269 @@
+@import "base/index.scss";
+@import "components.scss";
+@import "var.scss";
+
+// TABLE CONTENTS
+//
+// Header
+// Benefits
+// Footer
+* {
+  box-sizing: border-box;
+  font-family: Verdana !important;
+}
+
+//------------------------------------
+//Header
+//------------------------------------
+
+.main-header {
+  height: 100vh;
+  background: {
+    image: url('img/header-bg.gif');
+    position: left center;
+    size: cover;
+  }
+
+  @include mq("tablet") {
+    height: 50vh;
+  }
+
+  &__info {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+
+    .info__title {
+      font-size: $font-md-small;
+      line-height: 40px;
+      margin-bottom: 30px;
+
+      @include mq("tablet") {
+        font-size: $font-lg-small;
+      }
+    }
+
+    .info__subtitle {
+      line-height: 16px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+//------------------------------------
+//MENU LIST
+//------------------------------------
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-size: $font-xs-small;
+
+  @include mq("tablet") {
+    justify-content: flex-end;
+    flex-grow: 1;
+    font-size: 18px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      color: yellow;
+    }
+
+    &:nth-child(2n) {
+
+      @include mq("tablet") {
+        padding: {
+          left: 20px;
+          right: 20px;
+        }
+      }
+    }
+
+    &:first-child {
+      position: relative;
+      perspective: 600px;
+
+      &:hover .animation {
+        transform: rotateX(0deg);
+      }
+    }
+
+    .animation {
+      backface-visibility: hidden;
+      transform-origin: top center;
+      position: absolute;
+      width: 100%;
+      background-color: #2d5f3b;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      transform: rotateX(-100deg);
+      transition: .5s linear 0s;
+
+      &__item {
+        padding-bottom: 10px;
+
+        &:first-child {
+          padding-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+//------------------------------------
+//Description
+//------------------------------------
+
+.description {
+  padding: {
+    top: 45px;
+    left: 40px;
+    right: 40px;
+    bottom: 50px;
+  }
+  text-align: center;
+
+  &__title {
+    margin-bottom: 35px;
+    line-height: 30.5px;
+  }
+
+  &__text {
+    font-size: $font-xs-small;
+    line-height: 21.5px;
+    margin-bottom: 55px;;
+    text-align: justify;
+
+    @include mq("tablet") {
+      font-size: 16px;
+    }
+  }
+
+  .app-palitra {
+    margin: 0 auto;
+
+    @include mq("tablet") {
+      margin-left: 0;
+    }
+  }
+}
+
+//------------------------------------
+//Benefits
+//------------------------------------
+
+.benefits {
+  color: white;
+
+  &-item {
+    position: relative;
+    text-align: justify;
+    width: 100%;
+    padding: {
+      top: 40px;
+      bottom: 80px;
+      left: 10%;
+      right: 10%;
+    }
+    &:first-of-type {
+      background: #404040;
+    }
+
+    &:nth-of-type(2) {
+      background: #f74c55;
+    }
+
+    &:last-of-type {
+      background: #2d5f3b;
+    }
+    &__title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 22px;
+      padding-bottom: 20px;
+
+      img {
+        margin-right: 10px;
+      }
+
+      &-text {
+        font-size: $font-sm-small;
+      }
+    }
+
+    @include mq("tablet-wide") {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+  }
+
+  .app-btn-plus {
+    bottom: 30px;
+    left: 80%
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+}
+
+//------------------------------------
+//Footer
+//------------------------------------
+.footer {
+  padding-top: 40px;
+  color: white;
+  background: {
+    image: url('img/footer-bg.jpg');
+    size: cover;
+    position: center center;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .app-multi-line {
+    margin-top: 20px;
+  }
+
+  .app-btn {
+    margin: 0 auto;
+  }
+
+  .app-title {
+
+    span {
+      font-weight: 700;
+    }
+
+  }
+}
+
+//------------------------------------
+//COPY
+//------------------------------------
+
+.copy {
+  font-size: 16px;
+  text-align: center;
+  line-height: 70px;
+  color: #585858;
+}
