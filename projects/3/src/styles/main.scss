@@ -34,7 +34,6 @@
     margin-top: 106px;
 
     &-item {
-      background-repeat: no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -43,6 +42,7 @@
         clip: content-box;
         position: center center;
         size: cover;
+        repeat: no-repeat;
       }
       height: 473px;
       margin-bottom: 20px;

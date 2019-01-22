@@ -1,0 +1,88 @@
+@import 'var';
+@import "base/api.scss";
+.scincare {
+    &-benefits {
+        &__item {
+            .app-text--bold {
+                padding-right: 5px;
+            }
+        }
+    }
+    &-section {
+        position: relative;
+        margin-top: 205px;
+        background-color: $scincare-color;
+        color: white;
+        text-align: center;
+        padding: {
+            top: 60px;
+            bottom: 80px;
+            left: 8%;
+            right: 8%;
+        }
+        @include mq("tablet") {
+            padding: {
+                top: 80px;
+            }
+        }
+        .section-title,
+        .app-text {
+            color: white;
+        }
+        &:before,
+        &:after {
+            display: block;
+            content: '';
+            position: absolute;
+            background-size: 100%;
+            width: 355px;
+            height: 463px;
+            z-index: -1;
+        }
+        &:before {
+            background-image: url('img/left_angle.png');
+            left: -25px;
+            bottom: -25px;
+        }
+        &:after {
+            background-image: url('img/right_angle.png');
+            top: -25px;
+            right: -25px;
+        }
+        .section-title {
+            text-transform: uppercase;
+            font: {
+                family: 'Rubik Medium';
+                weight: 300;
+            }
+        }
+        .section-title,
+        .section-subtitle {
+            padding-bottom: 20px;
+        }
+        .scincare-description {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            font: {
+                size: 24px;
+            }
+            line-height: 1.2em;
+        }
+        .section-subtitle {
+            font: {
+                family: 'Myriad Pro Regular' $font-fallback;
+                size: $font-md-small;
+            }
+            text-transform: uppercase;
+            span {
+                color: $light-pink;
+            }
+        }
+    }
+    &-benefits__column {
+        list-style-type: none;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+}

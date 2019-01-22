@@ -1,0 +1,182 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+}
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+@mixin background-center($size: cover) {
+  background: {
+    position: 50% 50%;
+    size: $size;
+    repeat: no-repeat;
+  } //розтягує повністю бекграунд коверос не з верхньо краю, а з центру//
+}
+
+@mixin dark-overlay($opacity) {
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    @include size(100%);
+    @include absolute(0 0 0 0);
+    background: rgba(0, 0, 0, $opacity);
+    z-index: -1;
+  }
+}
+
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%;
+  height: auto;
+}
+
+//todo inspect placeholder color
+@mixin placeholderColor($color) {
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin scrollbar-style($width, $height, $foreground-color, $border-radius, $background-color: mix($foreground-color, white,  30%)) {
+  ::-webkit-scrollbar {
+    width: $width;
+    height: $height;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: $border-radius;
+    background: $background-color;
+  }
+
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+@mixin selection-style($bg-color, $color) {
+  ::selection {
+    background-color: $bg-color;
+    color: $color;
+  }
+}
+
+@mixin square($size:100%) {
+  width: $size;
+  height: $size;
+}
+
+%outline-none {
+  &:active,
+  &:hover,
+  &:focus,
+  &:visited {
+    outline: none;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+  @include pseudo($pos: $position);
+  width: 0;
+  height: 0;
+  @if $round {
+    border-radius: 3px;
+  }
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - round( $size / 2.5 );
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - round( $size / 2.5 );
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  } @else if $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}
+
+$breakpoints: (
+    "phone": 400px,
+    "phone-wide": 480px,
+    "phablet": 560px,
+    "tablet-small": 640px,
+    "tablet": 768px,
+    "tablet-wide": 992px,
+    "desktop": 1248px,
+    "desktop-wide": 1440px
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+  }
+  @if $type == max {
+    $width: $width - 1px;
+  }
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//Based on font-squirrel generator
+@mixin fontFace($basePath, $fontName) {
+  @font-face {
+    font-family: '#{$fontName}';
+    src: url('#{$basePath}/#{$fontName}-webfont.eot');
+    src: url('#{$basePath}/#{$fontName}-webfont.eot?#iefix') format('embedded-opentype'),
+    url('#{$basePath}/#{$fontName}-webfont.woff2') format('woff2'),
+    url('#{$basePath}/#{$fontName}-webfont.woff') format('woff'),
+    url('#{$basePath}/#{$fontName}-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}

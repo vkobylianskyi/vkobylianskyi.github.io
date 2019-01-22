@@ -1,0 +1,105 @@
+@import 'base/api.scss';
+
+.header {
+    margin-top: 13px;
+    height: 70px;
+    background-color: $header-nav-color;
+    box-shadow: 0 16px 48.58px -22.58px rgba(0, 0, 0, 0.5);
+    position: relative;
+    @include mq('tablet') {
+        margin-top: 0;
+        background-color: #fff;
+        box-shadow: none;
+    }
+    .row {
+        height: inherit;
+    }
+
+    &__hamburger {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        z-index: 200;
+        position: relative;
+        &--icon {
+            display: inline-block;
+            margin-right: 22px;
+            cursor: pointer;
+            display: block;
+            position: fixed;
+            background-color: white;
+            padding: 5px;
+            top: 30px;
+            left: 10px;
+            border: 2px solid #eee;
+            border-radius: 3px;
+
+            @include mq('tablet') {
+                display: none;
+                padding: 0;
+                position: static;
+                border: none;
+            }
+
+            .bar1,
+            .bar2,
+            .bar3 {
+                width: 30px;
+                height: 3px;
+                background-color: #333;
+                margin: 6px 0;
+                transition: 0.4s;
+                will-change: transform;
+                transition: transform .5s;
+            }
+
+            &.active {
+                .bar2 {
+                    opacity: 0;
+                }
+                .bar1 {
+                    transform: rotate(-45deg) translate(-5px, 6px);
+                }
+                .bar3 {
+                    transform: rotate(45deg) translate(-6px, -8px);
+                }
+            }
+        }
+
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        .change .bar2 {
+            opacity: 0;
+        }
+        .change .bar3 {
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+        &--title {
+            color: #2d1b45;
+            text-transform: uppercase;
+            font: {
+                family: 'Rubik Medium' $font-fallback;
+                size: $font-sm-small;
+            }
+            display: none;
+            @include mq('tablet') {
+                display: block;
+            }
+        }
+    }
+    &__bucket {
+        &-section {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+            img {
+                height: 30px;
+                width: 35px;
+                margin-left: 22px;
+            }
+        }
+    }
+}

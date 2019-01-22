@@ -1,0 +1,239 @@
+@import 'var';
+@import 'base/api.scss';
+.average-section {
+    margin-top: 80px;
+}
+
+.subscription {
+
+    &-section {
+        &:before {
+            @include pseudo;
+            width: 96%;
+            height: 2px;
+            background-color: $app-text-color;
+            top: -55px;
+            right: 50%;
+            transform: translateX(50%);
+            display: block;
+            @include mq('tablet') {
+                display: none;
+            }
+        }
+
+
+        &__title-container {
+            margin-top: 105px;
+            position: relative;
+        }
+
+
+        .container {
+            position: relative;
+        }
+        &__title {
+            font: {
+                size: 36px;
+                family: 'Myriad Pro Regular' $font-fallback;
+            }
+            text-transform: capitalize;
+            color: $nav-section-color;
+            text-align: center;
+        }
+    }
+
+    //common styles for every item
+    &-item {
+        min-height: 225px;
+
+        @include mq('tablet') {
+            height: 365px;
+        }
+
+        &:nth-of-type(2n) {
+            background-size: cover;
+            background-image: url('img/main_background.png');
+        }
+
+        .app-text--bold {
+            text-transform: uppercase;
+            color: $primary-color;
+            font-size: 23px;
+        }
+
+        &__first {
+            img {
+                transform: translateY(9.3%);
+                width: 100%;
+
+                @include mq('tablet') {
+                    max-width: 510px;
+                }
+            }
+        }
+
+        &__second {
+            img {
+                max-height: 330px;
+            }
+
+            &-row {
+                min-height: 100%;
+            }
+        }
+
+        &__third {
+            img {
+                max-height: 290px;
+                transform: translate(0, 35px);
+            }
+        }
+
+        &-step {
+            min-width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            color: white;
+            background-color: $secondary-color;
+            line-height: 110px;
+            text-align: center;
+            margin: {
+                right: 10px;
+            }
+
+            font: {
+                size: 40px;
+                family: 'golden_youth_scriptregular' $font-fallback;
+            }
+
+            @include mq('tablet') {
+                min-width: 130px;
+                height: 130px;
+                line-height: 140px;
+            }
+
+            &__text {
+                font: {
+                    family: 'Rubik Light' $font-fallback;
+                    size: 18px;
+                }
+                color: #000;
+            }
+        }
+
+        &__description {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: {
+                top: 27px;
+            }
+            .app-text {
+                min-width: 100px;
+                max-width: 390px;
+            }
+        }
+
+        &__picture {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+        }
+    }
+}
+
+//last 4 section
+.switch {
+    margin-top: 35px;
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    &-item {
+        background-color: black;
+    }
+
+    &__description {
+        font: {
+            family: 'Rubik Ligth' $font-fallback;
+            size: 17px;
+        }
+        position: relative;
+        margin-top: 15px;
+        padding: {
+            right: 65px;
+            bottom: 40px;
+        }
+
+        @include mq('tablet-wide') {
+            width: 500px;
+        }
+
+        .app-text--bold {
+            color: black;
+            text-transform: lowercase;
+            font-weight: 700;
+            font: {
+                family: 'Rubik Medium' $font-fallback;
+                size: 17px;
+            }
+        }
+    }
+
+    &__hand {
+        width: 80px;
+        position: absolute;
+        right: -12px;
+        top: 0;
+    }
+
+    &-item {
+        color: $primary-color;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 90px;
+
+        &:nth-child(2) {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        @include mq('tablet-wide') {
+            width: 120px;
+        }
+
+        .app-text--bold {
+            text-transform: uppercase;
+            margin-right: 0;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 1.4em;
+            font-size: 15px;
+        }
+
+        &__icon {
+            background-color: $primary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90px;
+            border-radius: 30%;
+
+            img {
+                height: 40%;
+            }
+
+            @include mq('tablet-wide') {
+                height: 120px;
+            }
+        }
+    }
+}

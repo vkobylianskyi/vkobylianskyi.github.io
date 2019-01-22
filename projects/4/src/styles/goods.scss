@@ -1,0 +1,66 @@
+
+.goods {
+    text-transform: uppercase;
+
+    &-section {
+        margin-top: 50px;
+
+        @include mq('tablet') {
+            margin-top: 135px;
+        }
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &-title {
+        margin-top: 10px;
+        text-transform: uppercase;
+        padding: {
+            left: 20px;
+            right: 20px;
+        }
+        font: {
+            size: 23px;
+            family: 'Rubik Medium' $font-fallback;
+        }
+    }
+    &-item__button {
+        background-color: transparent;
+        width: 100%;
+        border: 2px solid $secondary-color;
+        color: $secondary-color;
+        text-transform: uppercase;
+        border-radius: 5px;
+        height: 45px;
+        transition: 0.5s all;
+        cursor: pointer;
+        font: {
+            size: 20px;
+            family: 'Rubik Bold' $font-fallback;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            color: white;
+            background-color: $secondary-color;
+        }
+    }
+    &-item-content {
+        img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+        figcaption {
+            text-align: center;
+        }
+        .app-text {
+            text-transform: uppercase;
+        }
+    }
+}

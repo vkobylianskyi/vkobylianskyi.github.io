@@ -1,0 +1,36 @@
+.list-explained {
+    &-section {
+
+        &__title {
+            margin-top: 150px;
+            position: relative;
+            padding: 0;
+        }
+     
+        padding: {
+            left: 5%;
+            right: 5%;
+        }
+        .app-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .section-title {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+    }
+    &-item {
+        margin-bottom: 25px;
+        .list-explained-subtitle {
+            font: {
+                family: 'Rubik Medium' $font-fallback;
+                size: 18px;
+            }
+            color: $app-text-color;
+            text-transform: uppercase;
+            text-align: left;
+        }
+    }
+}

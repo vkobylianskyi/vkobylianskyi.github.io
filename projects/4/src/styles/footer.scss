@@ -1,0 +1,97 @@
+@import 'var';
+@import 'base/api.scss';
+
+.footer {
+    margin-top: 30px;
+    background-color: $footer-color;
+    color: white;
+
+    @include mq('tablet') {
+        margin-top: 150px;
+    }
+
+    .row {
+        height: inherit;
+    }
+
+    &-nav {
+        text-transform: uppercase;
+        height: 100%;
+    }
+
+    .footer-copy {
+        font-family: 'Myriad Pro Regular';
+        margin-right: 10px;
+    }
+
+    &-nav__menu,
+    &-info {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin-bottom: 0;
+    }
+
+    &-nav__menu {
+        justify-content: center;
+        flex-direction: column;
+        padding: {
+            top: 30px;
+            bottom: 30px;
+            left: 0;
+        }
+        min-height: 80px;
+
+        @include mq('tablet') {
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+
+        &-item {
+            @include mq('tablet') {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &-info {
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        @include mq('tablet') {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button-social {
+        color: white;
+        background-color: transparent;
+        font-size: 25px;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin: {
+            left: 5px;
+            right: 5px;
+        }
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            color: rgba(white, 0.8);
+        }
+    }
+}

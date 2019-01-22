@@ -1,0 +1,160 @@
+@import 'var';
+@import 'base/api.scss';
+.app-text {
+    font: {
+        family: 'Rubik Light' $font-fallback;
+        size: 14px;
+    }
+    color: $app-text-color;
+    &--bold {
+        font: {
+            family: 'Rubik Medium' $font-fallback;
+            weight: 700;
+        }
+    }
+    &.app-text__average {
+        font-size: 17px;
+        text-align: center;
+        padding-bottom: 100px;
+        @include mq('tablet') {
+            font-size: $font-sm-small;
+        }
+    }
+    &.list-explained-text {
+        font-size: 18px;
+    }
+}
+
+.section-title {
+    font: {
+        family: 'Myriad Pro Regular' $font-fallback;
+    }
+    color: $primary-color;
+    text-transform: capitalize;
+    text-align: center;
+    &.section-title__story {
+        font-size: 36px;
+        padding: {
+            top: 79px;
+            bottom: 30px;
+        }
+    }
+    &.section-title__average {
+        color: $app-title-color;
+        font-size: $font-md-small;
+        padding-bottom: 20px;
+        text-transform: uppercase;
+        span {
+            font: {
+                family: 'Rubik Bold' $font-fallback;
+            }
+            color: $light-pink;
+        }
+    }
+    &.section-title__lowercase {
+        text-transform: capitalize;
+        padding-bottom: 50px;
+        font-size: $font-md-small;
+    }
+}
+
+.app-toggle {
+    font-weight: 200;
+    background-color: transparent;
+    border: 0;
+    font-size: 36px;
+    cursor: pointer;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+    &:hover {
+        color: $primary-color;
+    }
+    display: none;
+    @include mq('tablet') {
+        display: block;
+    }
+}
+
+//------------------------------------
+// Top-button
+//------------------------------------
+
+.top-button {
+    right: 5%;
+    border-radius: 50%;
+    font-size: $font-lg-small;
+    line-height: 60px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease-out;
+    display: none;
+    color: $primary-color;
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 5%;
+    background-color: white;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    right: 3%;
+
+    &:before,
+    &:after {
+        @include pseudo;
+        border: 1.5px solid rgb(221, 221, 221);
+        left: -20px;
+        right: -20px;
+        top: -20px;
+        bottom: -20px;
+        border-radius: 50%;
+        animation: top-button 1.8s linear infinite;
+        &:active {
+            outline: none;
+        }
+    }
+
+    &:hover {
+        will-change: transform;
+        transform: scale(0.9, 0.9);
+        transition: 0.3s ease-out;
+    }
+}
+
+@keyframes top-button {
+    0% {
+        will-change: transform;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        will-change: opacity;
+        opacity: 1;
+    }
+    100% {
+        will-change: transform;
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.app-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $primary-color;
+    transform: translateY(-10px);
+    will-change: transform;
+    transition: 0.5s transform;
+    transform-origin: center;
+    transform: rotate(-180deg);
+
+    &.closed {
+        transform: rotate(0deg);
+    }
+}

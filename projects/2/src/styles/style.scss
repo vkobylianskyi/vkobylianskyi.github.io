@@ -1,0 +1,262 @@
+@import "fonts";
+@import "var";
+.top-line {
+    background-color: $baner-color;
+    height: 104px;
+    .header-line {
+        font-size: 16px;
+        transform: translateY(50%);
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            &-subtitle {
+                color: $header-text-color;
+                width: 140px;
+                padding-left: 12px;
+            }
+        }
+        .contact {
+            display: flex;
+            align-items: center;
+            color: white;
+            &-namber {
+                font-size: $font-md-small;
+                padding-right: 27px;
+            }
+            &-subtitle {
+                border-bottom: 1px, dotted, white;
+            }
+        }
+        .social {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: $font-sm-small;
+            color: $baner-color;
+            cursor: pointer;
+            i {
+                width: 31px;
+                height: 31px;
+                line-height: 31px;
+                border-radius: 50%;
+                background-color: white;
+                display: flex;
+                justify-content: center;
+                transition-duration: .5s;
+                &:nth-child(2) {
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+                &:hover {
+                    color: white;
+                    background-color: $baner-color;
+                    transition-duration: .5s;
+                }
+            }
+        }
+    }
+}
+
+.header {
+    background: {
+        image: url("img/main_picture.png");
+        repeat: no-repeat;
+        size: cover;
+        position: bottom center;
+    }
+    height: 552px;
+    position: relative;
+    &-block {
+        font-family: 'Trebuchet MS Regular';
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        background-color: rgba(255, 242, 0, 0.7);
+        text-align: center;
+        font-weight: 700;
+        position: absolute;
+        bottom: 48px;
+        left: 28px;
+        &__title {
+            font-size: 25px;
+            line-height: 30px;
+            padding-top: 30px;
+        }
+        &__subtitle {
+            font-size: $font-xs-small;
+            text-transform: uppercase;
+            padding-top: 21px;
+        }
+        &__number {
+            font-size: 24px;
+            color: white;
+            background-color: black;
+            width: 109px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.header-info {
+    font-family: 'Trebuchet MS Regular';
+    .app-info {
+        margin-top: 30px;
+        &--title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2 {
+                font-size: 35px;
+                border-bottom: 2px solid #7f7f7f;
+                font-weight: 700;
+            }
+            .fa-star {
+                color: #ffc20e;
+                font-size: $font-md-small;
+            }
+            &__price {
+                font-size: 35px;
+                font-weight: 700;
+            }
+        }
+        &--assessment {
+            font-family: 'Arial';
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 38px;
+            &__text {
+                font-size: $font-xs-small;
+                font-weight: 700;
+                span {
+                    font-weight: 400;
+                    color: $text-color;
+                }
+            }
+            &__number {
+                width: 50px;
+                height: 50px;
+                background-color: #00bff3;
+                color: #fff;
+                font-size: 24px;
+                font-weight: 700;
+                text-align: center;
+                line-height: 50px;
+            }
+            &__rating {
+                font-size: 12px;
+                color: $text-color;
+                text-transform: uppercase;
+                font-weight: 400;
+                span {
+                    font-weight: 700;
+                    color: black;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .app-days {
+        margin-top: -35px;
+        width: 150px;
+        &__number {
+            color: $text-color;
+            font-size: 100px;
+            font-weight: 400;
+            line-height: 100px;
+        }
+        &__subtitle {
+            text-align: justify;
+            font-size: 29px;
+            font-weight: 400;
+            line-height: 32px;
+        }
+    }
+}
+
+main {
+    .app-offers {
+        margin-top: 37px;
+        figure {
+            img {
+                width: 100%;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .app-offer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-family: 'Trebuchet MS Regular';
+                &__title {
+                    font-size: $font-md-small;
+                    font-weight: 700;
+                    border-bottom: 2px solid #7f7f7f;
+                }
+                &__price {
+                    font-size: 50px;
+                    font-weight: 700;
+                }
+                &.sea {
+                    position: relative;
+                    &::after {
+                        font-family: 'Arial';
+                        content: 'Экстремальный маршрут';
+                        display: block;
+                        font-size: font-xs-small;
+                        position: absolute;
+                        color: $text-color;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+                &.mountains {
+                    position: relative;
+                    &::after {
+                        font-family: 'Arial';
+                        content: 'Роупджампинг';
+                        display: block;
+                        font-size: font-xs-small;
+                        position: absolute;
+                        color: $text-color;
+                        left: 0;
+                        bottom: 0;
+                    }
+                    &::before {
+                        content: '$90';
+                        font-family: 'Trebuchet MS Regular';
+                        display: block;
+                        font-size: $font-sm-small;
+                        position: absolute;
+                        color: $text-color;
+                        text-decoration: line-through red;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .main-block {
+        margin-top: 95px;
+        margin-bottom: 26px;
+        font-family: Arial;
+        &-title {
+            font-family: 'Trebuchet MS';
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 56px;
+        }
+        &-info {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+        }
+        &-text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            margin-top: 27px;
+        }
+    }
+}
