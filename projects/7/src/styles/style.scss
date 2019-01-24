@@ -1,0 +1,10 @@
+@import 'reset';
+@import 'nav';
+@import 'main';
+
+body {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
