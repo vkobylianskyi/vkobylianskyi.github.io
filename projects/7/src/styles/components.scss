@@ -1,6 +1,28 @@
 @import 'var';
 @import 'base/api.scss';
+.app-button {
+    margin: 20px;
+    width: 114px;
+    height: 41px;
+    background-color: transparent;
+    border-radius: 57px;
+    border: 1px solid #c9c9c9;
+    &.small {
+        width: 41px;
+        border-radius: 50%;
+        background-color: $primery-coolor;
+    }
+    &.large {
+        width: 230px;
+        background-color: transparent;
+    }
+}
 
-.buttom {
-    
+.prosent {
+    width: 57px;
+    height: 33px;
+    border-radius: 3px;
+    background-color: $primery-coolor;
+    text-align: center;
+    line-height: 33px;
 }
