@@ -1,0 +1,21 @@
+.app-days__number {
+    color: $text-color;
+    font: {
+        family:'Trebuchet MS Regular' $font-fallback;
+        size: 100px;
+    }
+    line-height: 100px;
+    &.main-number {
+        margin-top: 209px;
+    }
+}
+
+.app-offer__title {
+        font-size: $font-md-small;
+        font-weight: 700;
+        border-bottom: 2px solid #7f7f7f;
+        &.main-title {
+            border: none;
+        }
+    
+}

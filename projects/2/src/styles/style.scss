@@ -1,5 +1,6 @@
 @import "fonts";
 @import "var";
+@import "components";
 .top-line {
     background-color: $baner-color;
     height: 104px;
@@ -18,7 +19,7 @@
         .contact {
             display: flex;
             align-items: center;
-            color: white;
+            color: #fff;
             &-namber {
                 font-size: $font-md-small;
                 padding-right: 27px;
@@ -98,7 +99,7 @@
 }
 
 .header-info {
-    font-family: 'Trebuchet MS Regular';
+    font-family: 'Trebuchet MS Regular' $font-fallback;
     .app-info {
         margin-top: 30px;
         &--title {
@@ -136,7 +137,7 @@
             &__number {
                 width: 50px;
                 height: 50px;
-                background-color: #00bff3;
+                background-color: $baner-color;
                 color: #fff;
                 font-size: 24px;
                 font-weight: 700;
@@ -159,16 +160,13 @@
     .app-days {
         margin-top: -35px;
         width: 150px;
-        &__number {
-            color: $text-color;
-            font-size: 100px;
-            font-weight: 400;
-            line-height: 100px;
-        }
+        font-weight: 400;
         &__subtitle {
             text-align: justify;
-            font-size: 29px;
-            font-weight: 400;
+            font: {
+                size: 29px;
+                weight: 400;
+            }
             line-height: 32px;
         }
     }
@@ -187,12 +185,7 @@ main {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                font-family: 'Trebuchet MS Regular';
-                &__title {
-                    font-size: $font-md-small;
-                    font-weight: 700;
-                    border-bottom: 2px solid #7f7f7f;
-                }
+                font-family: 'Trebuchet MS Regular' $font-fallback;
                 &__price {
                     font-size: 50px;
                     font-weight: 700;
@@ -224,7 +217,7 @@ main {
                     }
                     &::before {
                         content: '$90';
-                        font-family: 'Trebuchet MS Regular';
+                        font-family: 'Trebuchet MS Regular' $font-fallback;
                         display: block;
                         font-size: $font-sm-small;
                         position: absolute;
@@ -240,23 +233,156 @@ main {
     .main-block {
         margin-top: 95px;
         margin-bottom: 26px;
-        font-family: Arial;
+        font: {
+            family: 'Arial Regular' $font-fallback;
+            weight: 700;
+        }
         &-title {
-            font-family: 'Trebuchet MS';
-            font-size: 50px;
-            font-weight: 700;
+            font: {
+                family: 'Trebuchet MS' $font-fallback;
+                size: 50px;
+                weight: 700;
+            }
             line-height: 56px;
+            padding-bottom: 26px;
+        }
+        &-subtitle {
+            margin: {
+                top: 20px;
+                bottom: 10px;
+            }
+            font: {
+                size: $font-sm-small;
+                family: 'Arial Bold' $font-fallback;
+            }
         }
         &-info {
             font-size: 16px;
-            font-weight: 700;
             line-height: 22px;
+            margin-bottom: 27px;
+            font-family: 'Arial Bold' $font-fallback;
         }
         &-text {
-            font-size: 14px;
-            font-weight: 400;
+            font: {
+                size: 14px;
+                weight: 400;
+            }
             line-height: 20px;
-            margin-top: 27px;
+            margin-bottom: 27px;
+        }
+        &-blockquote {
+            background-color: $blockquote-bg-color;
+            padding: {
+                left: 15px;
+                right: 30px;
+                top: 16px;
+                bottom: 20px;
+            }
+            border-left: 3px solid #33ccf5;
+            margin-left: 27px;
+        }
+        &-table {
+            &__title {
+                font: {
+                    family: 'Arial Bold' $font-fallback;
+                    size: 12px;
+                    weight: 900;
+                }
+            }
+            &__text {
+                font: {
+                    family: 'Arial Regular' $font-fallback;
+                    size: $font-xs-small;
+                    weight: 400;
+                }
+            }
+            &__row {
+                border-bottom: 1px solid $table-color;
+            }
+            td {
+                padding: {
+                    top: 12px;
+                    bottom: 12px;
+                    left: 15px;
+                    right: 15px;
+                }
+            }
+            thead {
+                background-color: $table-color;
+                border-bottom: 1px solid $text-color;
+            }
+        }
+        &-fount {
+            font: {
+                size: $font-xs-small;
+                weight: 400;
+            }
+            line-height: 20px;
+            margin-top: 33px;
+            .main-block-list {
+                list-style: none;
+                margin: 0;
+                .main-block-fount__item {
+                    position: relative;
+                    &:before {
+                        content: "—";
+                        position: absolute;
+                        left: -18px;
+                    }
+                }
+            }
+            &__title {
+                font: {
+                    size: $font-xs-small;
+                }
+            }
+        }
+        .main-subtitle {
+            font-family: 'Trebuchet MS';
+            color: $text-color;
+            font: {
+                size: $font-sm-small;
+                weight: 400;
+            }
+            line-height: 24px;
+        }
+    }
+}
+
+.footer-block {
+    margin: {   
+        top: 45px;
+        bottom: 30px;
+    }
+    border-top: 1px solid $text-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    font: {
+        family: 'Arial Regular' $font-fallback;
+        weight: 400;
+        font-size: 12px;
+    }
+    &-social {
+        display: flex;
+        justify-content: center;
+        &__item {
+            width: 31px;
+            height: 31px;
+            border-radius: 50%;
+            background-color: $baner-color;
+            font-size: $font-sm-small;
+            line-height: 31px;
+            text-align: center;
+            color: $header-text-color;
+            border: none;
+            &:nth-child(2) {
+                margin: {
+                    left: 10px;
+                    right: 10px;
+                }
+            }
         }
     }
 }
