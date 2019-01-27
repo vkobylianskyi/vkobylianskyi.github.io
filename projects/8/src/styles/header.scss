@@ -1,0 +1,57 @@
+@import 'var';
+.header {
+    background-color: $primary-color;
+    padding: {
+        left: 50px;
+    }
+    &-top-line {
+        height: 100px;
+        padding: {
+            top: 30px;
+        }
+        margin-bottom: 25px;
+        font: {
+            family: 'Open Sans Regular' $font-fallback;
+            weight: 400;
+        }
+        &__menu {
+            &-item {
+                margin-right: 60px;
+                a {
+                    color: $header-text-color;
+                    font-size: $font-md-small;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    &-info {
+        .header-button-signature {
+            font: {
+                family: 'Open Sans Regular' $font-fallback;
+                size: 28px;
+                weight: 400;
+            }
+            color: #95c9fc;
+            text-decoration: underline;
+            padding-bottom: 70px;
+            cursor: pointer;
+            i {
+                border: 1px solid #95c9fc;
+                width: 30px;
+                border-radius: 50%;
+                text-align: center;
+                margin-left: 10px;
+            }
+        }
+    }
+    &-picture {
+        object-position: center right;
+        img {
+            width: 88%;
+           
+        }
+    }
+}

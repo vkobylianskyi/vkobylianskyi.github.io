@@ -1,0 +1,99 @@
+@import 'var';
+
+main {
+    flex-grow: 1;
+    min-width: 922px;
+}
+
+.tabs {
+    height: 78px;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 130px;
+    border-bottom: 1px solid #d3d7da;
+
+    &-list {
+        height: 100%;
+        display: flex;
+        &-item {
+            display: flex;
+            align-items: center;
+            height: calc(100% + 0);
+            color: $text-color;
+            padding: {
+                left: 40px;
+                right: 70px;
+            }
+            font: {
+                family: Tahoma;
+                size: 24px;
+            }
+            border-bottom: 1px solid #d3d7da;
+            background-color: rgb(248, 248, 248);
+            cursor: pointer;
+
+            &__text {
+                position: relative;
+            }
+
+            .app-notifications {
+                top: -15px;
+                right: -35px;
+            }
+
+            &:not(:first-child) {
+                border-left: 1px solid #d3d7da;
+            }
+
+            &:last-child {
+                border-right: 1px solid #d3d7da;
+            }
+
+            &--active {
+                background-color: #fff;
+                border-bottom-color: #fff;
+            }
+
+            i {
+                margin-right: 13px;
+                font-size: 40px;
+                color: #d6d6d6;
+            }
+        }
+    }
+}
+
+.dashboard-info {
+    width: 73%;
+}
+
+.dashboard-chat {
+    width: 26%;
+}
+
+.avatar-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .app-avatar {
+        margin-right: 10px;
+    }
+
+    &__time {
+        text-transform: uppercase;
+        font-size: $font-xs-small;
+        margin-top: 5px;
+
+        span {
+            font-size: 13px;
+        }
+    }
+
+    &__decription {
+        color: #909090;
+        font-family: Tahoma;
+    }
+}
