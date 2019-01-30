@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
@@ -12,445 +11,197 @@
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
 </head>
-
 <body>
     <header class="container-fluid header">
-        <div class="header-top-line">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <button class="app-button navbar-logo">Logo</button>
-                <div class="collapse navbar-collapse app-nav" id="navbarNavDropdown">
-                    <ul class="navbar-nav header-top-line__menu">
-                        <li class="header-top-line__menu-item">
-                            <a href="#shakers">Shakers</a>
-                        </li>
-                        <li class="header-top-line__menu-item">
-                            <a href="#accessories">Accessories</a></li>
-                        <li class="header-top-line__menu-item">
-                            <a href="#faq">FAQ</a></li>
-                        </li>
-                        <li class="header-top-line__menu-item">
-                            <a href="#about">About</a></li>
-                        </li>
-                        <li class="header-top-line__menu-item">
-                            <a href="#contact">Contact</a></li>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <div class="row">
-            <div class="col-md-6 header-info">
-                <div class="app-title header-info--title">
-                    Custom & Private Label<br>
-                    Shaker Bottles
-                </div>
-                <div class="app-text header-info--text">
-                    The World's Largest Selection of Private Label Shaker Bottles, Pill organizers, and other
-                    Promotional Fitness Items. Customize with your company logo and colors.
-                </div>
-                <button class="app-button header-button">view all shakers</button>
-                <div class=" header-button-signature">Watch how it works<i class="fas fa-caret-right"></i></div>
+        <div class="container">
+            <div class="header-top-line">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                        <button class="app-button app-button-logo"><a >Logo</a></button>
+                    <button class="navbar-toggler"
+                    type="button" 
+                    data-toggle="collapse" 
+                    data-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse app-nav" id="navbarNavDropdown">
+                        <ul class="navbar-nav header-top-line__menu">
+                            <li class="header-top-line__menu-item">
+                                <a href="#shakers">Shakers</a>
+                            </li>
+                            <li class="header-top-line__menu-item">
+                                <a href="#accessories">Accessories</a></li>
+                            <li class="header-top-line__menu-item">
+                                <a href="#faq">FAQ</a></li>
+                            </li>
+                            <li class="header-top-line__menu-item">
+                                <a href="#about">About</a></li>
+                            </li>
+                            <li class="header-top-line__menu-item">
+                                <a href="#contact">Contact</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
-            <div class="col-md-6 header-picture">
-                <img src="img/header_logo.png" alt="">
+            <div class="row header-section">
+                <div class="col-md-6 header-info">
+                    <div class="app-title app-title-header">
+                        Custom & Private Label<br>
+                        Shaker Bottles
+                    </div>
+                    <div class="app-text app-text-header">
+                        The World's Largest Selection of Private Label Shaker Bottles, Pill organizers, and other
+                        Promotional Fitness Items. Customize with your company logo and colors.
+                    </div>
+                    <button class="app-button app-button-header">view all shakers</button>
+                    <div class=" header-button-signature">Watch how it works<i class="fas fa-caret-right"></i></div>
+                </div>
+                <div class="col-md-6 col-sm-12 order-first order-md-0 header-picture">
+                    <img src="img/header_logo.png" alt="">
+                </div>
             </div>
+            <section class="under-header">
+                <p class="app-text app-text-header-under">Over 3,000,000 shakers shipped to date.</p>
+                <img src="img/topWell.png" alt="">
+                <img src="img/on.png" alt="">
+                <img src="img/bulk.png" alt="">
+                <img src="img/sts.png" alt="">
+                <img src="img/foodFirst.png" alt="">
+                <img src="img/maxBody.png" alt="">
+            </section>
         </div>
     </header>
-
     <main>
-       
-        <section class="tabs">
-            <div class="tabs-list">
-                <div class="tabs-list-item tabs-list-item--active">
-                    <i class="far fa-clock"></i>
-                    <span class="tabs-list-item__text">
-                        Active Projects
-                        <span class="app-notifications app-notifications--danger">
-                            2
-                        </span>
+        <div class="container">
+            <div class="swiper">
+                <div class="swiper-angle"><i class="fas fa-angle-double-left"></i></div>
+                <div class="swiper-item">
+                    <div class="swiper-item__text">zen</div>
+                    <div class="swiper-item__picture">
+                        <img src="img/zen.png" alt="">
+                    </div>
                 </div>
-                <div class="tabs-list-item">
-                    <i class="fab fa-telegram-plane"></i>
-                    <span class="tabs-list-item__text">
-                        Messenger
-                        <span class="app-notifications app-notifications--danger">
-                            2
-                        </span>
+                <div class="swiper-item">
+                    <div class="swiper-item__text">hercules</div>
+                    <div class="swiper-item__picture">
+                        <img src="img/hercules.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-item">
+                    <div class="swiper-item__text">zen</div>
+                    <div class="swiper-item__picture">
+                        <img src="img/zen.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-item">
+                    <div class="swiper-item__text">zen</div>
+                    <div class="swiper-item__picture">
+                        <img src="img/zen.png" alt="">
+                    </div>
+                </div>
+                <div class="swiper-angle swiper-angle-right"><i class="fas fa-angle-double-right"></i></div>
+            </div>
+            <h2 class="app-title app-title-main">We supply shakers and accessories to some of the largest name brands in
+                the supplement industry.
+            </h2>
+            <div class="row main-section">
+                <div class="col-md-6 col-sm-12 main-section--info">
+                    <h3 class="app-title app-title-main-section">Custom design & Free mockups</h3>
+                    <p class="app-text app-text-main-section">Our shaker bottles comes in various shapes and sizes, and
+                        can be custom-designed from over 20 molds.</p>
+                    <p class="app-text app-text-main-section">All shakers are customizable with your logo and any color on
+                        lid and body, and we provide free mockups of yourshaker prior to sampling.</p>
+                </div>
+                <div class="col-md-6 col-sm-12 order-first order-md-0 main-section--picture">
+                    <img src="img/main_picture1.png" alt="">
                 </div>
             </div>
-            <input type="text" class="app-form-control" placeholder="Search Project, User, Task, etc..." />
-        </section>
-        <section class="dashboard-section">
-            <div class="dashboard__list  dashboard-info">
-                <div class="dashboard__list-header">
-                    <input type="text" class="app-form-control" placeholder="Search Project, User, Task, etc..." />
-                    <div class="dashboard__list-header--controls">
-                        <button class="app-button app-button--title">
-                            New projects
-                            <i class="">(descending)</i>
-                            <i class="fas fa-angle-down"></i>
-                        </button>
-                        <button class="app-button app-button--round app-button--danger">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
+            <div class="row main-section">
+                <div class="col-md-6 col-sm-12 main-section--picture">
+                    <img src="img/main_picture2.png" alt="">
                 </div>
-                <div class="dashboard__list-body">
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label app-label--danger">23<small>%</small></div>
-                            <div class="app-text">
-                                Create Contact Formular
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <button class="app-button app-button--small">Worlda</button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label app-label--danger">87<small>%</small></div>
-                            <div class="app-text">
-                                Create Subpage PSD
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <button class="app-button app-button--small">Panorama</button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label app-label--danger">83<small>%</small></div>
-                            <div class="app-text">
-                                Layout & implementation in HTML & CSS
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <button class="app-button app-button--small">Ebay Relaunch</button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-angle-up"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label">66<small>%</small></div>
-                            <div class="app-text">
-                                Creating the Context
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <div class="app-avatar app-avatar--small">
-                                <img src="img/IMG.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="app-avatar app-avatar--small">
-                                <img src="img/Ebene 57.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-
-                            <div class="app-avatar app-avatar--small">
-                                <img src="img/avatar_small.png">
-                                <div class="app-avatar__status"></div>
-                            </div>
-
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i>+3</i>
-                            </button>
-
-                            <button class="app-button">
-                                <i class="fas fa-redo"></i> Today, 13:40 PM
-
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label"><span class="app-label-text">READY</span></div>
-                            <div class="app-text app-text--cross">
-                                Implementation in the Layout
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <div class="app-avatar app-avatar--small">
-                                <img src="img/Ebene 57.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-
-                            <div class="app-avatar app-avatar--small">
-                                <img src="img/avatar_small.png">
-                                <div class="app-avatar__status"></div>
-                            </div>
-
-                            <button class="app-button">
-                                <i class="fas fa-redo"></i> Yestarday, 12:40 PM
-
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label app-label--danger">23<small>%</small></div>
-                            <div class="app-text">
-                                Lorem ipsum dolor sit amet, elitr, sed diam nonumy eirmod tempo
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <button class="app-button app-button--small">Panorama</button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label app-label--danger">98<small>%</small></div>
-                            <div class="app-text">
-                                Create Contact Formular
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <button class="app-button app-button--small">Worlda</button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label app-label--danger">98<small>%</small></div>
-                            <div class="app-text">
-                                Create Contact Formular
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <button class="app-button app-button--small">Worlda</button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label app-label--danger">98<small>%</small></div>
-                            <div class="app-text">
-                                Create Contact Formular
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <button class="app-button app-button--small">Worlda</button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="dashboard__list-row-description">
-                            <div class="app-label app-label--danger">98<small>%</small></div>
-                            <div class="app-text">
-                                Create Contact Formular
-                            </div>
-                        </div>
-                        <div class="dashboard__list-controls">
-                            <button class="app-button app-button--small">Worlda</button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-search"></i>
-                            </button>
-                            <button class="app-button app-button--round app-button--hover-danger app-button--small">
-                                <i class="fas fa-angle-down"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="dashboard__list-footer">
-                    <span class="app-text app-text--small">
-                        Project Archive
-                    </span>
-                    <i class="fas fa-angle-right"></i>
+                <div class="col-md-6 col-sm-12 main-section--info">
+                    <h3 class="app-title app-title-main-section">Door to Door Pricing</h3>
+                    <p class="app-text app-text-main-section">Our shaker bottles comes in various shapes and sizes, and
+                        can be custom-designed from over 20 molds.</p>
+                    <p class="app-text app-text-main-section">All shakers are customizable with your logo and any color on
+                        lid and body, and we provide free mockups of yourshaker prior to sampling.</p>
                 </div>
             </div>
-            <div class="dashboard__list dashboard-chat">
-                <div class="dashboard__list-body">
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/IMG.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Mark P.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/Ebene 62.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Marvin S.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/avatar_small.png">
-                                <div class="app-avatar__status"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Sebastian K.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/IMG.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Mark P.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/Ebene_65.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Philip O.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/IMG.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Mark P.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/Ebene_66.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Benni I.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/Ebene_66.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Benni I.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/IMG.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Benni I.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard__list-row">
-                        <div class="avatar-section">
-                            <div class="app-avatar">
-                                <img src="img/Ebene_66.png">
-                                <div class="app-avatar__status app-avatar__status--online"></div>
-                            </div>
-                            <div class="avatar-section__decription">
-                                <span class="app-text app-text--small">Benni I.</span>
-                                <span class="app-text--small">add an Image into Worlda</span>
-                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
-                            </div>
-                        </div>
-                    </div>
+            <h3 class="app-title app-title-main app-title-main__subtitle">What our clients are saying.</h3>
+            <div class="row main-opinion">
+                <div class="col-md-4 col-sm-12 main-opinion-item">
+                    <blockquote class="main-opinion-item__text">We chose shakerfactory for their efficiency and
+                        friendly sales team, get in touch with them and you’ll know what I mean.and friendly sales
+                        team, get in touch with them and you’ll know what I mean.</blockquote>
+                    <div class="main-opinion-item__name">Angelo Eu</div>
+                    <div class="main-opinion-item__product">Optimum Nutrition</div>
                 </div>
-                <div class="dashboard__list-footer">
-                    <span class="app-text app-text--small">
-                        Project Archive
-                    </span>
-                    <i class="fas fa-angle-right"></i>
+                <div class="col-md-4 col-sm-12 main-opinion-item">
+                    <blockquote class="main-opinion-item__text">The two most significant benefits of Shakerfactory for
+                        me are the good prices and the high quality of products.</blockquote>
+                    <div class="main-opinion-item__name">Spiros Maragakis</div>
+                    <div class="main-opinion-item__product">X-Treme Stores</div>
+                </div>
+                <div class="col-md-4 col-sm-12 main-opinion-item">
+                    <blockquote class="main-opinion-item__text"> To future clients I would say that Shakerfactory has
+                        both good personal service and good prices.</blockquote>
+                    <div class="main-opinion-item__name">Arnlaugur Einarsson </div>
+                    <div class="main-opinion-item__product">Allilja Ehf</div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="container-fluid main-info">
+            <h2 class="app-title app-title-main app-title-main--info">We supply shakers to some of the largest name
+                brands in the supplement industry.
+            </h2>
+            <div class="app-text app-text--info">
+                View our large selection of Shakers and get started on your own design today.
+            </div>
+            <button class="app-button">view our selection</button>
+        </div>
     </main>
+    <footer>
+        <div class="container footer">
+            <div class="row footer-section">
+                <div class="col-md-4 col-sm-12 footer-section--item">
+                    <h4 class="app-title app-title--footer">shakerfactory</h4>
+                    <div class="app-text app-text--footer">A one-stop shop for all branding and promotional merchandise
+                        for the health and fitness industries. </div>
+                </div>
+                <div class="col-md-4 col-sm-12 footer-section--item">
+                    <h4 class="app-title app-title--footer">Contact</h4>
+                    <div class="app-text app-text--footer">Contact us at <span>info@shakerfactory.com</span>
+                        or by Skype at paul.shakerfactory</div>
+                </div>
+                <div class="col-md-4 col-sm-12 footer-section--item">
+                    <h4 class="app-title app-title--footer">social</h4>
+                    <div class="footer-section--item__social">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <button class="app-button app-button--copy"><i class="fas fa-thumbs-up"></i><span>Like</span>4.1K</button>
+                <button class="app-button app-button--copy">Share</button>
+                <div class="footer-copy--text">© 2018 - Shakerfactory Ltd. All Rights Reserved</div>
+            </div>
+        </div>
+    </footer>
 </body>
-
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 </html>

@@ -1,9 +1,6 @@
 @import 'var';
 .header {
     background-color: $primary-color;
-    padding: {
-        left: 50px;
-    }
     &-top-line {
         height: 100px;
         padding: {
@@ -14,12 +11,15 @@
             family: 'Open Sans Regular' $font-fallback;
             weight: 400;
         }
+        .navbar {
+            padding: 0; 
+        }
         &__menu {
             &-item {
                 margin-right: 60px;
                 a {
                     color: $header-text-color;
-                    font-size: $font-md-small;
+                    font-size: $font-sm-small;
                 }
                 &:last-child {
                     margin-right: 0;
@@ -27,31 +27,40 @@
             }
         }
     }
-    &-info {
+    &-section {
+        padding-bottom: 100px; 
+    .header-info {
         .header-button-signature {
             font: {
                 family: 'Open Sans Regular' $font-fallback;
-                size: 28px;
+                size: $font-sm-small;
                 weight: 400;
             }
             color: #95c9fc;
             text-decoration: underline;
-            padding-bottom: 70px;
             cursor: pointer;
             i {
                 border: 1px solid #95c9fc;
-                width: 30px;
+                width: 22px;
                 border-radius: 50%;
                 text-align: center;
                 margin-left: 10px;
             }
         }
     }
-    &-picture {
-        object-position: center right;
+    .header-picture {
         img {
-            width: 88%;
-           
+            height: 400px;
         }
     }
+}
+.under-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 60px; 
+    img {
+        width: 8%;
+    }
+}
 }

@@ -1,0 +1,59 @@
+@import 'var';
+.header {
+    &-top-line {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        font: {
+            family: 'overpass_semibold' $font-fallback;
+            weight: 400;
+        }
+        .navbar {
+            padding: 0; 
+        }
+        &__menu {
+            &-item {
+                margin-right: 60px;
+                a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    &-section {
+        padding-bottom: 100px; 
+    .header-info {
+        .header-button-signature {
+            font: {
+                family: 'Open Sans Regular' $font-fallback;
+                size: $font-sm-small;
+                weight: 400;
+            }
+            color: #95c9fc;
+            text-decoration: underline;
+            cursor: pointer;
+            i {
+                border: 1px solid #95c9fc;
+                width: 22px;
+                border-radius: 50%;
+                text-align: center;
+                margin-left: 10px;
+            }
+        }
+    }
+    .header-picture {
+        img {
+            height: 400px;
+        }
+    }
+}
+.under-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 60px; 
+    img {
+        width: 8%;
+    }
+}
+}

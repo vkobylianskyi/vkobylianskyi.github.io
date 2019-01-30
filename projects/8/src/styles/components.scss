@@ -4,7 +4,7 @@
 .app-button {
     font: {
         family: 'Open Sans Regular' $font-fallback;
-        size: $font-md-small;
+        size: $font-sm-small;
         weight: 600;
     }
     color: $button-text-color;
@@ -12,14 +12,15 @@
     border-radius: 5px;
     text-align: center;
     text-transform: uppercase;
-    width: 462px;
-    height: 120px;
+    width: 277px;
+    height: 72px;
     border: none;
     cursor: pointer;
-    &.navbar-logo {
+    user-select: none;
+    &-logo {
         color: #fff;
         font: {
-            size: 50px;
+            size: $font-lg-small;
             weight: 200;
         }
         padding: 0;
@@ -31,95 +32,124 @@
         text-align: left;
         text-transform: capitalize;
     }
-    &.header-button {
+    &-header {
         margin-bottom: 30px;
-        
+    }
+    &--copy {
+        text-transform: capitalize;
+        font-weight: 200;
+        color: $header-title-color;
+        background-color: #4266b3;
+        height: 35px;
+        border-radius: 5px;
+        width: auto;
+        padding: {
+            left: 12px;
+            right: 12px;
+        }
+        &:nth-of-type(2) {
+            margin: {
+                left: 15px;
+                right: 15px;
+            }
+        }
+        span {
+            font-weight: 600;
+            padding: {
+                left: 5px;
+                right: 5px;
+            }
+        }
     }
 }
 
 .app-title {
     font: {
         family: 'Open Sans Regular' $font-fallback;
-        size: 36px;
+        size: $font-sm-small;
         weight: 300;
     }
-    &.header-info--title {
+    &-header {
         color: $header-title-color;
-        font-size: 50px;
+        font-size: $font-lg-small;
         line-height: 50px;
         margin: {
-            top: 115px;
-            bottom: 42px;
+            top: 30px;
+            bottom: 22px;
         }
+    }
+    &-main {
+        padding: {
+            top: 80px;
+        }
+        color: $main-title-color;
+        font-size: $font-lg-small;
+        line-height: 60px;
+        text-align: center;
+        width: 75%;
+        margin: 0 auto;
+        &__subtitle {
+            font-size: 50px;
+            padding: {
+                top: 230px;
+                bottom: 150px;
+            }
+        }
+        &--info {
+            max-width: 882px;
+            color: $header-title-color;
+        }
+    }
+    &-main-section {
+        font: {
+            size: $font-md-small;
+        }
+        color: $main-title-color;
+    }
+    &--footer {
+        font: {
+            family: 'Open Sans Bold' $font-fallback;
+        }
+        text-transform: uppercase;
+        color: $footer-title-color;
+        padding-bottom: 25px;
     }
 }
 
 .app-text {
     font: {
         family: 'Open Sans Regular' $font-fallback;
-        size: 28px;
+        size: $font-sm-small;
         weight: 300;
     }
     color: $header-text-color;
-    &.header-info--text {
+    &-header {
         line-height: 25px;
         margin-bottom: 36px;
         line-height: 40px;
     }
-    &--small {
-        font-size: 18px;
+    &-header-under {
+        font-size: $font-sm-small;
+        color: #a4d1fc;
     }
-}
-
-.app-avatar {
-    position: relative;
-    min-width: 40px;
-    min-height: 40px;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+    &-main-section {
+        font-size: 25px;
+        color: $main-text-color;
+        padding-top: 50px;
     }
-    &--small {
-        $size: 33px;
-        min-width: $size;
-        min-height: $size;
-        width: $size;
-        height: $size;
-    }
-    &__status {
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        background-color: #c5c5c5;
-        border-radius: 50%;
-        border: 1px solid #fff;
-        top: 0;
-        &--online {
-            background-color: #aacc4e;
+    &--info {
+        color: $header-text-color;
+        padding: {
+            top: 35px;
+            bottom: 35px;
         }
     }
-}
-
-.app-form-control {
-    height: 25px;
-    text-align: center;
-    line-height: 25px;
-    border: none;
-    font: {
-        size: 22px;
-        weight: 400;
-    }
-    text-align: left;
-    width: 340px;
-    background-color: transparent;
-    &::placeholder {
-        color: #c1c1c1;
-        text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.31);
-    }
-    &:focus,
-    &:active {
-        outline: none;
+    &--footer {
+        color: $footer-text-color;
+        line-height: 30px;
+        font-weight: 400;
+        span {
+            color:  #3874ca;
+        }
     }
 }
