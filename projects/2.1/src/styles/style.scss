@@ -1,8 +1,11 @@
-@import "fonts";
-@import "var";
-@import "components";
-@import "base/api.scss";
-@include mq("tablet-wide") {
+@import 'fonts';
+@import 'var';
+@import 'components';
+@import 'base/api.scss';
+
+//
+
+@include mq('tablet-wide') {
     padding-top: 110px;
 }
 
@@ -40,12 +43,14 @@
             padding-right: 0;
             &-number {
                 display: flex;
+                color: green;
                 align-items: center;
                 font-size: $font-md-small;
-                @include mq("tablet-wide") {
-                   justify-content: flex-start;
+                @include mq('lg') {
+                    color: red;
+                    justify-content: flex-start;
                 }
-                @include mq("phablet") {
+                @include mq('sm') {
                     justify-content: flex-end;
                 }
             }
@@ -53,7 +58,7 @@
                 justify-content: center;
                 display: flex;
                 align-items: center;
-                @include mq("phablet") {
+                @include mq('sm') {
                     justify-content: flex-start;
                 }
                 &--text {
@@ -67,10 +72,10 @@
             justify-content: center;
             align-items: center;
             font-size: $font-sm-small;
-            color: $baner-color;
+            color: $banner-color;
             padding-top: 10px;
             cursor: pointer;
-            @include mq("tablet-wide") {
+            @include mq('tablet-wide') {
                 justify-content: flex-end;
             }
             i {
@@ -81,15 +86,15 @@
                 background-color: white;
                 display: flex;
                 justify-content: center;
-                transition-duration: .5s;
+                transition-duration: 0.5s;
                 &:nth-child(2) {
                     margin-right: 10px;
                     margin-left: 10px;
                 }
                 &:hover {
                     color: white;
-                    background-color: $baner-color;
-                    transition-duration: .5s;
+                    background-color: $banner-color;
+                    transition-duration: 0.5s;
                 }
             }
         }
@@ -98,7 +103,7 @@
 
 .header {
     background: {
-        image: url("img/main_picture.png");
+        image: url('img/main_picture.png');
         repeat: no-repeat;
         size: cover;
         position: bottom center;
@@ -175,7 +180,7 @@
             &__number {
                 width: 50px;
                 height: 50px;
-                background-color: $baner-color;
+                background-color: $banner-color;
                 color: #fff;
                 font-size: 24px;
                 font-weight: 700;
@@ -367,7 +372,7 @@ main {
                 .main-block-fount__item {
                     position: relative;
                     &:before {
-                        content: "—";
+                        content: '—';
                         position: absolute;
                         left: -18px;
                     }
@@ -413,7 +418,7 @@ main {
             width: 31px;
             height: 31px;
             border-radius: 50%;
-            background-color: $baner-color;
+            background-color: $banner-color;
             font-size: $font-sm-small;
             line-height: 31px;
             text-align: center;
