@@ -1,8 +1,8 @@
+@import 'base/api.scss';
 @import 'var';
 .header {
     background-color: $primary-color;
     &-top-line {
-        height: 100px;
         padding: {
             top: 30px;
         }
@@ -12,55 +12,94 @@
             weight: 400;
         }
         .navbar {
-            padding: 0; 
+            padding: 0;
         }
         &__menu {
+            text-align: center;
+            @include mq('lg') {
+                text-align: left;
+                padding-left: 300px;
+            }
+            @include mq('md') {
+                flex-direction: row;
+                justify-content: space-between;
+            }
             &-item {
-                margin-right: 60px;
+                padding: {
+                    right: 0;
+                    bottom: 10px;
+                }
+                @include mq('lg') {
+                    padding: {
+                        right: 30px;
+                        bottom: 0;
+                    }
+                }
                 a {
                     color: $header-text-color;
                     font-size: $font-sm-small;
                 }
                 &:last-child {
-                    margin-right: 0;
+                    padding-right: 0;
                 }
             }
         }
     }
     &-section {
-        padding-bottom: 100px; 
-    .header-info {
-        .header-button-signature {
-            font: {
-                family: 'Open Sans Regular' $font-fallback;
-                size: $font-sm-small;
-                weight: 400;
-            }
-            color: #95c9fc;
-            text-decoration: underline;
-            cursor: pointer;
-            i {
-                border: 1px solid #95c9fc;
-                width: 22px;
-                border-radius: 50%;
-                text-align: center;
-                margin-left: 10px;
-            }
-        }
-    }
-    .header-picture {
-        img {
-            height: 400px;
-        }
+        padding-bottom: 100px;
     }
 }
+
+.header-button-signature {
+    font: {
+        family: 'Open Sans Regular' $font-fallback;
+        size: $font-sm-small;
+        weight: 400;
+    }
+    color: #95c9fc;
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+    @include mq('md') {
+        text-align: left;
+    }
+    i {
+        border: 1px solid #95c9fc;
+        width: 22px;
+        border-radius: 50%;
+        text-align: center;
+        margin-left: 10px;
+    }
+}
+
+.header-picture {
+    img {
+        max-height: 400px;
+        width: 100%;
+    }
+}
+
 .under-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 60px; 
-    img {
-        width: 8%;
+    flex-direction: column;
+    padding-bottom: 50px;
+    @include mq('md') {
+        flex-direction: row;
     }
-}
+    &-picture {
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // overflow-x: scroll;
+        // min-width: 320px;
+        @include mq('md') {
+            padding-top: 0;
+        }
+        img {
+            width: 15%;
+        }
+    }
 }

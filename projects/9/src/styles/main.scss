@@ -68,7 +68,6 @@
             weight: 400;
         }
         &__text {
-            color: $header-title-color;
             font: {
                 size: 18px;
             }
@@ -98,7 +97,6 @@
             font: {
                 size: $font-sm-small;
             }
-            color: $main-title-color;
             padding-top: 20px;
         }
         &__product {
@@ -106,7 +104,6 @@
                 family: 'Open Sans Regular' $font-fallback;
                 size: $font-xs-small;
             }
-            color: $main-text-color;
             padding-top: 10px;
         }
     }

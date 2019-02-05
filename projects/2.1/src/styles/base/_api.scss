@@ -139,18 +139,6 @@
   }
 }
 
-// $breakpoints: (
-//     "phone": 400px,
-//     "phone-wide": 480px,
-//     "phablet": 576px,
-//     "tablet-small": 640px,
-//     "tablet": 768px,
-//     "tablet-wide": 992px,
-//     "desktop": 1248px,
-//     "desktop-wide": 1440px
-// );
-
-
 @mixin mq($width, $type: min) {
   @if map_has_key($grid-breakpoints, $width) {
     $width: map_get($grid-breakpoints, $width);

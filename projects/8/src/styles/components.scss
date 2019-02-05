@@ -17,6 +17,8 @@
     border: none;
     cursor: pointer;
     user-select: none;
+    display: block;
+    margin: 0 auto;
     &-logo {
         color: #fff;
         font: {
@@ -27,13 +29,24 @@
         border: none;
         background-color: transparent;
         cursor: pointer;
-        margin-right: 300px;
         width: 0;
-        text-align: left;
+        margin: 0;
         text-transform: capitalize;
     }
     &-header {
-        margin-bottom: 30px;
+        margin: {
+            top: 0; 
+            left: auto;
+            right: auto;
+            bottom: 30px;
+        }
+        @include mq('md') {
+            margin: {
+                top: 0; 
+                left: 0;
+                right: 0;
+            }
+        }
     }
     &--copy {
         text-transform: capitalize;
@@ -66,33 +79,60 @@
 .app-title {
     font: {
         family: 'Open Sans Regular' $font-fallback;
-        size: $font-sm-small;
+        size: 25px;
         weight: 300;
     }
     &-header {
         color: $header-title-color;
-        font-size: $font-lg-small;
-        line-height: 50px;
+        line-height: 35px;
+        text-align: center;
         margin: {
             top: 30px;
             bottom: 22px;
         }
+        @include mq('md') {
+            font-size: $font-md-small;
+            line-height: 30px;
+            text-align: center;
+        }
+        @include mq('lg') {
+            font-size: $font-lg-small;
+            line-height: 50px;
+            text-align: left;
+        }
     }
     &-main {
         padding: {
-            top: 80px;
+            top: 40px;
         }
         color: $main-title-color;
-        font-size: $font-lg-small;
-        line-height: 60px;
+        font-size: 25px;
+        line-height: 30px;
         text-align: center;
         width: 75%;
         margin: 0 auto;
+        @include mq('md') {
+            font-size: $font-md-small;
+            line-height: 30px;
+        }
+        @include mq('lg') {
+            font-size: $font-lg-small;
+            line-height: 50px;
+        }
         &__subtitle {
-            font-size: 50px;
+            font-size: $font-md-small;
+            line-height: 30px;
             padding: {
-                top: 230px;
-                bottom: 150px;
+                top: 80px;
+                bottom: 60px;
+            }
+            @include mq('lg') {
+                font-size: 50px;
+                line-height: 50px;
+                padding: {
+                    top: 230px;
+                    bottom: 150px;
+                }
             }
         }
         &--info {
@@ -101,8 +141,20 @@
         }
     }
     &-main-section {
+        padding-top: 15px;
         font: {
             size: $font-md-small;
+        }
+        text-align: center;
+        @include mq('md') {
+            padding-top: 0;
+            font-size: 25px;
+            text-align: left;
+        }
+        @include mq('lg') {
+            font-size: $font-md-small;
+            line-height: 50px;
+            text-align: left;
         }
         color: $main-title-color;
     }
@@ -122,22 +174,36 @@
         size: $font-sm-small;
         weight: 300;
     }
+    text-align: center;
     color: $header-text-color;
+    @include mq('md') {
+        text-align: left;
+    }
     &-header {
-        line-height: 25px;
+        line-height: 30px;
+        @include mq('md') {}
         margin-bottom: 36px;
-        line-height: 40px;
     }
     &-header-under {
+        width: 100%;
         font-size: $font-sm-small;
         color: #a4d1fc;
     }
     &-main-section {
-        font-size: 25px;
+        font-size: $font-sm-small;
         color: $main-text-color;
-        padding-top: 50px;
+        padding-top: 25px;
+        text-align: center;
+        @include mq('md') {
+            text-align: left;
+        }
+        @include mq('lg') {
+            font-size: 25px;
+            padding-top: 50px;
+        }
     }
     &--info {
+        text-align: center;
         color: $header-text-color;
         padding: {
             top: 35px;
@@ -148,8 +214,9 @@
         color: $footer-text-color;
         line-height: 30px;
         font-weight: 400;
+        text-align: left;
         span {
-            color:  #3874ca;
+            color: #3874ca;
         }
     }
 }
