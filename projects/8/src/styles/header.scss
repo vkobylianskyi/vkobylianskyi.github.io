@@ -93,8 +93,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // overflow-x: scroll;
-        // min-width: 320px;
         @include mq('md') {
             padding-top: 0;
         }
