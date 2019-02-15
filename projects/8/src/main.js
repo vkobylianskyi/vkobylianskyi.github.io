@@ -14,6 +14,7 @@ if (currentWight > 992)  {
     slidesPerView = 4;
 }
 
+
 var swiper = new Swiper('.swiper', {
     slidesPerView,
     spaceBetween: 30,
