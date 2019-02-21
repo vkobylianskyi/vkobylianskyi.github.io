@@ -1,18 +1,17 @@
 @import 'var';
 @import 'base/api.scss';
 .swiper {
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid $primary-color;
     height: 300px;
-    &-angle {
+
+    &-container {
+        width: 100%;
+    }
+
+    &-button {
         font: {
             size: $font-lg-small;
         }
         color: $primary-color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 5.5%;
         border-left: 1px solid $primary-color;
         cursor: pointer;
@@ -21,7 +20,6 @@
         }
     }
     &-slide {
-        width: 22.2%;
         height: 100%;
         border-left: 1px solid $primary-color;
         &__text {
@@ -91,7 +89,7 @@
                 left: 50px;
                 right: 40px;
                 top: 35px;
-                bottom: 35px
+                bottom: 35px;
             }
             @include mq('lg') {
                 font-size: 18px;
