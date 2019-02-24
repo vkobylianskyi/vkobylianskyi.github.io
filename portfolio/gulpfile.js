@@ -25,11 +25,11 @@ gulp.task('copy-assets', () => {
         .pipe(browserSync.stream());
 });
 
-gulp.task('copy:libs', function() {
-    gulp.src(npmDist(), {base: './node_modules'})
-        .pipe(gulp.dest('./dist/node_modules'))
-        .pipe(browserSync.stream());
-});
+// gulp.task('copy:libs', function() {
+//     gulp.src(npmDist(), {base: './node_modules'})
+//         .pipe(gulp.dest('./dist/node_modules'))
+//         .pipe(browserSync.stream());
+// });
 
 gulp.task('copy:js', function() {
     gulp.src('src/**/*.js')
@@ -57,7 +57,7 @@ gulp.task('serve', () => {
     gulp.watch('src/assets/**/*', ['copy-assets']);
     gulp.watch('src/**/*.js', ['copy:js']);
     gulp.watch('src/**/*.css', ['copy:css']);
-    gulp.watch('./node_modules', ['copy:libs']);
+    // gulp.watch('./node_modules', ['copy:libs']);
 
 });
 
@@ -71,5 +71,5 @@ gulp.task('clear:dist', ()=> {
 
 });
 
-gulp.task('watch', ['build-styles', 'copy-html', 'copy-assets', 'copy:js', 'copy:css', 'copy:libs', 'serve']);
-gulp.task('build', ['build-styles', 'copy-html', 'copy-assets', 'copy:libs']);
+gulp.task('watch', ['build-styles', 'copy-html', 'copy-assets', 'copy:js', 'copy:css', 'serve']);
+gulp.task('build', ['build-styles', 'copy-html', 'copy-assets']);

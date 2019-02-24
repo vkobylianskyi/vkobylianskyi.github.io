@@ -45,15 +45,19 @@
 		padding: 30px;
 	}
 	h5 {
-		font-size: 16px;
+		font-size: 20px;
 		margin-bottom: 15px;
-		a {
-			color: $white;
-		}
+		color: $white;
 	}
 	p {
 		color: $white;
-		font-size: 13px;
-		line-height: 20px;
+		font-size: 16px;
+		line-height: 22px;
+		margin-bottom: 15px;
+	}
+	a {
+		color: #ffab40;
+    transition: color .3s ease;
+	text-transform: uppercase;
 	}
 }

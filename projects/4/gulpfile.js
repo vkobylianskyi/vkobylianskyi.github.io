@@ -1,6 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     npmDist = require('gulp-npm-dist'),
@@ -37,6 +38,16 @@ gulp.task('copy:libs', function() {
         .pipe(browserSync.stream());
 });
 
+gulp.task('scripts', function() {
+    return gulp.src(
+      [
+      'node_modules/babel-polyfill/dist/polyfill.js',
+      'js/*.js'
+      ])
+      .pipe(babel({presets: ['es2015']}))
+      .pipe(gulp.dest('./dist'))
+});
+
 gulp.task('copy:js', function() {
     gulp.src('src/**/*.js')
     .pipe(gulp.dest('./dist'))
@@ -70,5 +81,5 @@ gulp.task('clear:dist', ()=> {
 
 });
 
-gulp.task('watch', ['build-styles', 'copy-html', 'copy-assets', 'copy:js','copy:libs', 'serve']);
-gulp.task('build', ['build-styles', 'copy-html', 'copy-assets', 'copy:libs']);
+gulp.task('watch', ['build-styles', 'scripts', 'copy-html', 'copy-assets', 'copy:js','copy:libs', 'serve']);
+gulp.task('build', ['build-styles', 'scripts', 'copy-html', 'copy-assets', 'copy:libs']);
