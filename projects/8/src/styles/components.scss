@@ -3,7 +3,7 @@
 @import 'fonts';
 .app-button {
     font: {
-        family: 'Open Sans Regular' $font-fallback;
+        family: 'Open Sans Regular', $font-fallback;
         size: $font-sm-small;
         weight: 600;
     }
@@ -83,7 +83,7 @@
 
 .app-title {
     font: {
-        family: 'Open Sans Regular' $font-fallback;
+        family: 'Open Sans Regular', $font-fallback;
         size: 25px;
         weight: 300;
     }
@@ -160,7 +160,7 @@
     }
     &__footer {
         font: {
-            family: 'Open Sans Bold' $font-fallback;
+            family: 'Open Sans Bold', $font-fallback;
             size: $font-sm-small;
         }
         text-transform: uppercase;
@@ -171,7 +171,7 @@
 
 .app-text {
     font: {
-        family: 'Open Sans Regular' $font-fallback;
+        family: 'Open Sans Regular', $font-fallback;
         size: $font-sm-small;
         weight: 300;
     }

@@ -8,7 +8,7 @@
         }
         margin-bottom: 25px;
         font: {
-            family: 'Open Sans Regular' $font-fallback;
+            family: 'Open Sans Regular', $font-fallback;
             weight: 400;
         }
         .navbar {
@@ -50,45 +50,44 @@
     &-section {
         padding-bottom: 100px;
     }
-// }
 
-&-button-signature {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #95c9fc;
-    @include mq('md') {
-        justify-content: flex-start;
-    }
-    &__text {
-        font: {
-            family: 'Open Sans Regular', $font-fallback;
-            size: $font-sm-small;
-            weight: 400;
-        }
-        text-decoration: underline;
-        cursor: pointer;
-        text-align: center;
+    &-button-signature {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #95c9fc;
         @include mq('md') {
-            text-align: left;
+            justify-content: flex-start;
+        }
+        &__text {
+            font: {
+                family: 'Open Sans Regular', $font-fallback;
+                size: $font-sm-small;
+                weight: 400;
+            }
+            text-decoration: underline;
+            cursor: pointer;
+            text-align: center;
+            @include mq('md') {
+                text-align: left;
+            }
+        }
+        &__icon {
+            border: 1px solid #95c9fc;
+            @include square(22px);
+            line-height: 22px;
+            border-radius: 50%;
+            text-align: center;
+            margin-left: 10px;
         }
     }
-    &__icon {
-        border: 1px solid #95c9fc;
-        @include square(22px);
-        line-height: 22px;
-        border-radius: 50%;
-        text-align: center;
-        margin-left: 10px;
-    }
-}
 
-&-picture {
-    img {
-        max-height: 400px;
-        width: 100%;
+    &-picture {
+        img {
+            max-height: 400px;
+            width: 100%;
+        }
     }
-}
 }
 .under-header {
     display: flex;
@@ -113,5 +112,5 @@
     }
 }
 .navbar-toggler-icon {
-    filter: invert(100%)
+    filter: invert(100%);
 }

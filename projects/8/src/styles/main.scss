@@ -49,7 +49,7 @@
 
         &__text {
             font: {
-                family: 'Open Sans Regular' $font-fallback;
+                family: 'Open Sans Regular', $font-fallback;
                 size: $font-sm-small;
                 weight: 700;
             }
@@ -91,7 +91,7 @@
     padding-bottom: 100px;
     &-item {
         font: {
-            family: 'Open Sans Regular' $font-fallback;
+            family: 'Open Sans Regular', $font-fallback;
             weight: 400;
         }
         padding-bottom: 20px;
@@ -140,7 +140,7 @@
         }
         &__product {
             font: {
-                family: 'Open Sans Regular' $font-fallback;
+                family: 'Open Sans Regular', $font-fallback;
                 size: $font-xs-small;
             }
             color: $main-text-color;
