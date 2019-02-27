@@ -35,20 +35,20 @@
     }
     &-header {
         margin: {
-            top: 0; 
+            top: 0;
             left: auto;
             right: auto;
             bottom: 30px;
         }
         @include mq('md') {
             margin: {
-                top: 0; 
+                top: 0;
                 left: 0;
                 right: 0;
             }
         }
     }
-    &--copy {
+    &__copy {
         text-transform: capitalize;
         font-weight: 200;
         color: $header-title-color;
@@ -63,7 +63,12 @@
         &:nth-of-type(2) {
             margin: {
                 left: 15px;
-                right: 15px;
+                right: 0;
+            }
+            @include mq('md') {
+                margin: {
+                    right: 15px;
+                }
             }
         }
         span {
@@ -116,8 +121,7 @@
             line-height: 30px;
         }
         @include mq('lg') {
-            font-size: $font-lg-small;
-            line-height: 50px;
+            line-height: 40px;
         }
         &__subtitle {
             font-size: $font-md-small;
@@ -127,12 +131,8 @@
                 bottom: 60px;
             }
             @include mq('lg') {
-                font-size: 50px;
-                line-height: 50px;
-                padding: {
-                    top: 230px;
-                    bottom: 150px;
-                }
+                font-size: $font-lg-small;
+                line-height: 40px;
             }
         }
         &--info {
@@ -158,9 +158,10 @@
         }
         color: $main-title-color;
     }
-    &--footer {
+    &__footer {
         font: {
             family: 'Open Sans Bold' $font-fallback;
+            size: $font-sm-small;
         }
         text-transform: uppercase;
         color: $footer-title-color;
@@ -198,23 +199,30 @@
             text-align: left;
         }
         @include mq('lg') {
-            font-size: 25px;
-            padding-top: 50px;
+            font-size: $font-sm-small;
+            padding-top: 40px;
+            line-height: 1.5em;
         }
     }
-    &--info {
+    &__info {
         text-align: center;
         color: $header-text-color;
+        line-height: 30px;
         padding: {
             top: 35px;
             bottom: 35px;
         }
     }
-    &--footer {
+    &__footer {
         color: $footer-text-color;
         line-height: 30px;
-        font-weight: 400;
-        text-align: left;
+        @include mq('md') {
+            text-align: left;
+        }
+        font: {
+            weight: 400;
+            size: 18px;
+        }
         span {
             color: #3874ca;
         }

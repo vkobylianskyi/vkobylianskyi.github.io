@@ -40,12 +40,12 @@
             z-index: -1;
         }
         &:before {
-            background-image: url('img/left_angle.png');
+            background-image: url('../assets/img/left_angle.png');
             left: -25px;
             bottom: -25px;
         }
         &:after {
-            background-image: url('img/right_angle.png');
+            background-image: url('../assets/img/right_angle.png');
             top: -25px;
             right: -25px;
         }

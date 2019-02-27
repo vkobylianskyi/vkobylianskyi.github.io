@@ -5,23 +5,48 @@
 
     &-container {
         width: 100%;
+        border: {
+            right: 1px solid $primary-color;
+            bottom: 1px solid $primary-color;
+            left: 1px solid $primary-color;
+        }
+        box-sizing: border-box;
     }
 
-    &-button {
+    &-wrapper {
+        box-sizing: border-box;
+    }
+
+    &-button-next,
+    &-button-prev
+     {
         font: {
             size: $font-lg-small;
         }
         color: $primary-color;
-        width: 5.5%;
-        border-left: 1px solid $primary-color;
+        height: 100%;
         cursor: pointer;
+        transform: translateY(-50%);
+        margin-top: 0;
         &-right {
             border-right: 1px solid $primary-color;
         }
     }
     &-slide {
         height: 100%;
-        border-left: 1px solid $primary-color;
+        padding-bottom: 15px;
+        box-sizing: border-box;
+        border: {
+            right: 1px solid $primary-color;
+        }
+
+        &:last-of-type {
+            border: {
+                right: none;
+            }
+        }
+       
+
         &__text {
             font: {
                 family: 'Open Sans Regular' $font-fallback;
@@ -50,7 +75,7 @@
 .main-section {
     margin-top: 60px;
     @include mq('md') {
-        margin-top: 120px;
+        margin-top: 80px;
     }
     &__title {
         padding-top: 40px;
@@ -58,7 +83,7 @@
     &--picture {
         img {
             max-height: 380px;
-            width: 100%;
+            max-width: 100%;
         }
     }
 }

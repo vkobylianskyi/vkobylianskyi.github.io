@@ -12,8 +12,10 @@
     }
     &-section {
         margin-bottom: 50px;
+        text-align: center;
         @include mq('md') {
             margin-bottom: 150px;
+            text-align: left;
         }
         &--item {
             padding-top: 20px;
@@ -58,18 +60,50 @@
         &-button {
             display: flex;
             padding-bottom: 15px;
+            @include mq('md') {
+                padding-bottom: 0;
+            }
         }
-        &--text {
+        &__text {
             font: {
                 family: 'Open Sans Regular' $font-fallback;
                 size: $font-sm-small;
                 weight: 400;
             }
+            line-height: 30px;
             color: $footer-text-color;
             text-align: center;
             @include mq('md') {
                 text-align: left;
             }
         }
+    }
+}
+
+.top-button {
+    right: 3%;
+    font-size: $font-lg-small;
+    line-height: 60px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease-out;
+    border-radius: 15px;
+    display: none;
+    color: $primary-color;
+    @include square(60px);
+    position: fixed;
+    bottom: 5%;
+    background-color: $header-text-color;
+    border-width: 0;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        will-change: transform;
+        transform: scale(0.9, 0.9);
+        transition: 0.3s ease-out;
     }
 }

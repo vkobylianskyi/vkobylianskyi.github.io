@@ -1,5 +1,6 @@
 @import 'var';
 @import 'base/api.scss';
+
 .ingridients {
     &-item {
         margin-bottom: 30px;
@@ -15,8 +16,7 @@
             .ingridients-item__picture {
                 box-shadow: 12px -2px 19.53px 1.47px rgba(0, 0, 0, 0.07);
                 @include mq('tablet') {
-                    box-shadow: 18.5px 32.043px 19.53px 1.47px
-                        rgba(0, 0, 0, 0.07);
+                    box-shadow: 18.5px 32.043px 19.53px 1.47px rgba(0, 0, 0, 0.07);
                 }
                 &-cap {
                     left: -20px;
@@ -29,7 +29,7 @@
         }
         &__sign {
             font: {
-                family: 'golden_youth_scriptregular' $font-fallback;
+                family: 'golden_youth_scriptregular', $font-fallback;
                 size: 36px;
             }
             padding-bottom: 10px;
@@ -60,7 +60,6 @@
                         position: center;
                     }
                 }
-
                 &-wide {
                     img {
                         height: 40%;
@@ -69,16 +68,10 @@
                         }
                     }
                 }
-
                 &-cap {
                     width: 100%;
                     height: 100%;
-                    background-image: linear-gradient(
-                        0deg,
-                        rgb(236, 224, 249) 0%,
-                        rgb(255, 242, 255) 43%,
-                        rgb(255, 238, 226) 99%
-                    );
+                    background-image: linear-gradient( 0, rgb(236, 224, 249) 0%, rgb(255, 242, 255) 43%, rgb(255, 238, 226) 99%);
                     position: absolute;
                     z-index: -1;
                     top: 20px;

@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
 
     <title>Document</title>
 </head>
+
 <body>
     <header class="container-fluid header">
         <div class="container">
@@ -30,15 +31,16 @@
                                 <a href="#shakers">Shakers</a>
                             </li>
                             <li class="header-top-line__menu-item">
-                                <a href="#accessories">Accessories</a></li>
-                            <li class="header-top-line__menu-item">
-                                <a href="#faq">FAQ</a></li>
+                                <a href="#accessories">Accessories</a>
                             </li>
                             <li class="header-top-line__menu-item">
-                                <a href="#about">About</a></li>
+                                <a href="#faq">FAQ</a>
                             </li>
                             <li class="header-top-line__menu-item">
-                                <a href="#contact">Contact</a></li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li class="header-top-line__menu-item">
+                                <a href="#contact">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -55,7 +57,10 @@
                         Promotional Fitness Items. Customize with your company logo and colors.
                     </div>
                     <button class="app-button app-button-header">view all shakers</button>
-                    <div class=" header-button-signature">Watch how it works<i class="fas fa-caret-right"></i></div>
+                    <div class="header-button-signature">
+                        <div class="header-button-signature__text">Watch how it works</div>
+                        <div class="header-button-signature__icon"><i class="fas fa-caret-right"></i></div>
+                    </div>
                 </div>
                 <div class="col-md-6 col-sm-12 order-first order-md-0 header-picture">
                     <img src="img/header_logo.png" alt="">
@@ -76,9 +81,7 @@
     </header>
     <main>
         <div class="container">
-
-
-            <div class="swiper-container">
+            <div class="swiper-container" id="shakers">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="swiper-slide__text">zen</div>
@@ -166,14 +169,10 @@
                     </div>
                 </div>
                 <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-
-
-
-            <h2 class="app-title app-title-main">We supply shakers and accessories to some of the largest name brands
+            <h2 class="app-title app-title-main" id="accessories">We supply shakers and accessories to some of the largest name brands
                 in
                 the supplement industry.
             </h2>
@@ -203,7 +202,7 @@
                         lid and body, and we provide free mockups of yourshaker prior to sampling.</p>
                 </div>
             </div>
-            <h3 class="app-title app-title-main app-title-main__subtitle">What our clients are saying.</h3>
+            <h3 class="app-title app-title-main app-title-main__subtitle" id="faq">What our clients are saying.</h3>
             <div class="row main-opinion">
                 <div class="col-md-4 col-sm-12 main-opinion-item">
                     <blockquote class="main-opinion-item__text">We chose shakerfactory for their efficiency and
@@ -227,30 +226,30 @@
             </div>
         </div>
         <div class="container-fluid main-info">
-            <h2 class="app-title app-title-main app-title-main--info">We supply shakers to some of the largest name
+            <h2 class="app-title app-title-main app-title-main--info" id="about">We supply shakers to some of the largest name
                 brands in the supplement industry.
             </h2>
-            <div class="app-text app-text--info">
+            <div class="app-text app-text__info">
                 View our large selection of Shakers and get started on your own design today.
             </div>
             <button class="app-button">view our selection</button>
         </div>
     </main>
     <footer>
-        <div class="container footer">
+        <div class="container footer" id="contact">
             <div class="row footer-section">
                 <div class="col-md-4 col-sm-12 footer-section--item">
-                    <h4 class="app-title app-title--footer">shakerfactory</h4>
-                    <div class="app-text app-text--footer">A one-stop shop for all branding and promotional merchandise
+                    <h4 class="app-title app-title__footer">shakerfactory</h4>
+                    <div class="app-text app-text__footer">A one-stop shop for all branding and promotional merchandise
                         for the health and fitness industries. </div>
                 </div>
                 <div class="col-md-4 col-sm-12 footer-section--item">
-                    <h4 class="app-title app-title--footer">Contact</h4>
-                    <div class="app-text app-text--footer">Contact us at <span>info@shakerfactory.com</span>
+                    <h4 class="app-title app-title__footer">Contact</h4>
+                    <div class="app-text app-text__footer">Contact us at <span>info@shakerfactory.com</span>
                         or by Skype at paul.shakerfactory</div>
                 </div>
                 <div class="col-md-4 col-sm-12 footer-section--item">
-                    <h4 class="app-title app-title--footer">social</h4>
+                    <h4 class="app-title app-title__footer">social</h4>
                     <div class="footer-section--item__social">
                         <i class="fab fa-facebook-f"></i>
                         <i class="fab fa-linkedin-in"></i>
@@ -262,18 +261,23 @@
             </div>
             <div class="footer-copy">
                 <div class="footer-copy-button">
-                    <button class="app-button app-button--copy"><i class="fas fa-thumbs-up"></i><span>Like</span>4.1K</button>
-                    <button class="app-button app-button--copy">Share</button>
+                    <button class="app-button app-button__copy"><i
+                            class="fas fa-thumbs-up"></i><span>Like</span>4.1K</button>
+                    <button class="app-button app-button__copy">Share</button>
                 </div>
-                <div class="footer-copy--text">© 2018 - Shakerfactory Ltd. All Rights Reserved</div>
+                <div class="footer-copy__text">© 2018 - Shakerfactory Ltd. All Rights Reserved</div>
             </div>
         </div>
     </footer>
+    <button class="top-button">
+        <i class="fa fa-angle-up"></i>
+    </button>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    crossorigin="anonymous"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script src="main.js"></script>
-</html>
 
+</html>
