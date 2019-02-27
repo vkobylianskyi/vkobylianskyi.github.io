@@ -1,0 +1,116 @@
+@import 'var';
+.swiper {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $primary-color;
+    height: 300px;
+    &-angle {
+        font: {
+            size: $font-lg-small;
+        }
+        color: $primary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5.5%;
+        border-left: 1px solid $primary-color;
+        cursor: pointer;
+        &-right {
+            border-right: 1px solid $primary-color;
+        }
+    }
+    &-item {
+        width: 22.2%;
+        height: 100%;
+        border-left: 1px solid $primary-color;
+        &__text {
+            font: {
+                family: 'Open Sans Regular' $font-fallback;
+                size: $font-sm-small;
+                weight: 700;
+            }
+            color: #315479;
+            text-align: center;
+            text-transform: uppercase;
+            padding: {
+                top: 30px;
+                bottom: 15px;
+            }
+        }
+        &__picture {
+            display: flex;
+            justify-content: center;
+            height: 180px;
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.main-section {
+    margin-top: 120px;
+    &__title {
+        padding-top: 40px;
+    }
+    &--picture {
+        img {
+            height: 380px;
+        }
+    }
+}
+
+.main-opinion {
+    padding-bottom: 100PX;
+    &-item {
+        font: {
+            family: 'Open Sans Regular' $font-fallback;
+            weight: 400;
+        }
+        &__text {
+            font: {
+                size: 18px;
+            }
+            line-height: 25px;
+            background-color: #1e8aef;
+            border-radius: 5px;
+            position: relative;
+            padding: {
+                left: 50px;
+                right: 40px;
+                top: 35px;
+                bottom: 35px
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                background-color: $primary-color;
+                left: 35px;
+                bottom: -9px;
+                width: 30px;
+                height: 30px;
+                z-index: -1;
+                transform: rotate(65deg);
+            }
+        }
+        &__name {
+            font: {
+                size: $font-sm-small;
+            }
+            padding-top: 20px;
+        }
+        &__product {
+            font: {
+                family: 'Open Sans Regular' $font-fallback;
+                size: $font-xs-small;
+            }
+            padding-top: 10px;
+        }
+    }
+}
+
+.main-info {
+    text-align: center;
+    background-color: $primary-color;
+    padding-bottom: 100px;
+}

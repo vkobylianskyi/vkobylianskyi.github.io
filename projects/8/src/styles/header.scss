@@ -1,11 +1,8 @@
+@import 'base/api.scss';
 @import 'var';
 .header {
     background-color: $primary-color;
-    padding: {
-        left: 50px;
-    }
     &-top-line {
-        height: 100px;
         padding: {
             top: 30px;
         }
@@ -14,44 +11,107 @@
             family: 'Open Sans Regular' $font-fallback;
             weight: 400;
         }
+        .navbar {
+            padding: 0;
+        }
         &__menu {
+            text-align: center;
+            @include mq('lg') {
+                text-align: left;
+                padding-left: 300px;
+            }
+            @include mq('md') {
+                flex-direction: row;
+                justify-content: space-between;
+            }
             &-item {
-                margin-right: 60px;
-                a {
-                    color: $header-text-color;
-                    font-size: $font-md-small;
+                font-size: $font-sm-small;
+                text-decoration: none;
+                padding: {
+                    right: 0;
+                    bottom: 10px;
+                }
+                @include mq('lg') {
+                    padding: {
+                        right: 30px;
+                        bottom: 0;
+                    }
                 }
                 &:last-child {
-                    margin-right: 0;
+                    padding-right: 0;
+                }
+                a {
+                    color: $header-text-color;
+                    text-decoration: none;
                 }
             }
         }
     }
-    &-info {
-        .header-button-signature {
-            font: {
-                family: 'Open Sans Regular' $font-fallback;
-                size: 28px;
-                weight: 400;
-            }
-            color: #95c9fc;
-            text-decoration: underline;
-            padding-bottom: 70px;
-            cursor: pointer;
-            i {
-                border: 1px solid #95c9fc;
-                width: 30px;
-                border-radius: 50%;
-                text-align: center;
-                margin-left: 10px;
-            }
+    &-section {
+        padding-bottom: 100px;
+    }
+// }
+
+&-button-signature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #95c9fc;
+    @include mq('md') {
+        justify-content: flex-start;
+    }
+    &__text {
+        font: {
+            family: 'Open Sans Regular', $font-fallback;
+            size: $font-sm-small;
+            weight: 400;
         }
+        text-decoration: underline;
+        cursor: pointer;
+        text-align: center;
+        @include mq('md') {
+            text-align: left;
+        }
+    }
+    &__icon {
+        border: 1px solid #95c9fc;
+        @include square(22px);
+        line-height: 22px;
+        border-radius: 50%;
+        text-align: center;
+        margin-left: 10px;
+    }
+}
+
+&-picture {
+    img {
+        max-height: 400px;
+        width: 100%;
+    }
+}
+}
+.under-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    @include mq('md') {
+        flex-direction: row;
     }
     &-picture {
-        object-position: center right;
+        padding-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mq('md') {
+            padding-top: 0;
+        }
         img {
-            width: 88%;
-           
+            width: 15%;
         }
     }
+}
+.navbar-toggler-icon {
+    filter: invert(100%)
 }

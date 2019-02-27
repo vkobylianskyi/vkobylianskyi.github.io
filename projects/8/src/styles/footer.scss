@@ -1,0 +1,109 @@
+@import 'base/api.scss';
+.footer {
+    margin: {
+        top: 50px;
+        bottom: 50px;
+    }
+    @include mq('md') {
+        margin: {
+            top: 100px;
+            bottom: 100px;
+        }
+    }
+    &-section {
+        margin-bottom: 50px;
+        text-align: center;
+        @include mq('md') {
+            margin-bottom: 150px;
+            text-align: left;
+        }
+        &--item {
+            padding-top: 20px;
+            &:first-child {
+                padding-top: 0;
+            }
+            @include mq('md') {
+                padding-top: 0;
+            }
+            &__social {
+                font-size: $font-md-small;
+                i {
+                    padding-right: 10px;
+                    cursor: pointer;
+                    &:first-child,
+                    &:last-child {
+                        color: #2d7dc1;
+                    }
+                    &:nth-child(2) {
+                        color: #0883bd;
+                    }
+                    &:nth-child(3) {
+                        color: #ec5451;
+                    }
+                    &:nth-child(4) {
+                        color: #2ea9e0;
+                    }
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    &-copy {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include mq('md') {
+            flex-direction: row;
+        }
+        &-button {
+            display: flex;
+            padding-bottom: 15px;
+            @include mq('md') {
+                padding-bottom: 0;
+            }
+        }
+        &__text {
+            font: {
+                family: 'Open Sans Regular' $font-fallback;
+                size: $font-sm-small;
+                weight: 400;
+            }
+            line-height: 30px;
+            color: $footer-text-color;
+            text-align: center;
+            @include mq('md') {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.top-button {
+    right: 3%;
+    font-size: $font-lg-small;
+    line-height: 60px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease-out;
+    border-radius: 15px;
+    display: none;
+    color: $primary-color;
+    @include square(60px);
+    position: fixed;
+    bottom: 5%;
+    background-color: $header-text-color;
+    border-width: 0;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        will-change: transform;
+        transform: scale(0.9, 0.9);
+        transition: 0.3s ease-out;
+    }
+}

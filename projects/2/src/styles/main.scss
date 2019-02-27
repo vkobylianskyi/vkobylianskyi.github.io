@@ -1,0 +1,200 @@
+@import 'base/api.scss';
+.offer-section {
+    &:first-of-type {
+        margin-bottom: 30px;
+    }
+}
+
+.offer-item {
+    margin: {
+        bottom: 0;
+    }
+    &__picture {
+        width: 100%;
+        object: {
+            fit: cover;
+            position: center center;
+        }
+    }
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font: {
+            family: $treb-reg-font;
+            weight: 700;
+        }
+        &_price {
+            font: {
+                size: $font-md-small;
+            }
+            margin: {
+                bottom: 0;
+            }
+            @include mq('lg') {
+                font-size: 50px;
+            }
+        }
+    }
+    &__subtitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $text-color;
+        height: 30px;
+        &_text {
+            font-family: $arial-reg-font;
+            font-size: $font-xs-small;
+        }
+        &_old-price {
+            font: {
+                family: $treb-reg-font;
+                size: $font-sm-small;
+            }
+            text-decoration: line-through red;
+            -webkit-text-decoration: line-through red;
+        }
+    }
+}
+
+.main-section {
+    margin-top: 66px;
+    margin-bottom: 26px;
+    font: {
+        family: $arial-reg-font;
+        weight: 700;
+    }
+    &-title {
+        font: {
+            family: $treb-reg-font;
+            size: $font-md-small;
+            weight: 700;
+        }
+        line-height: 30px;
+        padding-bottom: 26px;
+        text-align: center;
+        @include mq('sm') {
+            font-size: $font-lg-small;
+            line-height: 40px;
+        }
+        @include mq('md') {
+            font-size: 50px;
+            line-height: 50px;
+            text-align: left;
+        }
+    }
+}
+
+.block-info {
+    &-title {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 27px;
+        font-family: $arial-bold-font;
+        text-align: justify;
+        @include mq('sm') {
+            text-align: left;
+        }
+    }
+    &--blockquote {
+        background-color: $blockquote-bg-color;
+        padding: {
+            left: 15px;
+            right: 30px;
+            top: 16px;
+            bottom: 20px;
+        }
+        border-left: 3px solid #33ccf5;
+        margin-left: 27px;
+        font-size: $font-xs-small;
+        text-align: justify;
+        @include mq('sm') {
+            text-align: left;
+        }
+    }
+}
+
+.block-table {
+    table-layout: fixed;
+    overflow-x: auto;
+    display: block;
+    &__title {
+        font: {
+            family: 'Arial Bold' $font-fallback;
+            size: 12px;
+            weight: 900;
+        }
+    }
+    &__text {
+        font: {
+            family: $arial-reg-font;
+            size: $font-xs-small;
+            weight: 400;
+        }
+    }
+    &__row {
+        border-bottom: 1px solid $table-color;
+    }
+    td {
+        padding: {
+            top: 12px;
+            bottom: 12px;
+            left: 15px;
+            right: 15px;
+        }
+    }
+    thead {
+        background-color: $table-color;
+        border-bottom: 1px solid $text-color;
+    }
+}
+
+.block-found {
+    font: {
+        size: $font-xs-small;
+        weight: 400;
+    }
+    line-height: 20px;
+    margin-top: 33px;
+    &__title {
+        font: {
+            size: $font-xs-small;
+        }
+    }
+    &-list {
+        list-style: none;
+        margin: 0;
+        &__item {
+            position: relative;
+            &:before {
+                content: '—';
+                position: absolute;
+                left: -18px;
+            }
+        }
+    }
+}
+
+.block-number {
+    margin-top: 20px;
+    text-align: center;
+    @include mq('md') {
+        margin-top: 200px;
+        text-align: left;
+    }
+    &__subtitle {
+        font-family: $treb-reg-font;
+        color: $text-color;
+        font: {
+            size: $font-sm-small;
+            weight: 400;
+        }
+        line-height: 24px;
+        @include mq('md') {
+            font-size: 16px;
+        }
+        @include mq('lg') {
+            font-size: $font-sm-small;
+        }
+    }
+}
