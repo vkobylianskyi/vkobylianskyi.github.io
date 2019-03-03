@@ -228,6 +228,14 @@
 //Footer
 //------------------------------------
 .footer {
+  padding: {
+    left: 0;
+    right: 0;
+  }
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 40px;
   color: white;
   background: {
@@ -241,20 +249,18 @@
     padding-right: 20px;
   }
 
-  .app-multi-line {
-    margin-top: 20px;
-  }
-
   .app-btn {
     margin: 0 auto;
   }
 
-  .app-title {
+  .app-multi-line {
+    margin-top: auto;
+  }
 
+  .app-title {
     span {
       font-weight: 700;
     }
-
   }
 }
 

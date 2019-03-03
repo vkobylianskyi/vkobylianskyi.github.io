@@ -24,6 +24,8 @@
     "image-webpack-loader": "^4.6.0",
     "jquery": "^3.3.1",
     "mini-css-extract-plugin": "^0.5.0",
+    "poper": "^0.1.1",
+    "popper.js": "^1.14.7",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "webpack": "^4.29.5",
