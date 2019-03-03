@@ -5,9 +5,6 @@
     padding: 30px;
 }
 
-
-
-
 .dashboard__list {
     border: 1px solid #d3d7da;
     border-radius: 5px;
@@ -15,48 +12,17 @@
     flex-direction: column;
     max-height: 800px;
 
-
     .row-wrapper {
-
-
-        .body {
-
-            max-height: 0;
-            transition: max-height 0.3s ease-in;
-            overflow: hidden;
-        }
-
-        .foo {
-            transition: transform 0.2s ease;
-        }
-
-        &.opened {
-
-            .body {
-            max-height: 500px !important;
-            }
-
-            .foo {
-                transform: rotate(180deg);
-            }
-        }
-
+        border-bottom: 1px solid #eaeaea;
     }
-  
+
     &-header,
     &-row,
     &-controls {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
-       
-    
-
     }
-
-  
-    
 
     &-controls {
         .app-avatar {
@@ -88,7 +54,6 @@
         }
         border-top: 1px solid #d3d7da;
     }
-
 
     &-row-description {
         display: flex;

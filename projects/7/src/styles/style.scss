@@ -1,9 +1,13 @@
+@import "base/index";
 @import 'components';
-@import 'reset';
 @import 'nav';
 @import 'header';
 @import 'dashboard';
 @import 'main';
+
+*, body, html {
+    -webkit-font-smoothing: antialiased;
+}
 
 body {
     display: flex;

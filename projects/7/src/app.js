@@ -1,14 +1,15 @@
-(function() {
+import $ from 'jquery';
 
-    $('.foo').click(function(){
-        let bodyElem = $(this).parent().parent().parent().parent();
-        if(bodyElem.hasClass('opened')){
-            bodyElem.removeClass('opened');
-        }else{
-            bodyElem.addClass('opened');
-        }
+import 'font-awesome/css/font-awesome.min.css';
+import './styles/style.scss';
 
-    })
+$('.row-wrapper').click(onRowClick);
 
-    $(document).ready(startApp);
-})();
+
+function onRowClick() {
+    $('.body').slideToggle('fast');
+    
+    $(this)
+        .find($('.app-toggle-button'))
+        .toggleClass('app--rotated');
+}

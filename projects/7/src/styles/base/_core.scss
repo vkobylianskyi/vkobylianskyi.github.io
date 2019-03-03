@@ -19,7 +19,6 @@ pre {
 
   img {
     filter: Gray();
-    filter: url('desaturate.svg#grayscale');
     filter: grayscale(100%);
   }
 

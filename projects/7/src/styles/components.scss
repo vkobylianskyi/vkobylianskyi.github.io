@@ -1,5 +1,5 @@
 @import 'var';
-@import 'base/api.scss';
+@import 'base/mixins.scss';
 @import 'fonts';
 
 .app-button {
@@ -197,4 +197,9 @@
     &:active {
         outline: none;
     }
+}
+
+.app--rotated {
+    transition: transform .5s;
+    transform: rotate(180deg);
 }
