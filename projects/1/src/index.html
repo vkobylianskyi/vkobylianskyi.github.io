@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <link
-            rel="stylesheet"
-            href="node_modules/bootstrap/dist/css/bootstrap.min.css"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <title>Test</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Join the colors</title>
     </head>
     <body>
         <header class="main-header container-fluid">
@@ -22,14 +16,12 @@
                         data-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown"
                         aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div
                         class="collapse navbar-collapse app-nav"
-                        id="navbarNavDropdown"
-                    >
+                        id="navbarNavDropdown">
                         <ul class="navbar-nav menu-list">
                             <li class="menu-list__item">
                                 The Products
@@ -46,8 +38,34 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-list__item">Services</li>
-                            <li class="menu-list__item">Contact me</li>
+                            <li class="menu-list__item">Services
+                                <ul class="animation">
+                                    <li class="animation-section__item">
+                                        Black
+                                    </li>
+                                    <li class="animation-section__item">
+                                        Green
+                                    </li>
+                                    <li class="animation-section__item">Red</li>
+                                    <li class="animation-section__item">
+                                        Yellow
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-list__item">Contact me
+                                <ul class="animation">
+                                    <li class="animation-section__item">
+                                        Black
+                                    </li>
+                                    <li class="animation-section__item">
+                                        Green
+                                    </li>
+                                    <li class="animation-section__item">Red</li>
+                                    <li class="animation-section__item">
+                                        Yellow
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -86,7 +104,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-12 benefits-item">
                         <div class="benefits-item__title">
-                            <img src="img/graf-icon.png" />
+                            <assets/img src="./assets/img/graf-icon.png" />
                             <div class="benefits-item__title-text">
                                 SEO Optimized
                             </div>
@@ -104,7 +122,7 @@
                     </div>
                     <div class="col-lg-4 col-md-12 benefits-item">
                         <div class="benefits-item__title">
-                            <img src="img/ipad-icon.png" />
+                            <assets/img src="./assets/img/ipad-icon.png" />
                             <div class="benefits-item__title-text">
                                 Responsive
                             </div>
@@ -117,11 +135,11 @@
                             accusantium velit, molestias debitis quam itaque
                             aspernatur rem, quos dignissimos. Nam.
                         </div>
-                        <div class="app-btn app-btn-plus">+</div>
+                        <button class="app-btn app-btn-plus">+</button>
                     </div>
                     <div class="col-lg-4 col-md-12 benefits-item">
                         <div class="benefits-item__title">
-                            <img src="img/upload-icon.png" />
+                            <assets/img src="./assets/img/upload-icon.png"/>
                             <div class="benefits-item__title-text">
                                 Cloud Services
                             </div>
@@ -134,7 +152,7 @@
                             ipsum possimus minus fuga atque. Veritatis ratione
                             beatae delectus ipsum aperiam blanditiis, quam?
                         </div>
-                        <div class="app-btn app-btn-plus">+</div>
+                        <button class="app-btn app-btn-plus">+</button>
                     </div>
                 </div>
             </div>
@@ -150,20 +168,6 @@
             <div class="app-multi-line"></div>
         </footer>
         <div class="copy">Copyright © 2013 Css Author</div>
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"
-        ></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-            crossorigin="anonymous"
-        ></script>
     </body>
+    <script src="./app.js"></script>
 </html>

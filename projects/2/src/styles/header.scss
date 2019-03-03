@@ -58,7 +58,7 @@
     }
     &-section {
         background: {
-            image: url('img/main_picture.png');
+            image: url('../assets/img/main_picture.png');
             size: cover;
             position: center center;
         }
@@ -131,7 +131,7 @@
             }
         }
         &-assessment {
-            font-family: 'Arial';
+            font-family: $arial-reg-font;
             display: flex;
             justify-content: space-between;
             align-items: center;

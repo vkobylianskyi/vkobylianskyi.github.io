@@ -1,6 +1,7 @@
 @import "base/index.scss";
-@import "components.scss";
-@import "var.scss";
+@import "components";
+@import "var";
+@import "fonts";
 
 // TABLE CONTENTS
 //
@@ -9,7 +10,7 @@
 // Footer
 * {
   box-sizing: border-box;
-  font-family: Verdana !important;
+  font-family: $Ver-reg-font !important;
 }
 
 //------------------------------------
@@ -19,7 +20,7 @@
 .main-header {
   height: 100vh;
   background: {
-    image: url('img/header-bg.gif');
+    image: url('../assets/img/header-bg.gif');
     position: left center;
     size: cover;
   }
@@ -230,7 +231,7 @@
   padding-top: 40px;
   color: white;
   background: {
-    image: url('img/footer-bg.jpg');
+    image: url('../assets/img/footer-bg.jpg');
     size: cover;
     position: center center;
   }
