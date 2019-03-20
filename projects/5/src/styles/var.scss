@@ -9,10 +9,13 @@ $super-light-grey: #fafafa;
 $cell-color: rgb(50, 58, 69);
 $light-black: #323a45;
 $black: #1d2025;
-
-
 $font-fallback: Verdana, serif, sans-serif;
 $font-xs-small: 14px;
 $font-sm-small: 20px;
 $font-md-small: 30px;
 $font-lg-small: 40px;
+
+$Arial-reg: 'ArialMT', $font-fallback;
+$Opensans-reg: 'open_sansregular', $font-fallback;
+$Raleway-light: 'ralewaylight', $font-fallback;
+$Raleway-semibold: 'ralewaysemibold', $font-fallback;

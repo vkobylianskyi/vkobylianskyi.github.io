@@ -1,0 +1,161 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+
+.top-header {
+    background-color: $light-grey;
+    &__name {
+        color: $title-color;
+        font: {
+            family: $Raleway-light;
+            size: $font-md-small;
+            weight: 300;
+        }
+        line-height: 24px;
+        span {
+            font: {
+                family: $Raleway-semibold;
+                weight: 600;
+            }
+            color: $dark-grey;
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: flex-start;
+        text-transform: uppercase;
+        color: $dark-grey;
+        font-weight: 600;
+        line-height: 2em;
+        @include mq ('lg') {
+            justify-content: flex-end;
+            line-height: 4em;
+        }
+    }
+}
+
+.navbar {
+    padding: .5rem;
+}
+
+.navbar-nav :last-child {
+    padding-right: 0;
+}
+
+.nav-item {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.active {
+    color: $light-green;
+}
+
+.swiper-container {
+    background: {
+        repeat: no-repeat;
+        position: top center;
+        size: cover;
+        image: url("../assets/img/baner2.png");
+    }
+    height: 514px;
+}
+
+.swiper-title {
+    font: {
+        size: 35px;
+        weight: 600;
+    }
+    text-transform: capitalize;
+    width: 353px;
+    height: 60px;
+    margin: {
+        top: 20px;
+        bottom: 0;
+        left: auto;
+        right: auto;
+    }
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+}
+
+.visible-title {
+    display: none;
+    @include mq ('md') {
+        display: block;
+    }
+}
+
+.hidden-title {
+    display: block;
+    font: {
+        size: $font-sm-small;
+        weight: 400;
+    }
+    width: 100%;
+    @include mq ('md') {
+        display: none;
+    }
+}
+
+
+.swiper-slide {
+    position: relative;
+    &__right,
+    &__center,
+    &__iphone,
+    &__ipad {
+        position: absolute;
+        left: 50%;
+        will-change: transform;
+    }
+    &__right,
+    &__iphone,
+    &__ipad {
+        display: none;
+        @include mq ('lg') {
+            display: block;
+        }
+    }
+    &__right {
+        top: 156px;
+        transform: translateX(-19%);
+    }
+    &__center {
+        top: 89px;
+        transform: translateX(-50%);
+        z-index: 1;
+        display: none;
+        @include mq ('md') {
+            display: block;
+        }
+    }
+    &__iphone {
+        top: 177px;
+        z-index: 2;
+        transform: translateX(88%);
+    }
+    &__ipad {
+        top: 108px;
+        z-index: 2;
+        transform: translateX(-127%);
+    }
+}
+
+.angle-button {
+    @include flex-center;
+    color: #fff;
+    font-size: $font-md-small;
+    background-color: rgba(0, 0, 0, .3);
+    line-height: 55px;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(0, 0, 0, .7);
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: none;
+    @include square(55px);
+}

@@ -1,27 +1,26 @@
-@import 'base/api.scss';
+@import 'base/mixins.scss';
 .header {
     &-nav-section {
         background-color: $banner-color;
         color: $header-text-color;
+        font-family: $arial-reg-font;
         padding: {
             top: 30px;
             bottom: 30px;
         }
         .top-line {
             font-size: 16px;
-            &-logo {
+            &__logo {
                 @include flex-center;
-                padding: {
-                    bottom: 15px;
-                }
                 @include mq('sm') {
                     justify-content: space-between;
                 }
                 @include mq('lg') {
                     justify-content: flex-start;
+                    align-items: center;
                     padding-bottom: 0;
                 }
-                &__subtitle {
+                &_subtitle {
                     display: none;
                     text-align: right;
                     @include mq('sm') {
@@ -33,24 +32,31 @@
                     }
                 }
             }
-            &-contact {
+            &__contact {
                 @include flex-center;
                 flex-direction: column;
                 @include mq('sm') {
                     justify-content: flex-start;
                     flex-direction: row;
                 }
-                &--number {
+                &_number {
                     font-size: $font-md-small;
+                    padding: {
+                        top: 15px;
+                        bottom: 13px;
+                    }
                 }
-                &--subtitle {
+                
+                &_subtitle {
                     padding-left: 0;
                     @include mq('sm') {
                         padding-left: 34px;
                     }
                     p {
-                        border-bottom: 1px, dotted, white;
-                        margin-bottom: 0;
+                        border-bottom: 1px dotted white;
+                        margin: {
+                            bottom: 0;
+                        }
                     }
                 }
             }
@@ -89,7 +95,12 @@
                 color: white;
                 background-color: black;
                 width: 109px;
-                margin: 0 auto;
+                margin: {
+                    top: 3px;
+                    bottom: 0;
+                    left: auto;
+                    right: auto;
+                }
             }
         }
     }
@@ -131,7 +142,7 @@
             }
         }
         &-assessment {
-            font-family: $arial-reg-font;
+            font-family: $arial-bold-font;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -192,7 +203,7 @@
     &-days {
         z-index: 0;
         top: -35px;
-        right: 95px;
+        right: 80px;
         width: 160px;
         font-weight: 400;
         position: absolute;

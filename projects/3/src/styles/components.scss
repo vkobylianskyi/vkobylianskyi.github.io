@@ -1,197 +1,125 @@
 @import "var";
-@import "base/api.scss";
-
+@import "base/mixins.scss";
 .app-button {
-  display: block;
-  box-sizing: border-box;
-  text-transform: uppercase;
-  font-family: 'pt_serifbold', $font-fallback;
-  color: white;
-  background-color: $vanil;
-  transition: .5s;
-  width: 243px;
-  height: 60px;
-
-  &.large {
-    font-size: $font-xs-small;
-    width: 273px;
-    height: 72px;
-    margin: 113px auto;
-  }
-
-  &.mas {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 60px auto;
-
-    @include mq("tablet-wide") {
-      margin: 103px auto;
+    display: block;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font: {
+        family: $serif-bold-font;
+        size: 14px
     }
-  }
-
-  &.rfs {
-    margin: 60px auto;
-
-    @include mq("tablet-wide") {
-      margin: {
-        left: 86px;
-        top: 60px;
-        bottom: 30px;
-      }
+    color: #fff;
+    background-color: $vanil;
+    transition: .5s;
+    width: 200px;
+    height: 50px;
+    @include mq("md") {
+        width: 243px;
+        height: 60px;
+        font-size: 16px;
     }
-  }
-
-  &.vfm {
-    margin: 58px auto;
-  }
-
-  &.ms {
-    margin: 65px auto 0;
-  }
-
-  &.ma {
-    margin-bottom: 70px;
-    margin: {
-      top: 0;
-      left: auto;
-      right: auto;
-      bottom: 70px;
+    margin: 0 auto;
+    &-large {
+        width: 200px;
+        height: 50px;
+        @include mq("md") {
+            width: 273px;
+            height: 72px;
+        }
+        margin: {
+            top: 113px;
+            left: auto;
+            right: auto;
+        }
     }
-
-    @include mq("tablet-wide") {
-      margin-bottom: 110px;
+    &-about {
+        margin: 60px auto;
+        @include mq("lg") {
+            margin: {
+                left: 86px;
+                top: 60px;
+                bottom: 30px;
+            }
+        }
     }
-  }
-
-  &.vat {
-    margin: 57px auto;
-
-    @include mq("tablet-wide") {
-      margin: {
-        top: 57px;
-        left: 0;
-      }
+    &-chef {
+        margin: 60px auto;
+        @include mq("lg") {
+            margin: {
+                left: 0;
+            }
+        }
     }
-  }
-
-  &.vmp {
-    margin: 70px auto;
-
-    @include mq("tablet-wide") {
-      margin: 57px auto 110px;
+    &-contact {
+        margin-bottom: 60px;
+        @include mq("lg") {
+            margin-bottom: 0;
+        }
     }
-  }
-
-  &:hover {
-    color: black;
-    border-radius: 15px;
-    background-color: $brown;
-  }
+    &:hover {
+        color: black;
+        border-radius: 15px;
+        background-color: $brown;
+    }
 }
 
 .app-title {
-  font-family: 'pt_serifbold', $font-fallback;
-  text-align: center;
-  background: {
-    repeat: no-repeat;
-    position: center top;
-  }
-  position: relative;
-
-  &.dark {
-    background-image: url("img/Vector Smart Object1.png");
-
-    &.blog {
-      margin-bottom: 112px;
+    font-family: $serif-bold-font;
+    text-align: center;
+    height: 97px;
+    background: {
+        repeat: no-repeat;
+        position: center top;
     }
-    &.book {
-      margin-top: 240px;
+    position: relative;
+    &_dark {
+        background-image: url("../assets/img/dark_title_image.png");
 
-      @include mq("tablet-wide") {
-        margin-top: 193px;
-      }
-    }
-
-    &.form {
-      padding-top: 70px;
-      background-position: center 110px;
-
-      @include mq("tablet-wide") {
-        padding-top: 110px;
-      }
-    }
-
-    .app-title-section {
-      color: #808369;
-    }
-
-    .app-title-description {
-      color: #434343;
-    }
-  }
-
-  &.white {
-    color: white;
-    background-image: url("img/Vector Smart Object copy 9.png");
-
-    &.about {
-      background: {
-        position: center 110px;
-      }
-      padding-top: 70px;
-
-      @include mq("tablet-wide") {
-        padding-top: 110px;
-      }
-    }
-    &.book {
-      background-position: center 60px;
-      padding-top: 60px;
-      margin-bottom: 260px;
-
-      @include mq("tablet-wide") {
-        background-position: center 193px;
-        padding-top: 193px;
-      }
-
-      .app-title-description {
-        font-size: 24px;
-
-        @include mq("tablet-wide") {
-          font-size: 50px;
+        &-section {
+            font-size: $font-xs-small;
+            color: #808369;
+            text-transform: uppercase;
+            padding-bottom: 5px;
         }
-
-        @include mq("tablet") {
-          font-size: 35px;
+        &-description {
+            color: #434343;
+            text-transform: capitalize;
+            font: {
+                size: 24px;
+                weight: 700;
+            }
+            @include mq("md") {
+                font-size: 35px;
+            }
         }
-      }
+    } 
+
+    &_white {
+        color: white;
+        background-image: url("../assets/img/white_title_image.png");
     }
-  }
-
-  &-section {
-    font-size: $font-xs-small;
-    text-transform: uppercase;
-    padding-bottom: 25px;
-  }
-
-  &-description {
-    text-transform: capitalize;
-    font-size: 24px;
-    font-weight: 700;
-
-    @include mq("tablet") {
-      font-size: 35px;
+    &-section {
+        font-size: $font-xs-small;
+        text-transform: uppercase;
+        padding-bottom: 5px;
     }
-  }
-
-  &:after {
-    @include pseudo;
-    width: 111px;
-    height: 2px;
-    background-color: #a7a99a;
-    bottom: -42px;
-    left: 50%;
-    margin-left: -55px;
-  }
+    &-description {
+        text-transform: capitalize;
+        font: {
+            size: 24px;
+            weight: 700;
+        }
+        @include mq("md") {
+            font-size: 35px;
+        }
+    }
+    &:after {
+        @include pseudo;
+        width: 111px;
+        height: 2px;
+        background-color: #a7a99a;
+        bottom: -22px;
+        left: 50%;
+        margin-left: -55px;
+    }
 }

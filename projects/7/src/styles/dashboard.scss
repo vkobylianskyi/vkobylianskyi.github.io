@@ -12,16 +12,16 @@
     flex-direction: column;
     max-height: 800px;
 
-    .row-wrapper {
-        border-bottom: 1px solid #eaeaea;
-    }
-
     &-header,
     &-row,
     &-controls {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &-row {
+        border-bottom: 1px solid #eaeaea;
     }
 
     &-controls {

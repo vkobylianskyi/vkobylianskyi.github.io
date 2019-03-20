@@ -1,4 +1,4 @@
-@import 'base/api.scss';
+@import 'base/mixins.scss';
 .offer-section {
     &:first-of-type {
         margin-bottom: 30px;
@@ -59,7 +59,7 @@
 
 .main-section {
     margin: {
-        top: 66px;
+        top: 56px;
         bottom: 26px;
     }
     font: {
@@ -98,7 +98,7 @@
             text-align: left;
         }
     }
-    &--blockquote {
+    &__blockquote {
         background-color: $blockquote-bg-color;
         padding: {
             left: 15px;
@@ -107,7 +107,10 @@
             bottom: 20px;
         }
         border-left: 3px solid #33ccf5;
-        margin-left: 27px;
+        margin: {
+            left: 27px;
+            bottom: 27px;
+        }
         font-size: $font-xs-small;
         text-align: justify;
         @include mq('sm') {
@@ -120,6 +123,7 @@
     table-layout: fixed;
     overflow-x: auto;
     display: block;
+    border-collapse: collapse;
     &__title {
         font: {
             family: $arial-bold-font;
@@ -137,7 +141,7 @@
     &__row {
         border-bottom: 1px solid $table-color;
     }
-    td {
+    td, th {
         padding: {
             top: 12px;
             bottom: 12px;
@@ -156,16 +160,17 @@
         size: $font-xs-small;
         weight: 400;
     }
-    line-height: 20px;
+    line-height: 25px;
     margin-top: 33px;
     &__title {
         font: {
             size: $font-xs-small;
+            weight: 100;
         }
     }
     &-list {
         list-style: none;
-        margin: 0;
+        margin-left: 35px;
         &__item {
             position: relative;
             &:before {

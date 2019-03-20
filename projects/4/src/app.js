@@ -1,7 +1,6 @@
 import $ from "jquery";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-
 import "./styles/style.scss";
 
 (function() {
@@ -18,8 +17,6 @@ import "./styles/style.scss";
         $('.nav-section__menu-link').click(onLinkClick);
         $('.app-toggle').click(onAppToggleClick);
     }
-
-
 
     function onLinkClick() {
         $('html, body').animate(

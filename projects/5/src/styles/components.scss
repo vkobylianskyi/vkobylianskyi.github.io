@@ -1,0 +1,52 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+.app-title {
+    font: {
+        family: $Opensans-reg;
+        size: $font-lg-small;
+    }
+    text: {
+        transform: uppercase;
+        align: center;
+    }
+    color: $title-color;
+}
+
+.app-text {
+    font: {
+        family: $Opensans-reg;
+        size: $font-xs-small;
+        weight: 400;
+    }
+    color: $text-color;
+}
+
+.app-palitra {
+    height: 13px;
+    margin-top: 8px;
+}
+
+.app-button {
+    color: white;
+    text-transform: uppercase;
+    margin: 60px auto 0;
+    background-color: $light-green;
+    font: {
+        size: $font-xs-small;
+        weight: 700;
+    }
+    padding: 14px 21px;
+    border: {
+        radius: 5px;
+        color: $light-green;
+    }
+    width: 164px;
+    text-align: center;
+    transition: .5s;
+    cursor: pointer;
+    &:hover {
+        border-radius: 0;
+        background-color: $title-color;
+    }
+}

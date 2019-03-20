@@ -1,4 +1,4 @@
-@import 'base/api.scss';
+@import 'base/mixins.scss';
 $size: 31px;
 .app-social {
     @include flex-center;
@@ -107,12 +107,13 @@ $size: 31px;
     @include mq('sm') {
         text-align: left;
     }
-    &--bold {
+    &_bold {
         font: {
             weight: 700;
             size: 16px;
         }
         text-align: justify;
+        margin-top: 27px;
         @include mq('sm') {
             text-align: left;
         }

@@ -1,0 +1,87 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+.footer-social {
+    background-color: $light-black;
+    height: 96px;
+}
+
+.social-title {
+    color: white;
+    font: {
+        size: 24px;
+        weight: 700;
+    }
+    line-height: 96px;
+    text-transform: capitalize;
+    text-align: start;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &__item {
+        min-width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: $title-color;
+        color: $light-black;
+        line-height: 32px;
+        text-align: center;
+        margin-right: 20px;
+        cursor: pointer;
+        transition: .5s;
+        &:hover {
+            color: $title-color;
+            background-color: $light-black;
+            transition: .5s;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.footer-contact {
+    background-color: $black;
+}
+
+.contact-title {
+    color: #fff;
+    font-size: $font-sm-small;
+    padding: {
+        top: 81px;
+        bottom: 39px;
+    }
+    text: {
+        transform: capitalize;
+        align: start;
+    }
+}
+
+.contact-text {
+    line-height: 26px;
+    padding-bottom: 95px;
+}
+
+.danger-text {
+    color: $light-green;
+}
+
+.last-text {
+    color: #fff;
+}
+
+.copyright {
+    background-color: $light-black;
+    font: {
+        family: $Arial-reg;
+        size: $font-xs-small;
+        weight: 400;
+    }
+    color: #fff;
+    line-height: 51px;
+    text-align: center;
+    height: 51px;
+}

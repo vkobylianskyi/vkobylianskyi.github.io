@@ -3,6 +3,7 @@
 @import 'fonts';
 
 .app-button {
+    transition: transform .5s;
     min-height: 40px;
     background-color: transparent;
     border: 1px solid #c9c9c9;
@@ -162,8 +163,7 @@
 
     &__status {
         position: absolute;
-        width: 8px;
-        height: 8px;
+        @include square(10px);
         background-color: #c5c5c5;
         border-radius: 50%;
         border: 1px solid #fff;
@@ -202,4 +202,8 @@
 .app--rotated {
     transition: transform .5s;
     transform: rotate(180deg);
+}
+
+.wrapper-button {
+    transition: transform .5s;
 }

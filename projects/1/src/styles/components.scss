@@ -27,9 +27,7 @@
   }
 
   &-plus {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     width: 40px;
     font-size: $font-sm-small;
     position: absolute;
@@ -39,16 +37,18 @@
 
     &:hover {
       color: black;
-      background: white;
+      background: #fff;
       cursor: pointer;
       border-radius: 50%;
     }
   }
 
   &-btn-dark {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 140px;
+    margin: {
+      left: auto;
+      right: auto;
+      bottom: 140px;
+    }
     width: 180px;
     display: block;
   }

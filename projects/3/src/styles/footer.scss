@@ -1,457 +1,451 @@
 @import "fonts";
 @import "var";
-@import "base/api.scss";
-
+@import "base/mixins.scss";
 // TABLE CONTENTS
 //
 // App-chef
 // App-staff
 // App-gallery
-// App-form-item
+// App-form
 // App-contact-container
 // Top-button
+
+
+footer {
+    color: $brown;
+    font-family: $serif-bold-font;
+}
 
 //------------------------------------
 //// App-chef
 //------------------------------------
 
-footer {
-  color: $brown;
-  font-family: 'pt_serifbold', $font-fallback;
-}
-
 .app-chef {
-  background: {
-    image: url("img/Depositphotos_58523849_original.png");
-    color: #f3f1ec;
-    repeat: no-repeat;
-    position: top center;
-  }
-  position: relative;
-  padding-bottom: 70px;
-
-  @include mq("tablet-wide") {
-    padding-bottom: 110px;
-  }
-
-  &-description {
-    padding-top: 106px;
-    padding-bottom: 70px;
-
-    @include mq("tablet-wide") {
-      padding-bottom: 110px;
+    background: {
+        color: #f3f1ec;
     }
-
-    &-picture {
-      background: {
-        image: url('img/Depositphotos_42938439_original.png');
-        position: center center;
-        size: cover;
-      }
-      height: 541px;
+    position: relative;
+    padding: {
+        bottom: 70px;
+        top: 60px;
     }
-
-    &-text {
-      box-sizing: border-box;
-      padding: {
-        left: 0;
-        right: 0;
-        top: 84px;
-      }
-      font-family: 'pt_serifregular', $font-fallback;
-      font-size: $font-xs-small;
-      font-weight: 400;
-      line-height: 24px;
-      color: $grey;
-      background-color: #fff;
-
-      @include mq("tablet") {
+    margin-top: 60px;
+    @include mq("lg") {
         padding: {
-          left: 0;
+            bottom: 110px;
+            top: 110px;
         }
-      }
-
-      @include mq("tablet-wide") {
-        padding: {
-          left: 71px;
-        }
-      }
-
-      &__item1 {
-        position: relative;
-        box-sizing: border-box;
-        text-align: justify;
-        padding: {
-          left: 40px;
-          right: 40px;
-        }
-
-        @include mq("tablet-wide") {
-          text-align: left;
-          box-sizing: content-box;
-          margin: 0;
-          padding: {
-            left: 0;
-            right: 20px;
-          }
-        }
-
-        &:before {
-          @include pseudo;
-          background: url('img/cov.png');;
-          height: 45px;
-          width: 62px;
-          top: 0;
-          left: 40px;
-          transform: translateY(-25%);
-
-          @include mq("tablet-wide") {
-            left: 0;
-          }
-        }
-      }
-
-      &__item2 {
-        padding-top: 82px;
-        text-transform: capitalize;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        @include mq("tablet-wide") {
-          margin: 0;
-          justify-content: flex-start;
-        }
-
-        span {
-          font-family: 'pt_serifbold', $font-fallback;
-          font-size: $font-sm-small;
-          color: $brown;
-          font-weight: 700;
-          line-height: 35px;
-          padding-right: 14px;
-        }
-
-        &:before {
-          @include pseudo;
-          width: 111px;
-          height: 2px;
-          background-color: #a7a99a;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 39px;
-
-          @include mq("tablet-wide") {
-            left: 0;
-            transform: none;
-          }
-        }
-      }
+        margin-top: 110px;
     }
-  }
+    &-description {
+        padding: {
+            top: 106px;
+            bottom: 70px;
+        }
+        @include mq("lg") {
+            padding-bottom: 110px;
+        }
+        &-picture {
+            background: {
+                image: url('../assets/img/Depositphotos_42938439_original.png');
+                position: center center;
+                size: cover;
+            }
+            height: 541px;
+        }
+        &-text {
+            box-sizing: border-box;
+            padding: {
+                left: 0;
+                right: 0;
+                top: 84px;
+            }
+            font-family: $serif-reg-font;
+            font-size: $font-xs-small;
+            font-weight: 400;
+            line-height: 24px;
+            color: $grey;
+            background-color: #fff;
+            @include mq("md") {
+                padding: {
+                    left: 0;
+                }
+            }
+            @include mq("lg") {
+                padding: {
+                    left: 71px;
+                }
+            }
+            &__item1 {
+                position: relative;
+                box-sizing: border-box;
+                text-align: justify;
+                padding: {
+                    left: 40px;
+                    right: 40px;
+                }
+                @include mq("lg") {
+                    text-align: left;
+                    box-sizing: content-box;
+                    margin: 0;
+                    padding: {
+                        left: 0;
+                        right: 20px;
+                    }
+                }
+                &:before {
+                    @include pseudo;
+                    background: url('../assets/img/cov.png');
+                    height: 45px;
+                    width: 62px;
+                    top: 0;
+                    left: 40px;
+                    transform: translateY(-25%);
+                    @include mq("lg") {
+                        left: 0;
+                    }
+                }
+            }
+            &__item2 {
+                padding-top: 82px;
+                text-transform: capitalize;
+                position: relative;
+                @include flex-center;
+                @include mq("lg") {
+                    margin: 0;
+                    justify-content: flex-start;
+                }
+                span {
+                    font-family: $serif-bold-font;
+                    font-size: $font-sm-small;
+                    color: $brown;
+                    font-weight: 700;
+                    line-height: 35px;
+                    padding-right: 14px;
+                }
+                &:before {
+                    @include pseudo;
+                    width: 111px;
+                    height: 2px;
+                    background-color: #a7a99a;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 39px;
+                    @include mq("lg") {
+                        left: 0;
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
 }
 
 //------------------------------------
 //// App-staff
 //------------------------------------
-
 .app-staff {
-  text-transform: capitalize;
-  background: {
-    repeat: no-repeat;
-    position: top center;
-  }
-  margin-top: 60px;
-  text-align: center;
-
-  @include mq("tablet-wide") {
-    margin-top: 113px;
-  }
-
-  img {
-    @include mq(1200, "max") {
-      height: 210px;
+    text-transform: capitalize;
+    background: {
+        repeat: no-repeat;
+        position: top center;
     }
-  }
-
-  figcaption {
-    font-family: 'pt_serifbold', $font-fallback;
-    font-size: $font-sm-small;
-    color: $brown;
-    padding-top: 49px;
-  }
-
-  p {
-    font-family: 'pt_serifregular', $font-fallback;
-    font-size: $font-xs-small;
-    color: $grey;
-    margin-top: 14px;
-  }
+    margin-top: 60px;
+    text-align: center;
+    @include mq("lg") {
+        margin-top: 113px;
+    }
+    img {
+        @include mq(1200,
+        "max") {
+            height: 210px;
+        }
+    }
+    figcaption {
+        font: {
+            family: $serif-bold-font;
+            size: $font-sm-small;
+        }
+        color: $brown;
+        padding-top: 20px;
+    }
+    p {
+        font-family: $serif-reg-font;
+        font-size: 16px;
+        color: $grey;
+        margin-top: 14px;
+    }
 }
 
 //------------------------------------
 //// App-gallery
 //------------------------------------
-
 .gallery-block {
-padding-top: 60px;
-
-  @include mq("tablet-wide") {
-    padding-top: 110px;
-  }
-
-  .app-gallery {
-
-    &-row {
-      margin-top: 0;
-
-      @include mq("tablet-wide") {
-        margin-top: 30px;
-      }
+    padding: {
+        top: 60px;
     }
-
-    &-picture-item {
-      overflow: hidden;
-      transition: all .5s;
-      margin-top: 50px;
-      &:hover {
-        filter: blur(5px);
-
-        img {
-          transform: scale(1.4);
+    @include mq("lg") {
+        padding-top: 110px;
+    }
+    .app-gallery {
+        padding: {
+            top: 110px;
+            bottom: 60px;
         }
-      }
-
-      img {
-        transition: all .5s;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      @include mq("tablet-wide") {
-        margin: 0;
-      }
+        @include mq("lg") {
+            padding: {
+                top: 60px;
+            }
+        }
+        &-row {
+            margin-top: 0;
+            @include mq("lg") {
+                margin-top: 30px;
+            }
+        }
+        &-picture-item {
+            overflow: hidden;
+            transition: all .5s;
+            margin-top: 50px;
+            &:hover {
+                filter: blur(5px);
+                img {
+                    transform: scale(1.4);
+                }
+            }
+            img {
+                transition: all .5s;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include mq("lg") {
+                margin: 0;
+            }
+        }
     }
-  }
 }
 
 //------------------------------------
-//// App-form-item
+//// App-form
 //------------------------------------
-
-.app-form-item {
-  background-color: $light-brown;
-  position: relative;
-  padding-bottom: 0;
-  margin-bottom: 19px;
-  height: 100%;
-  font-size: $font-xs-small;
-  font-family: 'pt_serifbold', $font-fallback;
-  color: $brown;
-
-  @include mq("tablet-wide") {
-    padding-bottom: 110px;
-    margin-bottom: 152px;
-  }
-
-  .fa-angle-up {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    cursor: pointer;
-    background-color: #fff;
-    width: 117px;
-    height: 85px;
-    text-align: center;
-    border-radius: 50%;
-    left: 50%;
-    transform: translateY(50%) translateX(-50%);
-    line-height: 70px;
-    overflow: hidden;
-
-  }
-  &:after {
-    content: 'top';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 100%);
-    text-transform: uppercase;
-  }
+.app-form {
+    background-color: $light-brown;
+    position: relative;
+    color: $brown;
+    padding: {
+        top: 60px;
+        bottom: 0;
+    }
+    margin: {
+        top: 60px;
+        bottom: 19px;
+    }
+    height: 100%;
+    @include mq("lg") {
+        padding: {
+            bottom: 110px;
+            top: 110px;
+        }
+        margin: {
+            bottom: 110px;
+            top: 110px;
+        }
+    }
+    font: {
+        size: $font-xs-small;
+        family: $serif-bold-font;
+    }
+    .fa-angle-up {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        cursor: pointer;
+        background-color: #fff;
+        width: 117px;
+        height: 85px;
+        text-align: center;
+        border-radius: 50%;
+        left: 50%;
+        transform: translateY(50%) translateX(-50%);
+        line-height: 70px;
+        overflow: hidden;
+    }
+    &:after {
+        content: 'top';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        text-transform: uppercase;
+    }
 }
 
 //------------------------------------
 //// App-contact-container
 //------------------------------------
-
 .app-contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: {
-    right: 50px;
-    left: 50px;
-  }
-
-  @include mq("tablet-wide") {
-    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
     padding: {
-      right: 200px;
-      left: 200px;
+        right: 50px;
+        left: 50px;
+        bottom: 60px;
     }
-  }
-
-  textarea {
-    resize: none;
-    width: 100%;
-    height: 208px;
-    padding: {
-      top: 20px;
-      right: 20px;
+    @include mq("lg") {
+        flex-direction: row;
+        padding: {
+            right: 200px;
+            left: 200px;
+            bottom: 0;
+        }
     }
-  }
+    textarea {
+        resize: none;
+        width: 100%;
+        height: 208px;
+        padding: {
+            top: 20px;
+            right: 20px;
+        }
+    }
 }
 
 .app-form-control {
-  font: {
-    family: 'pt_serifbold', $font-fallback;
-    size: $font-xs-small;
-  }
-  outline: none;
-  border: none;
-  color: $brown;
-  padding-left: 43px;
-  text-transform: uppercase;
+    font: {
+        family: $serif-bold-font;
+        size: $font-xs-small;
+    }
+    outline: none;
+    border: none;
+    color: $brown;
+    padding-left: 43px;
+    text-transform: uppercase;
 }
 
 input[type=text],
 input[type=email] {
-  width: 100%;
-  height: 66px;
-  line-height: 66px;
-  margin-bottom: 30px;
-  margin-top: 107px;
-
-  @include mq("tablet-wide") {
-    width: 48%;
-  }
+    width: 100%;
+    height: 66px;
+    line-height: 66px;
+    margin-bottom: 30px;
+    margin-top: 107px;
+    @include mq("lg") {
+        width: 48%;
+    }
 }
 
 input[type=email] {
-  margin-top: 0;
-
-  @include mq("tablet-wide") {
-    margin-top: 107px;
-  }
+    margin-top: 0;
+    @include mq("lg") {
+        margin-top: 107px;
+    }
 }
 
 .under-footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  padding: {
-    right: 8px;
-    bottom: 42px;
-  }
-
-  @include mq("tablet-wide") {
-    margin-top: 75px;
-  }
-
-  i {
-    display: block;
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background-color: $light-grey;
-    text-align: center;
-    color: #fff;
-    font-size: $font-xs-small;
-    line-height: 42px;
-    cursor: pointer;
-    margin-right: 8px;
-
-    &:last-child {
-      margin-right: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    padding: {
+        right: 8px;
+        bottom: 42px;
     }
-  }
+    @include mq("lg") {
+        margin-top: 75px;
+    }
+    i {
+        display: block;
+        @include square(42px);
+        border-radius: 50%;
+        background-color: $light-grey;
+        text-align: center;
+        color: #fff;
+        font-size: $font-xs-small;
+        line-height: 42px;
+        cursor: pointer;
+        margin-right: 8px;
+        transition: .5s;
+        &:last-child {
+            margin-right: 0;
+        }
+        &:hover {
+            background-color: $vanil;
+            transition: .5s;
+        }
+    }
 }
 
 .copyright {
-  text-align: center;
-  text-transform: capitalize;
-  color: $grey;
-  font-size: $font-xs-small;
-  font-family: 'pt_serifregular', $font-fallback;
-  padding-bottom: 42px;
-
-  span {
-    text-decoration: underline;
-  }
+    text-align: center;
+    text-transform: capitalize;
+    color: $grey;
+    font-size: $font-xs-small;
+    font-family: $serif-reg-font;
+    padding-bottom: 42px;
+    span {
+        text-decoration: underline;
+    }
 }
 
 //------------------------------------
 //// Top-button
 //------------------------------------
-
 .top-button {
-  right: 5%;
-  border-radius: 50%;
-  font-size: $font-lg-small;
-  line-height: 60px;
-  cursor: pointer;
-  text-align: center;
-  transition: .3s ease-out;
-  display: none;
-  color: $grey;
-  width: 60px;
-  height: 60px;
-  position: fixed;
-  bottom: 15%;
-
-  @include mq("tablet-wide") {
-    right: 3%;
-
-    &:before, &:after {
-      @include pseudo;
-      border: 1.5px solid rgb(221, 221, 221);
-      left: -20px;
-      right: -20px;
-      top: -20px;
-      bottom: -20px;
-      border-radius: 50%;
-      animation: top-button 1.8s linear infinite;
+    right: 5%;
+    border-radius: 50%;
+    font-size: $font-lg-small;
+    line-height: 60px;
+    cursor: pointer;
+    text-align: center;
+    transition: .3s ease-out;
+    display: none;
+    color: $grey;
+    @include square(60px);
+    position: fixed;
+    bottom: 15%;
+    i {
+        font-size: 50px;
     }
-
-    &:after {
-      animation-delay: .3s;
+    @include mq("lg") {
+        right: 3%;
+        &:before,
+        &:after {
+            @include pseudo;
+            border: 1.5px solid rgb(221, 221, 221);
+            left: -20px;
+            right: -20px;
+            top: -20px;
+            bottom: -20px;
+            border-radius: 50%;
+            animation: top-button 1.8s linear infinite;
+        }
+        &:after {
+            animation-delay: .3s;
+        }
+        &:hover {
+            will-change: transform;
+            transform: scale(0.9, 0.9);
+            transition: .3s ease-out;
+        }
     }
-
-    &:hover {
-      will-change: transform;
-      transform: scale(0.9, 0.9);
-      transition: .3s ease-out;
-    }
-  }
 }
 
 @keyframes top-button {
-  0% {
-    will-change: transform;
-    transform: scale(0.5);
-    opacity: 0;
-  }
-  50% {
-    will-change: opacity;
-    opacity: 1;
-  }
-  100% {
-    will-change: transform;
-    transform: scale(1.2);
-    opacity: 0;
-  }
+    0% {
+        will-change: transform;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        will-change: opacity;
+        opacity: 1;
+    }
+    100% {
+        will-change: transform;
+        transform: scale(1.2);
+        opacity: 0;
+    }
 }

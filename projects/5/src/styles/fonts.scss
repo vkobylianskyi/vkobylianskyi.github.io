@@ -1,110 +1,21 @@
-@font-face {
-    font-family: 'open_sansbold';
-    src: url('fonts/opensans-bold-webfont.eot');
-    src: url('fonts/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/opensans-bold-webfont.woff2') format('woff2'),
-    url('fonts/opensans-bold-webfont.woff') format('woff'),
-    url('fonts/opensans-bold-webfont.ttf') format('truetype'),
-    url('fonts/opensans-bold-webfont.svg#open_sansbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@import './base/mixins';
 
-@font-face {
-    font-family: 'open_sanslight';
-    src: url('fonts/opensans-light-webfont.eot');
-    src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/opensans-light-webfont.woff2') format('woff2'),
-    url('fonts/opensans-light-webfont.woff') format('woff'),
-    url('fonts/opensans-light-webfont.ttf') format('truetype'),
-    url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@include fontFace(
+    '../assets/fonts/raleway-semibold',
+    'ralewaysemibold'
+);
 
-@font-face {
-    font-family: 'open_sansregular';
-    src: url('fonts/opensans-regular-webfont.eot');
-    src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/opensans-regular-webfont.woff2') format('woff2'),
-    url('fonts/opensans-regular-webfont.woff') format('woff'),
-    url('fonts/opensans-regular-webfont.ttf') format('truetype'),
-    url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@include fontFace(
+    '../assets/fonts/raleway-light',
+    'ralewaylight'
+);
 
-@font-face {
-    font-family: 'allerbold';
-    src: url('fonts/aller_bd-webfont.eot');
-    src: url('fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/aller_bd-webfont.woff2') format('woff2'),
-    url('fonts/aller_bd-webfont.woff') format('woff'),
-    url('fonts/aller_bd-webfont.svg#allerbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@include fontFace(
+    '../assets/fonts/opensans-regular',
+    'open_sansregular'
+);
 
-@font-face {
-    font-family: 'aller_lightregular';
-    src: url('fonts/aller_lt-webfont.eot');
-    src: url('fonts/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/aller_lt-webfont.woff2') format('woff2'),
-    url('fonts/aller_lt-webfont.woff') format('woff'),
-    url('fonts/aller_lt-webfont.svg#aller_lightregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'allerregular';
-    src: url('fonts/aller_rg-webfont.eot');
-    src: url('fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/aller_rg-webfont.woff2') format('woff2'),
-    url('fonts/aller_rg-webfont.woff') format('woff'),
-    url('fonts/aller_rg-webfont.svg#allerregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'MyriadPro-Regular';
-    src:    url('fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/MyriadPro-Regular.otf') format('opentype'),
-    url('fonts/MyriadPro-Regular.woff') format('woff'),
-    url('fonts/MyriadPro-Regular.ttf') format('truetype'),
-    url('fonts/MyriadPro-Regular.svg#MyriadPro-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'proxima_nova_rgbold';
-    src: url('fonts/11096-webfont.eot');
-    src: url('fonts/11096-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/11096-webfont.woff2') format('woff2'),
-    url('fonts/11096-webfont.woff') format('woff'),
-    url('fonts/11096-webfont.svg#proxima_nova_rgbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ralewaylight';
-    src: url('fonts/raleway-light-webfont.eot');
-    src: url('fonts/raleway-light-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/raleway-light-webfont.woff2') format('woff2'),
-    url('fonts/raleway-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ralewaysemibold';
-    src: url('fonts/raleway-semibold-webfont.eot');
-    src: url('fonts/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/raleway-semibold-webfont.woff2') format('woff2'),
-    url('fonts/raleway-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@include fontFace(
+    '../assets/fonts/ArialMT',
+    'ArialMT'
+);

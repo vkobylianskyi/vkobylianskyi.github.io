@@ -1,65 +1,16 @@
+@import './base/mixins';
 
-@font-face {
-    font-family: 'pt_serifregular';
-    src: url('fonts/ptf55f-webfont.eot');
-    src: url('fonts/ptf55f-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/ptf55f-webfont.woff2') format('woff2'),
-    url('fonts/ptf55f-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+@include fontFace(
+    '../assets/fonts/PTSerif-Regular',
+    'PTSerif-Regular'
+);
 
-}
+@include fontFace(
+    '../assets/fonts/PTSerif-Bold',
+    'PTSerif-Bold'
+);
 
-
-
-
-@font-face {
-    font-family: 'pt_serifitalic';
-    src: url('fonts/ptf56f-webfont.eot');
-    src: url('fonts/ptf56f-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/ptf56f-webfont.woff2') format('woff2'),
-    url('fonts/ptf56f-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'pt_serifbold';
-    src: url('fonts/ptf75f-webfont.eot');
-    src: url('fonts/ptf75f-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/ptf75f-webfont.woff2') format('woff2'),
-    url('fonts/ptf75f-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'pt_serifbold_italic';
-    src: url('fonts/ptf76f-webfont.eot');
-    src: url('fonts/ptf76f-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/ptf76f-webfont.woff2') format('woff2'),
-    url('fonts/ptf76f-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-@font-face {
-    font-family: 'yellowtailregular';
-    src: url('fonts/yellowtail-regular-webfont.eot');
-    src: url('fonts/yellowtail-regular-webfont.eot?#iefix') format('embedded-opentype'),
-    url('fonts/yellowtail-regular-webfont.woff2') format('woff2'),
-    url('fonts/yellowtail-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
+@include fontFace(
+    '../assets/fonts/yellowtail-regular-webfont',
+    'yellowtailregular'
+);

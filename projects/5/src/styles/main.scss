@@ -1,0 +1,158 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+
+main {
+    font-family: $Opensans-reg;
+    background-color: rgb(250, 250, 250);
+    color: $dark-grey;
+}
+
+.main-title {
+    padding: {
+        top: 50px;
+        bottom: 50px;
+    }
+}
+
+.app-talented {
+    &__title {
+        font: {
+            size: 22px;
+            weight: 600;
+        }
+        text-transform: capitalize;
+        text-align: left;
+    }
+    &__text {
+        line-height: 26px;
+    }
+    &__icon {
+        left: 0;
+        top: -6px;
+        position: absolute;
+        color: #fff;
+        font-size: $font-sm-small;
+        line-height: 46px;
+        border-radius: 50%;
+        background-color: $title-color;
+        @include square(46px);
+        text-align: center;
+    }
+    &__info {
+        &_item {
+            position: relative;
+            padding: {
+                left: 66px;
+                bottom: 25px;
+            }
+        }
+    }
+    &__progress {
+        &_item {
+            margin-bottom: 28px;
+        }
+    }
+}
+
+.progress-technology {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__title {
+        font: {
+            size: 20px;
+            weight: 600;
+        }
+        line-height: 30px;
+        text-transform: capitalize;
+    }
+    &__percent {
+        font-size: 18px;
+    }
+    &__design {
+        background-image: linear-gradient(to left, $text-color 10%, $light-green 10%);
+    }
+    &__html {
+        background-image: linear-gradient(to left, $text-color 5%, $light-green 5%);
+    }
+    &__php {
+        background-image: linear-gradient(to left, $text-color 30%, $light-green 30%);
+    }
+    &__wordpress {
+        background-image: linear-gradient(to left, $text-color 20%, $light-green 20%);
+    }
+    &__data {
+        background-image: linear-gradient(to left, $text-color 40%, $light-green 40%);
+    }
+}
+
+.app-works {
+    margin-top: 30px;
+
+    &__item {
+        height: 212px;
+        background: {
+            color: $cell-color;
+            clip: content-box;
+        }
+        box-sizing: border-box;
+    }
+}
+
+.works-title {
+    font: {
+        size: $font-md-small;
+        weight: 600;
+    }
+    padding: {
+        top: 50px;
+        bottom: 20px;
+    }
+}
+
+.testimonials-title {
+    font: {
+        size: $font-md-small;
+        weight: 600;
+    }
+    padding: {
+        top: 70px;
+        bottom: 50px;
+    }
+}
+
+.app-testimonials__quote {
+    background-color: $light-grey;
+    color: $title-color;
+    font: {
+        size: $font-xs-small;
+        weight: 400;
+    }
+    line-height: 26px;
+}
+
+.app-testimonials__signature {
+    color: $title-color;
+    font: {
+        size: $font-xs-small;
+        weight: 400;
+    }
+    margin: 20px auto 20px;
+    text-align: center;
+    position: relative;
+    &:before {
+        top: 50%;
+        left: 40%;
+        content: "\f007";
+        font-style: normal;
+        font-weight: 600;
+        text-decoration: inherit;
+        font-family: 'FontAwesome';
+        position: absolute;
+        color: $title-color;
+        font-size: 12px;
+        will-change: transform;
+        transform: translateY(-50%);
+    }
+}
