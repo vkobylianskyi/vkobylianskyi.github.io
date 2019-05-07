@@ -13,12 +13,4 @@
         return false;
     });
 
-
-
 })(jQuery);
-
-
-
-
-
-

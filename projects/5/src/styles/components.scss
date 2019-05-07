@@ -4,13 +4,16 @@
 .app-title {
     font: {
         family: $Opensans-reg;
-        size: $font-lg-small;
+        size: $font-md-small;
     }
     text: {
         transform: uppercase;
         align: center;
     }
     color: $title-color;
+    @include mq ('sm') {
+        font-size: $font-lg-small;
+    }
 }
 
 .app-text {

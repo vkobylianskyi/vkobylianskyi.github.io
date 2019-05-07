@@ -1,0 +1,26 @@
+@import './base/mixins';
+
+@include fontFace(
+    '../assets/fonts/aller_bold',
+    'aller_bold'
+);
+
+@include fontFace(
+    '../assets/fonts/aller_light',
+    'aller_light'
+);
+
+@include fontFace(
+    '../assets/fonts/aller_regular',
+    'aller_regular'
+);
+
+@include fontFace(
+    '../assets/fonts/opensans_light',
+    'opensans_light'
+);
+
+@include fontFace(
+    '../assets/fonts/ProximaNova_Bold',
+    'ProximaNova_Bold'
+);

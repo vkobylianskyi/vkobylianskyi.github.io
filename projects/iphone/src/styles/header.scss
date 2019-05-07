@@ -1,0 +1,37 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+
+.header {
+    background: {
+        image: url('../assets/img/Top_bg.png');
+        repeat: no-repeat;
+        size: contain;
+    }
+    color: white;
+    overflow: hidden;
+
+    &-container {
+        padding-top: 53px;
+    }
+
+    &-top-line__menu {
+        
+    }
+}
+
+.header-top-line {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .header-top-line nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 326px;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    font-family: $aller_regular;
+  }

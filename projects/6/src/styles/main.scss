@@ -1,0 +1,343 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+
+// TABLE CONTENTS
+//
+//App-mission
+//App-projects
+//App-team
+
+
+//------------------------------------
+//App-mission
+//------------------------------------
+
+.app-mission {
+    padding-bottom: 120px;
+
+    @include mq("xl") {
+        padding-bottom: 224px;
+    }
+
+    &__number {
+        display: flex;
+        align-items: center;
+    }
+
+
+    &__info {
+        position: relative;
+
+        &_picture {
+            box-shadow: 0 270px 230px 70px rgba(0, 0, 0, 0.26);
+            box-sizing: content-box;
+            height: 290px;
+
+            @include mq("sm") {
+                height: 500px;
+            }
+
+            @include mq("md") {
+                height: 560px;
+            }
+
+            @include mq("lg") {
+                height: auto;
+            }
+        }
+
+        &_text {
+            position: absolute;
+            width: auto;
+            left: 7%;
+            right: 4%;
+            top: 50%;
+            will-change: transform;
+            transform: translateY(-50%);
+
+            @include mq("lg") {
+                right: 0;
+            }
+        }
+    }
+}
+
+.mission-text {
+    padding-bottom: 30px;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+//------------------------------------
+//App-projects
+//------------------------------------
+
+.app-projects {
+    height: 600px;
+
+    @include mq("sm") {
+        height: 800px
+    }
+   
+    @include mq("md") {
+        height: 1182px
+    }
+
+    background: {
+        image: url("../assets/img/main-background.png");
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.18);
+
+    &-container {
+        position: relative;
+    }
+
+    &__number {
+        margin-top: 0;
+
+        @include mq("lg") {
+            margin-top: 120px;
+        }
+    }
+
+    &-section {
+
+        @include mq("xl") {
+            padding-top: 160px;
+        }
+
+        &__content {
+            margin-right: 0;
+            margin-left: 0 ;
+
+            @include mq("xl") {
+                padding-top: 250px;
+            }
+
+            &_picture {
+                height: 57px;
+                padding-top: 15px;
+
+                @include mq("sm") {
+                    padding-top: 0;
+                    margin-top: 35px;
+                }
+
+                &:nth-of-type(3) {
+
+                    @include mq("md") {
+                        padding-top: 0;
+                    }
+                }
+
+                &:nth-of-type(4),
+                &:nth-of-type(5),
+                &:nth-of-type(6) {
+                    @include mq("md") {
+                        margin-top: 123px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.first-letter {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+//------------------------------------
+//App-team
+//------------------------------------
+
+.app-team {
+    position: relative;
+
+    margin: {
+        top: 200px;
+        bottom: 200px;
+    }
+
+    &__picture {
+        box-shadow: 0 178px 152px 0 rgba(0, 0, 0, 0.45);
+        height: 290px;
+
+        @include mq("sm") {
+            height: 500px;
+        }
+
+        @include mq("md") {
+            height: 560px;
+        }
+
+        @include mq("lg") {
+            height: auto;
+        }
+    }
+
+    &__first-line {
+        margin-bottom: 125px;
+
+        @include mq("lg") {
+            margin-bottom: 150px;
+        }
+
+        &_right {
+            top: 15%;
+            left: 8%;
+
+            @include mq("lg") {
+                top: 45%;
+            }
+        }
+
+        &_item {
+            &:last-child {
+                text-align: center;
+
+                @include mq("lg") {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    &__second-line {
+        margin-bottom: 30px;
+
+        &_left {
+            bottom: 0;
+            left: 8%;
+
+            @include mq("lg") {
+                top: 45%;
+                right: -20%;
+            }
+        }
+
+        &_right {
+            bottom: 0;
+            left: 8%;
+
+            @include mq("lg") {
+                left: 8%;
+            }
+        }
+
+        &_item {
+            text-align: center;
+
+            @include mq("lg") {
+                text-align: left;
+            }
+
+            &:last-child {
+                padding-top: 125px;
+
+                @include mq("lg") {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    &__third-line {
+
+        &_left {
+            bottom: 0;
+            left: 8%;
+
+            @include mq("lg") {
+                top: 45%;
+                left: 0;
+            }
+        }
+
+        &_right {
+            bottom: 0;
+            left: 8%;
+
+            @include mq("lg") {
+                bottom: -5%;
+                right: 0;
+            }
+        }
+
+        &_item {
+            text-align: center;
+
+            &:first-child {
+                padding-top: 125px;
+
+                @include mq("lg") {
+                    padding: {
+                        left: 80px;
+                        top: 0;
+                    }
+                }
+            }
+
+            &:last-child {
+                padding-top: 125px;
+
+                @include mq("lg") {
+                    padding-top: 230px;
+                }
+            }
+
+            @include mq("lg") {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.second-letter {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.team-title {
+    margin-bottom: 0;
+    font: {
+        size: $font-md-small;
+        weight: 100;
+    }
+
+    text-align: left;
+    position: relative;
+
+    @include mq("sm") {
+        font-size: $font-lg-small;
+    }
+
+    &:before {
+        @include pseudo;
+        width: 56px;
+        height: 5px;
+        background-color: #fff;
+        top: -13px;
+        left: 0;
+
+        @include mq("md") {
+            top: -33px;
+        }
+    }
+}
+
+.team-text {
+    font-size: $font-xs-small;
+    max-width: 312px;
+    text-align: left;
+}

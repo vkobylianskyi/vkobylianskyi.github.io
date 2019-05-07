@@ -34,16 +34,8 @@
 
 }
 
-
-
-
-
 $body-color:		#777;
-
-
 $heading-color:		#555;
-
-
 $accent:			#6cc0f7;
 $black:				#000;
 $white:				#fff;
@@ -52,14 +44,9 @@ $dark-bg:           #5f6d7e;
 $border-color:      #dddddd;
 $light-color:       #999;
 
-
 $phone:				768px;
 $tablet:			992px;
 $desktop:			1200px;
-
-
-
-
 
 @mixin transition($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
@@ -73,6 +60,17 @@ $desktop:			1200px;
 @mixin border-radius($radius) {
 	-webkit-border-radius: $radius;
 	border-radius: $radius;
+}
+
+@mixin square($size:100%) {
+  width: $size;
+  height: $size;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
 }
 
 @mixin media( $query: $feature $value ) {

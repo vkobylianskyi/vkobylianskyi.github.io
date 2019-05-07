@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project management application</title>
+<link href="bundle-styles.css" rel="stylesheet"></head>
+
+<body>
+    <nav class="nav">
+        <ul class="nav-top">
+            <div class="nav-item nav-item__nohover">
+                <div class="nav-avatar-section">
+                    <img src="static/avatar.png" />
+                    <div class="app-notifications app-notifications--danger">
+                        2
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item">
+                <i class="fa fa-tachometer nav-item-icon__main"></i>
+                <span class="nav-item__text">Board</span>
+                <i class="fa fa-ellipsis-h nav-item-icon__dots"></i>
+            </div>
+            <div class="nav-item">
+                <i class="fa fa-bars nav-item-icon__main"></i>
+                <span class="nav-item__text">Projects</span>
+                <div class="app-notifications">2</div>
+                <i class="fa fa-ellipsis-h nav-item-icon__dots"></i>
+            </div>
+            <div class="nav-item">
+                <i class="fa fa-cog nav-item-icon__main"></i>
+                <span class="nav-item__text">Settings</span>
+            </div>
+        </ul>
+        <ul class="nav-top">
+            <div class="nav-item">
+                <i class="fa fa-cog nav-item-icon__main"></i>
+                <span class="nav-item__text">Upgrade</span>
+                <div class="nav-item__notifications"></div>
+                <div class="app-notifications app-notifications--danger">
+                    2
+                </div>
+                <i class="fa fa-ellipsis-h nav-item-icon__dots"></i>
+            </div>
+            <div class="nav-item">
+                <i class="fa fa-power-off nav-item-icon__main"></i>
+                <span class="nav-item__text">Logout</span>
+            </div>
+        </ul>
+    </nav>
+    <main>
+        <header class="header">
+            <div class="header__left-controls">
+                <button class="app-button app-button--round app-button--danger">
+                    <i class="fa fa-refresh"></i>
+                </button>
+                <button class="app-button app-button--title">Dashboard</button>
+            </div>
+            <div class="header__right-controls">
+                <button class="app-button app-button--round app-button--success">
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                <button class="app-button app-button--status">
+                    <i class="fa fa-comments"></i> 5 USERS ONLINE
+                    <i class="fa fa-angle-down"></i>
+                </button>
+            </div>
+        </header>
+        <section class="tabs">
+            <div class="tabs-list">
+                <div class="tabs-list-item tabs-list-item--active">
+                    <i class="fa fa-clock-o"></i>
+                    <span class="tabs-list-item__text">Active Projects
+                        <span class="app-notifications app-notifications--danger">2</span>
+                </div>
+                <div class="tabs-list-item">
+                    <i class="fa fa-telegram"></i>
+                    <span class="tabs-list-item__text">Messenger
+                        <span class="app-notifications app-notifications--danger">2</span>
+                </div>
+            </div>
+            <input type="text" class="app-form-control" placeholder="Search Project, User, Task, etc..." />
+        </section>
+        <section class="dashboard-section">
+            <div class="dashboard__list  dashboard-info">
+                <div class="dashboard__list-header">
+                    <input type="text" class="app-form-control" placeholder="Search Project, User, Task, etc..." />
+                    <div class="dashboard__list-header--controls">
+                        <button class="app-button app-button--title">
+                            New projects
+                            <i class="">(descending)</i>
+                            <i class="fa fa-angle-down"></i>
+                        </button>
+                        <button class="app-button app-button--round app-button--danger">
+                            <i class="fa fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="dashboard__list-body">
+                    <div class="row-wrapper">
+                        <div class="row-wrapper__header">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label app-label--danger">23<small>%</small></div>
+                                    <div class="app-text">
+                                        Create Contact Formular
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <button class="app-button app-button--small">Worlda</button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-angle-up wrapper-button app-toggle-button"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper__body">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label">66<small>%</small></div>
+                                    <div class="app-text">
+                                        Creating the Context
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/IMG.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i>+2</i>
+                                    </button>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Today, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label"><span class="app-label-text">READY</span></div>
+                                    <div class="app-text app-text--cross">
+                                        Implementation in the Layout
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Yestarday, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper">
+                        <div class="row-wrapper__header">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label app-label--danger">87<small>%</small></div>
+                                    <div class="app-text">
+                                        Create Subpage PSD
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <button class="app-button app-button--small">Panorama</button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-angle-up wrapper-button app-toggle-button"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper__body">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label">66<small>%</small></div>
+                                    <div class="app-text">
+                                        Creating the Context
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/IMG.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i>+3</i>
+                                    </button>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Today, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label"><span class="app-label-text">READY</span></div>
+                                    <div class="app-text app-text--cross">
+                                        Implementation in the Layout
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Yestarday, 12:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper">
+                        <div class="row-wrapper__header">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label app-label--danger">83<small>%</small></div>
+                                    <div class="app-text">
+                                        Layout & implementation in HTML & CSS
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <button class="app-button app-button--small">Ebay Relaunch</button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button
+                                        class="app-button app-toggle-button app-button--round app-button--hover-danger app-button--small app-button--angle-up">
+                                        <i class="fa fa-angle-up"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper__body">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label">66<small>%</small></div>
+                                    <div class="app-text">
+                                        Creating the Context
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/IMG.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i>+3</i>
+                                    </button>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Today, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label"><span class="app-label-text">READY</span></div>
+                                    <div class="app-text app-text--cross">
+                                        Implementation in the Layout
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Yestarday, 12:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper">
+                        <div class="row-wrapper__header">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label app-label--danger">23<small>%</small></div>
+                                    <div class="app-text">
+                                        Lorem ipsum dolor sit amet, elitr, sed diam nonumy eirmod tempo
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <button class="app-button app-button--small">Panorama</button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-angle-up wrapper-button app-toggle-button"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper__body">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label">66<small>%</small></div>
+                                    <div class="app-text">
+                                        Creating the Context
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/IMG.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i>+3</i>
+                                    </button>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Today, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label"><span class="app-label-text">READY</span></div>
+                                    <div class="app-text app-text--cross">
+                                        Implementation in the Layout
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Yestarday, 12:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper">
+                        <div class="row-wrapper__header">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label app-label--danger">98<small>%</small></div>
+                                    <div class="app-text">
+                                        Create Contact Formular
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <button class="app-button app-button--small">Worlda</button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-angle-up wrapper-button app-toggle-button"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper__body">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label">66<small>%</small></div>
+                                    <div class="app-text">
+                                        Creating the Context
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/IMG.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i>+3</i>
+                                    </button>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Today, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label"><span class="app-label-text">READY</span></div>
+                                    <div class="app-text app-text--cross">
+                                        Implementation in the Layout
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Yestarday, 12:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper">
+                        <div class="row-wrapper__header">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label app-label--danger">98<small>%</small></div>
+                                    <div class="app-text">
+                                        Create Contact Formular
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <button class="app-button app-button--small">Worlda</button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button
+                                        class="app-button app-toggle-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-angle-up wrapper-button app-toggle-button"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper__body">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label">66<small>%</small></div>
+                                    <div class="app-text">
+                                        Creating the Context
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/IMG.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i>+3</i>
+                                    </button>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Today, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label"><span class="app-label-text">READY</span></div>
+                                    <div class="app-text app-text--cross">
+                                        Implementation in the Layout
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Yestarday, 12:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper">
+                        <div class="row-wrapper__header">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label app-label--danger">98<small>%</small></div>
+                                    <div class="app-text">
+                                        Create Contact Formular
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <button class="app-button app-button--small">Worlda</button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-angle-up wrapper-button app-toggle-button"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper__body">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label">66<small>%</small></div>
+                                    <div class="app-text">
+                                        Creating the Context
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/IMG.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i>+3</i>
+                                    </button>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Today, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label"><span class="app-label-text">READY</span></div>
+                                    <div class="app-text app-text--cross">
+                                        Implementation in the Layout
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Yestarday, 12:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper">
+                        <div class="row-wrapper__header">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label app-label--danger">98<small>%</small></div>
+                                    <div class="app-text">
+                                        Create Contact Formular
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <button class="app-button app-button--small">Worlda</button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-angle-up wrapper-button app-toggle-button"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper__body">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label">66<small>%</small></div>
+                                    <div class="app-text">
+                                        Creating the Context
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/IMG.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i>+3</i>
+                                    </button>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Today, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label"><span class="app-label-text">READY</span></div>
+                                    <div class="app-text app-text--cross">
+                                        Implementation in the Layout
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Yestarday, 12:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-wrapper">
+                        <div class="row-wrapper__header">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label app-label--danger">98<small>%</small></div>
+                                    <div class="app-text">
+                                        Create Contact Formular
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <button class="app-button app-button--small">Worlda</button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-angle-up wrapper-button app-toggle-button"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-wrapper__body">
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label">66<small>%</small></div>
+                                    <div class="app-text">
+                                        Creating the Context
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/IMG.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i>+3</i>
+                                    </button>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Today, 13:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="dashboard__list-row">
+                                <div class="dashboard__list-row-description">
+                                    <div class="app-label"><span class="app-label-text">READY</span></div>
+                                    <div class="app-text app-text--cross">
+                                        Implementation in the Layout
+                                        <i class="fa fa-check"></i>
+                                    </div>
+                                </div>
+                                <div class="dashboard__list-controls">
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/Ebene 57.png">
+                                        <div class="app-avatar__status app-avatar__status--online"></div>
+                                    </div>
+                                    <div class="app-avatar app-avatar--small">
+                                        <img src="static/avatar_small.png">
+                                        <div class="app-avatar__status"></div>
+                                    </div>
+                                    <button class="app-button">
+                                        <i class="fa fa-redo"></i> Yestarday, 12:40 PM
+                                    </button>
+                                    <button
+                                        class="app-button app-button--round app-button--hover-danger app-button--small">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__list-footer">
+                    <span class="app-text app-text--small">
+                        Project Archive
+                    </span>
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="dashboard__list dashboard-chat">
+                <div class="dashboard__list-body">
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/IMG.png">
+                                <div class="app-avatar__status app-avatar__status--online"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Mark P.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/Ebene 62.png">
+                                <div class="app-avatar__status app-avatar__status--online"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Marvin S.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/avatar_small.png">
+                                <div class="app-avatar__status"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Sebastian K.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/IMG.png">
+                                <div class="app-avatar__status app-avatar__status--online"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Mark P.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/Ebene_65.png">
+                                <div class="app-avatar__status app-avatar__status--online"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Philip O.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/IMG.png">
+                                <div class="app-avatar__status app-avatar__status--online"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Mark P.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/Ebene_66.png">
+                                <div class="app-avatar__status app-avatar__status--online"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Benni I.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/Ebene_66.png">
+                                <div class="app-avatar__status app-avatar__status--online"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Benni I.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/IMG.png">
+                                <div class="app-avatar__status app-avatar__status--online"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Benni I.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard__list-row">
+                        <div class="avatar-section">
+                            <div class="app-avatar">
+                                <img src="static/Ebene_66.png">
+                                <div class="app-avatar__status app-avatar__status--online"></div>
+                            </div>
+                            <div class="avatar-section__decription">
+                                <span class="app-text app-text--small">Benni I.</span>
+                                <span class="app-text--small">add an Image into Worlda</span>
+                                <p class="avatar-section__time">Today <span>10:30</span> AM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard__list-footer">
+                    <span class="app-text app-text--small">
+                        Project Archive
+                    </span>
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./app.js"></script>
+<script type="text/javascript" src="bundle.js"></script></body>
+
+</html>

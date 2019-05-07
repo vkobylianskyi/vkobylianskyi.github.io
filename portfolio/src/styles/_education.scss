@@ -1,0 +1,41 @@
+.education-info {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    @include media(max-width $phone) {
+        flex-direction: column;
+	}
+
+    &__picture {
+        height: 150px;
+        margin-right: 20px;
+    }
+
+    &__content {
+        font-size: 18px;
+        @include media(max-width $phone) {
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        &_title {
+            font: {
+                weight: 700;
+            }
+            
+        }
+
+        &_subtitle {
+            font: {
+                weight: 500;
+            }
+        }
+
+        &_period {
+            font: {
+                weight: 300;
+            }
+        }
+    }
+}

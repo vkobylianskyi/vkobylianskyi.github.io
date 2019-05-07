@@ -3,7 +3,6 @@
 @import "base/mixins";
 .footer-social {
     background-color: $light-black;
-    height: 96px;
 }
 
 .social-title {
@@ -14,13 +13,19 @@
     }
     line-height: 96px;
     text-transform: capitalize;
-    text-align: start;
+    text-align: center;
+    @include mq ('md') {
+        text-align: start;
+    }
 }
 
 .social-buttons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    @include flex-center;
+    padding-bottom: 20px;
+    @include mq ('md') {
+        justify-content: flex-end;
+        padding-bottom: 0;
+    }
     &__item {
         min-width: 32px;
         height: 32px;
@@ -29,9 +34,12 @@
         color: $light-black;
         line-height: 32px;
         text-align: center;
-        margin-right: 20px;
+        margin-right: 10px;
         cursor: pointer;
         transition: .5s;
+        @include mq ('sm') {
+            margin-right: 20px;
+        }
         &:hover {
             color: $title-color;
             background-color: $light-black;
@@ -45,24 +53,42 @@
 
 .footer-contact {
     background-color: $black;
+    padding: {
+        bottom: 39px;
+    }
+    @include mq ('md') {
+        padding: {
+            bottom: 0;
+        }
+    }
 }
 
 .contact-title {
     color: #fff;
     font-size: $font-sm-small;
     padding: {
-        top: 81px;
+        top: 39px;
         bottom: 39px;
     }
     text: {
         transform: capitalize;
         align: start;
     }
+    @include mq ('md') {
+        padding: {
+            top: 81px;
+        }
+    }
 }
 
 .contact-text {
     line-height: 26px;
-    padding-bottom: 95px;
+    padding-bottom: 0;
+    @include mq ('md') {
+        padding: {
+            bottom: 81px;
+        }
+    }
 }
 
 .danger-text {
@@ -81,7 +107,9 @@
         weight: 400;
     }
     color: #fff;
-    line-height: 51px;
+    line-height: 30px;
     text-align: center;
-    height: 51px;
+    @include mq (417px) {
+        line-height: 51px;
+    }
 }

@@ -1,0 +1,173 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+
+.footer {
+    font: {
+        family: $raleway-Thin;
+        weight: 100;
+        size: $font-xs-small;
+    }
+    background: {
+        image: url("../assets/img/footer.png");
+        repeat: no-repeat;
+        position: bottom center;
+        size: cover;
+    }
+    z-index: -1;
+    color: $text-color;
+
+    &-container {
+        position: relative;
+    }
+
+    &-number {
+        text-align: center;
+    }
+
+    &-title {
+        text-align: left;
+        font-size: $font-lg-small;
+
+        padding: {
+            top: 120px;
+            bottom: 60px;
+        }
+
+        @include mq("sm") {
+            font-size: 72px;
+            padding: {
+                top: 220px;
+            }
+        }
+    }
+
+    &-subtitle {
+        left: 50%;
+    }
+
+    &-text {
+        max-width: 463px;
+        padding: {
+            bottom: 32px;
+        }
+
+        &:last-child {
+            padding: {
+                bottom: 150px;
+            }
+
+            @include mq("sm") {
+                padding: {
+                    bottom: 400px;
+                }
+            }
+        }
+    }
+
+    &-nav {
+        padding: {
+            top: 40px;
+            bottom: 20px;
+        }
+
+        &__menu {
+            @include flex-center;
+            text-transform: capitalize;
+            padding-left: 0;
+            cursor: pointer;
+
+            &_item {
+                list-style: none;
+                text-decoration: underline;
+
+                padding: {
+                    right: 20px;
+                }
+
+                &:hover {
+                    color: $title-color;
+                }
+
+                &:last-child {
+                    padding: {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-copy {
+        text-align: center;
+        padding: {
+            bottom: 75px;
+        }
+    }
+}
+
+.third-letter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 74%;
+    z-index: -1;
+}
+
+.top-button {
+    right: 5%;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent; 
+    line-height: 60px;
+    cursor: pointer;
+    text-align: center;
+    transition: .3s ease-out;
+    display: none;
+    color: $title-color;
+    @include square(60px);
+    position: fixed;
+    bottom: 15%;
+    i {
+        font-size: 50px;
+    }
+    @include mq("lg") {
+        right: 3%;
+        &:before,
+        &:after {
+            @include pseudo;
+            border: 1.5px solid $number-color;
+            left: -20px;
+            right: -20px;
+            top: -20px;
+            bottom: -20px;
+            border-radius: 50%;
+            animation: top-button 1.8s linear infinite;
+        }
+        &:after {
+            animation-delay: .3s;
+        }
+        &:hover {
+            will-change: transform;
+            transform: scale(0.9, 0.9);
+            transition: .3s ease-out;
+        }
+    }
+}
+
+@keyframes top-button {
+    0% {
+        will-change: transform;
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        will-change: opacity;
+        opacity: 1;
+    }
+    100% {
+        will-change: transform;
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}

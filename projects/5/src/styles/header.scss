@@ -1,17 +1,19 @@
 @import "fonts";
 @import "var";
 @import "base/mixins";
-
 .top-header {
     background-color: $light-grey;
     &__name {
         color: $title-color;
         font: {
             family: $Raleway-light;
-            size: $font-md-small;
+            size: 28px;
             weight: 300;
         }
         line-height: 24px;
+        @include mq ('sm') {
+            font-size: $font-md-small;
+        }
         span {
             font: {
                 family: $Raleway-semibold;
@@ -87,20 +89,29 @@
 }
 
 .hidden-title {
-    display: block;
+    display: table;
     font: {
         size: $font-sm-small;
         weight: 400;
     }
-    width: 100%;
+    width: auto;
+    padding: {
+        left: 15px;
+        right: 15px;
+    }
+    line-height: 60px;
     @include mq ('md') {
         display: none;
     }
 }
 
-
 .swiper-slide {
-    position: relative;
+    @include flex-center;
+    flex-direction: column;
+    @include mq ('md') {
+        position: relative;
+        display: block;
+    }
     &__right,
     &__center,
     &__iphone,
@@ -157,5 +168,9 @@
 .swiper-button-next,
 .swiper-button-prev {
     background: none;
+    display: none;
     @include square(55px);
+    @include mq ('md') {
+        display: block;
+    }
 }

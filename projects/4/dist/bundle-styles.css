@@ -9706,11 +9706,11 @@ a.text-dark:focus, a.text-dark:hover {
       .nav-section__menu-link:hover {
         text-decoration: none; }
     .nav-section__menu-item {
-      text-align: center;
       display: flex;
       align-items: center;
-      background-color: white;
       justify-content: center;
+      text-align: center;
+      background-color: white;
       height: 100%;
       cursor: pointer;
       transition: 0.3s ease-out;

@@ -1,0 +1,68 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+
+.header {
+    background: {
+        image: url("../assets/img/mountains header.png");
+        size: cover;
+        repeat: no-repeat;
+    }
+    height: 600px;
+
+    @include mq("sm") {
+        height: 800px
+    }
+   
+    @include mq("md") {
+        height: 1000px
+    }
+
+    &-logo {
+        padding: {
+            top: 84px;
+        }
+    }
+
+    &__top-line {
+        position: relative;
+        margin-bottom: 2em;
+
+        @include mq("sm") {
+            margin-bottom: 10em;
+        }
+       
+        @include mq("md") {
+            margin-bottom: 13em;
+        }
+
+        &_hamburger {
+            display: inline-block;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            will-change: transform;
+            transform: translateY(50%);
+        }
+    }
+}
+
+.bar1,
+.bar3 {
+    width: 48px;
+    height: 4px;
+    background-color: #fff;
+    margin: 9px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-2px, 6px);
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-4px, -8px);
+}

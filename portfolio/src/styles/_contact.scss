@@ -1,21 +1,74 @@
-.contact-form {
-	margin-top: 40px;
-	input, textarea {
-		width: 100%;
-		outline: 0;
-		border: 1px solid darken($border-color, 20%);
-		padding: 12px;
-		color: $light-color;
-		margin-bottom: 30px;
-		&:focus {
-			outline: 0;
-		}
-	}
-	.button {
-		width: auto;
-		background: $dark-bg;
-		color: $white;
-		text-transform: uppercase;
-		border: 0;
-	}
+.contact-info {
+    margin-top: 25px;
+    text-align: left;
+
+    &:first-of-type {
+        margin-top: 40px;
+    }
+
+    &:nth-of-type(4) {
+        &:hover {
+            box-shadow: none;
+        }
+
+        color: $accent;
+    }
+
+    &__tooltip {
+
+        &:after {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 8px 8px 8px 0px;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+            color: #FFF;
+            content: attr(data-tooltip);
+            margin-top: -24px;
+            opacity: 0;
+            padding: 3px 7px;
+            position: absolute;
+            visibility: hidden;
+            transition: all 0.4s ease-in-out;
+        }
+
+        &:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+
+    &__icon {
+        margin: {
+            right: 40px;
+        }
+        
+        background-color: $dark-bg;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        @include square (50px);
+        line-height: 50px;
+        font-size: 25px;
+
+        @include media(max-width  $phone) {
+            margin: {
+                right: auto;
+                left: auto;
+                bottom: 10px;
+            }
+            display: block;
+        }
+
+        &:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, .6);
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        @include media(max-width  $phone) {
+            display: block;
+            text-align: center;
+        }
+    }
 }

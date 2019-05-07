@@ -1,7 +1,13 @@
 $bg-color: #191e3f;
-$text-color: rgba(255,255,255,.3);
+$text-color: rgba(255,255,255, .3);
+$title-color: rgba(255, 255, 255, .5);
+$number-color: rgba(255, 255, 255, 0.0117647);
 $font-fallback: Verdana, serif, sans-serif;
 $font-xs-small: 14px;
 $font-sm-small: 20px;
 $font-md-small: 30px;
 $font-lg-small: 40px;
+
+$raleway-SemiBold: 'ralewaySemiBold', $font-fallback;
+$raleway-Thin: 'ralewayThin', $font-fallback;
+$yantramanav-Black: 'yantramanavBlack', $font-fallback;

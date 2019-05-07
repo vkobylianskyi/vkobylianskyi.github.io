@@ -1,0 +1,154 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+
+.app-logo {
+    margin: 0 auto;
+    display: block;
+}
+
+.app-title {
+    font: {
+        family: $raleway-Thin;
+        size: 32px;
+    }
+    color: $title-color;
+    line-height: 60px;
+    text-align: center;
+    @include mq("sm") {
+        font-size: 46px
+    }
+   
+    @include mq("md") {
+        font-size: 54px
+    }
+    @include mq("lg") {
+        font-size: 76px;
+        line-height: 1.2em;
+    }
+}
+
+.app-subtitle {
+    font: {
+        family: $raleway-Thin;
+        size: $font-sm-small;
+        weight: 100;
+        
+    }
+    text-align: left;
+    color: rgba(255, 255, 255, .2);
+    margin: {
+        top: 0;
+        bottom: 10px;
+    }
+
+    @include mq("md") {
+        margin: {
+            top: 17px;
+            bottom: 46px;
+        }
+    }
+}
+
+.app-text {
+    font: {
+        family: $raleway-Thin;
+        size: $font-xs-small;
+        weight: 100;
+    }
+    color: rgba(255, 255, 255, .3);
+
+    @include mq("md") {
+        font-size: 16px;
+    }
+
+    @include mq("lg") {
+        font-size: $font-sm-small;
+    }
+}
+
+.app-number {
+    position: relative;
+    margin: 30px auto;
+    user-select: none;
+}
+
+.number-title {
+    color: $number-color;
+    line-height: 210px;
+    text-align: center;
+    font: {
+        family: $yantramanav-Black;
+        size: 250px;
+        weight: 600;
+    }
+    
+    @include mq("md") {
+        font-size: 286px;
+    }
+}
+
+.number-subtitle {
+    position: absolute;
+    color: #fff;
+    transform: translateY(-50%) translateX(-50%) rotate(-90deg);
+    top: 50%;
+    left: 52%;
+
+    font: {
+        family: $raleway-Thin;
+        size: 29px;
+        weight: 100;
+    }
+
+    @include mq("md") {
+        font-size: 34px;
+        left: 51%;
+    }
+}
+
+.app-letter {
+    color: rgba(25, 30, 63, .612);
+    user-select: none;
+
+    font: {
+        family: $raleway-SemiBold;
+        size: 450px;
+        weight: 900;
+    }
+    line-height: 100%;
+    text: {
+        transform: uppercase;
+        shadow: 0px 178px 152px rgba(0, 0, 0, .45);
+    }
+
+    @include mq("sm") {
+        font-size: 800px;
+     }
+
+    @include mq("md") {
+        font-size: 900px;
+     }
+   
+    @include mq("lg") {
+        font-size: 1000px;
+     }
+
+     @include mq("xl") {
+        font-size: 1200px;
+     }
+   
+}
+
+.app-content {
+    position: absolute;
+}
+
+.app-picture {
+    box-shadow: 0 178px 152px 0 rgba(0, 0, 0, 0.45);
+    height: 290px;
+
+    @include mq("sm") {
+        height: auto;
+     }
+}
