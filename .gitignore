@@ -1,6 +1,5 @@
 .idea
 .sass-cache
 *.psd
-*.pdf
 
 node_modules
