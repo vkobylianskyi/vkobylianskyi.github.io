@@ -1,0 +1,13 @@
+
+@import "base/_index";
+@import "_components";
+@import "_header";
+@import "_main";
+@import "_footer";
+
+
+body {
+    background: linear-gradient( -72deg, rgb(72,120,198) 0%, rgb(12,53,121) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

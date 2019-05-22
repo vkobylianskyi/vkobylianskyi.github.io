@@ -1,0 +1,13 @@
+@import "_fonts";
+@import "_var";
+@import "base/_mixins";
+
+.text {
+color: green;
+font-family: $Roboto-Thin;
+
+@include media(max-width $phone) {
+	color: white;
+}
+
+}

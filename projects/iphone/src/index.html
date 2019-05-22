@@ -20,66 +20,95 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse app-nav" id="navbarNavDropdown">
-                        <ul class="navbar-nav header-top-line__menu">
-                            <li class="header-top-line__menu-item">
+                        <ul class="navbar-nav">
+                            <li class="header-top-line_item">
                                 <a href="#home">home</a>
                             </li>
-                            <li class="header-top-line__menu-item">
+                            <li class="header-top-line_item">
                                 <a href="#about">abouts</a>
                             </li>
-                            <li class="header-top-line__menu-item">
+                            <li class="header-top-line_item">
                                 <a href="#features">features</a>
                             </li>
-                            <li class="header-top-line__menu-item">
+                            <li class="header-top-line_item">
                                 <a href="#contact">contact</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
-
-                <div class="description">
-                    <h1 class="header-main-title">
-                        Hello.
-                    </h1>
-                    <h2 class="header-secondary-title">We take mobile photography to a brand new level.</h2>
-                    <p>With our free app you can take amazing photos straight from you</p>
-                    <button class="app-button">get the free app</button>
-                    <div class="shop-btn-block">
-                        <div class="app-store">
-                            <img src="assets/img/apple_icon.png" alt="">
-                            <div class="shop-btn-description-app-store">
-                                <span class="app-spore-span1">Available on the</span>
-                                <span class="app-spore-span2">App Store</span>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="app-title header-title">Hello. </h1>
+                        <h2 class="header-subtitle">We take mobile photography to a brand new level.</h2>
+                        <p class="app-text header-text">With our free app you can take amazing photos straight from you
+                        </p>
+                        <button class="app-button">get the free app</button>
+                        <div class="btn-block">
+                            <div class="app-button store-button">
+                                <img class="store-button__picture" src="assets/img/apple_icon.png" alt="">
+                                <div>
+                                    <h4 class="store-button_subtitle">Available on the</h4>
+                                    <h3 class="store-button_title">App Store</h3>
+                                </div>
                             </div>
-                        </div>
-                        <div class="google-play">
-                            <img src="assets/img/Play_Icon.png" alt="">
-                            <div class="shop-btn-description-google-play">
-                                <span class="google-play-span1">get it on</span>
-                                <span class="google-play-span2">Google Play</span>
+                            <div class="app-button store-button">
+                                <img class="store-button__picture" src="assets/img/Play_Icon.png" alt="">
+                                <div>
+                                    <h4 class="store-button_subtitle">get it on</h4>
+                                    <h3 class="store-button_title">Google Play</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <img class="header-iphone1" src="assets/img/iPhone_3.png" alt="">
+                        <img class="header-iphone2" src="assets/img/iPhone_2.png" alt="">
+                    </div>
                 </div>
-                <img class="header-iphone1" src="assets/img/iPhone_3.png" alt="">
-                <img class="header-iphone2" src="assets/img/iPhone_2.png" alt="">
             </div>
         </div>
     </header>
     <main>
-        <div class="second-container">
-            <img class="main-iphone" src="assets/img/iPhone_1.png" alt="">
-            <div class="content">
-                <h2 class="main-title">About us</h2>
-                <p class="main-text">Despreneur is a magazine about design, technology and entrepreneurship. Nowadays
-                    designers play major roles in successful startups and established companies. A Despreneur, coined by
-                    us,
-                    is a new breed of human being – a designer with entrepreneurial mindset.</p>
-                <div class="circles">
-                    <div class="active"></div>
-                    <div></div>
-                    <div></div>
+        <div class="container main-container">
+            <img class="main-picture" src="assets/img/iPhone_1.png" alt="">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h2 class="app-title slide-title">About us</h2>
+                            <p class="app-text slide-text">Despreneur is a magazine about design, technology and
+                                entrepreneurship. Nowadays
+                                designers play major roles in successful startups and established companies. A
+                                Despreneur, coined by
+                                us,
+                                is a new breed of human being – a designer with entrepreneurial mindset.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h2 class="app-title slide-title">About us</h2>
+                            <p class="app-text slide-text">Despreneur is a magazine about design, technology and
+                                entrepreneurship. Nowadays
+                                designers play major roles in successful startups and established companies. A
+                                Despreneur, coined by
+                                us,
+                                is a new breed of human being – a designer with entrepreneurial mindset.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content">
+                            <h2 class="app-title slide-title">About us</h2>
+                            <p class="app-text slide-text">Despreneur is a magazine about design, technology and
+                                entrepreneurship. Nowadays
+                                designers play major roles in successful startups and established companies. A
+                                Despreneur, coined by
+                                us,
+                                is a new breed of human being – a designer with entrepreneurial mindset.</p>
+                        </div>
+                    </div>
                 </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </main>

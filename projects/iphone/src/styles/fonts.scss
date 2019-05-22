@@ -21,6 +21,16 @@
 );
 
 @include fontFace(
+    '../assets/fonts/opensans_light',
+    'opensans_light'
+);
+
+@include fontFace(
     '../assets/fonts/ProximaNova_Bold',
     'ProximaNova_Bold'
+);
+
+@include fontFace(
+    '../assets/fonts/MyriadPro-Regular',
+    'MyriadPro-Regular'
 );

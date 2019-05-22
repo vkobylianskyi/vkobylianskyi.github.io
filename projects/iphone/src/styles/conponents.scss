@@ -1,0 +1,45 @@
+@import "fonts";
+@import "var";
+@import "base/mixins";
+
+.app-title {
+    font: {
+        family: $aller_bold;
+        size: $xl-font-size;
+    }
+}
+
+.app-text {
+    font: {
+        family: $opensans_light;
+        size: $bg-font-size;
+    }
+
+    line-height: 23px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+    color: rgba(255, 255, 255, .8);
+    margin-top: 20px;
+}
+
+.app-button {
+    cursor: pointer;
+    background-color: $btn-color;
+    color: white;
+    transition: 0.5s;
+
+    font: {
+        size: $bg-font-size;
+        family: $aller_bold;
+    }
+
+    width: 410px;
+    height: 67px;
+    border-radius: 3px;
+    box-shadow: none;
+    border: none;
+    text-transform: uppercase;
+
+    &:hover {
+        color: rgba(255, 255, 255, .8);
+    }
+}
