@@ -1,13 +1,90 @@
-@import "_fonts";
-@import "_var";
-@import "base/_mixins";
+@import '_fonts';
+@import '_var';
+@import 'base/_mixins';
 
-.text {
-color: green;
-font-family: $Roboto-Thin;
-
-@include media(max-width $phone) {
-	color: white;
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+.main {
+    padding-top: 63px;
+    flex-grow: 1;
+    color: white;
+    font-family: $Roboto-Thin;
+
+    &__title {
+        font-size: $font-md-small;
+        margin-bottom: 40px;
+        text-align: center;
+
+        @include mq("phone") {
+            font-size: 30px;
+        }
+
+        @include mq("phone-wide") {
+            font-size: 42px;
+            text-align: left;
+        }
+    }
+
+    &__article {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 40px;
+
+        @include mq("phone-wide") {
+            font-size: $font-md-small;
+            text-align: left;
+
+        }
+
+        @include mq("tablet") {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &__input {
+        padding-left: 12px;
+        height: 33px;
+
+        &[type=text] {
+            margin-bottom: 12px;
+            color: black;
+        }
+
+        &[type=email] {
+            margin-bottom: 20px;
+            color: black;
+        }
+    }
+
+    &__button {
+        text-align: center;
+        width: 195px;
+        height: 35px;
+        background-color: $button-color;
+        margin-left: auto;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.25);
+        padding: 15px 15px 20px;
+        font-family: $Roboto-Light;
+
+        &__title {
+            font-size: $font-md-small;
+            margin-bottom: 10px;
+        }
+
+        &__subtitle {
+            font-size: 14px;
+            margin-bottom: 27px;
+        }
+    }
 }

@@ -9,52 +9,111 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="style.css" />
-
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="row header">
-                <div class="col-md-3 ">
-                    <img src="/img/logo-header.png" alt="Logo">
-                </div>
-                <div class="col-md-3 header-contact">
-                    <ul class="header-contact__menu">
-                        <li class="header-contact__menu_item">
-                            <a class="menu-link" href="https://www.facebook.com">
-                                <i class="fa fa-facebook menu-icon"></i></a>
-                        </li>
-                        <li class="header-contact__menu_item">
-                            <a class="menu-link" href="https://www.vk.com"><i class="fa fa-vk menu-icon"></i></a>
-                        </li>
-                        <li class="header-contact__menu_item">
-                            <a class="menu-link" href="https://www.twitter.com"><i
-                                    class="fa fa-twitter menu-icon"></i></a>
-                        </li>
-                        <li class="header-contact__menu_item">
-                            <a class="menu-link" href="https://www.instagram.com"><i
-                                    class="fa fa-instagram menu-icon"></i></a>
-                        </li>
-                        <li class="header-contact__menu_item">
-                            <a class="menu-link" href="https://www.youtube.com"><i
-                                    class="fa fa-youtube-play menu-icon"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3 header-language">
-                    <div class="language-button">
-                        <div class="language-button__item">Рус</div>
-                        <div class="language-button__item">Eng</div>
-                    </div>
-                </div>
-                <div class="col-md-3 header-date">
-                    <div class="header-date__text">15-16.04.2016</div>
+    <div class="container main-container">
+        <header class="row header">
+            <div class="col-lg-4 col-md-4 header-logo">
+                <img src="img/logo-header.png" alt="Logo"/>
+            </div>
+            <ul class="col-lg-3 col-md-4 header-contacts">
+                <li class="header-contacts__item">
+                    <a href="https://www.facebook.com">
+                        <span class="fa fa-facebook"></span></a>
+                </li>
+                <li class="header-contacts__item">
+                    <a href="https://www.vk.com"><span class="fa fa-vk "></span></a>
+                </li>
+                <li class="header-contacts__item">
+                    <a href="https://www.twitter.com"><span class="fa fa-twitter "></span></a>
+                </li>
+                <li class="header-contacts__item">
+                    <a href="https://www.instagram.com"><span class="fa fa-instagram"></span></a>
+                </li>
+                <li class="header-contacts__item">
+                    <a href="https://www.youtube.com">
+                        <span class="fa fa-youtube-play"></span></a>
+                </li>
+            </ul>
+            <div class="col-lg-1 col-md-4 header-language">
+                <div class="language-button">
+                    <a class="language-button__item" href="#">Рус</a>
+                    <a class="language-button__item" href="#">Eng</a>
                 </div>
             </div>
-        </div>
-        </div>
-    </header>
+            <div class="col-lg-4 col-md-12 header-meta">
+                <div class="header-meta__date">
+                    <div class="header-meta__date-text">
+                        15-16.04.2016
+                    </div>
+                </div>
+                <div class="header-meta__location">
+                    <span class="fa fa-map-marker"></span>
+                    Азербайджан, Баку
+                </div>
+            </div>
+        </header>
+        <main class="main row">
+            <div class="col-md-7">
+                <h1 class="main__title">
+                    Первый азербайджанский форум инновационных технологий InnoTech Azerbaijan 2016
+                </h1>
+                <article class="main__article">
+                    Второй ежегодный форум инновационных технологий InnoTech Ukraine, который пройдет 11-12 марта в
+                    Киеве на НСК «Олимпийский», покажет наиболее актуальные тренды инноваций, которые уже доступны в
+                    Украине.
+                </article>
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+                <form action="" class="main-form">
+                    <p class="main-form__title">Следите за новостями:</p>
+                    <p class="main-form__subtitle">
+                        Укажите адрес своей почты - мы будем сообщать
+                        Вам подробности.
+                    </p>
+                    <input type="text" class="main__input" placeholder="Имя*" />
+                    <input type="email" class="main__input" placeholder="Email*" />
+                    <button class="main__button">
+                        Подписаться
+                    </button>
+                </form>
+            </div>
+        </main>
+        <footer class="footer row">
+            <div class="col-lg-8 support col-md-12">
+                <h3 class="support__title">
+                    По всем вопросам звоните или пишите:
+                </h3>
+                <div class="support__meta">
+                    <img class="support__logo" src="img/avatar.png" alt="avatar"/>
+                    <div class="support__info">
+                        <p class="support__name">Марес Шамжи</p>
+                        <p class="support__role">Куратор проекта</p>
+                        <ul class="support__contacts">
+                            <li class="support__contacts-item">
+                                <span class="fa fa-phone"> </span>
+                                +7 (495) 212 11 28
+                            </li>
+                            <li class="support__contacts-item">
+                                <span class="fa fa-envelope"></span>
+                                client@smile-expo.com
+                            </li>
+                            <li class="support__contacts-item">
+                                <span class="fa fa-skype"></span>
+                                mares_sh
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 copyright col-md-12">
+                <div class="copyright-meta">
+                    Организатор:
+                </div>
+                <img class="copyright-logo" src="img/smilet.png" alt="copyright"/>
+            </div>
+        </footer>
+    </div>
 </body>
-
 </html>

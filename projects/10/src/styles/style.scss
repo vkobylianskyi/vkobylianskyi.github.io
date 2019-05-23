@@ -1,13 +1,25 @@
+@import 'base/_index';
+@import '_components';
+@import '_header';
+@import '_main';
+@import '_footer';
 
-@import "base/_index";
-@import "_components";
-@import "_header";
-@import "_main";
-@import "_footer";
 
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background: linear-gradient( -72deg, rgb(72,120,198) 0%, rgb(12,53,121) 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: {
+        image: linear-gradient(72deg, rgba(12,53,121,0.9) 0%, rgba(72,120,198,0.9) 100%),
+            url('img/bg-logo.png');
+        size: cover, 772px 786px;
+        repeat: no-repeat;
+        position: 0 0, 30% 160px;
+    }
 }
+
+a:hover {
+    text-decoration: none;
+} 
+

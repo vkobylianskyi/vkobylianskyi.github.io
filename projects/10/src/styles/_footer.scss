@@ -1,3 +1,139 @@
-@import "_fonts";
-@import "_var";
-@import "base/_mixins";
+@import '_fonts';
+@import '_var';
+@import 'base/_mixins';
+
+.footer {
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.25),
+        0px 0px 25px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 50px;
+}
+
+.support {
+    color: white;
+    position: relative;
+    background-color: rgba(43, 43, 43, 0.7);
+    padding: {
+        left: 15px;
+        top: 27px;
+        bottom: 23px;
+    }
+    font-family: $Roboto-Light;
+    height: auto;
+
+    @include mq("phone-wide") {
+        padding-left: 107px;
+        height: 190px;
+    }
+
+
+    &:before {
+        content: '';
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 190px 60px;
+        border-color: transparent transparent #1d458a transparent;
+
+        @include mq("desktop") {
+            display: block;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: $font-sm-small;
+
+        @include mq("phone-wide") {
+            text-align: left;
+            font-size: $font-md-small;
+        }
+
+    }
+
+    &__meta {
+        margin-top: 25px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &__name {
+        font-size: $font-sm-small;
+        margin-bottom: 6px;
+    }
+
+    &__role {
+        color: #7e7f80;
+        font-size: $font-xs-small;
+    }
+
+    &__info {
+        padding-left: 28px;
+        padding-top: 5px;
+
+        @include mq("phone") {
+            padding-left: 38px;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 500px;
+        margin-top: 12px;
+
+        @include mq("phone-wide") {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        &-item {
+            font-size: 15px;
+            padding-bottom: 10px;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            span {
+                color: $label-color;
+                margin-right: 12px;
+            }
+        }
+    }
+}
+
+.copyright {
+    height: 100px;
+    background-color: #1d458a;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+
+    padding: {
+        right: 38px;
+        left: 100px;
+    }
+
+    @include mq("desktop") {
+        justify-content: space-between;
+        height: 190px;
+    }
+
+    &-meta {
+        padding-right: 39px;
+
+        @include mq("desktop") {
+            padding-right: 0;
+    
+        }
+    }
+}
