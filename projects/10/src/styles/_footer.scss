@@ -58,8 +58,12 @@
     &__meta {
         margin-top: 25px;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: flex-start;
+
+        @include mq("phone-wide") {
+            justify-content: flex-start;
+        }
     }
 
     &__name {
@@ -114,17 +118,17 @@
 .copyright {
     height: 100px;
     background-color: #1d458a;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     color: white;
+    padding: 0;
+    @include flex-center;
 
-    padding: {
-        right: 0;
-        left: 15px;
-    }
+    // padding: {
+    //     right: 0;
+    //     left: 15px;
+    // }
 
-    @include mq("phone") {
+    @include mq("tablet") {
+        justify-content: flex-start;
         padding: {
             right: 38px;
             left: 100px;

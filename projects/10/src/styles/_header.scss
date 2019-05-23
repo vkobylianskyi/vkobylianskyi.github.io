@@ -50,6 +50,10 @@
         justify-content: center;
 
         @include mq("tablet") {
+            justify-content: flex-end;
+        }
+
+        @include mq("desktop") {
             justify-content: flex-start;
         }
     }

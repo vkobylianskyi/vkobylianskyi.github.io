@@ -76,6 +76,16 @@
         background-color: rgba(0, 0, 0, 0.25);
         padding: 15px 15px 20px;
         font-family: $Roboto-Light;
+        width: auto;
+       
+        @include mq("phone") {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        @include mq("tablet") {
+            width: auto;
+        }
 
         &__title {
             font-size: $font-md-small;
