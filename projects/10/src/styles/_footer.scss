@@ -21,7 +21,7 @@
     height: auto;
 
     @include mq("phone-wide") {
-        padding-left: 107px;
+        padding-left: 90px;
         height: 190px;
     }
 
@@ -73,7 +73,7 @@
     }
 
     &__info {
-        padding-left: 28px;
+        padding-left: 25px;
         padding-top: 5px;
 
         @include mq("phone") {
@@ -86,12 +86,13 @@
         align-items: flex-start;
         justify-content: space-between;
         flex-direction: column;
-        width: 500px;
+        width: 100%;
         margin-top: 12px;
 
         @include mq("phone-wide") {
             justify-content: space-between;
             flex-direction: row;
+            width: 470px;
         }
 
         &-item {
@@ -119,8 +120,15 @@
     color: white;
 
     padding: {
-        right: 38px;
-        left: 100px;
+        right: 0;
+        left: 15px;
+    }
+
+    @include mq("phone") {
+        padding: {
+            right: 38px;
+            left: 100px;
+        }
     }
 
     @include mq("desktop") {
