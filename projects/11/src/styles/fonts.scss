@@ -1,0 +1,16 @@
+@import './base/mixins';
+
+@include fontFace(
+    '../assets/fonts/PTSerif-Regular',
+    'PTSerif-Regular'
+);
+
+@include fontFace(
+    '../assets/fonts/PTSerif-Bold',
+    'PTSerif-Bold'
+);
+
+@include fontFace(
+    '../assets/fonts/yellowtail-regular-webfont',
+    'yellowtailregular'
+);
