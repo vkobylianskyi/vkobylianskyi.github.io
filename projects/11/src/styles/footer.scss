@@ -12,7 +12,7 @@
 
 
 footer {
-    color: $brown;
+    color: #222222;
     font-family: $serif-bold-font;
 }
 
@@ -230,55 +230,23 @@ footer {
 //// App-form
 //------------------------------------
 .app-form {
-    background-color: $light-brown;
+    background-color: rgba(38, 144, 168, 0.1);
     position: relative;
     color: $brown;
     padding: {
         top: 60px;
         bottom: 0;
     }
-    margin: {
-        top: 60px;
-        bottom: 19px;
-    }
     height: 100%;
     @include mq("lg") {
         padding: {
             bottom: 110px;
-            top: 110px;
-        }
-        margin: {
-            bottom: 110px;
-            top: 110px;
+            top: 60px;
         }
     }
     font: {
         size: $font-xs-small;
         family: $serif-bold-font;
-    }
-    .fa-angle-up {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        cursor: pointer;
-        background-color: #fff;
-        width: 117px;
-        height: 85px;
-        text-align: center;
-        border-radius: 50%;
-        left: 50%;
-        transform: translateY(50%) translateX(-50%);
-        line-height: 70px;
-        overflow: hidden;
-    }
-    &:after {
-        content: 'top';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, 100%);
-        text-transform: uppercase;
     }
 }
 
@@ -321,7 +289,7 @@ footer {
     }
     outline: none;
     border: none;
-    color: $brown;
+    color: #222;
     padding-left: 43px;
     text-transform: uppercase;
 }

@@ -1,9 +1,17 @@
-@import 'var';
-@import 'base/api.scss';
+@import "fonts";
+@import "var";
+@import "base/mixins.scss";
 
 .ingridients {
     &-item {
         margin-bottom: 30px;
+
+        &__picture {
+            img {
+                width: 100%;
+                border-radius: 4px;
+            }
+        }
         &:nth-of-type(2n + 1) {
             .ingridients-item__picture {
                 box-shadow: 12px -2px 19.53px 1.47px rgba(0, 0, 0, 0.07);
@@ -15,43 +23,37 @@
         &:nth-of-type(2n) {
             .ingridients-item__picture {
                 box-shadow: 12px -2px 19.53px 1.47px rgba(0, 0, 0, 0.07);
-                @include mq('tablet') {
+                @include mq("tablet") {
                     box-shadow: 18.5px 32.043px 19.53px 1.47px rgba(0, 0, 0, 0.07);
-                }
-                &-cap {
-                    left: -20px;
-                    right: 0;
-                    @include mq('tablet') {
-                        left: 20px;
-                    }
                 }
             }
         }
         &__sign {
             font: {
-                family: 'golden_youth_scriptregular', $font-fallback;
+                family: "golden_youth_scriptregular", $font-fallback;
                 size: 36px;
             }
             padding-bottom: 10px;
-            color: $primary-color;
-            @include mq('tablet') {
+            color: $light-brown;
+            @include mq("tablet") {
                 font-size: 54px;
             }
         }
+        .app-text {
+            font-size: 24px;
+        }
+        .app-text--bold {
+            font-size: 24px;
+            font-weight: bold;
+        }
         &__picture-block {
-            margin-left: 20px;
-            @include mq('tablet') {
-                margin-left: 0;
-            }
+            margin-left: 0;
             .ingridients-item__picture {
                 width: 100%;
-                height: 320px;
-                padding-bottom: 20px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                background-color: #fff;
                 img {
                     height: 60%;
                     max-width: 100%;
@@ -63,18 +65,10 @@
                 &-wide {
                     img {
                         height: 40%;
-                        @include mq('tablet') {
+                        @include mq("tablet") {
                             height: 60%;
                         }
                     }
-                }
-                &-cap {
-                    width: 100%;
-                    height: 100%;
-                    background-image: linear-gradient( 0, rgb(236, 224, 249) 0%, rgb(255, 242, 255) 43%, rgb(255, 238, 226) 99%);
-                    position: absolute;
-                    z-index: -1;
-                    top: 20px;
                 }
             }
         }
@@ -84,8 +78,7 @@
                 right: 50px;
                 left: 50px;
             }
-            text-align: center;
-            @include mq('tablet') {
+            @include mq("tablet") {
                 text-align: left;
                 padding: {
                     right: 100px;
@@ -95,6 +88,18 @@
             .app-text--bold {
                 margin-top: 10px;
             }
+        }
+    }
+}
+
+.ingridients-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .app-title {
+        margin-bottom: 100px;
+        .app-title_dark-description {
+            padding-top: 30px;
         }
     }
 }

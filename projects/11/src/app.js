@@ -5,7 +5,7 @@ import b from  'bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
-import 'swiper/dist/css/swiper.min.css';
+import 'swiper/css/swiper.min.css';
 import './styles/style.scss';
 
 (function(){

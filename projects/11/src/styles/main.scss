@@ -446,11 +446,71 @@
     }
 }
 
+
+.about-block-container {
+    background-color: rgba(38, 144, 168, 0.1);
+}
+
+.about-block {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about-block {
+    padding-top: 80px;
+
+    .app-title {
+        margin-bottom: 100px;
+        .app-title_dark-description {
+            padding-top: 30px;
+        }
+    }
+}
+
+
+.app-testimonials {
+    padding-top: 80px;
+
+    .app-title {
+        margin-bottom: 100px;
+        .app-title_dark-description {
+            padding-top: 30px;
+        }
+    }
+}
+
+.gallery-block {
+    background-color: rgba(38, 144, 168, 0.1);
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .app-title {
+        margin-bottom: 100px;
+        .app-title_dark-description {
+            padding-top: 30px;
+        }
+    }
+}
+.app-form {
+    background-color: rgba(38, 144, 168, 0.1);
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    .app-title {
+        margin-bottom: 30px;
+        .app-title_dark-description {
+            padding-top: 30px;
+        }
+    }
+}
+
+
+
+
 //------------------------------------
 //App-testimonials
 //------------------------------------
 .app-testimonials {
-    background-color: #f3f1ec;
     padding: {
         top: 60px;
         bottom: 80px;
@@ -460,9 +520,8 @@
         padding-top: 110px;
     }
     &-description {
-        margin-top: 190px;
+        margin-top: 70px;
         height: 259px;
-        background-color: white;
         display: flex;
         align-items: center;
         &:before {
@@ -479,7 +538,7 @@
         }
         p {
             font-weight: 700;
-            color: $brown;
+            color: $light-brown;
             font-size: 14px;
             line-height: 18px;
             padding: {
