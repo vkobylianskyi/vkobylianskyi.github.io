@@ -25,13 +25,13 @@
     h2 {
         font-size: 42px;
         font-family: 'robotobold';
-        color: $white;
+        color: #59b053;
         margin-bottom: 30px;
 
         @include media(max-width $phone) {
 			font-size: 40px;
 			text-align: center;
-			line-height: 60x;
+			line-height: 60px;
 		}
 	}
 

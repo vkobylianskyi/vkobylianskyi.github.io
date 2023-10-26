@@ -112,7 +112,7 @@ h3.profile-title {
 
 .top-section {
 	@include media(max-width $tablet) {
-		padding-bottom: 0;
+		padding-bottom: 20px;
 	}
 }
 
