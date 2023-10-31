@@ -1,0 +1,48 @@
+.experience-block {
+	display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+
+    &__image {
+        display: block;
+        width: 40px;
+    }
+
+    &__content {
+        text-align: left;
+        color: #fff;
+
+        &-title {
+            font-family: 'robotobold';
+            color: #fff;
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        &-company {
+            font-size: 20px;
+            line-height: 22px;
+            color: #ff8c05
+        }
+
+        &-list {
+            color: #bcbcbc;
+
+            &-item {
+                &::marker {
+                    color: #ff8c05
+                }
+
+                &:not(:last-of-type) {
+                    padding-bottom: 8px;
+                }
+        }
+        }
+    }
+
+    .not-image {
+        visibility: hidden;
+    }
+}
+

@@ -4,6 +4,7 @@ body {
     color: $body-color;
     font-family: 'robotoregular';
     overflow-x: hidden;
+    background-color: #212121;
 }
 
 a {
@@ -56,40 +57,26 @@ h5 {
     }
 }
 
-.content-wrapper {
-    padding: 0 80px;
-
-    @include media(max-width $tablet) {
-        padding: 0 30px;
-    }
-}
-
-h4.widget-title {
-    font-size: 20px;
-    font-family: 'robotobold';
+.widget-title {
+    font-size: 22px;
+    color: #ff8c05;
     text-transform: uppercase;
-    margin-bottom: 40px;
+    font-family: 'robotobold';
 
     @include media(max-width $phone) {
         text-align: center;
     }
 }
 
-hr {
-    position: relative;
-    outline: 0;
-    border: 0;
-    width: 100%;
-    height: 4px;
-    background: $border-color;
-    margin-top: 40px;
-    margin-bottom: 0;
+.page-section {
+    background-color: #262626;
+    border-radius: 16px;
+    margin-top: 24px;
+    padding: 24px 16px;
 }
 
-.page-section {
-    padding-top: 80px;
-
-    &:last-of-type {
-        padding-bottom: 150px;
-    }
+.page-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
