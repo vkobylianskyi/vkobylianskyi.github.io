@@ -1,8 +1,7 @@
 (function($) {
 
-	"use strict";	
+	"use strict";
 
-  
     $('.navigation').singlePageNav({
         currentClass : 'active'
     });
@@ -12,5 +11,9 @@
         $('.responsive-menu').stop(true,true).slideToggle();
         return false;
     });
+
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({items: 1, dots: true});
+      });
 
 })(jQuery);
