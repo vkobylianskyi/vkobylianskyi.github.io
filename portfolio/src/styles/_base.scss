@@ -57,26 +57,9 @@ h5 {
     }
 }
 
-.widget-title {
-    font-size: 22px;
-    color: #ff8c05;
-    text-transform: uppercase;
-    font-family: 'robotobold';
-
-    @include media(max-width $phone) {
-        text-align: center;
-    }
-}
-
 .page-section {
     background-color: #262626;
     border-radius: 16px;
     margin-top: 24px;
     padding: 24px 16px;
-}
-
-.page-block {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
 }

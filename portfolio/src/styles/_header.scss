@@ -36,62 +36,64 @@
     margin: 7px 0;
     transition: 0.4s;
     will-change: transform;
-    transition: transform .5s;
+    transition: transform 0.5s;
 }
 
 .main-navigation {
     li {
-		display: block;
+        display: block;
         text-align: left;
-		a {
-			padding: 15px 40px;
-			display: block;
-			color: $white;
-			font-size: 14px;
-			i {
-				margin-right: 15px;
-				font-size: 24px;
-			}
-			&:hover {
+        a {
+            padding: 15px 40px;
+            display: block;
+            color: $white;
+            font-size: 14px;
+            i {
+                margin-right: 15px;
+                font-size: 24px;
+            }
+            &:hover {
                 color: #ff8c05;
-			}
-		}
-	}
+            }
+        }
+    }
 }
 
 .sidebar-menu {
-	float: left;
-	width: 23%;
-	height: 100%;
-	position: fixed;
-	background-color: $dark-bg;
-	color: $white;
-	overflow-y: hidden;
-	@include media(max-width 1290px) {
-		overflow-y: scroll;
-		width: 30%;
-	}
+    float: left;
+    width: 23%;
+    height: 100%;
+    position: fixed;
+    background-color: $dark-bg;
+    color: $white;
+    overflow-y: hidden;
+    @include media(max-width 1290px) {
+        overflow-y: scroll;
+        width: 30%;
+    }
 }
 
-
 .profile-image {
-	width: 100px;
-	height: 100px;
-	border: 4px solid $white;
-	@include border-radius(75px);
-	overflow: hidden;
-	img {
-		width: 100%;
-	}
+    width: 100px;
+    height: 100px;
+    border: 4px solid $white;
+    @include border-radius(75px);
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
 }
 
 h3.profile-title {
-	margin-bottom: 5px;
-	color: $white;
-	font-size: 18px;
-	font-family: 'robotobold';
+    margin-bottom: 5px;
+    color: $white;
+    font-size: 18px;
+    font-family: "robotobold";
 }
 
+.profile-description {
+    color: #bcbcbc;
+}
 
 // .main-navigation {
 // 	li {
@@ -119,29 +121,28 @@ h3.profile-title {
 // }
 
 .social-icons {
-	display: block;
-	padding: 30px 40px;
-	li {
-		display: inline-block;
-		margin-right: 20px;
-	}
-	a {
-		font-size: 18px;
-		color: $white;
-		&:hover {
-			color: darken($dark-bg, 25%);
-		}
-	}
+    display: block;
+    padding: 30px 40px;
+    li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    a {
+        font-size: 18px;
+        color: $white;
+        &:hover {
+            color: darken($dark-bg, 25%);
+        }
+    }
 }
 
-
 .responsive-header {
-	text-align: center;
-	@include media(max-width $tablet) {
-		.main-navigation {
-			display: none;
-		}
-	}
+    text-align: center;
+    @include media(max-width $tablet) {
+        .main-navigation {
+            display: none;
+        }
+    }
 }
 
 // .main-navigation {
