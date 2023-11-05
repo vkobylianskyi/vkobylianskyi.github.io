@@ -61,7 +61,7 @@ const categories = [
 const item = {
     py: "2px",
     px: 3,
-    color: "rgba(255, 255, 255, 0.7)",
+    color: (theme) => theme.palette.secondary.main,
     "&:hover, &:focus": {
         bgcolor: "rgba(255, 255, 255, 0.08)",
     },
@@ -99,7 +99,7 @@ export default function Navigator(props: DrawerProps) {
                     </ListItemContentWrapper>
                 </ListItemWrapper>
                 {categories.map(({ id, children }) => (
-                    <Box key={id} sx={{ bgcolor: "#101F33" }}>
+                    <Box key={id} sx={{ bgcolor: (theme) => theme.palette.primary.light }}>
                         {children.map(({ id: childId, icon, active }) => (
                             <ListItem disablePadding key={childId}>
                                 <ListItemButton selected={active} sx={item}>

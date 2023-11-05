@@ -3,12 +3,11 @@ import Container from "@mui/material/Container";
 
 import {
     AboutWrapper,
-    AboutGridWrapper,
     AboutImage,
     AboutTitle,
     AboutSubtitle,
 } from "./about.component.styles.ts";
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 import aboutImage from "./public/about-image.jpg";
 

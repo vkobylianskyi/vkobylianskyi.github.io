@@ -1,6 +1,5 @@
 import * as React from "react";
 import Container from "@mui/material/Container";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -11,14 +10,19 @@ import {
     ExperienceImage,
     ExperienceTitle,
     ExperienceSubtitle,
-    ExperienceSliderItemWrapper,
     ExperienceDate,
-    ExperienceList,
-    ExperienceListItemIcon,
     ExperienceListItemCircle,
     ExperienceListItemText,
+    ExperienceListGrid,
 } from "./experience.component.styles.ts";
-import { Grid, ListItem, Typography } from "@mui/material";
+import {
+    Box,
+    Grid,
+    List,
+    ListItem,
+    ListItemIcon,
+    Typography,
+} from "@mui/material";
 
 import cexLogo from "./public/cex-logo.svg";
 import etLogo from "./public/etc-logo.svg";
@@ -69,69 +73,89 @@ export default function Experience() {
                     My Experience
                 </Typography>
                 <ExperienceSliderWrapper {...settings}>
-                    <ExperienceSliderItemWrapper>
-                        <ExperienceGridWrapper container spacing={4}>
+                    <Box>
+                        <ExperienceGridWrapper
+                            container
+                            spacing={4}
+                            alignItems={"center"}
+                        >
                             <Grid item xs={1}>
                                 <ExperienceImage
                                     src={cexLogo}
                                     alt="CEX.IO logo"
                                 />
                             </Grid>
-                            <Grid item xs={10}>
+                            <Grid item xs={11}>
                                 <ExperienceTitle>CEX.IO</ExperienceTitle>
+                            </Grid>
+                        </ExperienceGridWrapper>
+                        <Grid container spacing={7}>
+                            <ExperienceListGrid item xs={11}>
                                 <ExperienceSubtitle>
                                     Front-end developer (HTML/CSS coder)
                                 </ExperienceSubtitle>
                                 <ExperienceDate>
                                     Jun 2019 - Present
                                 </ExperienceDate>
-                                <ExperienceList>
+                                <List>
                                     {cexExperience.map((listItem, index) => (
                                         <ListItem key={index}>
-                                            <ExperienceListItemIcon>
+                                            <ListItemIcon>
                                                 <ExperienceListItemCircle></ExperienceListItemCircle>
-                                            </ExperienceListItemIcon>
+                                            </ListItemIcon>
                                             <ExperienceListItemText>
                                                 {listItem}
                                             </ExperienceListItemText>
                                         </ListItem>
                                     ))}
-                                </ExperienceList>
-                            </Grid>
-                        </ExperienceGridWrapper>
-                    </ExperienceSliderItemWrapper>
-                    <ExperienceSliderItemWrapper>
-                        <ExperienceGridWrapper container>
+                                </List>
+                            </ExperienceListGrid>
+                        </Grid>
+                    </Box>
+                    <Box>
+                        <ExperienceGridWrapper
+                            container
+                            spacing={4}
+                            alignItems={"center"}
+                        >
                             <Grid item xs={1} />
                             <Grid item xs={11}>
                                 <ExperienceTitle>
                                     Argo perception
                                 </ExperienceTitle>
+                            </Grid>
+                        </ExperienceGridWrapper>
+                        <Grid container spacing={7}>
+                            <ExperienceListGrid item xs={11}>
                                 <ExperienceSubtitle>
                                     Front-end developer (HTML/CSS coder)
                                 </ExperienceSubtitle>
                                 <ExperienceDate>
                                     February 2019 - June 2019
                                 </ExperienceDate>
-                                <ExperienceList>
+                                <List>
                                     {argoPerceptionExperience.map(
                                         (listItem, index) => (
                                             <ListItem key={index}>
-                                                <ExperienceListItemIcon>
+                                                <ListItemIcon>
                                                     <ExperienceListItemCircle></ExperienceListItemCircle>
-                                                </ExperienceListItemIcon>
+                                                </ListItemIcon>
                                                 <ExperienceListItemText>
                                                     {listItem}
                                                 </ExperienceListItemText>
                                             </ListItem>
                                         )
                                     )}
-                                </ExperienceList>
-                            </Grid>
-                        </ExperienceGridWrapper>
-                    </ExperienceSliderItemWrapper>
-                    <ExperienceSliderItemWrapper>
-                        <ExperienceGridWrapper container>
+                                </List>
+                            </ExperienceListGrid>
+                        </Grid>
+                    </Box>
+                    <Box>
+                        <ExperienceGridWrapper
+                            container
+                            spacing={4}
+                            alignItems={"center"}
+                        >
                             <Grid item xs={1}>
                                 <ExperienceImage
                                     src={etLogo}
@@ -140,29 +164,33 @@ export default function Experience() {
                             </Grid>
                             <Grid item xs={11}>
                                 <ExperienceTitle>Etcetera</ExperienceTitle>
+                            </Grid>
+                        </ExperienceGridWrapper>
+                        <Grid container spacing={7}>
+                            <ExperienceListGrid item xs={11}>
                                 <ExperienceSubtitle>
                                     Front-end developer
                                 </ExperienceSubtitle>
                                 <ExperienceDate>
                                     October 2018 - February 2019
                                 </ExperienceDate>
-                                <ExperienceList>
+                                <List>
                                     {etceteraExperience.map(
                                         (listItem, index) => (
                                             <ListItem key={index}>
-                                                <ExperienceListItemIcon>
+                                                <ListItemIcon>
                                                     <ExperienceListItemCircle></ExperienceListItemCircle>
-                                                </ExperienceListItemIcon>
+                                                </ListItemIcon>
                                                 <ExperienceListItemText>
                                                     {listItem}
                                                 </ExperienceListItemText>
                                             </ListItem>
                                         )
                                     )}
-                                </ExperienceList>
-                            </Grid>
-                        </ExperienceGridWrapper>
-                    </ExperienceSliderItemWrapper>
+                                </List>
+                            </ExperienceListGrid>
+                        </Grid>
+                    </Box>
                 </ExperienceSliderWrapper>
             </ExperienceWrapper>
         </Container>

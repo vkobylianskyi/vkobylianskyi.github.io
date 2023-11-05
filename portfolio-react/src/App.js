@@ -3,29 +3,31 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Navigator from "./components/Navigator.tsx";
-import Header from "./components/Header.tsx";
+import Navigator from "./components/navigator-conponent.tsx";
+import Header from "./components/header.component.tsx";
 import Welcome from "./components/welcome.component.tsx";
 import About from "./components/about.component.tsx";
 import Experience from "./components/experience.component.tsx";
-
-function Copyright() {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center">
-            {"Copyright © "}
-            {new Date().getFullYear()}.
-        </Typography>
-    );
-}
+import Projects from "./components/projects.component.tsx";
+import Skills from "./components/skills.component.tsx";
+import Education from "./components/education.component.tsx";
+import Contact from "./components/contact.component.tsx";
+import Copy from "./components/copy.component.tsx";
 
 let theme = createTheme({
     palette: {
         primary: {
-            light: "#63ccff",
-            main: "#009be5",
-            dark: "#006db3",
+            light: "#262626",
+            main: "#ff8c05",
+            dark: "#212121",
         },
+        secondary: {
+            main: "#fff",
+        },
+        text: {
+            primary: "#000",
+            secondary: 'rgba(0, 0, 0, 0.7);',
+        }
     },
     typography: {
         h2: {
@@ -68,7 +70,15 @@ theme = {
         MuiDrawer: {
             styleOverrides: {
                 paper: {
-                    backgroundColor: "#081627",
+                    backgroundColor: theme.palette.primary.light,
+                },
+            },
+        },
+        MuiAppBar: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: theme.palette.primary.light,
+                    borderRadius: 5,
                 },
             },
         },
@@ -76,38 +86,14 @@ theme = {
             styleOverrides: {
                 root: {
                     textTransform: "none",
+                    "&:hover": {
+                        backgroundColor: theme.palette.primary.main,
+                    },
                 },
                 contained: {
                     boxShadow: "none",
                     "&:active": {
                         boxShadow: "none",
-                    },
-                },
-            },
-        },
-        MuiTabs: {
-            styleOverrides: {
-                root: {
-                    marginLeft: theme.spacing(1),
-                },
-                indicator: {
-                    height: 3,
-                    borderTopLeftRadius: 3,
-                    borderTopRightRadius: 3,
-                    backgroundColor: theme.palette.common.white,
-                },
-            },
-        },
-        MuiTab: {
-            styleOverrides: {
-                root: {
-                    textTransform: "none",
-                    margin: "0 16px",
-                    minWidth: 0,
-                    padding: 0,
-                    [theme.breakpoints.up("md")]: {
-                        padding: 0,
-                        minWidth: 0,
                     },
                 },
             },
@@ -157,7 +143,7 @@ theme = {
                 root: {
                     height: "48px",
                     "&.Mui-selected": {
-                        color: "#4fc3f7",
+                        color: theme.palette.primary.main,
                     },
                 },
             },
@@ -211,12 +197,11 @@ function App() {
                         <Welcome />
                         <About />
                         <Experience />
-                        <Box
-                            component="footer"
-                            sx={{ p: 2, bgcolor: "#eaeff1" }}
-                        >
-                            <Copyright />
-                        </Box>
+                        <Projects />
+                        <Skills />
+                        <Education />
+                        <Contact />
+                        <Copy />
                     </Box>
                 </Box>
             </ThemeProvider>

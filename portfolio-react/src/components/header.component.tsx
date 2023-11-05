@@ -26,10 +26,19 @@ export default function Header(props: HeaderProps) {
     };
 
     return (
-        <React.Fragment>
-            <AppBar color="primary" position="sticky" elevation={0} sx={{ paddingTop: "12px", paddingBottom: "12px" }}>
+            <AppBar
+                color="secondary"
+                position="sticky"
+                elevation={0}
+                sx={{ paddingTop: "12px", paddingBottom: "12px", width: "calc(100% - 48px)", marginLeft: "24px"}}
+            >
                 <Toolbar>
-                    <Grid container spacing={1} alignItems="center" justifyContent="flex-end" >
+                    <Grid
+                        container
+                        spacing={1}
+                        alignItems="center"
+                        justifyContent="flex-end"
+                    >
                         <Grid
                             sx={{ display: { sm: "none", xs: "block" } }}
                             item
@@ -55,7 +64,9 @@ export default function Header(props: HeaderProps) {
                                 sx={{ m: 1, minWidth: 120 }}
                                 size="small"
                             >
-                                <InputLabel id="language-select-label">Language</InputLabel>
+                                <InputLabel id="language-select-label">
+                                    Language
+                                </InputLabel>
                                 <Select
                                     labelId="language-select-label"
                                     id="language-select"
@@ -71,6 +82,5 @@ export default function Header(props: HeaderProps) {
                     </Grid>
                 </Toolbar>
             </AppBar>
-        </React.Fragment>
     );
 }

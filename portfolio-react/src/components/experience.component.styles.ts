@@ -1,8 +1,6 @@
 import {
     Box,
     Grid,
-    List,
-    ListItemIcon,
     ListItemText,
     Typography,
     styled,
@@ -15,26 +13,23 @@ export const ExperienceWrapper = styled(Box)`
     background-color: #262626;
     margin-top: 40px;
     border-radius: 5px;
-    gap: 16px;
-    flex-wrap: nowrap;
 `;
 
 export const ExperienceGridWrapper = styled(Grid)`
-    align-items: flex-start;
-    gap: 16px;
+    margin-bottom: 16px;
 `;
 
 export const ExperienceTitle = styled(Typography)`
     font-size: 50px;
     line-height: 110%;
     font-weight: 900;
-    margin-bottom: 30px;
-    color: #ffffff;
+    color: #ff8c05;
 `;
 
 export const ExperienceSubtitle = styled(Typography)`
-    font-size: 16px;
-    line-height: 27px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 8px;
     color: #ffffff;
 `;
 
@@ -48,14 +43,13 @@ export const ExperienceImage = styled("img")`
     width: 100%;
 `;
 
-export const ExperienceSliderItemWrapper = styled(Box)`
+export const ExperienceListGrid = styled(Grid)`
+    margin-left: auto;
 `;
 
-export const ExperienceList = styled(List)``;
-
-export const ExperienceListItemIcon = styled(ListItemIcon)``;
-
-export const ExperienceListItemText = styled(ListItemText)``;
+export const ExperienceListItemText = styled(ListItemText)`
+    color: #bcbcbc;
+`;
 
 export const ExperienceListItemCircle = styled("div")`
     width: 10px;
@@ -65,19 +59,18 @@ export const ExperienceListItemCircle = styled("div")`
 `;
 
 export const ExperienceSliderWrapper = styled(Slider)`
+    .slick-dots {
+        margin-top: 30px;
+        position: static;
+    }
 
-.slick-dots {
-    margin-top: 30px;
-    position: static;
-}
+    .slick-dots li.slick-active button:before {
+        color: #ff8c05;
+    }
 
-.slick-dots li.slick-active button:before {
-    color: #ff8c05;
-}
-
-.slick-dots li button:before {
-    font-size: 12px;
-    color: #515151;
-    opacity: inherit;
-}
-`
+    .slick-dots li button:before {
+        font-size: 12px;
+        color: #515151;
+        opacity: inherit;
+    }
+`;

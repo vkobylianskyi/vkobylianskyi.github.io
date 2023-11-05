@@ -5,8 +5,6 @@ export const AboutWrapper = styled(Box)`
     background-color: #262626;
     margin-top: 40px;
     border-radius: 5px;
-    gap: 16px;
-    flex-wrap: nowrap;
 `;
 
 export const AboutTitle = styled(Typography)`
