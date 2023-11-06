@@ -26,15 +26,20 @@ let theme = createTheme({
         },
         text: {
             primary: "#000",
-            secondary: 'rgba(0, 0, 0, 0.7);',
-        }
+            secondary: "rgba(0, 0, 0, 0.7);",
+        },
     },
     typography: {
         h2: {
-            fontSize: 28,
+            fontSize: 22,
             color: "#ff8c05",
             textTransform: "uppercase",
-            marginBottom: 30,
+            marginBottom: 20,
+
+            '@media (min-width:900px)': {
+                fontSize: '28px',
+                marginBottom: 30,
+            },
         },
         h5: {
             fontWeight: 500,
@@ -145,6 +150,48 @@ theme = {
                     "&.Mui-selected": {
                         color: theme.palette.primary.main,
                     },
+                },
+            },
+        },
+        MuiSelect: {
+            styleOverrides: {
+                iconOutlined: {
+                    color: theme.palette.secondary.main,
+                },
+            },
+        },
+        MuiOutlinedInput: {
+            styleOverrides: {
+                notchedOutline: {
+                    borderColor: theme.palette.secondary.main
+                },
+            },
+        },
+        MuiGrid: {
+            styleOverrides: {
+                root: {
+                    color: theme.palette.secondary.main,
+                },
+            },
+        },
+        MuiFormLabel: {
+            styleOverrides: {
+                root: {
+                    color: theme.palette.secondary.main,
+                },
+            },
+        },
+        MuiFormControl: {
+            styleOverrides: {
+                root: {
+                    color: theme.palette.secondary.main,
+                },
+            },
+        },
+        MuiInputBase: {
+            styleOverrides: {
+                input: {
+                    color: theme.palette.secondary.main,
                 },
             },
         },

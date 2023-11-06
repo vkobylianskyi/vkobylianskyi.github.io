@@ -40,11 +40,11 @@ export default function Header(props: HeaderProps) {
                         justifyContent="flex-end"
                     >
                         <Grid
-                            sx={{ display: { sm: "none", xs: "block" } }}
+                            sx={{ display: { sm: "none", xs: "block", flexGrow: 1 } }}
                             item
                         >
                             <IconButton
-                                color="inherit"
+                                color="secondary"
                                 aria-label="open drawer"
                                 onClick={onDrawerToggle}
                                 edge="start"
@@ -54,7 +54,7 @@ export default function Header(props: HeaderProps) {
                         </Grid>
                         <Grid item>
                             <Tooltip title="Change theme">
-                                <IconButton color="inherit">
+                                <IconButton color="secondary">
                                     <Brightness4Icon />
                                 </IconButton>
                             </Tooltip>

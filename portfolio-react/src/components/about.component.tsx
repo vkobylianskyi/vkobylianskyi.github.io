@@ -7,19 +7,30 @@ import {
     AboutTitle,
     AboutSubtitle,
 } from "./about.component.styles.ts";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 import aboutImage from "./public/about-image.jpg";
 
 export default function About() {
+    const theme = useTheme();
+    const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
+
     return (
         <Container>
             <AboutWrapper>
-                <Typography variant="h2">ABOUT ME</Typography>
-                <Grid container spacing={2} alignItems={"center"}>
-                    <Grid item xs={6}>
-                        <AboutTitle>I am Front-end developer</AboutTitle>
-                        <AboutSubtitle>
+                <Typography variant="h2" align={isDesktop ? "left" : "center"}>
+                    ABOUT ME
+                </Typography>
+                <Grid
+                    container
+                    spacing={isDesktop ? 2 : 4}
+                    alignItems={"center"}
+                >
+                    <Grid item xs={12} md={6}>
+                        <AboutTitle align={isDesktop ? "left" : "center"}>
+                            I am Front-end developer
+                        </AboutTitle>
+                        <AboutSubtitle align={isDesktop ? "left" : "center"}>
                             Hello, I am Front-end developer with solid
                             mathematical background. My key skills are
                             self-motivation, precision and quality. My main goal
@@ -29,7 +40,7 @@ export default function About() {
                             how important this part of our work is.
                         </AboutSubtitle>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} md={6}>
                         <AboutImage
                             src={aboutImage}
                             alt="Volodymyr Kobylianskiy"
