@@ -8,7 +8,7 @@ export const WelcomeWrapper = styled(Grid)`
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
-            padding: "40px"
+            padding: "40px",
         },
     })}
 `;
@@ -39,7 +39,7 @@ export const WelcomeSubtitle = styled(Typography)`
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
             fontSize: "70px",
-            lineHeight: "87px"
+            lineHeight: "87px",
         },
     })}
 `;
@@ -58,11 +58,40 @@ export const WelcomeAction = styled(Link)`
     padding: 13px 20px;
     font-weight: 700;
     font-size: 16px;
+    position: relative;
+
+    &:hover::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 90%;
+        background: #262626;
+        animation: titles 0.4s cubic-bezier(0.25, 0.61, 1, 0.47) forwards;
+        transform: translateY(100%);
+        animation-delay: 0.1s;
+        z-index: 1;
+    }
+
+    @keyframes titles {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(-101%);
+        }
+    }
+
+    ${({ theme }) => ({
+        [theme.breakpoints.up("md")]: {
+            marginLeft: 0,
+        },
+    })}
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
-            marginLeft: 0,
-            marginTop: "50px"
+            marginTop: "50px",
         },
     })}
 `;

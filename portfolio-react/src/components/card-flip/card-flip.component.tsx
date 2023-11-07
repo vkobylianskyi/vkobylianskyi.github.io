@@ -58,7 +58,7 @@ export const CardFlip: React.FC<CardFlipProps> = ({
                         {backSide && backSide.description}
                     </CardFlipItemBackDescription>
                     <CardFlipItemButtonsWrapper visible={rotate}>
-                        <CardFlipItemTryNow fontWeight={600} href={href}>
+                        <CardFlipItemTryNow fontWeight={600} href={href} target="_blank">
                             <span>View site</span>
                             <KeyboardArrowRightIcon />
                         </CardFlipItemTryNow>

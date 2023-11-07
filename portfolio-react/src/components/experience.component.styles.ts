@@ -1,18 +1,16 @@
-import {
-    Box,
-    Grid,
-    ListItemText,
-    Typography,
-    styled,
-} from "@mui/material";
-
-import Slider from "react-slick";
+import { Box, Grid, ListItemText, Typography, styled } from "@mui/material";
 
 export const ExperienceWrapper = styled(Box)`
-    padding: 40px;
-    background-color: #262626;
+    padding: 30px;
+    background-color: ${({ theme }) => theme.palette.primary.light};
     margin-top: 40px;
     border-radius: 5px;
+
+    ${({ theme }) => ({
+        [theme.breakpoints.up("lg")]: {
+            padding: "40px",
+        },
+    })}
 `;
 
 export const ExperienceGridWrapper = styled(Grid)`
@@ -20,10 +18,16 @@ export const ExperienceGridWrapper = styled(Grid)`
 `;
 
 export const ExperienceTitle = styled(Typography)`
-    font-size: 50px;
+    font-size: 30px;
     line-height: 110%;
     font-weight: 900;
     color: #ff8c05;
+
+    ${({ theme }) => ({
+        [theme.breakpoints.up("lg")]: {
+            fontSize: 50
+        },
+    })}
 `;
 
 export const ExperienceSubtitle = styled(Typography)`
@@ -41,6 +45,9 @@ export const ExperienceDate = styled(Typography)`
 
 export const ExperienceImage = styled("img")`
     width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
 `;
 
 export const ExperienceListGrid = styled(Grid)`
@@ -56,21 +63,4 @@ export const ExperienceListItemCircle = styled("div")`
     height: 10px;
     border-radius: 50%;
     background-color: #ff8c05;
-`;
-
-export const ExperienceSliderWrapper = styled(Slider)`
-    .slick-dots {
-        margin-top: 30px;
-        position: static;
-    }
-
-    .slick-dots li.slick-active button:before {
-        color: #ff8c05;
-    }
-
-    .slick-dots li button:before {
-        font-size: 12px;
-        color: #515151;
-        opacity: inherit;
-    }
 `;

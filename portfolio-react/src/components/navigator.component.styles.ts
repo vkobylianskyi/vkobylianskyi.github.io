@@ -2,9 +2,10 @@ import { ListItem, styled } from "@mui/material";
 
 export const ListItemImage = styled("img")`
     width: 80px;
-    height: 100%;
+    height: 80px;
     border: 2px solid #fff;
     border-radius: 50%;
+    margin-top: 8px;
 `;
 
 export const ListItemContentWrapper = styled("div")`

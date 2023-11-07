@@ -23,7 +23,7 @@ import {
     ListItemImage,
     ListItemContentWrapper,
     ListItemWrapper,
-} from "./navigator.styles.ts";
+} from "./navigator.component.styles.ts";
 
 import profileImage from "./public/profile.jpg";
 import { Typography } from "@mui/material";

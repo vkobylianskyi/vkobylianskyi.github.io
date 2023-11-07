@@ -6,12 +6,16 @@ import {
 } from "@mui/material";
 
 export const EducationWrapper = styled(Box)`
-    padding: 40px;
-    background-color: #262626;
+    padding: 30px;
+    background-color: ${({ theme }) => theme.palette.primary.light};
     margin-top: 40px;
     border-radius: 5px;
-    gap: 16px;
-    flex-wrap: nowrap;
+
+    ${({ theme }) => ({
+        [theme.breakpoints.up("lg")]: {
+            padding: "40px",
+        },
+    })}
 `;
 
 export const EducationGrid = styled(Grid)`
@@ -22,8 +26,18 @@ export const EducationGrid = styled(Grid)`
 
 export const EducationIcon = styled("img")`
     width: 100%;
+    max-width: 160px;
     border-radius: 50%;
     border: 10px solid #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    ${({ theme }) => ({
+        [theme.breakpoints.up("lg")]: {
+            marginLeft: 0
+        },
+    })}
 `;
 
 export const EducationTitle = styled(Typography)`

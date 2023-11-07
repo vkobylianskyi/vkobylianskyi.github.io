@@ -1,10 +1,8 @@
 import * as React from "react";
 import Container from "@mui/material/Container";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from "react-material-ui-carousel";
 
 import {
-    ExperienceSliderWrapper,
     ExperienceWrapper,
     ExperienceGridWrapper,
     ExperienceImage,
@@ -22,20 +20,14 @@ import {
     ListItem,
     ListItemIcon,
     Typography,
+    useMediaQuery,
+    useTheme,
 } from "@mui/material";
 
 import cexLogo from "./public/cex-logo.svg";
 import etLogo from "./public/etc-logo.svg";
 
 export default function Experience() {
-    const settings = {
-        dots: true,
-        arrows: false,
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
-
     const cexExperience = [
         "creating landing pages (Responsive and Adaptive web design, Mobile First approach, Cross-browser layout);",
         "creating an email-letter layout with IE support for light and dark screen themes;",
@@ -46,18 +38,21 @@ export default function Experience() {
         "development pages using Strapi CMS;",
         "creating pages using the styled component approach;",
         "rendering optimization tasks;",
-        "assets loading performance tasks;",
-        " JS, CSS animations - sliders, smooth scroll.",
+        "assets loading performance tasks.",
     ];
 
     const argoPerceptionExperience = [
-        "creating markup for application about plant diseases;",
+        "creating markup for application about plant diseases (Responsive and Adaptive web design, Mobile First approach, Cross-browser layout);",
         "creating an email-letter;",
         "working with a responsive site.",
+        "rendering optimization tasks;",
+        "assets loading performance tasks;",
+        "JS, CSS animations - sliders, smooth scroll.",
+        "bootstrap development.",
     ];
 
     const etceteraExperience = [
-        "creating landing pages (Responsive and Adaptive web design, Mobile First approach);",
+        "creating landing pages (Responsive and Adaptive web design, Mobile First approach, Cross-browser layout);",
         "basic Javascript (DOM manipulation, AJAX, contact forms);",
         "rendering optimization tasks;",
         "assets loading performance tasks;",
@@ -66,31 +61,48 @@ export default function Experience() {
         "bootstrap development.",
     ];
 
+    const theme = useTheme();
+        const isSmUp = useMediaQuery(theme.breakpoints.up("md"));
+
     return (
         <Container>
             <ExperienceWrapper>
                 <Typography variant="h2" align="center">
                     My Experience
                 </Typography>
-                <ExperienceSliderWrapper {...settings}>
+                <Carousel
+                    autoPlay={false}
+                    animation="slide"
+                    indicatorIconButtonProps={{
+                        style: {
+                            padding: "10px", 
+                            color: "#515151"
+                        },
+                    }}
+                    activeIndicatorIconButtonProps={{
+                        style: {
+                            color: theme.palette.primary.main
+                        }
+                    }}
+                >
                     <Box>
                         <ExperienceGridWrapper
                             container
                             spacing={4}
                             alignItems={"center"}
                         >
-                            <Grid item xs={1}>
+                            <Grid item xs={3} md={2} lg={1}>
                                 <ExperienceImage
                                     src={cexLogo}
                                     alt="CEX.IO logo"
                                 />
                             </Grid>
-                            <Grid item xs={11}>
+                            <Grid item xs={9} md={10} lg={11}>
                                 <ExperienceTitle>CEX.IO</ExperienceTitle>
                             </Grid>
                         </ExperienceGridWrapper>
                         <Grid container spacing={7}>
-                            <ExperienceListGrid item xs={11}>
+                            <ExperienceListGrid item xs={12} md={10} lg={11} justifyContent={"center"}>
                                 <ExperienceSubtitle>
                                     Front-end developer (HTML/CSS coder)
                                 </ExperienceSubtitle>
@@ -115,18 +127,18 @@ export default function Experience() {
                     <Box>
                         <ExperienceGridWrapper
                             container
-                            spacing={4}
+                            spacing={isSmUp ? 4 : 0}
                             alignItems={"center"}
                         >
-                            <Grid item xs={1} />
-                            <Grid item xs={11}>
+                            <Grid item xs={0} md={2} lg={1}/>
+                            <Grid item xs={12} md={10} lg={11}>
                                 <ExperienceTitle>
                                     Argo perception
                                 </ExperienceTitle>
                             </Grid>
                         </ExperienceGridWrapper>
                         <Grid container spacing={7}>
-                            <ExperienceListGrid item xs={11}>
+                            <ExperienceListGrid item xs={12} md={10} lg={11}>
                                 <ExperienceSubtitle>
                                     Front-end developer (HTML/CSS coder)
                                 </ExperienceSubtitle>
@@ -156,18 +168,18 @@ export default function Experience() {
                             spacing={4}
                             alignItems={"center"}
                         >
-                            <Grid item xs={1}>
+                            <Grid item xs={3} md={2} lg={1}>
                                 <ExperienceImage
                                     src={etLogo}
                                     alt="Etcetera logo"
                                 />
                             </Grid>
-                            <Grid item xs={11}>
+                            <Grid item xs={9} md={10} lg={11}>
                                 <ExperienceTitle>Etcetera</ExperienceTitle>
                             </Grid>
                         </ExperienceGridWrapper>
                         <Grid container spacing={7}>
-                            <ExperienceListGrid item xs={11}>
+                            <ExperienceListGrid item xs={12} md={10} lg={11}>
                                 <ExperienceSubtitle>
                                     Front-end developer
                                 </ExperienceSubtitle>
@@ -191,7 +203,7 @@ export default function Experience() {
                             </ExperienceListGrid>
                         </Grid>
                     </Box>
-                </ExperienceSliderWrapper>
+                </Carousel>
             </ExperienceWrapper>
         </Container>
     );

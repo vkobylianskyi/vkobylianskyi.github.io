@@ -36,8 +36,8 @@ let theme = createTheme({
             textTransform: "uppercase",
             marginBottom: 20,
 
-            '@media (min-width:900px)': {
-                fontSize: '28px',
+            "@media (min-width:900px)": {
+                fontSize: "28px",
                 marginBottom: 30,
             },
         },
@@ -163,7 +163,7 @@ theme = {
         MuiOutlinedInput: {
             styleOverrides: {
                 notchedOutline: {
-                    borderColor: theme.palette.secondary.main
+                    borderColor: theme.palette.secondary.main,
                 },
             },
         },

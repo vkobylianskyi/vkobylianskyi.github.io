@@ -13,6 +13,7 @@ import aboutImage from "./public/about-image.jpg";
 
 export default function About() {
     const theme = useTheme();
+    const isTabletWide = useMediaQuery(theme.breakpoints.up("md"));
     const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
 
     return (
@@ -27,10 +28,10 @@ export default function About() {
                     alignItems={"center"}
                 >
                     <Grid item xs={12} md={6}>
-                        <AboutTitle align={isDesktop ? "left" : "center"}>
+                        <AboutTitle align={isTabletWide ? "left" : "center"}>
                             I am Front-end developer
                         </AboutTitle>
-                        <AboutSubtitle align={isDesktop ? "left" : "center"}>
+                        <AboutSubtitle align={isTabletWide ? "left" : "center"}>
                             Hello, I am Front-end developer with solid
                             mathematical background. My key skills are
                             self-motivation, precision and quality. My main goal

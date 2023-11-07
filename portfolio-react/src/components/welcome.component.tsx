@@ -14,15 +14,12 @@ import welcomeImage from "./public/welcome-image.png";
 
 export default function Welcome() {
     const theme = useTheme();
-    const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
+    const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
     return (
         <Container>
             <WelcomeWrapper>
-                <Grid
-                    container
-                    alignItems={"center"}
-                >
+                <Grid container alignItems={"center"}>
                     <Grid item xs={12} md={6}>
                         <WelcomeTitle align={isDesktop ? "left" : "center"}>
                             I AM VOLODYMYR KOBYLIANSKIY
@@ -32,7 +29,11 @@ export default function Welcome() {
                         </WelcomeSubtitle>
                         <WelcomeAction>Contact Me</WelcomeAction>
                     </Grid>
-                    <Grid item md={6} sx={{ display: { xs: "none", md: "block"} }}>
+                    <Grid
+                        item
+                        md={6}
+                        sx={{ display: { xs: "none", md: "block" } }}
+                    >
                         <WelcomeImage
                             src={welcomeImage}
                             alt="Volodymyr Kobylianskiy"
