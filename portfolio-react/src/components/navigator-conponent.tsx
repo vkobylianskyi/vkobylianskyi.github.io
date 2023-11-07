@@ -63,7 +63,7 @@ const item = {
     px: 3,
     color: (theme) => theme.palette.secondary.main,
     "&:hover, &:focus": {
-        bgcolor: "rgba(255, 255, 255, 0.08)",
+        bgcolor:" rgba(255, 140, 5, 0.04)",
     },
 };
 
