@@ -1,5 +1,6 @@
 import * as React from "react";
 import Container from "@mui/material/Container";
+import { useTranslation } from 'react-i18next';
 
 import {
     WelcomeWrapper,
@@ -16,13 +17,15 @@ export default function Welcome() {
     const theme = useTheme();
     const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
+    const [t] = useTranslation();
+
     return (
         <Container>
             <WelcomeWrapper>
                 <Grid container alignItems={"center"}>
                     <Grid item xs={12} md={6}>
                         <WelcomeTitle align={isDesktop ? "left" : "center"}>
-                            I AM VOLODYMYR KOBYLIANSKIY
+                        {t('title')}
                         </WelcomeTitle>
                         <WelcomeSubtitle align={isDesktop ? "left" : "center"}>
                             Front-end developer

@@ -14,6 +14,14 @@ import Education from "./components/education.component.tsx";
 import Contact from "./components/contact.component.tsx";
 import Copy from "./components/copy.component.tsx";
 
+import i18n from "i18next";
+import { initReactI18next,} from "react-i18next";
+import LanguageDetector from 'i18next-browser-languagedetector';
+import HttpApi from 'i18next-http-backend';
+
+import translationEn from './components/public/translations/en/translation.json';
+import translationUa from './components/public/translations/ua/translation.json';
+
 let theme = createTheme({
     palette: {
         primary: {
@@ -207,52 +215,74 @@ function App() {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
+
+    i18n
+    .use(initReactI18next)
+    .use(LanguageDetector)
+    .use(HttpApi)
+    .init({
+      supportedLngs: ['en', 'ua'],
+      fallbackLng: "en",
+      detection: {
+        order: ['cookie', 'localStorage', 'htmlTag', 'path', 'subdomain'],
+        caches: ['cookie']
+      },
+      resources: {
+        en: { translation: translationEn },
+        ua: { translation: translationUa },
+    },
+    });
+
     return (
-        <div className="App">
-            <ThemeProvider theme={theme}>
-                <Box sx={{ display: "flex" }}>
-                    <CssBaseline />
-                    <Box
-                        component="nav"
-                        sx={{
-                            width: { sm: drawerWidth },
-                            flexShrink: { sm: 0 },
-                        }}
-                    >
-                        {isSmUp ? null : (
+        <React.Suspense fallback="Loading...">
+            <div className="App">
+                <ThemeProvider theme={theme}>
+                    <Box sx={{ display: "flex" }}>
+                        <CssBaseline />
+                        <Box
+                            component="nav"
+                            sx={{
+                                width: { sm: drawerWidth },
+                                flexShrink: { sm: 0 },
+                            }}
+                        >
+                            {isSmUp ? null : (
+                                <Navigator
+                                    PaperProps={{
+                                        style: { width: drawerWidth },
+                                    }}
+                                    variant="temporary"
+                                    open={mobileOpen}
+                                    onClose={handleDrawerToggle}
+                                />
+                            )}
                             <Navigator
                                 PaperProps={{ style: { width: drawerWidth } }}
-                                variant="temporary"
-                                open={mobileOpen}
-                                onClose={handleDrawerToggle}
+                                sx={{ display: { sm: "block", xs: "none" } }}
                             />
-                        )}
-                        <Navigator
-                            PaperProps={{ style: { width: drawerWidth } }}
-                            sx={{ display: { sm: "block", xs: "none" } }}
-                        />
+                        </Box>
+                        <Box
+                            sx={{
+                                flex: 1,
+                                display: "flex",
+                                flexDirection: "column",
+                                backgroundColor: "#212121",
+                            }}
+                        >
+                            <Header onDrawerToggle={handleDrawerToggle} />
+                            <Welcome />
+                            <About />
+                            <Experience />
+                            <Projects />
+                            <Skills />
+                            <Education />
+                            <Contact />
+                            <Copy />
+                        </Box>
                     </Box>
-                    <Box
-                        sx={{
-                            flex: 1,
-                            display: "flex",
-                            flexDirection: "column",
-                            backgroundColor: "#212121",
-                        }}
-                    >
-                        <Header onDrawerToggle={handleDrawerToggle} />
-                        <Welcome />
-                        <About />
-                        <Experience />
-                        <Projects />
-                        <Skills />
-                        <Education />
-                        <Contact />
-                        <Copy />
-                    </Box>
-                </Box>
-            </ThemeProvider>
-        </div>
+                </ThemeProvider>
+            </div>
+        </React.Suspense>
     );
 }
 

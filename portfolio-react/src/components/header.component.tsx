@@ -11,6 +11,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import i18n from "i18next";
 
 import { HeaderWrapper } from "./header.component.styles.ts";
 
@@ -25,6 +26,7 @@ export default function Header(props: HeaderProps) {
 
     const handleChange = (event: SelectChangeEvent) => {
         setLanguage(event.target.value as string);
+        i18n.changeLanguage(event.target.value);
     };
 
     return (
@@ -121,8 +123,8 @@ export default function Header(props: HeaderProps) {
                                 label="language"
                                 onChange={handleChange}
                             >
-                                <MenuItem value={10}>English</MenuItem>
-                                <MenuItem value={20}>Ukrainian</MenuItem>
+                                <MenuItem value="en">English</MenuItem>
+                                <MenuItem value="ua">Ukrainian</MenuItem>
                             </Select>
                         </FormControl>
                     </Grid>
