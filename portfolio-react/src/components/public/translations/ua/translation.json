@@ -1,5 +1,20 @@
 {
-    "title": "Володимир Кобилянський",
-    "develop": "Front-end розробник",
-    "buttonTitle": "Мої контакти"
+    "welcomeTitle": "Володимир Кобилянський",
+    "welcomeDevelop": "Front-end розробник",
+    "welcomeButtonTitle": "Мої контакти",
+    "aboutSectionTitle": "Про мене",
+    "aboutTitle": "Я Front-end розробник",
+    "aboutDescription": "Привіт, я Front-end розробник із хорошою математичною освітою. Мої ключові навички - самомотивація, точність, якість. Моя головна мета - створити якісний продукт, щоб він був максимально корисний для широкого кола користувачів. Я приділяю багато уваги спілкуванню, оскільки розумію, наскільки важлива ця частина в нашій роботи.",
+    "experienceSectionTitle": "Досвід роботи",
+    "cexExperienceFirstItem": "верстка рекламних, користувацьких, SEO сторінок ('резинова' та адаптивна верстка, підхід Mobile First, кросбраузерна верстка);",
+    "cexExperienceSecondItem": "верстка розмітки email листів з підтримкою IE для світлих та темних тем екрану;",
+    "cexExperienceThirdItem": "верстка цільових сторінок та веб-додатків за допомогою бібліотеки React, TypeScript;",
+    "cexExperienceFourthItem": "взаємодія сторінок з API;",
+    "cexExperienceFifthItem": "підтримка та часткова розробка в середовищі WordPress;",
+    "cexExperienceSixthItem": "створення бібліотеки компонентів з використанням MUI;",
+    "cexExperienceSeventhItem": "створення WEB сторінок за допомогою Strapi CMS;",
+    "cexExperienceEighthItem": "створення сторінок з використанням бібліотеки 'styled component';",
+    "cexExperienceNinthItem": "оптимізація відмальовування сторінок у браузері;",
+    "cexExperienceTenthItem": "оптимізація завантаження сторінок у браузері;",
+    "argoPerceptionExperienceFirstItem": "верстка сторінок для додатку з моніторингу росту рослин ('резинова' та адаптивна верстка, підхід Mobile First, кросбраузерна верстка);"
 }

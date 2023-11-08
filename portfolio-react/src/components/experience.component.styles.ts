@@ -34,13 +34,13 @@ export const ExperienceSubtitle = styled(Typography)`
     font-size: 20px;
     line-height: 30px;
     padding-bottom: 8px;
-    color: #ffffff;
+    color:${({ theme }) => theme.palette.secondary.main};
 `;
 
 export const ExperienceDate = styled(Typography)`
     font-size: 16px;
     line-height: 27px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.palette.secondary.main};
 `;
 
 export const ExperienceImage = styled("img")`
@@ -55,7 +55,7 @@ export const ExperienceListGrid = styled(Grid)`
 `;
 
 export const ExperienceListItemText = styled(ListItemText)`
-    color: #bcbcbc;
+    color: ${({ theme }) => theme.palette.secondary.main};
 `;
 
 export const ExperienceListItemCircle = styled("div")`

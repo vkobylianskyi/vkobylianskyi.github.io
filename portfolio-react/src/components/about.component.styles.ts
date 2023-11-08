@@ -16,7 +16,7 @@ export const AboutWrapper = styled(Box)`
 export const AboutTitle = styled(Typography)`
     font-size: 32px;
     line-height: 110%;
-    font-weight: 900;
+    font-weight: 600;
     margin-bottom: 20px;
     color: ${({ theme }) => theme.palette.secondary.main};
 

@@ -47,7 +47,6 @@ export const WelcomeAction = styled(Link)`
     text-decoration: none;
     cursor: pointer;
     display: block;
-    width: 130px;
     background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
     color: #fff;
     border: 0;
@@ -59,6 +58,7 @@ export const WelcomeAction = styled(Link)`
     font-weight: 700;
     font-size: 16px;
     position: relative;
+    text-align: center;
 
     &:hover::after {
         content: "";

@@ -1,5 +1,20 @@
 {
-    "title": "I AM VOLODYMYR KOBYLIANSKIY",
-    "develop": "Front-end developer",
-    "buttonTitle": "Contact Me"
+    "welcomeTitle": "I AM VOLODYMYR KOBYLIANSKIY",
+    "welcomeDevelop": "Front-end developer",
+    "welcomeButtonTitle": "Contact Me",
+    "aboutSectionTitle": "ABOUT ME",
+    "aboutTitle": "I am Front-end developer",
+    "aboutDescription": "Hello, I am Front-end developer with solid mathematical background. My key skills are self-motivation, precision and quality. My main goal is to create a high-quality product for my customers and make my customers happy with my work. I pay a lot of attention to communication as I understand how important this part of our work is.",
+    "experienceSectionTitle": "MY EXPERIENCE",
+    "cexExperienceFirstItem": "creating landing pages (Responsive and Adaptive web design, Mobile First approach, Cross-browser layout);",
+    "cexExperienceSecondItem": "creating an email-letter layout with IE support for light and dark screen themes;",
+    "cexExperienceThirdItem": "creating landing pages and web applications using React and TypeScript;",
+    "cexExperienceFourthItem": "interaction of pages with API;",
+    "cexExperienceFifthItem": "support and partial development of WordPress;",
+    "cexExperienceSixthItem": "creating a library of components using MUI;",
+    "cexExperienceSeventhItem": "development pages using Strapi CMS;",
+    "cexExperienceEighthItem": "creating pages using the styled component approach;",
+    "cexExperienceNinthItem": "rendering optimization tasks;",
+    "cexExperienceTenthItem": "assets loading performance tasks.",
+    "argoPerceptionExperienceFirstItem": "creating pages for plant growth monitoring application (Responsive and Adaptive web design, Mobile First approach, Cross-browser layout);"
 }

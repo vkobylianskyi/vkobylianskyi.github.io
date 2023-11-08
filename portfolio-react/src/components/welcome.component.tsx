@@ -25,12 +25,12 @@ export default function Welcome() {
                 <Grid container alignItems={"center"}>
                     <Grid item xs={12} md={6}>
                         <WelcomeTitle align={isDesktop ? "left" : "center"}>
-                        {t('title')}
+                        {t('welcomeTitle')}
                         </WelcomeTitle>
                         <WelcomeSubtitle align={isDesktop ? "left" : "center"}>
-                            Front-end developer
+                           {t('welcomeDevelop')}
                         </WelcomeSubtitle>
-                        <WelcomeAction>Contact Me</WelcomeAction>
+                        <Grid xs={4}><WelcomeAction>{t('welcomeButtonTitle')}</WelcomeAction></Grid>
                     </Grid>
                     <Grid
                         item

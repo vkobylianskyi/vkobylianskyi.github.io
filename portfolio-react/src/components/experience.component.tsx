@@ -1,6 +1,7 @@
 import * as React from "react";
 import Container from "@mui/material/Container";
 import Carousel from "react-material-ui-carousel";
+import { useTranslation } from "react-i18next";
 
 import {
     ExperienceWrapper,
@@ -13,36 +14,27 @@ import {
     ExperienceListItemText,
     ExperienceListGrid,
 } from "./experience.component.styles.ts";
-import {
-    Box,
-    Grid,
-    List,
-    ListItem,
-    ListItemIcon,
-    Typography,
-    useMediaQuery,
-    useTheme,
-} from "@mui/material";
+import { Box, Grid, List, ListItem, ListItemIcon, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 import cexLogo from "./public/cex-logo.svg";
 import etLogo from "./public/etc-logo.svg";
 
 export default function Experience() {
     const cexExperience = [
-        "creating landing pages (Responsive and Adaptive web design, Mobile First approach, Cross-browser layout);",
-        "creating an email-letter layout with IE support for light and dark screen themes;",
-        "creating landing pages and web applications using React and TypeScript;",
-        "interaction of pages with API;",
-        "support and partial development of WordPress;",
-        "creating a library of components using MUI;",
-        "development pages using Strapi CMS;",
-        "creating pages using the styled component approach;",
-        "rendering optimization tasks;",
-        "assets loading performance tasks.",
+        "cexExperienceFirstItem",
+        "cexExperienceSecondItem",
+        "cexExperienceThirdItem",
+        "cexExperienceFourthItem",
+        "cexExperienceFifthItem",
+        "cexExperienceSixthItem",
+        "cexExperienceSeventhItem",
+        "cexExperienceEighthItem",
+        "cexExperienceNinthItem",
+        "cexExperienceTenthItem",
     ];
 
     const argoPerceptionExperience = [
-        "creating markup for application about plant diseases (Responsive and Adaptive web design, Mobile First approach, Cross-browser layout);",
+        "argoPerceptionExperienceFirstItem",
         "creating an email-letter;",
         "working with a responsive site.",
         "rendering optimization tasks;",
@@ -62,40 +54,35 @@ export default function Experience() {
     ];
 
     const theme = useTheme();
-        const isSmUp = useMediaQuery(theme.breakpoints.up("md"));
+    const isSmUp = useMediaQuery(theme.breakpoints.up("md"));
+
+    const [t] = useTranslation();
 
     return (
         <Container>
             <ExperienceWrapper>
                 <Typography variant="h2" align="center">
-                    My Experience
+                    {t('experienceSectionTitle')}
                 </Typography>
                 <Carousel
                     autoPlay={false}
                     animation="slide"
                     indicatorIconButtonProps={{
                         style: {
-                            padding: "10px", 
-                            color: "#515151"
+                            padding: "10px",
+                            color: "#515151",
                         },
                     }}
                     activeIndicatorIconButtonProps={{
                         style: {
-                            color: theme.palette.primary.main
-                        }
+                            color: theme.palette.primary.main,
+                        },
                     }}
                 >
                     <Box>
-                        <ExperienceGridWrapper
-                            container
-                            spacing={4}
-                            alignItems={"center"}
-                        >
+                        <ExperienceGridWrapper container spacing={4} alignItems={"center"}>
                             <Grid item xs={3} md={2} lg={1}>
-                                <ExperienceImage
-                                    src={cexLogo}
-                                    alt="CEX.IO logo"
-                                />
+                                <ExperienceImage src={cexLogo} alt="CEX.IO logo" />
                             </Grid>
                             <Grid item xs={9} md={10} lg={11}>
                                 <ExperienceTitle>CEX.IO</ExperienceTitle>
@@ -103,21 +90,15 @@ export default function Experience() {
                         </ExperienceGridWrapper>
                         <Grid container spacing={7}>
                             <ExperienceListGrid item xs={12} md={10} lg={11} justifyContent={"center"}>
-                                <ExperienceSubtitle>
-                                    Front-end developer (HTML/CSS coder)
-                                </ExperienceSubtitle>
-                                <ExperienceDate>
-                                    Jun 2019 - Present
-                                </ExperienceDate>
+                                <ExperienceSubtitle>Front-end developer (HTML/CSS coder)</ExperienceSubtitle>
+                                <ExperienceDate>Jun 2019 - Present</ExperienceDate>
                                 <List>
                                     {cexExperience.map((listItem, index) => (
                                         <ListItem key={index}>
                                             <ListItemIcon>
                                                 <ExperienceListItemCircle></ExperienceListItemCircle>
                                             </ListItemIcon>
-                                            <ExperienceListItemText>
-                                                {listItem}
-                                            </ExperienceListItemText>
+                                            <ExperienceListItemText>{t(listItem)}</ExperienceListItemText>
                                         </ListItem>
                                     ))}
                                 </List>
@@ -125,54 +106,33 @@ export default function Experience() {
                         </Grid>
                     </Box>
                     <Box>
-                        <ExperienceGridWrapper
-                            container
-                            spacing={isSmUp ? 4 : 0}
-                            alignItems={"center"}
-                        >
-                            <Grid item xs={0} md={2} lg={1}/>
+                        <ExperienceGridWrapper container spacing={isSmUp ? 4 : 0} alignItems={"center"}>
+                            <Grid item xs={0} md={2} lg={1} />
                             <Grid item xs={12} md={10} lg={11}>
-                                <ExperienceTitle>
-                                    Argo perception
-                                </ExperienceTitle>
+                                <ExperienceTitle>Argo perception</ExperienceTitle>
                             </Grid>
                         </ExperienceGridWrapper>
                         <Grid container spacing={7}>
                             <ExperienceListGrid item xs={12} md={10} lg={11}>
-                                <ExperienceSubtitle>
-                                    Front-end developer (HTML/CSS coder)
-                                </ExperienceSubtitle>
-                                <ExperienceDate>
-                                    February 2019 - June 2019
-                                </ExperienceDate>
+                                <ExperienceSubtitle>Front-end developer (HTML/CSS coder)</ExperienceSubtitle>
+                                <ExperienceDate>February 2019 - June 2019</ExperienceDate>
                                 <List>
-                                    {argoPerceptionExperience.map(
-                                        (listItem, index) => (
-                                            <ListItem key={index}>
-                                                <ListItemIcon>
-                                                    <ExperienceListItemCircle></ExperienceListItemCircle>
-                                                </ListItemIcon>
-                                                <ExperienceListItemText>
-                                                    {listItem}
-                                                </ExperienceListItemText>
-                                            </ListItem>
-                                        )
-                                    )}
+                                    {argoPerceptionExperience.map((listItem, index) => (
+                                        <ListItem key={index}>
+                                            <ListItemIcon>
+                                                <ExperienceListItemCircle></ExperienceListItemCircle>
+                                            </ListItemIcon>
+                                            <ExperienceListItemText>{t(listItem)}</ExperienceListItemText>
+                                        </ListItem>
+                                    ))}
                                 </List>
                             </ExperienceListGrid>
                         </Grid>
                     </Box>
                     <Box>
-                        <ExperienceGridWrapper
-                            container
-                            spacing={4}
-                            alignItems={"center"}
-                        >
+                        <ExperienceGridWrapper container spacing={4} alignItems={"center"}>
                             <Grid item xs={3} md={2} lg={1}>
-                                <ExperienceImage
-                                    src={etLogo}
-                                    alt="Etcetera logo"
-                                />
+                                <ExperienceImage src={etLogo} alt="Etcetera logo" />
                             </Grid>
                             <Grid item xs={9} md={10} lg={11}>
                                 <ExperienceTitle>Etcetera</ExperienceTitle>
@@ -180,25 +140,17 @@ export default function Experience() {
                         </ExperienceGridWrapper>
                         <Grid container spacing={7}>
                             <ExperienceListGrid item xs={12} md={10} lg={11}>
-                                <ExperienceSubtitle>
-                                    Front-end developer
-                                </ExperienceSubtitle>
-                                <ExperienceDate>
-                                    October 2018 - February 2019
-                                </ExperienceDate>
+                                <ExperienceSubtitle>Front-end developer</ExperienceSubtitle>
+                                <ExperienceDate>October 2018 - February 2019</ExperienceDate>
                                 <List>
-                                    {etceteraExperience.map(
-                                        (listItem, index) => (
-                                            <ListItem key={index}>
-                                                <ListItemIcon>
-                                                    <ExperienceListItemCircle></ExperienceListItemCircle>
-                                                </ListItemIcon>
-                                                <ExperienceListItemText>
-                                                    {listItem}
-                                                </ExperienceListItemText>
-                                            </ListItem>
-                                        )
-                                    )}
+                                    {etceteraExperience.map((listItem, index) => (
+                                        <ListItem key={index}>
+                                            <ListItemIcon>
+                                                <ExperienceListItemCircle></ExperienceListItemCircle>
+                                            </ListItemIcon>
+                                            <ExperienceListItemText>{listItem}</ExperienceListItemText>
+                                        </ListItem>
+                                    ))}
                                 </List>
                             </ExperienceListGrid>
                         </Grid>
