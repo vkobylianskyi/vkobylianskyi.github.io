@@ -1,10 +1,8 @@
 import * as React from "react";
+import { useTranslation } from "react-i18next";
 import Container from "@mui/material/Container";
 
-import {
-    ProjectsWrapper,
-    ProjectsBox,
-} from "./projects.component.styles.ts";
+import { ProjectsWrapper, ProjectsBox } from "./projects.component.styles.ts";
 import { Grid, Typography } from "@mui/material";
 
 import { CardFlip } from "./card-flip/card-flip.component.tsx";
@@ -43,7 +41,7 @@ const cardContent = [
         href: "https://cex.io/metaverse-and-nfts-explained",
         backSide: {
             title: "CEX.IO Prices",
-            description:"HTML, SASS, JS, Jquery, Bootstrap, Webpack"
+            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack",
         },
     },
     {
@@ -52,7 +50,7 @@ const cardContent = [
         href: "#",
         backSide: {
             title: "Ingredients & Extracts",
-            description: "HTML, SASS, JS, Jquery, Bootstrap, Gulp.JS"
+            description: "HTML, SASS, JS, Jquery, Bootstrap, Gulp.JS",
         },
     },
     {
@@ -61,7 +59,7 @@ const cardContent = [
         href: "#",
         backSide: {
             title: "SunTour",
-            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack"
+            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack",
         },
     },
     {
@@ -70,7 +68,8 @@ const cardContent = [
         href: "#",
         backSide: {
             title: "Sensational Food",
-            description: "HTML, SASS, JS, Jquery, Bootstrap, Swiper.JS, Webpack"
+            description:
+                "HTML, SASS, JS, Jquery, Bootstrap, Swiper.JS, Webpack",
         },
     },
     {
@@ -79,7 +78,7 @@ const cardContent = [
         href: "#",
         backSide: {
             title: "Web developer site",
-            description: "HTML, SASS, JS, Bootstrap, Webpack"
+            description: "HTML, SASS, JS, Bootstrap, Webpack",
         },
     },
     {
@@ -88,7 +87,7 @@ const cardContent = [
         href: "#",
         backSide: {
             title: "Project management application",
-            description: "HTML, SASS, JS, Webpack"
+            description: "HTML, SASS, JS, Webpack",
         },
     },
     {
@@ -97,7 +96,8 @@ const cardContent = [
         href: "#",
         backSide: {
             title: "Shaker Bottles",
-            description: "HTML, SASS, JS, Jquery, Bootstrap, Swiper.JS, Webpack"
+            description:
+                "HTML, SASS, JS, Jquery, Bootstrap, Swiper.JS, Webpack",
         },
     },
     {
@@ -106,7 +106,7 @@ const cardContent = [
         href: "#",
         backSide: {
             title: "Join the colors",
-            description: "HTML, SASS, Gulp.JS"
+            description: "HTML, SASS, Gulp.JS",
         },
     },
     {
@@ -115,24 +115,24 @@ const cardContent = [
         href: "https://vkobylianskyi.github.io/projects/6/dist/index.html",
         backSide: {
             title: "Innovative companies",
-            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack"
+            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack",
         },
     },
 ];
 
 export default function Projects() {
+    const [t] = useTranslation();
+
     return (
         <Container>
             <ProjectsWrapper>
                 <Typography variant="h2" align="center">
-                    MY PET PROJECTS
+                    {t("projectsTitle")}
                 </Typography>
                 <Grid container spacing={3}>
                     {cardContent.map((cardContentItem, index) => (
                         <Grid item xs={12} md={6} lg={4}>
-                            <ProjectsBox
-                                key={index}
-                            >
+                            <ProjectsBox key={index}>
                                 <CardFlip {...cardContentItem} />
                             </ProjectsBox>
                         </Grid>

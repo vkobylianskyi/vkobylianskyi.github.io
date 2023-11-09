@@ -30,7 +30,7 @@ export default function Welcome() {
                         <WelcomeSubtitle align={isDesktop ? "left" : "center"}>
                            {t('welcomeDevelop')}
                         </WelcomeSubtitle>
-                        <Grid xs={4}><WelcomeAction>{t('welcomeButtonTitle')}</WelcomeAction></Grid>
+                        <WelcomeAction>{t('welcomeButtonTitle')}</WelcomeAction>
                     </Grid>
                     <Grid
                         item

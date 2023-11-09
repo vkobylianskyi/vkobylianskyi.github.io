@@ -22,7 +22,7 @@ interface HeaderProps {
 export default function Header(props: HeaderProps) {
     const { onDrawerToggle } = props;
 
-    const [language, setLanguage] = React.useState("");
+    const [language, setLanguage] = React.useState("en");
 
     const handleChange = (event: SelectChangeEvent) => {
         setLanguage(event.target.value as string);

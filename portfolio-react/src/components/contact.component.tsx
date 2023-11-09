@@ -6,13 +6,16 @@ import EmailIcon from "@mui/icons-material/Email";
 
 import { ContactWrapper } from "./contact.component.styles.ts";
 import { Stack, IconButton, Container, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+    const [t] = useTranslation();
+    
     return (
         <Container>
             <ContactWrapper>
                 <Typography variant="h2" align="center">
-                    Contact ME
+                    {t("contactTitle")}
                 </Typography>
                 <Stack direction="row" spacing={1} justifyContent={"center"}>
                     <IconButton

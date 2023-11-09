@@ -15,12 +15,12 @@ import Contact from "./components/contact.component.tsx";
 import Copy from "./components/copy.component.tsx";
 
 import i18n from "i18next";
-import { initReactI18next,} from "react-i18next";
-import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import HttpApi from "i18next-http-backend";
 
-import translationEn from './components/public/translations/en/translation.json';
-import translationUa from './components/public/translations/ua/translation.json';
+import translationEn from "./components/public/translations/en/translation.json";
+import translationUa from "./components/public/translations/ua/translation.json";
 
 let theme = createTheme({
     palette: {
@@ -51,7 +51,7 @@ let theme = createTheme({
         },
         h5: {
             fontWeight: 500,
-            fontSize: 18,
+            fontSize: 17,
             lineHeight: 1.5,
         },
         nav: {
@@ -172,6 +172,9 @@ theme = {
             styleOverrides: {
                 notchedOutline: {
                     borderColor: theme.palette.secondary.main,
+                    '&:not(.Mui-disabled):hover::before': {
+                        borderColor: 'white',
+                    },
                 },
             },
         },
@@ -216,22 +219,27 @@ function App() {
         setMobileOpen(!mobileOpen);
     };
 
-    i18n
-    .use(initReactI18next)
-    .use(LanguageDetector)
-    .use(HttpApi)
-    .init({
-      supportedLngs: ['en', 'ua'],
-      fallbackLng: "en",
-      detection: {
-        order: ['cookie', 'localStorage', 'htmlTag', 'path', 'subdomain'],
-        caches: ['cookie']
-      },
-      resources: {
-        en: { translation: translationEn },
-        ua: { translation: translationUa },
-    },
-    });
+    i18n.use(initReactI18next)
+        .use(LanguageDetector)
+        .use(HttpApi)
+        .init({
+            supportedLngs: ["en", "ua"],
+            fallbackLng: "en",
+            detection: {
+                order: [
+                    "cookie",
+                    "localStorage",
+                    "htmlTag",
+                    "path",
+                    "subdomain",
+                ],
+                caches: ["cookie"],
+            },
+            resources: {
+                en: { translation: translationEn },
+                ua: { translation: translationUa },
+            },
+        });
 
     return (
         <React.Suspense fallback="Loading...">

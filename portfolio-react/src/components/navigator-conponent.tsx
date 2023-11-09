@@ -27,22 +27,23 @@ import {
 
 import profileImage from "./public/profile.jpg";
 import { Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const categories = [
     {
         id: "Main",
         children: [
-            { id: "Welcome", icon: <PublicIcon />, active: true },
-            { id: "About Me", icon: <CreateIcon />, },
-            { id: "My Experience", icon: <ExtensionIcon /> },
-            { id: "My Pet projects", icon: <AccountTreeIcon /> },
-            { id: "Skills", icon: <BuildIcon /> },
+            { id: "navigationWelcome", icon: <PublicIcon />, active: true },
+            { id: "aboutSectionTitle", icon: <CreateIcon />, },
+            { id: "experienceSectionTitle", icon: <ExtensionIcon /> },
+            { id: "projectsTitle", icon: <AccountTreeIcon /> },
+            { id: "navigationSkill", icon: <BuildIcon /> },
             {
-                id: "Contact Me",
+                id: "contactTitle",
                 icon: <ConnectWithoutContactIcon />,
             },
             {
-                id: "My CV",
+                id: "navigationDoc",
                 icon: <DescriptionIcon />,
             },
         ],
@@ -76,6 +77,8 @@ const itemCategory = {
 export default function Navigator(props: DrawerProps) {
     const { ...other } = props;
 
+    const [t] = useTranslation();
+    
     return (
         <Drawer variant="permanent" {...other}>
             <List disablePadding>
@@ -93,9 +96,9 @@ export default function Navigator(props: DrawerProps) {
                     />
                     <ListItemContentWrapper>
                         <Typography variant="h5">
-                            Volodymyr Kobylianskiy
+                            {t("navigationTitle")}
                         </Typography>
-                        <Typography>Front-end developer</Typography>
+                        <Typography>{t("welcomeDevelop")}</Typography>
                     </ListItemContentWrapper>
                 </ListItemWrapper>
                 {categories.map(({ id, children }) => (
@@ -104,7 +107,7 @@ export default function Navigator(props: DrawerProps) {
                             <ListItem disablePadding key={childId}>
                                 <ListItemButton selected={active} sx={item}>
                                     <ListItemIcon>{icon}</ListItemIcon>
-                                    <ListItemText>{childId}</ListItemText>
+                                    <ListItemText>{t(childId)}</ListItemText>
                                 </ListItemButton>
                             </ListItem>
                         ))}

@@ -16,6 +16,7 @@ import {
     CardFlipItemTryNow,
     CardFlipItemSubtitle,
 } from "./card-flip.component.styles.ts";
+import { useTranslation } from "react-i18next";
 
 export type CardFlipProps = {
     background: string;
@@ -37,6 +38,8 @@ export const CardFlip: React.FC<CardFlipProps> = ({
         setRotate((prev) => !prev);
     };
 
+    const [t] = useTranslation();
+
     return (
         <CardFlipWrapper>
             <CardFlipInner rotate={rotate}>
@@ -53,13 +56,19 @@ export const CardFlip: React.FC<CardFlipProps> = ({
                     <CardFlipItemTitle>
                         {backSide && backSide.title}
                     </CardFlipItemTitle>
-                    <CardFlipItemSubtitle>Technologies:</CardFlipItemSubtitle>
+                    <CardFlipItemSubtitle>
+                        {t("projectsTechnologies")}
+                    </CardFlipItemSubtitle>
                     <CardFlipItemBackDescription>
                         {backSide && backSide.description}
                     </CardFlipItemBackDescription>
                     <CardFlipItemButtonsWrapper visible={rotate}>
-                        <CardFlipItemTryNow fontWeight={600} href={href} target="_blank">
-                            <span>View site</span>
+                        <CardFlipItemTryNow
+                            fontWeight={600}
+                            href={href}
+                            target="_blank"
+                        >
+                            <span>{t("projectsSiteLinkTitle")}</span>
                             <KeyboardArrowRightIcon />
                         </CardFlipItemTryNow>
                         <CardFlipItemButton

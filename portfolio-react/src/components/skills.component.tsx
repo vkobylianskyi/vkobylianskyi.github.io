@@ -26,6 +26,7 @@ import strapiLogo from "./public/strapi-logo.png";
 import npmLogo from "./public/npm-logo.png";
 import muiLogo from "./public/mui-logo.png";
 import webpackLogo from "./public/webpack-logo.png";
+import { useTranslation } from "react-i18next";
 
 const technologyList = [
     htmlLogo,
@@ -49,11 +50,12 @@ const technologyList = [
 ];
 
 export default function Skills() {
+    const [t] = useTranslation();
     return (
         <Container>
             <SkillsWrapper>
                 <Typography variant="h2" align="center">
-                    TECHNOLOGY, WHAT I USE
+                    {t("technologyTitle")}
                 </Typography>
                 <Grid container spacing={3}>
                     {technologyList.map((technologyItem, index) => (

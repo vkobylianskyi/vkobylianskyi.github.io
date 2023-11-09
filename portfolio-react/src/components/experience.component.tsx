@@ -35,22 +35,22 @@ export default function Experience() {
 
     const argoPerceptionExperience = [
         "argoPerceptionExperienceFirstItem",
-        "creating an email-letter;",
-        "working with a responsive site.",
-        "rendering optimization tasks;",
-        "assets loading performance tasks;",
-        "JS, CSS animations - sliders, smooth scroll.",
-        "bootstrap development.",
+        "argoPerceptionExperienceSecondItem",
+        "argoPerceptionExperienceThirdItem",
+        "argoPerceptionExperienceFourthItem",
+        "argoPerceptionExperienceFifthItem",
+        "argoPerceptionExperienceSixthItem",
+        "argoPerceptionExperienceSeventhItem",
     ];
 
     const etceteraExperience = [
-        "creating landing pages (Responsive and Adaptive web design, Mobile First approach, Cross-browser layout);",
-        "basic Javascript (DOM manipulation, AJAX, contact forms);",
-        "rendering optimization tasks;",
-        "assets loading performance tasks;",
-        "basic JS animations - sliders, smooth scroll;",
-        "writing code that has progressive enhancement and graceful degradation;",
-        "bootstrap development.",
+        "etceteraExperienceFirstItem",
+        "etceteraExperienceSecondItem",
+        "etceteraExperienceThirdItem",
+        "etceteraExperienceFifthItem",
+        "etceteraExperienceSixthItem",
+        "etceteraExperienceSeventhItem",
+        "etceteraExperienceEighthItem",
     ];
 
     const theme = useTheme();
@@ -90,8 +90,8 @@ export default function Experience() {
                         </ExperienceGridWrapper>
                         <Grid container spacing={7}>
                             <ExperienceListGrid item xs={12} md={10} lg={11} justifyContent={"center"}>
-                                <ExperienceSubtitle>Front-end developer (HTML/CSS coder)</ExperienceSubtitle>
-                                <ExperienceDate>Jun 2019 - Present</ExperienceDate>
+                                <ExperienceSubtitle>{t("welcomeDevelop")} (HTML/CSS coder)</ExperienceSubtitle>
+                                <ExperienceDate>{t("cexExperienceDate")}</ExperienceDate>
                                 <List>
                                     {cexExperience.map((listItem, index) => (
                                         <ListItem key={index}>
@@ -114,8 +114,8 @@ export default function Experience() {
                         </ExperienceGridWrapper>
                         <Grid container spacing={7}>
                             <ExperienceListGrid item xs={12} md={10} lg={11}>
-                                <ExperienceSubtitle>Front-end developer (HTML/CSS coder)</ExperienceSubtitle>
-                                <ExperienceDate>February 2019 - June 2019</ExperienceDate>
+                                <ExperienceSubtitle>{t("welcomeDevelop")} (HTML/CSS coder)</ExperienceSubtitle>
+                                <ExperienceDate>{t("argoPerceptionExperienceDate")}</ExperienceDate>
                                 <List>
                                     {argoPerceptionExperience.map((listItem, index) => (
                                         <ListItem key={index}>
@@ -140,15 +140,15 @@ export default function Experience() {
                         </ExperienceGridWrapper>
                         <Grid container spacing={7}>
                             <ExperienceListGrid item xs={12} md={10} lg={11}>
-                                <ExperienceSubtitle>Front-end developer</ExperienceSubtitle>
-                                <ExperienceDate>October 2018 - February 2019</ExperienceDate>
+                                <ExperienceSubtitle>{t("welcomeDevelop")}</ExperienceSubtitle>
+                                <ExperienceDate>{t("etceteraExperienceDate")}</ExperienceDate>
                                 <List>
                                     {etceteraExperience.map((listItem, index) => (
                                         <ListItem key={index}>
                                             <ListItemIcon>
                                                 <ExperienceListItemCircle></ExperienceListItemCircle>
                                             </ListItemIcon>
-                                            <ExperienceListItemText>{listItem}</ExperienceListItemText>
+                                            <ExperienceListItemText>{t(listItem)}</ExperienceListItemText>
                                         </ListItem>
                                     ))}
                                 </List>
