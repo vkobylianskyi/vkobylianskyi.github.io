@@ -17,13 +17,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
-import PublicIcon from '@mui/icons-material/Public';
+import PublicIcon from "@mui/icons-material/Public";
 
-import {
-    ListItemImage,
-    ListItemContentWrapper,
-    ListItemWrapper,
-} from "./navigator.component.styles.ts";
+import { ListItemImage, ListItemContentWrapper, ListItemWrapper } from "./navigator.component.styles.ts";
 
 import profileImage from "./public/profile.jpg";
 import { Typography } from "@mui/material";
@@ -34,7 +30,7 @@ const categories = [
         id: "Main",
         children: [
             { id: "navigationWelcome", icon: <PublicIcon />, active: true },
-            { id: "aboutSectionTitle", icon: <CreateIcon />, },
+            { id: "aboutSectionTitle", icon: <CreateIcon /> },
             { id: "experienceSectionTitle", icon: <ExtensionIcon /> },
             { id: "projectsTitle", icon: <AccountTreeIcon /> },
             { id: "navigationSkill", icon: <BuildIcon /> },
@@ -64,7 +60,7 @@ const item = {
     px: 3,
     color: (theme) => theme.palette.secondary.main,
     "&:hover, &:focus": {
-        bgcolor:" rgba(255, 140, 5, 0.04)",
+        bgcolor: " rgba(255, 140, 5, 0.04)",
     },
 };
 
@@ -78,7 +74,7 @@ export default function Navigator(props: DrawerProps) {
     const { ...other } = props;
 
     const [t] = useTranslation();
-    
+
     return (
         <Drawer variant="permanent" {...other}>
             <List disablePadding>
@@ -90,14 +86,9 @@ export default function Navigator(props: DrawerProps) {
                         color: "#fff",
                     }}
                 >
-                    <ListItemImage
-                        src={profileImage}
-                        alt="Volodymyr Kobylianskiy"
-                    />
+                    <ListItemImage src={profileImage} alt="Volodymyr Kobylianskiy" />
                     <ListItemContentWrapper>
-                        <Typography variant="h5">
-                            {t("navigationTitle")}
-                        </Typography>
+                        <Typography variant="h5">{t("navigationTitle")}</Typography>
                         <Typography>{t("welcomeDevelop")}</Typography>
                     </ListItemContentWrapper>
                 </ListItemWrapper>
@@ -105,7 +96,7 @@ export default function Navigator(props: DrawerProps) {
                     <Box key={id} sx={{ bgcolor: (theme) => theme.palette.primary.light }}>
                         {children.map(({ id: childId, icon, active }) => (
                             <ListItem disablePadding key={childId}>
-                                <ListItemButton selected={active} sx={item}>
+                                <ListItemButton selected={active} sx={item} href={`#${childId}`}>
                                     <ListItemIcon>{icon}</ListItemIcon>
                                     <ListItemText>{t(childId)}</ListItemText>
                                 </ListItemButton>

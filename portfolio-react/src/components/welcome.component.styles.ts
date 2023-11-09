@@ -59,6 +59,7 @@ export const WelcomeAction = styled(Link)`
     font-size: 16px;
     position: relative;
     text-align: center;
+    width: 150px;
 
     &:hover::after {
         content: "";
