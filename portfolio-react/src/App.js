@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
@@ -22,276 +22,129 @@ import HttpApi from "i18next-http-backend";
 import translationEn from "./components/public/translations/en/translation.json";
 import translationUa from "./components/public/translations/ua/translation.json";
 
-let theme = createTheme({
-    palette: {
-        primary: {
-            light: "#262626",
-            main: "#ff8c05",
-            dark: "#212121",
-        },
-        secondary: {
-            main: "#fff",
-        },
-        text: {
-            primary: "#000",
-            secondary: "rgba(0, 0, 0, 0.7);",
-        },
-    },
-    typography: {
-        h2: {
-            fontSize: 22,
-            color: "#ff8c05",
-            textTransform: "uppercase",
-            marginBottom: 20,
+import getDefaultTheme from "./themes/default/default.theme";
 
-            "@media (min-width:900px)": {
-                fontSize: "28px",
-                marginBottom: 30,
-            },
-        },
-        h5: {
-            fontWeight: 500,
-            fontSize: 17,
-            lineHeight: 1.5,
-        },
-        nav: {
-            fontWeight: 500,
-            fontSize: 16,
-            lineHeight: 1.5,
-        },
-    },
-    shape: {
-        borderRadius: 8,
-    },
-    components: {
-        MuiTab: {
-            defaultProps: {
-                disableRipple: true,
-            },
-        },
-    },
-    mixins: {
-        toolbar: {
-            minHeight: 48,
-        },
-    },
+// Context, that handles toggle theme function
+export const ColorModeContext = React.createContext({
+  toggleColorMode: () => {},
+  mode: "",
 });
 
-theme = {
-    ...theme,
-    components: {
-        MuiDrawer: {
-            styleOverrides: {
-                paper: {
-                    backgroundColor: theme.palette.primary.light,
-                },
-            },
-        },
-        MuiAppBar: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: theme.palette.primary.light,
-                    borderRadius: 5,
-                },
-            },
-        },
-        MuiButton: {
-            styleOverrides: {
-                root: {
-                    textTransform: "none",
-                    "&:hover": {
-                        backgroundColor: theme.palette.primary.main,
-                    },
-                },
-                contained: {
-                    boxShadow: "none",
-                    "&:active": {
-                        boxShadow: "none",
-                    },
-                },
-            },
-        },
-        MuiIconButton: {
-            styleOverrides: {
-                root: {
-                    padding: theme.spacing(1),
-                },
-            },
-        },
-        MuiTooltip: {
-            styleOverrides: {
-                tooltip: {
-                    borderRadius: 4,
-                },
-            },
-        },
-        MuiDivider: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: "rgb(255,255,255,0.15)",
-                },
-            },
-        },
-        MuiListItemText: {
-            styleOverrides: {
-                primary: {
-                    fontWeight: theme.typography.fontWeightRegular,
-                },
-            },
-        },
-        MuiListItemIcon: {
-            styleOverrides: {
-                root: {
-                    color: "inherit",
-                    minWidth: "auto",
-                    marginRight: theme.spacing(2),
-                    "& svg": {
-                        fontSize: 20,
-                    },
-                },
-            },
-        },
-        MuiListItemButton: {
-            styleOverrides: {
-                root: {
-                    height: "48px",
-                    "&.Mui-selected": {
-                        color: theme.palette.primary.main,
-                    },
-                },
-            },
-        },
-        MuiSelect: {
-            styleOverrides: {
-                iconOutlined: {
-                    color: theme.palette.secondary.main,
-                },
-            },
-        },
-        MuiOutlinedInput: {
-            styleOverrides: {
-                notchedOutline: {
-                    borderColor: theme.palette.secondary.main,
-                    '&:not(.Mui-disabled):hover::before': {
-                        borderColor: 'white',
-                    },
-                },
-            },
-        },
-        MuiGrid: {
-            styleOverrides: {
-                root: {
-                    color: theme.palette.secondary.main,
-                },
-            },
-        },
-        MuiFormLabel: {
-            styleOverrides: {
-                root: {
-                    color: theme.palette.secondary.main,
-                },
-            },
-        },
-        MuiFormControl: {
-            styleOverrides: {
-                root: {
-                    color: theme.palette.secondary.main,
-                },
-            },
-        },
-        MuiInputBase: {
-            styleOverrides: {
-                input: {
-                    color: theme.palette.secondary.main,
-                },
-            },
-        },
-    },
-};
-
-const drawerWidth = 256;
-
 function App() {
-    const [mobileOpen, setMobileOpen] = React.useState(false);
-    const isSmUp = useMediaQuery(theme.breakpoints.up("sm"));
+  // To get the best user experience check this doc link.
+  // You can enable the dark or light mode by user default theme from OS.
+  // Read https://mui.com/material-ui/customization/dark-mode/#system-preference
 
-    const handleDrawerToggle = () => {
-        setMobileOpen(!mobileOpen);
-    };
-
-    i18n.use(initReactI18next)
-        .use(LanguageDetector)
-        .use(HttpApi)
-        .init({
-            supportedLngs: ["en", "ua"],
-            fallbackLng: "en",
-            detection: {
-                order: [
-                    "cookie",
-                    "localStorage",
-                    "htmlTag",
-                    "path",
-                    "subdomain",
-                ],
-                caches: ["cookie"],
-            },
-            resources: {
-                en: { translation: translationEn },
-                ua: { translation: translationUa },
-            },
+  // Available modes, the mode can be dark or light
+  const availableModes = ["dark", "light"];
+  // get modes from localstorage
+  const getModeFromLs = () => {
+    const mode = localStorage.getItem("mode");
+    if (!mode || !availableModes.includes(mode)) {
+      localStorage.setItem("mode", availableModes[0]);
+      return availableModes[0];
+    }
+    return mode;
+  };
+  // Set the color mode
+  const [mode, setMode] = React.useState(getModeFromLs());
+  // Toggle color mode though react-context, you can use redux instead the React.createContext
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => {
+          const currentMode =
+            prevMode === availableModes[1]
+              ? availableModes[0]
+              : availableModes[1];
+          localStorage.setItem("mode", currentMode);
+          return currentMode;
         });
+      },
+      mode,
+    }),
+    []
+  );
+  const defaultTheme = getDefaultTheme(mode);
 
-    return (
-        <React.Suspense fallback="Loading...">
-            <div className="App">
-                <ThemeProvider theme={theme}>
-                    <Box sx={{ display: "flex" }}>
-                        <CssBaseline />
-                        <Box
-                            component="nav"
-                            sx={{
-                                width: { sm: drawerWidth },
-                                flexShrink: { sm: 0 },
-                            }}
-                        >
-                            {isSmUp ? null : (
-                                <Navigator
-                                    PaperProps={{
-                                        style: { width: drawerWidth },
-                                    }}
-                                    variant="temporary"
-                                    open={mobileOpen}
-                                    onClose={handleDrawerToggle}
-                                />
-                            )}
-                            <Navigator
-                                PaperProps={{ style: { width: drawerWidth } }}
-                                sx={{ display: { sm: "block", xs: "none" } }}
-                            />
-                        </Box>
-                        <Box
-                            sx={{
-                                flex: 1,
-                                display: "flex",
-                                flexDirection: "column",
-                                backgroundColor: "#212121",
-                            }}
-                        >
-                            <Header onDrawerToggle={handleDrawerToggle} />
-                            <Welcome />
-                            <About />
-                            <Experience />
-                            <Projects />
-                            <Skills />
-                            <Education />
-                            <Contact />
-                            <Copy />
-                        </Box>
-                    </Box>
-                </ThemeProvider>
-            </div>
-        </React.Suspense>
-    );
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const isSmUp = useMediaQuery(defaultTheme.breakpoints.up("sm"));
+  const drawerWidth = 256;
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  i18n
+    .use(initReactI18next)
+    .use(LanguageDetector)
+    .use(HttpApi)
+    .init({
+      supportedLngs: ["en", "ua"],
+      fallbackLng: "en",
+      detection: {
+        order: ["cookie", "localStorage", "htmlTag", "path", "subdomain"],
+        caches: ["cookie"],
+      },
+      resources: {
+        en: { translation: translationEn },
+        ua: { translation: translationUa },
+      },
+    });
+
+  return (
+    <React.Suspense fallback="Loading...">
+      <div className="App">
+        <ColorModeContext.Provider value={colorMode}>
+          <ThemeProvider theme={defaultTheme}>
+            <Box sx={{ display: "flex" }}>
+              <CssBaseline />
+              <Box
+                component="nav"
+                sx={{
+                  width: { sm: drawerWidth },
+                  flexShrink: { sm: 0 },
+                }}
+              >
+                {isSmUp ? null : (
+                  <Navigator
+                    PaperProps={{
+                      style: { width: drawerWidth },
+                    }}
+                    variant="temporary"
+                    open={mobileOpen}
+                    onClose={handleDrawerToggle}
+                  />
+                )}
+                <Navigator
+                  PaperProps={{ style: { width: drawerWidth } }}
+                  sx={{ display: { sm: "block", xs: "none" } }}
+                />
+              </Box>
+              <Box
+                sx={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  backgroundColor: "#212121",
+                }}
+              >
+                <Header onDrawerToggle={handleDrawerToggle} />
+                <Welcome />
+                <About />
+                <Experience />
+                <Projects />
+                <Skills />
+                <Education />
+                <Contact />
+                <Copy />
+              </Box>
+            </Box>
+          </ThemeProvider>
+        </ColorModeContext.Provider>
+      </div>
+    </React.Suspense>
+  );
 }
 
 export default App;
