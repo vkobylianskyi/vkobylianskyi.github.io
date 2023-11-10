@@ -22,7 +22,7 @@ import HttpApi from "i18next-http-backend";
 import translationEn from "./components/public/translations/en/translation.json";
 import translationUa from "./components/public/translations/ua/translation.json";
 
-import getDefaultTheme from "./themes/default/default.theme"; // Context, that handles toggle theme function
+import getDefaultTheme from "./themes/default/default.theme";
 
 // Context, that handles toggle theme function
 export const ColorModeContext = React.createContext({
