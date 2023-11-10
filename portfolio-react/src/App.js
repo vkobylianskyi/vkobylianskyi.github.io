@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ThemeProvider} from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
@@ -31,6 +31,11 @@ export const ColorModeContext = React.createContext({
 });
 
 function App() {
+  // To get the best user experience check this doc link.
+  // You can enable the dark or light mode by user default theme from OS.
+  // Read https://mui.com/material-ui/customization/dark-mode/#system-preference
+
+  // Available modes, the mode can be dark or light
   const availableModes = ["dark", "light"];
   // get modes from localstorage
   const getModeFromLs = () => {
