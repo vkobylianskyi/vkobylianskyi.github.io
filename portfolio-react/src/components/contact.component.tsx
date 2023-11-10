@@ -12,7 +12,7 @@ export default function Contact() {
     const [t] = useTranslation();
     
     return (
-        <Container>
+        <Container id="contactSection">
             <ContactWrapper>
                 <Typography variant="h2" align="center">
                     {t("contactTitle")}

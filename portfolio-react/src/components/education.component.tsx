@@ -39,7 +39,7 @@ export default function Education() {
     
     return (
         <Container>
-            <EducationWrapper>
+            <EducationWrapper id="educationSection">
                 <Typography variant="h2" align="center">
                     {t("educationTitle")}
                 </Typography>

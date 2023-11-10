@@ -1,8 +1,8 @@
 {
     "navigationTitle": "Володимир Кобилянський",
     "navigationWelcome": "Вітання",
-    "navigationDoc": "Моє резюме",
-    "navigationSkill": "Мої навички",
+    "navigationDoc": "Резюме",
+    "navigationSkill": "Навички",
     "welcomeTitle": "Володимир Кобилянський",
     "welcomeDevelop": "Front-end розробник",
     "welcomeButtonTitle": "Мої контакти",
@@ -37,7 +37,7 @@
     "etceteraExperienceSixthItem": "JS, CSS анімації - слайдер, плавний скрол;",
     "etceteraExperienceSeventhItem": "написання коду, який має прогресивне вдосконалення.",
     "etceteraExperienceEighthItem": "використання бібліотеки bootstrap.",
-    "projectsTitle": "Мої проекти",
+    "projectsTitle": "Проекти",
     "projectsTechnologies": "Технології",
     "projectsSiteLinkTitle": "Відвідати сайт",
     "technologyTitle": "Технології, які я використовую",
@@ -45,5 +45,5 @@
     "educationUniversity": "Національний технічний університет України 'Київський політехнічний інститут'",
     "educationDegreeSoftware": "Бакалавр, розробник програмного забезпечення",
     "educationDegreePower": "Магістр, енергетика",
-    "contactTitle": "мої контакти"
+    "contactTitle": "Контакти"
 }

@@ -14,10 +14,27 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import i18n from "i18next";
 
 import { HeaderWrapper } from "./header.component.styles.ts";
+import Sound from "./public/audio/dvmzu.mp3";
+import FlagUA from "./public/flag/ua.svg";
+import FlagGB from "./public/flag/gb.svg";
+import { InputAdornment } from "@mui/material";
 
 interface HeaderProps {
     onDrawerToggle: () => void;
 }
+
+const LANGUAGES = {
+    uk: {
+        flag: FlagUA,
+        label: "Українська",
+        code: "ua",
+    },
+    en: {
+        flag: FlagGB,
+        label: "English",
+        code: "en",
+    },
+};
 
 export default function Header(props: HeaderProps) {
     const { onDrawerToggle } = props;
@@ -27,6 +44,10 @@ export default function Header(props: HeaderProps) {
     const handleChange = (event: SelectChangeEvent) => {
         setLanguage(event.target.value as string);
         i18n.changeLanguage(event.target.value);
+        if (event.target.value === "ua") {
+            const audio = new Audio(Sound);
+            audio.play();
+        }
     };
 
     return (
@@ -114,7 +135,7 @@ export default function Header(props: HeaderProps) {
                     <Grid item>
                         <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
                             <InputLabel id="language-select-label">
-                                Language
+                            Language
                             </InputLabel>
                             <Select
                                 labelId="language-select-label"
@@ -123,8 +144,11 @@ export default function Header(props: HeaderProps) {
                                 label="language"
                                 onChange={handleChange}
                             >
-                                <MenuItem value="en">English</MenuItem>
-                                <MenuItem value="ua">Ukrainian</MenuItem>
+                                {Object.values(LANGUAGES).map((item) => (
+                                    <MenuItem value={item.code}>
+                                        {item.label}
+                                    </MenuItem>
+                                ))}
                             </Select>
                         </FormControl>
                     </Grid>

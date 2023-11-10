@@ -20,7 +20,7 @@ export default function Welcome() {
     const [t] = useTranslation();
 
     return (
-        <Container>
+        <Container id="welcomeSection">
             <WelcomeWrapper>
                 <Grid container alignItems={"center"}>
                     <Grid item xs={12} md={6}>

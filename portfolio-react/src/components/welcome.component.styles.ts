@@ -8,7 +8,7 @@ export const WelcomeWrapper = styled(Grid)`
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
-            padding: "40px",
+            padding: 40,
         },
     })}
 `;

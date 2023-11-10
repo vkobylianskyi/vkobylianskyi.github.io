@@ -59,7 +59,7 @@ export default function Experience() {
     const [t] = useTranslation();
 
     return (
-        <Container>
+        <Container id="experienceSection">
             <ExperienceWrapper>
                 <Typography variant="h2" align="center">
                     {t('experienceSectionTitle')}

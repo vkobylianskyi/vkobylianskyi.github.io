@@ -10,7 +10,7 @@ export const SkillsWrapper = styled(Box)`
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
-            padding: 40,
+            padding: 40
         },
     })}
 `;

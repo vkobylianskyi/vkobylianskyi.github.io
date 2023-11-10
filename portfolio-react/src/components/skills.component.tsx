@@ -52,7 +52,7 @@ const technologyList = [
 export default function Skills() {
     const [t] = useTranslation();
     return (
-        <Container id="navigationSkill">
+        <Container id="skillsSection">
             <SkillsWrapper>
                 <Typography variant="h2" align="center">
                     {t("technologyTitle")}

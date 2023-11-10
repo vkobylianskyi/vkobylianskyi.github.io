@@ -124,7 +124,7 @@ export default function Projects() {
     const [t] = useTranslation();
 
     return (
-        <Container>
+        <Container id="projectsSection">
             <ProjectsWrapper>
                 <Typography variant="h2" align="center">
                     {t("projectsTitle")}

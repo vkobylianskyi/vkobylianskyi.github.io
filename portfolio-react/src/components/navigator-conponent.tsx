@@ -18,8 +18,14 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import PublicIcon from "@mui/icons-material/Public";
+import SchoolIcon from "@mui/icons-material/School";
+import { Link, animateScroll as scroll } from "react-scroll";
 
-import { ListItemImage, ListItemContentWrapper, ListItemWrapper } from "./navigator.component.styles.ts";
+import {
+    ListItemImage,
+    ListItemContentWrapper,
+    ListItemWrapper,
+} from "./navigator.component.styles.ts";
 
 import profileImage from "./public/profile.jpg";
 import { Typography } from "@mui/material";
@@ -29,17 +35,45 @@ const categories = [
     {
         id: "Main",
         children: [
-            { id: "navigationWelcome", icon: <PublicIcon />, active: true },
-            { id: "aboutSectionTitle", icon: <CreateIcon /> },
-            { id: "experienceSectionTitle", icon: <ExtensionIcon /> },
-            { id: "projectsTitle", icon: <AccountTreeIcon /> },
-            { id: "navigationSkill", icon: <BuildIcon /> },
             {
-                id: "contactTitle",
+                id: "welcomeSection",
+                listTitle: "navigationWelcome",
+                icon: <PublicIcon />,
+                active: true,
+            },
+            {
+                id: "aboutSection",
+                listTitle: "aboutSectionTitle",
+                icon: <CreateIcon />,
+            },
+            {
+                id: "experienceSection",
+                listTitle: "experienceSectionTitle",
+                icon: <ExtensionIcon />,
+            },
+            {
+                id: "projectsSection",
+                listTitle: "projectsTitle",
+                icon: <AccountTreeIcon />,
+            },
+            {
+                id: "skillsSection",
+                listTitle: "navigationSkill",
+                icon: <BuildIcon />,
+            },
+            {
+                id: "educationSection",
+                listTitle: "educationTitle",
+                icon: <SchoolIcon />,
+            },
+            {
+                id: "contactSection",
+                listTitle: "contactTitle",
                 icon: <ConnectWithoutContactIcon />,
             },
             {
                 id: "navigationDoc",
+                listTitle: "navigationDoc",
                 icon: <DescriptionIcon />,
             },
         ],
@@ -47,10 +81,26 @@ const categories = [
     {
         id: "Contacts",
         children: [
-            { id: "Facebook", icon: <FacebookIcon /> },
-            { id: "Linkedin", icon: <LinkedInIcon /> },
-            { id: "GitHub", icon: <GitHubIcon /> },
-            { id: "Email", icon: <EmailIcon /> },
+            {
+                listTitle: "Linkedin",
+                icon: <LinkedInIcon />,
+                link: "https://www.linkedin.com/in/volodymyr-kobylianskyi-45479a140",
+            },
+            {
+                listTitle: "GitHub",
+                icon: <GitHubIcon />,
+                link: "https://github.com/vkobylianskyi",
+            },
+            {
+                listTitle: "Facebook",
+                icon: <FacebookIcon />,
+                link: "https://www.facebook.com/kobylynskyy",
+            },
+            {
+                listTitle: "Email",
+                icon: <EmailIcon />,
+                link: "mailto:kobylianskiy10@gmail.com",
+            },
         ],
     },
 ];
@@ -86,22 +136,53 @@ export default function Navigator(props: DrawerProps) {
                         color: "#fff",
                     }}
                 >
-                    <ListItemImage src={profileImage} alt="Volodymyr Kobylianskiy" />
+                    <ListItemImage
+                        src={profileImage}
+                        alt="Volodymyr Kobylianskiy"
+                    />
                     <ListItemContentWrapper>
-                        <Typography variant="h5">{t("navigationTitle")}</Typography>
+                        <Typography variant="h5">
+                            {t("navigationTitle")}
+                        </Typography>
                         <Typography>{t("welcomeDevelop")}</Typography>
                     </ListItemContentWrapper>
                 </ListItemWrapper>
                 {categories.map(({ id, children }) => (
-                    <Box key={id} sx={{ bgcolor: (theme) => theme.palette.primary.light }}>
-                        {children.map(({ id: childId, icon, active }) => (
-                            <ListItem disablePadding key={childId}>
-                                <ListItemButton selected={active} sx={item} href={`#${childId}`}>
-                                    <ListItemIcon>{icon}</ListItemIcon>
-                                    <ListItemText>{t(childId)}</ListItemText>
-                                </ListItemButton>
-                            </ListItem>
-                        ))}
+                    <Box
+                        key={id}
+                        sx={{ bgcolor: (theme) => theme.palette.primary.light }}
+                    >
+                        {children.map(
+                            ({
+                                id: childId,
+                                icon,
+                                active,
+                                listTitle,
+                                link,
+                            }) => (
+                                <ListItem disablePadding key={childId}>
+                                    <Link
+                                        activeClass="active"
+                                        to={childId}
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration={200}
+                                    >
+                                        <ListItemButton
+                                            selected={active}
+                                            sx={item}
+                                            href={link ? link : null}
+                                        >
+                                            <ListItemIcon>{icon}</ListItemIcon>
+                                            <ListItemText>
+                                                {t(listTitle)}
+                                            </ListItemText>
+                                        </ListItemButton>
+                                    </Link>
+                                </ListItem>
+                            )
+                        )}
                         <Divider sx={{ mt: 2 }} />
                     </Box>
                 ))}

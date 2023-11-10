@@ -8,7 +8,7 @@ export const AboutWrapper = styled(Box)`
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
-            padding: "40px",
+            padding: 40
         },
     })}
 `;

@@ -1,9 +1,4 @@
-import {
-    Box,
-    Grid,
-    Typography,
-    styled,
-} from "@mui/material";
+import { Box, Grid, Typography, styled } from "@mui/material";
 
 export const EducationWrapper = styled(Box)`
     padding: 30px;
@@ -13,16 +8,16 @@ export const EducationWrapper = styled(Box)`
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
-            padding: "40px",
+            padding: 40
         },
     })}
 `;
 
 export const EducationGrid = styled(Grid)`
-&:last-of-type {
-    margin-top: 0;
-}
-`
+    &:last-of-type {
+        margin-top: 0;
+    }
+`;
 
 export const EducationIcon = styled("img")`
     width: 100%;
@@ -35,7 +30,7 @@ export const EducationIcon = styled("img")`
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
-            marginLeft: 0
+            marginLeft: 0,
         },
     })}
 `;

@@ -15,7 +15,7 @@ export default function About() {
     const [t] = useTranslation();
 
     return (
-        <Container>
+        <Container id="aboutSection">
             <AboutWrapper>
                 <Typography variant="h2" align={isDesktop ? "left" : "center"}>
                 {t('aboutSectionTitle')}
