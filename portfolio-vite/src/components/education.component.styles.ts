@@ -5,6 +5,7 @@ export const EducationWrapper = styled(Box)`
     background-color: ${({ theme }) => theme.palette.primary.light};
     margin-top: 40px;
     border-radius: 5px;
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
@@ -39,18 +40,18 @@ export const EducationTitle = styled(Typography)`
     font-size: 22px;
     line-height: 30px;
     padding-bottom: 8px;
-    color: #ff8c05;
+    color: ${({ theme }) => theme.palette.primary.main};
 `;
 
 export const EducationSubtitle = styled(Typography)`
     font-size: 20px;
     line-height: 30px;
     padding-bottom: 8px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.palette.secondary.main};
 `;
 
 export const EducationDate = styled(Typography)`
     font-size: 16px;
     line-height: 27px;
-    color: #ffffff;
+    color: ${({ theme }) => theme.palette.secondary.main};
 `;

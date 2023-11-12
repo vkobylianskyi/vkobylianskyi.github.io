@@ -1,6 +1,6 @@
 import { createContext, useState, useMemo, Suspense } from 'react'
 import getDefaultTheme from "./theme/default/default.theme.ts";
-import { Box, CssBaseline, ThemeProvider, useMediaQuery } from '@mui/material';
+import { Box, CssBaseline, ThemeProvider, useMediaQuery, useTheme } from '@mui/material';
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
@@ -18,7 +18,12 @@ import Projects from './components/projects.component.tsx';
 import Skills from './components/skills.component.tsx';
 import Education from './components/education.component.tsx';
 import Contact from './components/contact.component.tsx';
+import Document from './components/documents.component.tsx';
 import Copy from './components/copy.component.tsx';
+
+import {
+  MainBoxWrapper
+} from "./App.styles.ts";
 
 export const ColorModeContext = createContext({
   toggleColorMode: () => {},
@@ -61,6 +66,7 @@ function App() {
     []
   );
   const defaultTheme = getDefaultTheme(mode);
+  const theme = useTheme();
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const isSmUp = useMediaQuery(defaultTheme.breakpoints.up("sm"));
@@ -116,14 +122,7 @@ function App() {
                   sx={{ display: { sm: "block", xs: "none" } }}
                 />
               </Box>
-              <Box
-                sx={{
-                  flex: 1,
-                  display: "flex",
-                  flexDirection: "column",
-                  backgroundColor: "#212121",
-                }}
-              >
+              <MainBoxWrapper>
                 <Header onDrawerToggle={handleDrawerToggle} />
                 <Welcome />
                 <About />
@@ -132,8 +131,9 @@ function App() {
                 <Skills />
                 <Education />
                 <Contact />
+                <Document />
                 <Copy />
-              </Box>
+              </MainBoxWrapper>
             </Box>
           </ThemeProvider>
         </ColorModeContext.Provider>

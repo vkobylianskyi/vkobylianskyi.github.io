@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Container from "@mui/material/Container";
 
-import { ProjectsWrapper, ProjectsBox } from "./projects.component.styles.ts";
+import { ProjectsWrapper, ProjectsBox, ProjectsSubtitle } from "./projects.component.styles.ts";
 import { Grid, Typography } from "@mui/material";
 
 import { CardFlip } from "./card-flip/card-flip.component.tsx";
@@ -13,7 +13,7 @@ const cardContent = [
         href: "#",
         backSide: {
             title: "CEX.IO About Us",
-            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack.",
+            description: "React, SASS, Webpack.",
         },
     },
     {
@@ -22,7 +22,7 @@ const cardContent = [
         href: "#",
         backSide: {
             title: "CEX.IO Plus Competition",
-            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack.",
+            description: "Next, Styled Components, Type Script, Material UI, Webpack.",
         },
     },
     {
@@ -31,16 +31,16 @@ const cardContent = [
         href: "https://cex.io/metaverse-and-nfts-explained",
         backSide: {
             title: "Metaverse and NFT",
-            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack",
+            description: "React, SASS, Webpack.",
         },
     },
     {
         background:
             "url('src/assets/img/cex-prices-image.png') no-repeat center center / cover, #FFFFFF",
-        href: "https://cex.io/metaverse-and-nfts-explained",
+        href: "https://cex.io/prices",
         backSide: {
             title: "CEX.IO Prices",
-            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack",
+            description: "React, SASS, Webpack.",
         },
     },
     {
@@ -128,10 +128,11 @@ export default function Projects() {
                 <Typography variant="h2" align="center">
                     {t("projectsTitle")}
                 </Typography>
+                <ProjectsSubtitle> {t('projectsText')}</ProjectsSubtitle>
                 <Grid container spacing={3}>
                     {cardContent.map((cardContentItem, index) => (
-                        <Grid item xs={12} md={6} lg={4}>
-                            <ProjectsBox key={index}>
+                        <Grid item xs={12} md={6} lg={4} key={index}>
+                            <ProjectsBox >
                                 <CardFlip {...cardContentItem} />
                             </ProjectsBox>
                         </Grid>

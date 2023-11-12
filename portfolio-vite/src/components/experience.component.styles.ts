@@ -5,6 +5,7 @@ export const ExperienceWrapper = styled(Box)`
     background-color: ${({ theme }) => theme.palette.primary.light};
     margin-top: 40px;
     border-radius: 5px;
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
@@ -34,7 +35,7 @@ export const ExperienceSubtitle = styled(Typography)`
     font-size: 20px;
     line-height: 30px;
     padding-bottom: 8px;
-    color:${({ theme }) => theme.palette.secondary.main};
+    color: ${({ theme }) => theme.palette.secondary.main};
 `;
 
 export const ExperienceDate = styled(Typography)`

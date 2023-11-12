@@ -7,6 +7,7 @@ export const SkillsWrapper = styled(Box)`
     border-radius: 5px;
     gap: 16px;
     flex-wrap: nowrap;
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {

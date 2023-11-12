@@ -58,8 +58,8 @@ export default function Skills() {
                 </Typography>
                 <Grid container spacing={3}>
                     {technologyList.map((technologyItem, index) => (
-                        <Grid item xs={6} md={3} lg={2}>
-                            <SkillsBoxWrapper key={index}>
+                        <Grid item xs={6} md={3} lg={2} key={index}>
+                            <SkillsBoxWrapper >
                                 <SkillsIcon
                                     src={technologyItem}
                                     alt={technologyItem}

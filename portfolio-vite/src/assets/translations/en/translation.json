@@ -38,6 +38,7 @@
     "etceteraExperienceSeventhItem": "writing code that has progressive enhancement and graceful degradation;",
     "etceteraExperienceEighthItem":  "bootstrap development.",
     "projectsTitle": "My Pet projects",
+    "projectsText": "This is some of the work I've done working products companies and as a freelancer. You can see in this works animations, a Mobile First approach, marketing, landings, SEO and other pages.",
     "projectsTechnologies": "Technologies",
     "projectsSiteLinkTitle": "View site",
     "technologyTitle": "TECHNOLOGY, WHAT I USE",
@@ -45,5 +46,9 @@
     "educationUniversity": "National Technical University of Ukraine 'Kyiv Polytechnic Institute'",
     "educationDegreeSoftware": "Bachelor's degree, software developer",
     "educationDegreePower": "Master's degree, power engineering",
-    "contactTitle": "Contact me"
+    "contactTitle": "Contact me",
+    "documentsTitle": "Documents",
+    "documentsCV": "CV",
+    "documentsRecommendationLetter": "Recommendation letter",
+    "documentsDiploma": "Bachelor's diploma"
 }

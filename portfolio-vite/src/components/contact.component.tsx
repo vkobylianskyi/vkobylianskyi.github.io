@@ -1,4 +1,3 @@
-import * as React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -10,7 +9,26 @@ import { useTranslation } from "react-i18next";
 
 export default function Contact() {
     const [t] = useTranslation();
-    
+
+    const contactList = [
+        {
+            link: "https://www.linkedin.com/in/volodymyr-kobylianskyi-45479a140",
+            icon: <LinkedInIcon fontSize="large" />,
+        },
+        {
+            link: "https://github.com/vkobylianskyi",
+            icon: <GitHubIcon fontSize="large" />,
+        },
+        {
+            link: "https://www.facebook.com/kobylynskyy",
+            icon: <FacebookIcon fontSize="large" />,
+        },
+        {
+            link: "mailto:kobylianskiy10@gmail.com",
+            icon: <EmailIcon fontSize="large" />,
+        },
+    ];
+
     return (
         <Container id="contactSection">
             <ContactWrapper>
@@ -18,37 +36,11 @@ export default function Contact() {
                     {t("contactTitle")}
                 </Typography>
                 <Stack direction="row" spacing={1} justifyContent={"center"}>
-                    <IconButton
-                        size="large"
-                        target="_blank"
-                        color="primary"
-                        href="https://www.linkedin.com/in/volodymyr-kobylianskyi-45479a140"
-                    >
-                        <LinkedInIcon fontSize="large" />
-                    </IconButton>
-                    <IconButton
-                        size="large"
-                        target="_blank"
-                        color="primary"
-                        href="https://github.com/vkobylianskyi"
-                    >
-                        <GitHubIcon />
-                    </IconButton>
-                    <IconButton
-                        size="large"
-                        target="_blank"
-                        color="primary"
-                        href="https://www.facebook.com/kobylynskyy"
-                    >
-                        <FacebookIcon fontSize="large" />
-                    </IconButton>
-                    <IconButton
-                        size="large"
-                        color="primary"
-                        href="mailto:kobylianskiy10@gmail.com"
-                    >
-                        <EmailIcon fontSize="large" />
-                    </IconButton>
+                    {contactList.map((contactListItem, index) => (
+                        <IconButton key={index} size="large" target="_blank" color="primary" href={contactListItem.link}>
+                            {contactListItem.icon}
+                        </IconButton>
+                    ))}
                 </Stack>
             </ContactWrapper>
         </Container>

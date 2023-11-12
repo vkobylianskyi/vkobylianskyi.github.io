@@ -19,6 +19,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import PublicIcon from "@mui/icons-material/Public";
 import SchoolIcon from "@mui/icons-material/School";
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
 
 import {
     ListItemImage,
@@ -70,6 +71,11 @@ const categories = [
                 id: "contactSection",
                 listTitle: "contactTitle",
                 icon: <ConnectWithoutContactIcon />,
+            },
+            {
+                id: "documentsSection",
+                listTitle: "documentsTitle",
+                icon: <InsertDriveFileIcon />,
             },
             {
                 id: "navigationDoc",
@@ -159,8 +165,8 @@ export default function Navigator(props: DrawerProps) {
                                 active,
                                 listTitle,
                                 link,
-                            }) => (
-                                <ListItem disablePadding key={childId}>
+                            }, index) => (
+                                <ListItem disablePadding key={index}>
                                     <ScrollLinkWrapper
                                         activeClass="active"
                                         to={childId}

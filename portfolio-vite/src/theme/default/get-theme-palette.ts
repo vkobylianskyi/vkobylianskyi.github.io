@@ -20,12 +20,12 @@ const getDefaultThemePalette = (mode) => {
       : {
           // palette values for light mode
           primary: {
-            light: "#ffdcb5",
+            light: "#fff",
             main: "#ff8c05",
-            dark: "#c66f00",
+            dark: "rgb(241, 252, 250)",
           },
           secondary: {
-            main: "#4a4a4a",
+            main: "#0E2026",
           },
           background: {
             default: "#f5f5f5",

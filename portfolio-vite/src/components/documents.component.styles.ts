@@ -1,6 +1,6 @@
-import { Grid, Link, Typography, styled } from "@mui/material";
+import { Box, Link, styled, Typography } from "@mui/material";
 
-export const WelcomeWrapper = styled(Grid)`
+export const DocumentsWrapper = styled(Box)`
     padding: 30px;
     background-color: ${({ theme }) => theme.palette.primary.light};
     margin-top: 40px;
@@ -14,44 +14,18 @@ export const WelcomeWrapper = styled(Grid)`
     })}
 `;
 
-export const WelcomeTitle = styled(Typography)`
-    font-size: 22px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: ${({ theme }) => theme.palette.secondary.main};
-
-    ${({ theme }) => ({
-        [theme.breakpoints.up("lg")]: {
-            fontSize: "26px",
-            marginBottom: "30px",
-        },
-    })}
+export const DocumentsTitle = styled(Typography)`
+    position: relative;
+    z-index: 2;
 `;
 
-export const WelcomeSubtitle = styled(Typography)`
-    font-size: 32px;
-    font-weight: 900;
-    background: -webkit-linear-gradient(right, #d61a5e, #ff8c05);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 120%;
-
-    ${({ theme }) => ({
-        [theme.breakpoints.up("lg")]: {
-            fontSize: "70px",
-            lineHeight: "87px",
-        },
-    })}
-`;
-export const WelcomeAction = styled(Link)`
+export const DocumentsLink = styled(Link)`
     text-decoration: none;
     cursor: pointer;
     display: block;
     background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
     color: #fff;
     border: 0;
-    margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
     border-radius: 2px;
@@ -60,7 +34,7 @@ export const WelcomeAction = styled(Link)`
     font-size: 16px;
     position: relative;
     text-align: center;
-    width: 150px;
+    width: 225px;
 
     &:hover::after {
         content: "";
@@ -85,19 +59,19 @@ export const WelcomeAction = styled(Link)`
         }
     }
 
-    ${({ theme }) => ({
-        [theme.breakpoints.up("md")]: {
-            marginLeft: 0,
-        },
-    })}
+   
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
-            marginTop: "50px",
+            order: 2,
+            
+            "&:first-of-type": {
+                order: 1
+            },
+        
+            "&:nth-of-type(2)": {
+                order: 0
+            }
         },
     })}
-`;
-
-export const WelcomeImage = styled("img")`
-    width: 100%;
 `;

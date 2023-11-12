@@ -23,6 +23,7 @@ const getDefaultTheme = (mode = "dark") =>
         color: primary.main,
         textTransform: "uppercase",
         marginBottom: 20,
+        fontWeight: 600,
 
         "@media (min-width:900px)": {
           fontSize: "28px",

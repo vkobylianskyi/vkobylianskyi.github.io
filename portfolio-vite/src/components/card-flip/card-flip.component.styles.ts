@@ -25,10 +25,11 @@ export const CardFlipItemSubtitle = styled(Typography)`
 export const CardFlipWrapper = styled("div")`
     height: 100%;
     width: 100%;
-    background-color: transparent;
+    background-color: #fff;
     perspective: 1000px;
     overflow: hidden;
     border-radius: 24px;
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
 `;
 
 export const CardFlipInner = styled("div")<{ rotate: boolean }>`
@@ -53,7 +54,7 @@ export const CardFlipItem = styled("div")`
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: ${({ theme }) => theme.palette.background.default};
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -126,7 +127,7 @@ export const CardFlipItemButton = styled(Button)<{ active: boolean }>`
     min-height: 56px;
     color: #fff;
     padding: 0;
-    background-color: #ff8c05;
+    background-color: ${({ theme }) => theme.palette.primary.main};
     margin-top: auto;
 
     svg {
@@ -153,7 +154,7 @@ export const CardFlipItemBackDescription = styled(Typography)`
     height: 100%;
     flex-grow: 0;
     line-height: 24px;
-    color: ${({ theme }) => alpha(theme.palette.text.primary, 0.7)};
+    color: ${({ theme }) => alpha(theme.palette.text.primary, 0.9)};
     overflow-y: auto;
 `;
 
