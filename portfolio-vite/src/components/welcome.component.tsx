@@ -38,7 +38,7 @@ export default function Welcome() {
                     >
                         <WelcomeImage
                             src={welcomeImage}
-                            alt="Volodymyr Kobylianskiy"
+                            alt="Volodymyr Kobylianskyi"
                         />
                     </Grid>
                 </Grid>

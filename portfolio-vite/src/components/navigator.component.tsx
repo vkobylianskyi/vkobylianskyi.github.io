@@ -144,7 +144,7 @@ export default function Navigator(props: DrawerProps) {
                 >
                     <ListItemImage
                         src={profileImage}
-                        alt="Volodymyr Kobylianskiy"
+                        alt="Volodymyr Kobylianskyi"
                     />
                     <ListItemContentWrapper>
                         <Typography variant="h5">

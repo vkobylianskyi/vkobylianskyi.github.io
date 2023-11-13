@@ -27,7 +27,7 @@ export default function About() {
                         </AboutSubtitle>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <AboutImage src={aboutImage} alt="Volodymyr Kobylianskiy" />
+                        <AboutImage src={aboutImage} alt="Volodymyr Kobylianskyi" />
                     </Grid>
                 </Grid>
             </AboutWrapper>

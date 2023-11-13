@@ -2,7 +2,7 @@ import { DocumentsWrapper, DocumentsTitle, DocumentsLink } from "./documents.com
 import { Stack, Container, useTheme, useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
 
-import cvDocument from "../assets/CV_Volodymyr_Kobylianskiy.pdf";
+import cvDocument from "../assets/CV_Volodymyr_Kobylianskyi.pdf";
 
 export default function Document() {
     const [t] = useTranslation();
