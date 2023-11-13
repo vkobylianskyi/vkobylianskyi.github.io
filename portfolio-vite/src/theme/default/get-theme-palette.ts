@@ -1,4 +1,4 @@
-const getDefaultThemePalette = (mode) => {
+const getDefaultThemePalette = (mode: string) => {
   return {
     mode,
     ...(mode === "dark"

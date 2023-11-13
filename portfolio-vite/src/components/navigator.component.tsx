@@ -1,4 +1,3 @@
-import * as React from "react";
 import Divider from "@mui/material/Divider";
 import Drawer, { DrawerProps } from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -114,7 +113,7 @@ const categories = [
 const item = {
     py: "2px",
     px: 3,
-    color: (theme) => theme.palette.secondary.main,
+    color: (theme: { palette: { secondary: { main: string; }; }; }) => theme.palette.secondary.main,
     "&:hover, &:focus": {
         bgcolor: " rgba(255, 140, 5, 0.04)",
     },
