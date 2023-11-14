@@ -24,7 +24,12 @@ export const ListItemWrapper = styled(ListItem)`
 export const ScrollLinkWrapper = styled(Link)`
     flex-grow: 1;
 
-    &.active div {
-        color: red;
+    &.active {
+        div {
+            color: ${({ theme }) => theme.palette.primary.main};
+        }
+        div:first-child {
+            background-color: rgba(255, 140, 5, 0.08)
+        }
     }
 `;

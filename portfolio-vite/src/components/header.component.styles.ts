@@ -14,3 +14,9 @@ export const HeaderWrapper = styled(AppBar)`
         },
     })}
 `;
+
+export const MenuItemImage = styled("img")`
+    width: 24px;
+    height: 24px;
+    padding-right: 6px;
+`;

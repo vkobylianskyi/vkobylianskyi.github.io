@@ -18,20 +18,31 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import PublicIcon from "@mui/icons-material/Public";
 import SchoolIcon from "@mui/icons-material/School";
-import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile';
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 
 import {
     ListItemImage,
     ListItemContentWrapper,
     ListItemWrapper,
-    ScrollLinkWrapper
+    ScrollLinkWrapper,
 } from "./navigator.component.styles.ts";
 
 import profileImage from "../assets/img/profile.jpg";
 import { Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import { ReactNode } from "react";
 
-const categories = [
+type navigatorTypes = {
+    id: string;
+    children: Array<{
+        id?: string;
+        listTitle: string;
+        icon: ReactNode;
+        link?: string;
+    }>;
+};
+
+const categories: navigatorTypes[] = [
     {
         id: "Main",
         children: [
@@ -39,7 +50,6 @@ const categories = [
                 id: "welcomeSection",
                 listTitle: "navigationWelcome",
                 icon: <PublicIcon />,
-                active: true,
             },
             {
                 id: "aboutSection",
@@ -76,16 +86,16 @@ const categories = [
                 listTitle: "documentsTitle",
                 icon: <InsertDriveFileIcon />,
             },
-            {
-                id: "navigationDoc",
-                listTitle: "navigationDoc",
-                icon: <DescriptionIcon />,
-            },
         ],
     },
     {
         id: "Contacts",
         children: [
+            {
+                listTitle: "navigationDoc",
+                icon: <DescriptionIcon />,
+                link: "https://www.linkedin.com/in/volodymyr-kobylianskyi-45479a140",
+            },
             {
                 listTitle: "Linkedin",
                 icon: <LinkedInIcon />,
@@ -113,10 +123,8 @@ const categories = [
 const item = {
     py: "2px",
     px: 3,
-    color: (theme: { palette: { secondary: { main: string; }; }; }) => theme.palette.secondary.main,
-    "&:hover, &:focus": {
-        bgcolor: " rgba(255, 140, 5, 0.04)",
-    },
+    color: (theme: { palette: { secondary: { main: string } } }) =>
+        theme.palette.secondary.main,
 };
 
 const itemCategory = {
@@ -158,26 +166,21 @@ export default function Navigator(props: DrawerProps) {
                         sx={{ bgcolor: (theme) => theme.palette.primary.light }}
                     >
                         {children.map(
-                            ({
-                                id: childId,
-                                icon,
-                                active,
-                                listTitle,
-                                link,
-                            }, index) => (
+                            ({ id: childId, icon, listTitle, link }, index) => (
                                 <ListItem disablePadding key={index}>
                                     <ScrollLinkWrapper
+                                        to={childId || ""}
                                         activeClass="active"
-                                        to={childId}
                                         spy={true}
                                         smooth={true}
                                         offset={-70}
                                         duration={200}
                                     >
                                         <ListItemButton
-                                            selected={active}
                                             sx={item}
-                                            href={link ? link : null}
+                                            onClick={() =>
+                                                link && window.open(link)
+                                            }
                                         >
                                             <ListItemIcon>{icon}</ListItemIcon>
                                             <ListItemText>

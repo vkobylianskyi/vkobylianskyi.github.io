@@ -1,187 +1,198 @@
-import {createTheme} from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import getDefaultThemePalette from "./get-theme-palette";
 
-// Uncomment while turn on the ts support and rename file to .ts
-// declare module "@mui/material/styles" {
-//   interface TypographyVariants {
-//     nav: CSSProperties;
-//   }
-//
-//   interface TypographyVariantsOptions {
-//     nav?: CSSProperties;
-//   }
-// }
-
 const getDefaultTheme = (mode = "dark") =>
-  createTheme({
-    palette: {
-      ...getDefaultThemePalette(mode)
-    },
-    typography: ({ primary }) => ({
-      h2: {
-        fontSize: 22,
-        color: primary.main,
-        textTransform: "uppercase",
-        marginBottom: 20,
-        fontWeight: 600,
+    createTheme({
+        palette: {
+            ...getDefaultThemePalette(mode),
+        },
+        typography: ({ primary }) => ({
+            h2: {
+                fontSize: 22,
+                color: primary.main,
+                textTransform: "uppercase",
+                marginBottom: 20,
+                fontWeight: 600,
 
-        "@media (min-width:900px)": {
-          fontSize: "28px",
-          marginBottom: 30,
-        },
-        h5: {
-          fontWeight: 500,
-          fontSize: 17,
-          lineHeight: 1.5,
-        },
-        nav: {
-          fontWeight: 500,
-          fontSize: 16,
-          lineHeight: 1.5,
-        },
-      },
-    }),
-    shape: {
-      borderRadius: 8,
-    },
-    components: {
-      MuiTab: {
-        defaultProps: {
-          disableRipple: true,
-        },
-      },
-      MuiDrawer: {
-        styleOverrides: {
-          paper: ({ theme }) => ({
-            backgroundColor: theme.palette.primary.light,
-          }),
-        },
-      },
-      MuiAppBar: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            backgroundColor: theme.palette.primary.light,
-            borderRadius: 5,
-          }),
-        },
-      },
-      MuiButton: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            textTransform: "none",
-            "&:hover": {
-              backgroundColor: theme.palette.primary.main,
+                "@media (min-width:900px)": {
+                    fontSize: "28px",
+                    marginBottom: 30,
+                },
+                h5: {
+                    fontWeight: 500,
+                    fontSize: 17,
+                    lineHeight: 1.5,
+                },
+                nav: {
+                    fontWeight: 500,
+                    fontSize: 16,
+                    lineHeight: 1.5,
+                },
             },
-          }),
-          contained: {
-            boxShadow: "none",
-            "&:active": {
-              boxShadow: "none",
+        }),
+        shape: {
+            borderRadius: 8,
+        },
+        components: {
+            MuiTab: {
+                defaultProps: {
+                    disableRipple: true,
+                },
             },
-          },
-        },
-      },
-      MuiIconButton: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            padding: theme.spacing(1),
-          }),
-        },
-      },
-      MuiTooltip: {
-        styleOverrides: {
-          tooltip: {
-            borderRadius: 4,
-          },
-        },
-      },
-      MuiDivider: {
-        styleOverrides: {
-          root: {
-            backgroundColor: "rgb(255,255,255,0.15)",
-          },
-        },
-      },
-      MuiListItemText: {
-        styleOverrides: {
-          primary: ({ theme }) => ({
-            fontWeight: theme.typography.fontWeightRegular,
-          }),
-        },
-      },
-      MuiListItemIcon: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            color: "inherit",
-            minWidth: "auto",
-            marginRight: theme.spacing(2),
-            "& svg": {
-              fontSize: 20,
+            MuiDrawer: {
+                styleOverrides: {
+                    paper: ({ theme }) => ({
+                        backgroundColor: theme.palette.primary.light,
+                    }),
+                },
             },
-          }),
-        },
-      },
-      MuiListItemButton: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            height: "48px",
-            "&.Mui-selected": {
-              color: theme.palette.primary.main,
+            MuiAppBar: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        backgroundColor: theme.palette.primary.light,
+                        borderRadius: 5,
+                    }),
+                },
             },
-          }),
-        },
-      },
-      MuiSelect: {
-        styleOverrides: {
-          iconOutlined: ({ theme }) => ({
-            color: theme.palette.secondary.main,
-          }),
-        },
-      },
-      MuiOutlinedInput: {
-        styleOverrides: {
-          notchedOutline: ({ theme }) => ({
-            borderColor: theme.palette.secondary.main,
-            "&:not(.Mui-disabled):hover::before": {
-              borderColor: "white",
+            MuiButton: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        textTransform: "none",
+                        "&:hover": {
+                            backgroundColor: theme.palette.primary.main,
+                        },
+                    }),
+                    contained: {
+                        boxShadow: "none",
+                        "&:active": {
+                            boxShadow: "none",
+                        },
+                    },
+                },
             },
-          }),
+            MuiIconButton: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        padding: theme.spacing(1),
+                        "&:hover": {
+                            backgroundColor: "rgba(255, 140, 5, 0.08)",
+                        },
+                    }),
+                },
+            },
+            MuiTooltip: {
+                styleOverrides: {
+                    tooltip: {
+                        borderRadius: 4,
+                    },
+                },
+            },
+            MuiDivider: {
+                styleOverrides: {
+                    root: {
+                        backgroundColor: "rgb(255,255,255,0.15)",
+                    },
+                },
+            },
+            MuiListItemText: {
+                styleOverrides: {
+                    primary: ({ theme }) => ({
+                        fontWeight: theme.typography.fontWeightRegular,
+                    }),
+                },
+            },
+            MuiListItemIcon: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        color: "inherit",
+                        minWidth: "auto",
+                        backgroundColor: "transparent !important",
+                        marginRight: theme.spacing(2),
+                        "& svg": {
+                            fontSize: 20,
+                        },
+                    }),
+                },
+            },
+            MuiListItemButton: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        height: "48px",
+                        "&.Mui-selected": {
+                            backgroundColor: "rgba(255, 140, 5, 0.08)",
+                            color: theme.palette.primary.main,
+                        },
+                        "&:hover": {
+                            backgroundColor: "rgba(255, 140, 5, 0.08)",
+                        },
+                    }),
+                },
+            },
+            MuiSelect: {
+                styleOverrides: {
+                    iconOutlined: ({ theme }) => ({
+                        color: theme.palette.secondary.main,
+                    }),
+                    select: {
+                        display: "flex",
+                        width: 115,
+                    },
+                },
+            },
+            MuiOutlinedInput: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        borderColor: theme.palette.secondary.main,
+                        ":hover": {
+                            ".MuiOutlinedInput-notchedOutline": {
+                                borderColor: theme.palette.secondary.main,
+                                color: theme.palette.secondary.main,
+                            },
+                        },
+                    }),
+                },
+            },
+            MuiGrid: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        color: theme.palette.secondary.main,
+                    }),
+                },
+            },
+            MuiFormLabel: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        color: theme.palette.secondary.main,
+                    }),
+                },
+            },
+            MuiFormControl: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        color: theme.palette.secondary.main,
+                    }),
+                },
+            },
+            MuiInputBase: {
+                styleOverrides: {
+                    input: ({ theme }) => ({
+                        color: theme.palette.secondary.main,
+                    }),
+                },
+            },
+            MuiMenuItem: {
+                styleOverrides: {
+                    root: ({ theme }) => ({
+                        color: theme.palette.secondary.main,
+                    }),
+                },
+            },
         },
-      },
-      MuiGrid: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            color: theme.palette.secondary.main,
-          }),
+        mixins: {
+            toolbar: {
+                minHeight: 48,
+            },
         },
-      },
-      MuiFormLabel: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            color: theme.palette.secondary.main,
-          }),
-        },
-      },
-      MuiFormControl: {
-        styleOverrides: {
-          root: ({ theme }) => ({
-            color: theme.palette.secondary.main,
-          }),
-        },
-      },
-      MuiInputBase: {
-        styleOverrides: {
-          input: ({ theme }) => ({
-            color: theme.palette.secondary.main,
-          }),
-        },
-      },
-    },
-    mixins: {
-      toolbar: {
-        minHeight: 48,
-      },
-    },
-  });
+    });
 
 export default getDefaultTheme;
