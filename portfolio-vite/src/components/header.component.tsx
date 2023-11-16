@@ -102,7 +102,7 @@ export default function Header(props: HeaderProps) {
                                     version="1.1"
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="1280"
-                                    height="696"
+                                    height="1280"
                                     viewBox="0 0 1280 696"
                                 >
                                     <path

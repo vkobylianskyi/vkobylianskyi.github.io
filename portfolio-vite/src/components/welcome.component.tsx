@@ -29,7 +29,7 @@ export default function Welcome() {
                         <WelcomeSubtitle align={isDesktop ? "left" : "center"}>
                            {t('welcomeDevelop')}
                         </WelcomeSubtitle>
-                        <WelcomeAction>{t('welcomeButtonTitle')}</WelcomeAction>
+                        <WelcomeAction href="#contactSection">{t('welcomeButtonTitle')}</WelcomeAction>
                     </Grid>
                     <Grid
                         item

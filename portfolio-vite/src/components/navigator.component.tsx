@@ -20,6 +20,8 @@ import PublicIcon from "@mui/icons-material/Public";
 import SchoolIcon from "@mui/icons-material/School";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 
+import cvDocument from "../assets/CV_Volodymyr_Kobylianskyi.pdf";
+
 import {
     ListItemImage,
     ListItemContentWrapper,
@@ -94,7 +96,7 @@ const categories: navigatorTypes[] = [
             {
                 listTitle: "navigationDoc",
                 icon: <DescriptionIcon />,
-                link: "https://www.linkedin.com/in/volodymyr-kobylianskyi-45479a140",
+                link: cvDocument,
             },
             {
                 listTitle: "Linkedin",

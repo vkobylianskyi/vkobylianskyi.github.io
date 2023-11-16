@@ -29,7 +29,6 @@ export const ColorModeContext = createContext({
 });
 
 function App() {
-
     const availableModes = ["dark", "light"];
 
     const getModeFromLs = () => {
@@ -96,8 +95,8 @@ function App() {
             <div className="App">
                 <ColorModeContext.Provider value={colorMode}>
                     <ThemeProvider theme={defaultTheme}>
+                        <CssBaseline />
                         <Box sx={{ display: "flex" }}>
-                            <CssBaseline />
                             <Box
                                 component="nav"
                                 sx={{
