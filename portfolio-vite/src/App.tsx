@@ -18,7 +18,7 @@ import Projects from "./components/projects.component.tsx";
 import Skills from "./components/skills.component.tsx";
 import Education from "./components/education.component.tsx";
 import Contact from "./components/contact.component.tsx";
-// import Document from "./components/documents.component.tsx";
+import Document from "./components/documents.component.tsx";
 import Copy from "./components/copy.component.tsx";
 
 import { MainBoxWrapper } from "./App.styles.ts";
@@ -132,7 +132,7 @@ function App() {
                                 <Skills />
                                 <Education />
                                 <Contact />
-                                {/* <Document /> */}
+                                <Document />
                                 <Copy />
                             </MainBoxWrapper>
                         </Box>

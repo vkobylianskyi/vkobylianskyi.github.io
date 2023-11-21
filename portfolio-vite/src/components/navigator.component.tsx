@@ -18,7 +18,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 import PublicIcon from "@mui/icons-material/Public";
 import SchoolIcon from "@mui/icons-material/School";
-// import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 
 import cvDocument from "../assets/CV_Volodymyr_Kobylianskyi_Front-end.pdf";
 
@@ -83,11 +83,11 @@ const categories: navigatorTypes[] = [
                 listTitle: "contactTitle",
                 icon: <ConnectWithoutContactIcon />,
             },
-            // {
-            //     id: "documentsSection",
-            //     listTitle: "documentsTitle",
-            //     icon: <InsertDriveFileIcon />,
-            // },
+            {
+                id: "documentsSection",
+                listTitle: "documentsTitle",
+                icon: <InsertDriveFileIcon />,
+            },
         ],
     },
     {
