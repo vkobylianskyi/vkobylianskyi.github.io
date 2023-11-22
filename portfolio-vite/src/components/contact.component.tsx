@@ -6,6 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import { ContactWrapper } from "./contact.component.styles.ts";
 import { Stack, IconButton, Container, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
+import ContactForm from "./form.component.tsx";
 
 export default function Contact() {
     const [t] = useTranslation();
@@ -43,6 +44,7 @@ export default function Contact() {
                     ))}
                 </Stack>
             </ContactWrapper>
+            <ContactForm />
         </Container>
     );
 }
