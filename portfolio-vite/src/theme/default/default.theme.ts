@@ -177,6 +177,10 @@ const getDefaultTheme = (mode = "dark") =>
                 styleOverrides: {
                     input: ({ theme }) => ({
                         color: theme.palette.secondary.main,
+                        '&:-webkit-autofill': {
+                            transitionDelay: '9999s',
+                            transitionProperty: 'background-color, color',
+                          },
                     }),
                 },
             },

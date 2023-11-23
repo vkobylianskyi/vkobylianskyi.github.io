@@ -3,8 +3,17 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 
-import { ContactWrapper } from "./contact.component.styles.ts";
-import { Stack, IconButton, Container, Typography } from "@mui/material";
+import { ContactWrapper, ContactSubtitle } from "./contact.component.styles.ts";
+import {
+    Stack,
+    IconButton,
+    Container,
+    Typography,
+    Grid,
+    useMediaQuery,
+    useTheme,
+    Box,
+} from "@mui/material";
 import { useTranslation } from "react-i18next";
 import ContactForm from "./form.component.tsx";
 
@@ -30,21 +39,52 @@ export default function Contact() {
         },
     ];
 
+    const theme = useTheme();
+    const isTabletWide = useMediaQuery(theme.breakpoints.up("md"));
+    const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
+
     return (
         <Container id="contactSection">
             <ContactWrapper>
-                <Typography variant="h2" align="center">
+                <Typography variant="h2" align={isDesktop ? "left" : "center"}>
                     {t("contactTitle")}
                 </Typography>
-                <Stack direction="row" spacing={1} justifyContent={"center"}>
-                    {contactList.map((contactListItem, index) => (
-                        <IconButton key={index} size="large" target="_blank" color="primary" href={contactListItem.link}>
-                            {contactListItem.icon}
-                        </IconButton>
-                    ))}
-                </Stack>
+                <Grid
+                    container
+                    spacing={isDesktop ? 2 : 4}
+                    alignItems={"center"}
+                >
+                    <Grid item xs={12} md={6}>
+                        <Box>
+                            <ContactSubtitle
+                                align={isTabletWide ? "left" : "center"}
+                            >
+                                {t("contactSubtitle")}
+                            </ContactSubtitle>
+                        </Box>
+                        <Stack
+                            direction="row"
+                            spacing={1}
+                            justifyContent={"start"}
+                        >
+                            {contactList.map((contactListItem, index) => (
+                                <IconButton
+                                    key={index}
+                                    size="large"
+                                    target="_blank"
+                                    color="primary"
+                                    href={contactListItem.link}
+                                >
+                                    {contactListItem.icon}
+                                </IconButton>
+                            ))}
+                        </Stack>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <ContactForm />
+                    </Grid>
+                </Grid>
             </ContactWrapper>
-            <ContactForm />
         </Container>
     );
 }

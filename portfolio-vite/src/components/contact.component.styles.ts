@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 
 export const ContactWrapper = styled(Box)`
     padding: 30px;
@@ -9,7 +9,21 @@ export const ContactWrapper = styled(Box)`
 
     ${({ theme }) => ({
         [theme.breakpoints.up("lg")]: {
-            padding: 40
+            padding: 40,
+        },
+    })}
+`;
+
+export const ContactSubtitle = styled(Typography)`
+    font-size: 32px;
+    line-height: 110%;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: ${({ theme }) => theme.palette.secondary.main};
+
+    ${({ theme }) => ({
+        [theme.breakpoints.up("lg")]: {
+            marginBottom: "30px",
         },
     })}
 `;
