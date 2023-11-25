@@ -79,14 +79,14 @@ const categories: navigatorTypes[] = [
                 icon: <SchoolIcon />,
             },
             {
-                id: "contactSection",
-                listTitle: "contactTitle",
-                icon: <ConnectWithoutContactIcon />,
-            },
-            {
                 id: "documentsSection",
                 listTitle: "documentsTitle",
                 icon: <InsertDriveFileIcon />,
+            },
+            {
+                id: "contactSection",
+                listTitle: "contactTitle",
+                icon: <ConnectWithoutContactIcon />,
             },
         ],
     },

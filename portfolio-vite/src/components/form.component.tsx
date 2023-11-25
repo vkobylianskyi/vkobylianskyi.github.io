@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { Grid, Button, TextField } from "@mui/material";
+import { Grid, TextField, Snackbar } from "@mui/material";
 import validate from "validate.js";
 import emailjs from "emailjs-com";
+import { FormAction } from "./form.component.styles";
+import { useTranslation } from "react-i18next";
 
 const USER_ID = "E9qBwC1FPspiD-IyC";
 const TEMPLATE_ID = "template_wgen6do";
@@ -47,7 +49,15 @@ const ContactForm = () => {
 
         emailjs
             .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-            .then((res) => console.log("SUCCESS!", res.status, res.text))
+            .then((res) => (
+                <Snackbar
+                    anchorOrigin={{ 'top', 'center' }}
+                    open={open}
+                    onClose={handleClose}
+                    message="Congratulations. Your message has been sent successfully"
+                    key={vertical + horizontal}
+                />
+            ))
             .catch((error) => console.log("FAILED...", error));
 
         setFormState((formState) => ({
@@ -95,8 +105,10 @@ const ContactForm = () => {
         }));
     };
 
-    const hasError = (field) =>
+    const hasError = (field: string) =>
         formState.touched[field] && formState.errors[field] ? true : false;
+
+    const [t] = useTranslation();
 
     return (
         <div>
@@ -106,10 +118,10 @@ const ContactForm = () => {
                 onSubmit={sendEmail}
             >
                 <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} md={6}>
                         <TextField
-                            placeholder="First name"
-                            label="First name"
+                            placeholder={t("formFirstName")}
+                            label={t("formFirstName")}
                             variant="standard"
                             size="medium"
                             name="firstName"
@@ -126,10 +138,10 @@ const ContactForm = () => {
                             value={formState.values.firstName || ""}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} md={6}>
                         <TextField
-                            placeholder="Last name"
-                            label="Last name"
+                            placeholder={t("formLastName")}
+                            label={t("formLastName")}
                             variant="standard"
                             size="medium"
                             name="lastName"
@@ -146,10 +158,10 @@ const ContactForm = () => {
                             value={formState.values.lastName || ""}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} md={6}>
                         <TextField
-                            placeholder="Email Address"
-                            label="Email Address"
+                            placeholder={t("formLastEmail")}
+                            label={t("formLastEmail")}
                             variant="standard"
                             size="medium"
                             name="email"
@@ -165,10 +177,10 @@ const ContactForm = () => {
                             value={formState.values.email || ""}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} md={6}>
                         <TextField
-                            placeholder="Subject"
-                            label="Subject"
+                            placeholder={t("formSubject")}
+                            label={t("formSubject")}
                             variant="standard"
                             size="medium"
                             name="subject"
@@ -186,8 +198,8 @@ const ContactForm = () => {
                     </Grid>
                     <Grid item xs={12}>
                         <TextField
-                            placeholder="Message"
-                            label="Message"
+                            placeholder={t("formMessage")}
+                            label={t("formMessage")}
                             variant="standard"
                             size="medium"
                             name="message"
@@ -206,15 +218,15 @@ const ContactForm = () => {
                         />
                     </Grid>
                     <Grid item xs={12}>
-                        <Button
+                        <FormAction
                             size="large"
                             variant="contained"
                             type="submit"
                             color="primary"
                             disabled={!formState.isValid}
                         >
-                            Send
-                        </Button>
+                            {t("formButtonTitle")}
+                        </FormAction>
                     </Grid>
                 </Grid>
             </form>

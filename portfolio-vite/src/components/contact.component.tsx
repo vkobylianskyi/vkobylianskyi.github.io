@@ -52,12 +52,12 @@ export default function Contact() {
                 <Grid
                     container
                     spacing={isDesktop ? 2 : 4}
-                    alignItems={"center"}
+                     alignItems={isTabletWide ? "center" : "start"}
                 >
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} lg={6}>
                         <Box>
                             <ContactSubtitle
-                                align={isTabletWide ? "left" : "center"}
+                                align={isDesktop ? "left" : "center"}
                             >
                                 {t("contactSubtitle")}
                             </ContactSubtitle>
@@ -65,7 +65,7 @@ export default function Contact() {
                         <Stack
                             direction="row"
                             spacing={1}
-                            justifyContent={"start"}
+                            justifyContent={isDesktop ? "left" : "center"}
                         >
                             {contactList.map((contactListItem, index) => (
                                 <IconButton
@@ -80,7 +80,7 @@ export default function Contact() {
                             ))}
                         </Stack>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} lg={6}>
                         <ContactForm />
                     </Grid>
                 </Grid>

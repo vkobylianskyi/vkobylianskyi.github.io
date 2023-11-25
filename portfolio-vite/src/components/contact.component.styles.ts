@@ -22,8 +22,9 @@ export const ContactSubtitle = styled(Typography)`
     color: ${({ theme }) => theme.palette.secondary.main};
 
     ${({ theme }) => ({
-        [theme.breakpoints.up("lg")]: {
+        [theme.breakpoints.up("xl")]: {
             marginBottom: "30px",
+            maxWidth: "68%",
         },
     })}
 `;

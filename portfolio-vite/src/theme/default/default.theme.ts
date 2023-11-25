@@ -182,6 +182,11 @@ const getDefaultTheme = (mode = "dark") =>
                             transitionProperty: 'background-color, color',
                           },
                     }),
+                    root: ({ theme }) => ({
+                        "&:hover:not(.Mui-disabled, .Mui-error):before": {
+                            borderBottomColor: `${theme.palette.secondary.main} !important`,
+                        }
+                    }),
                 },
             },
             MuiMenuItem: {

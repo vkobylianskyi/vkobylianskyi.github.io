@@ -131,8 +131,8 @@ function App() {
                                 <Projects />
                                 <Skills />
                                 <Education />
-                                <Contact />
                                 <Document />
+                                <Contact />
                                 <Copy />
                             </MainBoxWrapper>
                         </Box>
