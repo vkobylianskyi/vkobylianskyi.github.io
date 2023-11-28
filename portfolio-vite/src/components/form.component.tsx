@@ -49,13 +49,11 @@ const ContactForm = () => {
 
         emailjs
             .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-            .then((res) => (
+            .then(() => (
                 <Snackbar
-                    anchorOrigin={{ 'top', 'center' }}
-                    open={open}
-                    onClose={handleClose}
+                    open
+                    anchorOrigin={{ vertical: "top", horizontal: "center" }}
                     message="Congratulations. Your message has been sent successfully"
-                    key={vertical + horizontal}
                 />
             ))
             .catch((error) => console.log("FAILED...", error));
