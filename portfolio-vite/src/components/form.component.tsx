@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Grid, TextField, Snackbar } from "@mui/material";
+import { Grid, TextField, Snackbar, Alert } from "@mui/material";
 import validate from "validate.js";
 import emailjs from "emailjs-com";
 import { FormAction } from "./form.component.styles";
@@ -44,18 +44,24 @@ const schema = {
 };
 
 const ContactForm = () => {
+    const [open, setOpen] = useState(false);
+
+    const handleClose = (
+        event?: React.SyntheticEvent | Event,
+        reason?: string
+    ) => {
+        if (reason === "clickaway") {
+            return;
+        }
+        setOpen(false);
+    };
+
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs
             .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-            .then(() => (
-                <Snackbar
-                    open
-                    anchorOrigin={{ vertical: "top", horizontal: "center" }}
-                    message="Congratulations. Your message has been sent successfully"
-                />
-            ))
+            .then(() => setOpen(true))
             .catch((error) => console.log("FAILED...", error));
 
         setFormState((formState) => ({
@@ -110,6 +116,20 @@ const ContactForm = () => {
 
     return (
         <div>
+            <Snackbar
+                open={open}
+                autoHideDuration={6000}
+                onClose={handleClose}
+                anchorOrigin={{ vertical: "top", horizontal: "center" }}
+            >
+                <Alert
+                    onClose={handleClose}
+                    severity="success"
+                    sx={{ width: "100%" }}
+                >
+                    Congratulations. Your message has been sent successfully
+                </Alert>
+            </Snackbar>
             <form
                 headers="application/json"
                 name="contact-form"
