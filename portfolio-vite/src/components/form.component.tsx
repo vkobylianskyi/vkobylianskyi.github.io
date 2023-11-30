@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEventHandler } from "react";
 import { Grid, TextField, Snackbar, Alert } from "@mui/material";
 import validate from "validate.js";
 import emailjs from "emailjs-com";
@@ -43,11 +43,19 @@ const schema = {
     },
 };
 
+type ContactFormTypes = {
+    email?: string;
+    subject?: string;
+    lastName?: string;
+    firstName?: string;
+    message?: string;
+};
+
 const ContactForm = () => {
     const [open, setOpen] = useState(false);
 
     const handleClose = (
-        event?: React.SyntheticEvent | Event,
+        _event?: React.SyntheticEvent | Event,
         reason?: string
     ) => {
         if (reason === "clickaway") {
@@ -56,7 +64,10 @@ const ContactForm = () => {
         setOpen(false);
     };
 
-    const sendEmail = (e) => {
+    const sendEmail = (e: {
+        preventDefault: () => void;
+        target: string | HTMLFormElement;
+    }) => {
         e.preventDefault();
 
         emailjs
@@ -73,7 +84,12 @@ const ContactForm = () => {
         }));
     };
 
-    const [formState, setFormState] = useState({
+    const [formState, setFormState] = useState<{
+        isValid: boolean;
+        values: ContactFormTypes;
+        touched: ContactFormTypes;
+        errors: ContactFormTypes;
+    }>({
         isValid: false,
         values: {},
         touched: {},
@@ -90,7 +106,9 @@ const ContactForm = () => {
         }));
     }, [formState.values]);
 
-    const handleChange = (e) => {
+    const handleChange = (
+        e: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
         e.persist();
 
         setFormState((formState) => ({
@@ -109,7 +127,7 @@ const ContactForm = () => {
         }));
     };
 
-    const hasError = (field: string) =>
+    const hasError = (field: "email") =>
         formState.touched[field] && formState.errors[field] ? true : false;
 
     const [t] = useTranslation();
@@ -127,7 +145,7 @@ const ContactForm = () => {
                     severity="success"
                     sx={{ width: "100%" }}
                 >
-                    Congratulations. Your message has been sent successfully
+                    {t("formSuccessMessage")}
                 </Alert>
             </Snackbar>
             <form

@@ -51,6 +51,7 @@ const cardContent = [
             title: "Ingredients & Extracts",
             description: "HTML, SASS, JS, Jquery, Bootstrap, Gulp.JS",
         },
+        isCodeLink: "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/4"
     },
     {
         background:

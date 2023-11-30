@@ -177,16 +177,38 @@ const getDefaultTheme = (mode = "dark") =>
                 styleOverrides: {
                     input: ({ theme }) => ({
                         color: theme.palette.secondary.main,
-                        '&:-webkit-autofill': {
-                            transitionDelay: '9999s',
-                            transitionProperty: 'background-color, color',
-                          },
+                        "&:-webkit-autofill": {
+                            transitionDelay: "9999s",
+                            transitionProperty: "background-color, color",
+                        },
                     }),
                     root: ({ theme }) => ({
                         "&:hover:not(.Mui-disabled, .Mui-error):before": {
                             borderBottomColor: `${theme.palette.secondary.main} !important`,
-                        }
+                        },
                     }),
+                },
+            },
+            MuiAlert: {
+                styleOverrides: {
+                    action: {
+                        paddingTop: 0,
+                        color: "#155724",
+                        backgroundColor: "#d4edda",
+                    },
+                    icon: {
+                        color: "#155724 !important",
+                    }
+                },
+            },
+            MuiSnackbar: {
+                styleOverrides: {
+                    root: {
+                        ".MuiPaper-root": {
+                            color: "#155724",
+                            backgroundColor: "#d4edda",
+                        },
+                    },
                 },
             },
             MuiMenuItem: {

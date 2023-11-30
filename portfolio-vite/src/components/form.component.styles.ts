@@ -21,7 +21,7 @@ export const FormAction = styled(Button)`
         top: 0;
         right: 0;
         width: 100%;
-        height: 90%;
+        height: 80%;
         background: ${({ theme }) => theme.palette.primary.light};
         animation: titles 0.4s cubic-bezier(0.25, 0.61, 1, 0.47) forwards;
         transform: translateY(100%);

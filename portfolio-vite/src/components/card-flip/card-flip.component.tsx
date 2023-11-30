@@ -25,12 +25,14 @@ export type CardFlipProps = {
         description: string | React.ReactNode;
     };
     href: string;
+    isCodeLink: string;
 };
 
 export const CardFlip: React.FC<CardFlipProps> = ({
     background,
     backSide,
     href,
+    isCodeLink,
 }) => {
     const [rotate, setRotate] = React.useState(false);
 
@@ -63,14 +65,26 @@ export const CardFlip: React.FC<CardFlipProps> = ({
                         {backSide && backSide.description}
                     </CardFlipItemBackDescription>
                     <CardFlipItemButtonsWrapper visible={rotate}>
-                        <CardFlipItemTryNow
-                            fontWeight={600}
-                            href={href}
-                            target="_blank"
-                        >
-                            <span>{t("projectsSiteLinkTitle")}</span>
-                            <KeyboardArrowRightIcon />
-                        </CardFlipItemTryNow>
+                        <div>
+                            <CardFlipItemTryNow
+                                fontWeight={600}
+                                href={href}
+                                target="_blank"
+                            >
+                                <span>{t("projectsSiteLinkTitle")}</span>
+                                <KeyboardArrowRightIcon />
+                            </CardFlipItemTryNow>
+                            {isCodeLink && (
+                                <CardFlipItemTryNow
+                                    fontWeight={600}
+                                    href={isCodeLink}
+                                    target="_blank"
+                                >
+                                    <span>{t("projectCodeLinkTitle")}</span>
+                                    <KeyboardArrowRightIcon />
+                                </CardFlipItemTryNow>
+                            )}
+                        </div>
                         <CardFlipItemButton
                             active={rotate}
                             onClick={toggleRotate}
