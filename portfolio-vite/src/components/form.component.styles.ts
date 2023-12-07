@@ -2,6 +2,7 @@ import { Button, styled } from "@mui/material";
 
 export const FormAction = styled(Button)`
     display: block;
+    text-transform: none;
     background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
     color: #fff;
     border: 0;

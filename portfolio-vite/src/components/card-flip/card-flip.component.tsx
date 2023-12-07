@@ -17,6 +17,7 @@ import {
     CardFlipItemSubtitle,
 } from "./card-flip.component.styles.ts";
 import { useTranslation } from "react-i18next";
+import { Stack } from "@mui/material";
 
 export type CardFlipProps = {
     background: string;
@@ -25,7 +26,7 @@ export type CardFlipProps = {
         description: string | React.ReactNode;
     };
     href: string;
-    isCodeLink: string;
+    isCodeLink?: string;
 };
 
 export const CardFlip: React.FC<CardFlipProps> = ({
@@ -65,26 +66,24 @@ export const CardFlip: React.FC<CardFlipProps> = ({
                         {backSide && backSide.description}
                     </CardFlipItemBackDescription>
                     <CardFlipItemButtonsWrapper visible={rotate}>
-                        <div>
+                        <Stack direction="row">
                             <CardFlipItemTryNow
-                                fontWeight={600}
                                 href={href}
                                 target="_blank"
+                                size="small"
                             >
                                 <span>{t("projectsSiteLinkTitle")}</span>
-                                <KeyboardArrowRightIcon />
                             </CardFlipItemTryNow>
                             {isCodeLink && (
                                 <CardFlipItemTryNow
-                                    fontWeight={600}
                                     href={isCodeLink}
                                     target="_blank"
+                                    size="small"
                                 >
                                     <span>{t("projectCodeLinkTitle")}</span>
-                                    <KeyboardArrowRightIcon />
                                 </CardFlipItemTryNow>
                             )}
-                        </div>
+                        </Stack>
                         <CardFlipItemButton
                             active={rotate}
                             onClick={toggleRotate}

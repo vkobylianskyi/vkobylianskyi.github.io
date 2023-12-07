@@ -56,12 +56,6 @@ const getDefaultTheme = (mode = "dark") =>
             },
             MuiButton: {
                 styleOverrides: {
-                    root: ({ theme }) => ({
-                        textTransform: "none",
-                        "&:hover": {
-                            backgroundColor: theme.palette.primary.main,
-                        },
-                    }),
                     contained: {
                         boxShadow: "none",
                         "&:active": {

@@ -120,7 +120,7 @@ export const CardFlipItemImage = styled("div")<{ background: string }>`
 export const CardFlipItemButton = styled(Button)<{ active: boolean }>`
     z-index: 1;
     align-self: flex-end;
-    border-radius: 32px;
+    border-radius: 50%;
     width: 56px;
     height: 56px;
     min-width: 56px;
@@ -129,6 +129,10 @@ export const CardFlipItemButton = styled(Button)<{ active: boolean }>`
     padding: 0;
     background-color: ${({ theme }) => theme.palette.primary.main};
     margin-top: auto;
+
+    &:hover {
+        background-color: ${({ theme }) => theme.palette.primary.main};
+    }
 
     svg {
         transition: transform 0.5s;
@@ -167,10 +171,6 @@ export const CardFlipItemButtonsWrapper = styled("div")<{
     align-items: center;
 `;
 
-export const CardFlipItemTryNow = styled(Link)`
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: 500;
+export const CardFlipItemTryNow = styled(Button)`
     color: #ff8c05;
 `;
