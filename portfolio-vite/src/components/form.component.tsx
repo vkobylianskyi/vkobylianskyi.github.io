@@ -1,4 +1,4 @@
-import { useState, useEffect, ChangeEventHandler } from "react";
+import { useState, useEffect } from "react";
 import { Grid, TextField, Snackbar, Alert } from "@mui/material";
 import validate from "validate.js";
 import emailjs from "emailjs-com";
@@ -51,83 +51,105 @@ type ContactFormTypes = {
     message?: string;
 };
 
-const ContactForm = () => {
-    const [open, setOpen] = useState(false);
+interface FormErrors {
+    firstName?: string[];
+    lastName?: string[];
+    email?: string[];
+    subject?: string[];
+    message?: string[];
+}
 
-    const handleClose = (
-        _event?: React.SyntheticEvent | Event,
-        reason?: string
-    ) => {
-        if (reason === "clickaway") {
-            return;
-        }
-        setOpen(false);
+interface FormState {
+    isValid: boolean;
+    values: ContactFormTypes;
+    touched: Record<keyof ContactFormTypes, boolean>;
+    errors: FormErrors;
+}
+
+const ContactForm: React.FC = () => {
+    const [openSnackbar, setOpenSnackbar] = useState(false);
+
+    const handleCloseSnackbar = () => {
+        setOpenSnackbar(false);
     };
 
-    const sendEmail = (e: {
-        preventDefault: () => void;
-        target: string | HTMLFormElement;
-    }) => {
-        e.preventDefault();
+    const sendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
 
-        emailjs
-            .sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
-            .then(() => setOpen(true))
-            .catch((error) => console.log("FAILED...", error));
+        try {
+            const formElement = event.target as HTMLFormElement;
+            await emailjs.sendForm(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                formElement,
+                USER_ID
+            );
+            setOpenSnackbar(true);
+        } catch (error) {
+            console.error("FAILED...", error);
+        }
 
-        setFormState((formState) => ({
-            ...formState,
+        setFormState((prevFormState: FormState) => ({
+            ...prevFormState,
             isValid: false,
             values: {},
-            touched: {},
+            touched: {
+                email: false,
+                subject: false,
+                lastName: false,
+                firstName: false,
+                message: false,
+            },
             errors: {},
         }));
     };
 
-    const [formState, setFormState] = useState<{
-        isValid: boolean;
-        values: ContactFormTypes;
-        touched: ContactFormTypes;
-        errors: ContactFormTypes;
-    }>({
+    const [formState, setFormState] = useState<FormState>({
         isValid: false,
         values: {},
-        touched: {},
+        touched: {
+            email: false,
+            subject: false,
+            lastName: false,
+            firstName: false,
+            message: false,
+        },
         errors: {},
     });
 
     useEffect(() => {
         const errors = validate(formState.values, schema);
 
-        setFormState((formState) => ({
-            ...formState,
-            isValid: errors ? false : true,
+        setFormState((prevFormState) => ({
+            ...prevFormState,
+            isValid: !errors,
             errors: errors || {},
         }));
     }, [formState.values]);
 
-    const handleChange = (
-        e: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+    const handleInputChange = (
+        event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     ) => {
-        e.persist();
+        const { name, type, value } = event.target;
 
-        setFormState((formState) => ({
-            ...formState,
+        setFormState((prevFormState) => ({
+            ...prevFormState,
             values: {
-                ...formState.values,
-                [e.target.name]:
-                    e.target.type === "checkbox"
-                        ? e.target.checked
-                        : e.target.value,
+                ...prevFormState.values,
+                [name]:
+                    type === "checkbox"
+                        ? (event as React.ChangeEvent<HTMLInputElement>).target
+                              .checked
+                        : value,
             },
             touched: {
-                ...formState.touched,
-                [e.target.name]: true,
+                ...prevFormState.touched,
+                [name]: true,
             },
         }));
     };
 
-    const hasError = (field: "email") =>
+    const hasError = (field: keyof FormErrors) =>
         formState.touched[field] && formState.errors[field] ? true : false;
 
     const [t] = useTranslation();
@@ -135,13 +157,13 @@ const ContactForm = () => {
     return (
         <div>
             <Snackbar
-                open={open}
+                open={openSnackbar}
                 autoHideDuration={6000}
-                onClose={handleClose}
+                onClose={handleCloseSnackbar}
                 anchorOrigin={{ vertical: "top", horizontal: "center" }}
             >
                 <Alert
-                    onClose={handleClose}
+                    onClose={handleCloseSnackbar}
                     severity="success"
                     sx={{ width: "100%" }}
                 >
@@ -149,7 +171,7 @@ const ContactForm = () => {
                 </Alert>
             </Snackbar>
             <form
-                headers="application/json"
+                encType="multipart/form-data"
                 name="contact-form"
                 onSubmit={sendEmail}
             >
@@ -165,11 +187,13 @@ const ContactForm = () => {
                             fullWidth
                             helperText={
                                 hasError("firstName")
-                                    ? formState.errors.firstName[0]
+                                    ? formState.errors.firstName
+                                        ? formState.errors.firstName[0]
+                                        : null
                                     : null
                             }
                             error={hasError("firstName")}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             type="text"
                             value={formState.values.firstName || ""}
                         />
@@ -185,11 +209,13 @@ const ContactForm = () => {
                             fullWidth
                             helperText={
                                 hasError("lastName")
-                                    ? formState.errors.lastName[0]
+                                    ? formState.errors.lastName
+                                        ? formState.errors.lastName[0]
+                                        : null
                                     : null
                             }
                             error={hasError("lastName")}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             type="text"
                             value={formState.values.lastName || ""}
                         />
@@ -204,11 +230,13 @@ const ContactForm = () => {
                             fullWidth
                             helperText={
                                 hasError("email")
-                                    ? formState.errors.email[0]
+                                    ? formState.errors.email
+                                        ? formState.errors.email[0]
+                                        : null
                                     : null
                             }
                             error={hasError("email")}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             type="email"
                             value={formState.values.email || ""}
                         />
@@ -223,11 +251,13 @@ const ContactForm = () => {
                             fullWidth
                             helperText={
                                 hasError("subject")
-                                    ? formState.errors.subject[0]
+                                    ? formState.errors.subject
+                                        ? formState.errors.subject[0]
+                                        : null
                                     : null
                             }
                             error={hasError("subject")}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             type="text"
                             value={formState.values.subject || ""}
                         />
@@ -244,11 +274,13 @@ const ContactForm = () => {
                             fullWidth
                             helperText={
                                 hasError("message")
-                                    ? formState.errors.message[0]
+                                    ? formState.errors.message
+                                        ? formState.errors.message[0]
+                                        : null
                                     : null
                             }
                             error={hasError("message")}
-                            onChange={handleChange}
+                            onChange={handleInputChange}
                             type="text"
                             value={formState.values.message || ""}
                         />
