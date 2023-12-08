@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Grid, TextField, Snackbar, Alert } from "@mui/material";
+import { Grid, TextField, Snackbar, Alert, useTheme, useMediaQuery } from "@mui/material";
 import validate from "validate.js";
 import emailjs from "emailjs-com";
 import { FormAction } from "./form.component.styles";
@@ -72,6 +72,9 @@ const ContactForm: React.FC = () => {
     const handleCloseSnackbar = () => {
         setOpenSnackbar(false);
     };
+
+    const theme = useTheme();
+    const isTabletWide = useMediaQuery(theme.breakpoints.up("md"));
 
     const sendEmail = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -269,7 +272,7 @@ const ContactForm: React.FC = () => {
                             variant="standard"
                             size="medium"
                             name="message"
-                            rows={5}
+                            rows={isTabletWide ? 9 : 5}
                             multiline
                             fullWidth
                             helperText={

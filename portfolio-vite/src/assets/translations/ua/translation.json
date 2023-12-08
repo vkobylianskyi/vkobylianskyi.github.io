@@ -59,5 +59,10 @@
     "documentsTitle": "Документи",
     "documentsCV": "Резюме",
     "documentsRecommendationLetter": "Рекомендаційний лист",
-    "documentsDiploma": "Диплом бакалавра"
+    "documentsDiploma": "Диплом бакалавра",
+    "recommendationTitle": "Рекомендації",
+    "recommendationPmName": "Олексій Каган",
+    "recommendationPmPosition": "Менеджер продукту",
+    "recommendationTechLeadName": "Євген Дегурко",
+    "recommendationTechLeadPosition": "Технічний керівник"
 }

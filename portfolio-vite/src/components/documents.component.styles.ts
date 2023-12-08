@@ -26,8 +26,8 @@ export const DocumentsLink = styled(Link)`
     background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
     color: #fff;
     border: 0;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
     border-radius: 2px;
     padding: 13px 20px;
     font-weight: 700;

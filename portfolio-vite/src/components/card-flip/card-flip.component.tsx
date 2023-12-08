@@ -3,6 +3,7 @@ import PublicIcon from "@mui/icons-material/Public";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import Button from "@mui/material/Button";
 
 import {
     CardFlipInner,
@@ -14,7 +15,6 @@ import {
     CardFlipItemBackSide,
     CardFlipItemBackDescription,
     CardFlipItemButtonsWrapper,
-    CardFlipItemTryNow,
     CardFlipItemSubtitle,
 } from "./card-flip.component.styles.ts";
 import { useTranslation } from "react-i18next";
@@ -67,8 +67,14 @@ export const CardFlip: React.FC<CardFlipProps> = ({
                         {backSide && backSide.description}
                     </CardFlipItemBackDescription>
                     <CardFlipItemButtonsWrapper visible={rotate}>
-                        <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
-                            <CardFlipItemTryNow
+                        <Stack
+                            direction="row"
+                            spacing={1}
+                            useFlexGap
+                            flexWrap="wrap"
+                        >
+                            <Button
+                                sx={{ width: 80, justifyContent: "flex-Start" }}
                                 startIcon={<PublicIcon />}
                                 href={href}
                                 target="_blank"
@@ -76,9 +82,13 @@ export const CardFlip: React.FC<CardFlipProps> = ({
                                 variant="outlined"
                             >
                                 <span>{t("projectsSiteLinkTitle")}</span>
-                            </CardFlipItemTryNow>
+                            </Button>
                             {codeLink && (
-                                <CardFlipItemTryNow
+                                <Button
+                                    sx={{
+                                        width: 80,
+                                        justifyContent: "flex-Start",
+                                    }}
                                     href={codeLink}
                                     startIcon={<GitHubIcon />}
                                     target="_blank"
@@ -86,7 +96,7 @@ export const CardFlip: React.FC<CardFlipProps> = ({
                                     variant="outlined"
                                 >
                                     <span>{t("projectCodeLinkTitle")}</span>
-                                </CardFlipItemTryNow>
+                                </Button>
                             )}
                         </Stack>
                         <CardFlipItemButton

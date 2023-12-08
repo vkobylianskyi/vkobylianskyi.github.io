@@ -6,7 +6,7 @@ import {
     EducationIcon,
     EducationTitle,
     EducationSubtitle,
-    EducationDate
+    EducationDate,
 } from "./education.component.styles.ts";
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 
@@ -33,7 +33,7 @@ export default function Education() {
 
     const theme = useTheme();
     const isTabletWide = useMediaQuery(theme.breakpoints.up("md"));
-    
+
     return (
         <Container>
             <EducationWrapper id="educationSection">
@@ -41,7 +41,13 @@ export default function Education() {
                     {t("educationTitle")}
                 </Typography>
                 {educationList.map((educationItem, index) => (
-                    <EducationGrid key={index} container spacing={3} alignItems={"center"} justifyContent={isTabletWide ? "flex-start" : "center"}>
+                    <EducationGrid
+                        key={index}
+                        container
+                        spacing={3}
+                        alignItems={"center"}
+                        justifyContent={isTabletWide ? "flex-start" : "center"}
+                    >
                         <Grid item xs={8} md={3} lg={2}>
                             <EducationIcon
                                 src={educationItem.icon}
@@ -49,9 +55,21 @@ export default function Education() {
                             />
                         </Grid>
                         <Grid item xs={12} md={9} lg={10}>
-                            <EducationTitle textAlign={isTabletWide ? "left" : "center"}>{t(educationItem.title)}</EducationTitle>
-                            <EducationSubtitle textAlign={isTabletWide ? "left" : "center"}>{t(educationItem.subtitle)}</EducationSubtitle>
-                            <EducationDate textAlign={isTabletWide ? "left" : "center"}>{educationItem.date}</EducationDate>
+                            <EducationTitle
+                                textAlign={isTabletWide ? "left" : "center"}
+                            >
+                                {t(educationItem.title)}
+                            </EducationTitle>
+                            <EducationSubtitle
+                                textAlign={isTabletWide ? "left" : "center"}
+                            >
+                                {t(educationItem.subtitle)}
+                            </EducationSubtitle>
+                            <EducationDate
+                                textAlign={isTabletWide ? "left" : "center"}
+                            >
+                                {educationItem.date}
+                            </EducationDate>
                         </Grid>
                     </EducationGrid>
                 ))}

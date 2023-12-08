@@ -19,6 +19,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import PublicIcon from "@mui/icons-material/Public";
 import SchoolIcon from "@mui/icons-material/School";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
+import RecommendIcon from '@mui/icons-material/Recommend';
 
 import cvDocument from "../assets/CV_Volodymyr_Kobylianskyi_Front-end.pdf";
 
@@ -82,6 +83,11 @@ const categories: navigatorTypes[] = [
                 id: "documentsSection",
                 listTitle: "documentsTitle",
                 icon: <InsertDriveFileIcon />,
+            },
+            {
+                id: "recommendationSection",
+                listTitle: "recommendationTitle",
+                icon: <RecommendIcon />,
             },
             {
                 id: "contactSection",
@@ -193,7 +199,7 @@ export default function Navigator(props: DrawerProps) {
                                 </ListItem>
                             )
                         )}
-                        <Divider sx={{ mt: 2 }} />
+                        <Divider sx={{ mt: 1 }} />
                     </Box>
                 ))}
             </List>

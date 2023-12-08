@@ -1,7 +1,6 @@
 import { alpha, styled } from "@mui/material";
 
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
 
 export const CardFlipItemTitle = styled(Typography)`
@@ -169,10 +168,4 @@ export const CardFlipItemButtonsWrapper = styled("div")<{
     display: flex;
     justify-content: space-between;
     align-items: center;
-`;
-
-export const CardFlipItemTryNow = styled(Button)`
-    color: #ff8c05;
-    width: 80px;
-    justify-content: flex-start;
 `;

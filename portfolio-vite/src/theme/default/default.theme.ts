@@ -11,12 +11,11 @@ const getDefaultTheme = (mode = "dark") =>
                 fontSize: 22,
                 color: primary.main,
                 textTransform: "uppercase",
-                marginBottom: 20,
+                marginBottom: 30,
                 fontWeight: 600,
 
                 "@media (min-width:900px)": {
                     fontSize: "28px",
-                    marginBottom: 30,
                 },
                 h5: {
                     fontWeight: 500,

@@ -59,5 +59,10 @@
     "documentsTitle": "Documents",
     "documentsCV": "CV",
     "documentsRecommendationLetter": "Recommendation letter",
-    "documentsDiploma": "Bachelor's diploma"
+    "documentsDiploma": "Bachelor's diploma",
+    "recommendationTitle": "Recommendations",
+    "recommendationPmName": "Oleksii Kahan",
+    "recommendationPmPosition": "Product Manager",
+    "recommendationTechLeadName": "Yevhen Dehurko",
+    "recommendationTechLeadPosition": "Tech Lead"
 }

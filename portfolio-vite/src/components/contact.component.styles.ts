@@ -16,7 +16,7 @@ export const ContactWrapper = styled(Box)`
 
 export const ContactSubtitle = styled(Typography)`
     font-size: 32px;
-    line-height: 110%;
+    line-height: 150%;
     font-weight: 600;
     margin-bottom: 20px;
     color: ${({ theme }) => theme.palette.secondary.main};
