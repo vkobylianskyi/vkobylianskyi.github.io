@@ -1,7 +1,8 @@
 import React from "react";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import PublicIcon from "@mui/icons-material/Public";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 import {
     CardFlipInner,
@@ -26,14 +27,14 @@ export type CardFlipProps = {
         description: string | React.ReactNode;
     };
     href: string;
-    isCodeLink?: string;
+    codeLink?: string;
 };
 
 export const CardFlip: React.FC<CardFlipProps> = ({
     background,
     backSide,
     href,
-    isCodeLink,
+    codeLink,
 }) => {
     const [rotate, setRotate] = React.useState(false);
 
@@ -66,19 +67,23 @@ export const CardFlip: React.FC<CardFlipProps> = ({
                         {backSide && backSide.description}
                     </CardFlipItemBackDescription>
                     <CardFlipItemButtonsWrapper visible={rotate}>
-                        <Stack direction="row">
+                        <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
                             <CardFlipItemTryNow
+                                startIcon={<PublicIcon />}
                                 href={href}
                                 target="_blank"
                                 size="small"
+                                variant="outlined"
                             >
                                 <span>{t("projectsSiteLinkTitle")}</span>
                             </CardFlipItemTryNow>
-                            {isCodeLink && (
+                            {codeLink && (
                                 <CardFlipItemTryNow
-                                    href={isCodeLink}
+                                    href={codeLink}
+                                    startIcon={<GitHubIcon />}
                                     target="_blank"
                                     size="small"
+                                    variant="outlined"
                                 >
                                     <span>{t("projectCodeLinkTitle")}</span>
                                 </CardFlipItemTryNow>

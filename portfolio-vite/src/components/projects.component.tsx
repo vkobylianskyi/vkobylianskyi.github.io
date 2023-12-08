@@ -1,7 +1,11 @@
 import { useTranslation } from "react-i18next";
 import Container from "@mui/material/Container";
 
-import { ProjectsWrapper, ProjectsBox, ProjectsSubtitle } from "./projects.component.styles.ts";
+import {
+    ProjectsWrapper,
+    ProjectsBox,
+    ProjectsSubtitle,
+} from "./projects.component.styles.ts";
 import { Grid, Typography } from "@mui/material";
 
 import { CardFlip } from "./card-flip/card-flip.component.tsx";
@@ -22,7 +26,8 @@ const cardContent = [
         href: "https://plus.cex.io/competition",
         backSide: {
             title: "CEX.IO Plus Competition",
-            description: "Next, Styled Components, Type Script, Material UI, Webpack.",
+            description:
+                "Next, Styled Components, Type Script, Material UI, Webpack.",
         },
     },
     {
@@ -51,7 +56,8 @@ const cardContent = [
             title: "Ingredients & Extracts",
             description: "HTML, SASS, JS, Jquery, Bootstrap, Gulp.JS",
         },
-        isCodeLink: "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/4"
+        codeLink:
+            "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/4",
     },
     {
         background:
@@ -61,6 +67,8 @@ const cardContent = [
             title: "SunTour",
             description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack",
         },
+        codeLink:
+            "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/2",
     },
     {
         background:
@@ -68,9 +76,10 @@ const cardContent = [
         href: "https://vkobylianskyi.github.io/projects/3/dist/index.html",
         backSide: {
             title: "Sensational Food",
-            description:
-                "HTML, SASS, JS, Jquery, Bootstrap, Webpack",
+            description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack",
         },
+        codeLink:
+        "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/3",
     },
     {
         background:
@@ -80,6 +89,8 @@ const cardContent = [
             title: "Web developer site",
             description: "HTML, SASS, JS, Bootstrap, Webpack",
         },
+        codeLink:
+        "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/5",
     },
     {
         background:
@@ -89,6 +100,8 @@ const cardContent = [
             title: "Project management application",
             description: "HTML, SASS, JS, Webpack",
         },
+        codeLink:
+        "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/7",
     },
     {
         background:
@@ -99,6 +112,8 @@ const cardContent = [
             description:
                 "HTML, SASS, JS, Jquery, Bootstrap, Swiper.JS, Webpack",
         },
+        codeLink:
+        "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/8",
     },
     {
         background:
@@ -108,6 +123,8 @@ const cardContent = [
             title: "Join the colors",
             description: "HTML, SASS, Gulp.JS",
         },
+        codeLink:
+        "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/1",
     },
     {
         background:
@@ -117,6 +134,8 @@ const cardContent = [
             title: "Innovative companies",
             description: "HTML, SASS, JS, Jquery, Bootstrap, Webpack",
         },
+        codeLink:
+        "https://github.com/vkobylianskyi/vkobylianskyi.github.io/tree/master/projects/6",
     },
 ];
 
@@ -129,11 +148,11 @@ export default function Projects() {
                 <Typography variant="h2" align="center">
                     {t("projectsTitle")}
                 </Typography>
-                <ProjectsSubtitle> {t('projectsText')}</ProjectsSubtitle>
+                <ProjectsSubtitle> {t("projectsText")}</ProjectsSubtitle>
                 <Grid container spacing={3}>
                     {cardContent.map((cardContentItem, index) => (
                         <Grid item xs={12} md={6} lg={4} key={index}>
-                            <ProjectsBox >
+                            <ProjectsBox>
                                 <CardFlip {...cardContentItem} />
                             </ProjectsBox>
                         </Grid>

@@ -173,4 +173,6 @@ export const CardFlipItemButtonsWrapper = styled("div")<{
 
 export const CardFlipItemTryNow = styled(Button)`
     color: #ff8c05;
+    width: 80px;
+    justify-content: flex-start;
 `;
