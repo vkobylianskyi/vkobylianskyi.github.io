@@ -7,24 +7,24 @@ import {
 } from "./skills.component.styles.ts";
 import { Grid, Typography } from "@mui/material";
 
-import htmlLogo from "../assets/img/html-logo.png";
-import cssLogo from "../assets/img/css-logo.png";
-import jsLogo from "../assets/img/js-logo.png";
-import jqueryLogo from "../assets/img/jquery-logo.png";
-import sassLogo from "../assets/img/sass-logo.png";
-import gitLogo from "../assets/img/git-logo.png";
-import gulpLogo from "../assets/img/gulp-logo.png";
-import bootstrapLogo from "../assets/img/bootstrap-logo.png";
-import swiperLogo from "../assets/img/swiper-logo.png";
-import photoshopLogo from "../assets/img/photoshop-logo.png";
-import figmaLogo from "../assets/img/figma-logo.png";
-import reactLogo from "../assets/img/react-logo.png";
-import typeScriptLogo from "../assets/img/type-script-logo.png";
-import nextLogo from "../assets/img/next-logo.png";
-import strapiLogo from "../assets/img/strapi-logo.png";
-import npmLogo from "../assets/img/npm-logo.png";
-import muiLogo from "../assets/img/mui-logo.png";
-import webpackLogo from "../assets/img/webpack-logo.png";
+import htmlLogo from "../assets/img/html-logo.webp";
+import cssLogo from "../assets/img/css-logo.webp";
+import jsLogo from "../assets/img/js-logo.webp";
+import jqueryLogo from "../assets/img/jquery-logo.webp";
+import sassLogo from "../assets/img/sass-logo.webp";
+import gitLogo from "../assets/img/git-logo.webp";
+import gulpLogo from "../assets/img/gulp-logo.webp";
+import bootstrapLogo from "../assets/img/bootstrap-logo.webp";
+import swiperLogo from "../assets/img/swiper-logo.webp";
+import photoshopLogo from "../assets/img/photoshop-logo.webp";
+import figmaLogo from "../assets/img/figma-logo.webp";
+import reactLogo from "../assets/img/react-logo.webp";
+import typeScriptLogo from "../assets/img/type-script-logo.webp";
+import nextLogo from "../assets/img/next-logo.webp";
+import strapiLogo from "../assets/img/strapi-logo.webp";
+import npmLogo from "../assets/img/npm-logo.webp";
+import muiLogo from "../assets/img/mui-logo.webp";
+import webpackLogo from "../assets/img/webpack-logo.webp";
 import { useTranslation } from "react-i18next";
 
 const technologyList = [

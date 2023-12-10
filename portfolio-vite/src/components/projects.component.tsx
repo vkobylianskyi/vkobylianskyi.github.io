@@ -13,7 +13,7 @@ import { CardFlip } from "./card-flip/card-flip.component.tsx";
 const cardContent = [
     {
         background:
-            "url('src/assets/img/cex-about-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/cex-about-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://cex.io/about",
         backSide: {
             title: "CEX.IO About Us",
@@ -22,7 +22,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/cex-competition-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/cex-competition-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://plus.cex.io/competition",
         backSide: {
             title: "CEX.IO Plus Competition",
@@ -32,7 +32,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/cex-nft-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/cex-nft-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://cex.io/metaverse-and-nfts-explained",
         backSide: {
             title: "Metaverse and NFT",
@@ -41,7 +41,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/cex-prices-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/cex-prices-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://cex.io/prices",
         backSide: {
             title: "CEX.IO Prices",
@@ -50,7 +50,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/third-project-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/third-project-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://vkobylianskyi.github.io/projects/4/dist/index.html",
         backSide: {
             title: "Ingredients & Extracts",
@@ -61,7 +61,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/second-project-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/second-project-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://vkobylianskyi.github.io/projects/2/dist/index.html",
         backSide: {
             title: "SunTour",
@@ -72,7 +72,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/fourth-project-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/fourth-project-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://vkobylianskyi.github.io/projects/3/dist/index.html",
         backSide: {
             title: "Sensational Food",
@@ -83,7 +83,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/fifth-project-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/fifth-project-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://vkobylianskyi.github.io/projects/5/dist/index.html",
         backSide: {
             title: "Web developer site",
@@ -94,7 +94,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/sixth-project-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/sixth-project-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://vkobylianskyi.github.io/projects/7/dist/index.html",
         backSide: {
             title: "Project management application",
@@ -105,7 +105,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/seventh-project-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/seventh-project-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://vkobylianskyi.github.io/projects/8/dist/index.html",
         backSide: {
             title: "Shaker Bottles",
@@ -117,7 +117,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/first-project-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/first-project-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://vkobylianskyi.github.io/projects/1/dist/index.html",
         backSide: {
             title: "Join the colors",
@@ -128,7 +128,7 @@ const cardContent = [
     },
     {
         background:
-            "url('src/assets/img/eighth-project-image.png') no-repeat center center / cover, #FFFFFF",
+            "url('src/assets/img/eighth-project-image.webp') no-repeat center center / cover, #FFFFFF",
         href: "https://vkobylianskyi.github.io/projects/6/dist/index.html",
         backSide: {
             title: "Innovative companies",
