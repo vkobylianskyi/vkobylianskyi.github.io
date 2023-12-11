@@ -40,16 +40,22 @@ export default function Experience() {
         "argoPerceptionExperienceFifthItem",
         "argoPerceptionExperienceSixthItem",
         "argoPerceptionExperienceSeventhItem",
+        "argoPerceptionExperienceEighthItem",
+        "argoPerceptionExperienceNinthItem",
+        "argoPerceptionExperienceTenthItem",
     ];
 
     const etceteraExperience = [
         "etceteraExperienceFirstItem",
         "etceteraExperienceSecondItem",
         "etceteraExperienceThirdItem",
+        "etceteraExperienceFourthItem",
         "etceteraExperienceFifthItem",
         "etceteraExperienceSixthItem",
         "etceteraExperienceSeventhItem",
         "etceteraExperienceEighthItem",
+        "etceteraExperienceNinthItem",
+        "etceteraExperienceTenthItem",
     ];
 
     const theme = useTheme();
@@ -61,7 +67,7 @@ export default function Experience() {
         <Container id="experienceSection">
             <ExperienceWrapper>
                 <Typography variant="h2" align="center">
-                    {t('experienceSectionTitle')}
+                    {t("experienceSectionTitle")}
                 </Typography>
                 <Carousel
                     autoPlay={false}

@@ -10,7 +10,7 @@ import {
 } from "./welcome.component.styles.ts";
 import { Grid, useMediaQuery, useTheme } from "@mui/material";
 
-import welcomeImage from "../assets/img/welcome-image.png";
+import welcomeImage from "../assets/img/welcome-image.webp";
 
 export default function Welcome() {
     const theme = useTheme();

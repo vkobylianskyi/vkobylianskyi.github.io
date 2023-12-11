@@ -272,7 +272,7 @@ const ContactForm: React.FC = () => {
                             variant="standard"
                             size="medium"
                             name="message"
-                            rows={isTabletWide ? 9 : 5}
+                            rows={isTabletWide ? 11 : 5}
                             multiline
                             fullWidth
                             helperText={

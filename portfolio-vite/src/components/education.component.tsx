@@ -10,7 +10,7 @@ import {
 } from "./education.component.styles.ts";
 import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 
-import educationIcon from "../assets/img/education-icon.jpg";
+import educationIcon from "../assets/img/education-icon.webp";
 import { useTranslation } from "react-i18next";
 
 const educationList = [
