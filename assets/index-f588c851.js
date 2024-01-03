@@ -766,7 +766,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
    
 
     ${({theme:e})=>({[e.breakpoints.up("lg")]:{order:2,"&:first-of-type":{order:1},"&:nth-of-type(2)":{order:0}}})}
-`,xme="/assets/Bachelor_diploma_Volodymyr_Kobylianskyi_Front-end-18a8eef1.pdf";function Cme(){const[e]=so(),t=[{link:Xk,text:"documentsCV"},{link:xme,text:"documentsDiploma"}],n=Tt(),r=wr(n.breakpoints.up("lg"));return b.jsx(Co,{id:"documentsSection",children:b.jsxs(vme,{children:[b.jsx(yme,{variant:"h2",align:"center",children:e("documentsTitle")}),b.jsx(Da,{direction:"row",justifyContent:"center",useFlexGap:!0,alignItems:"center",flexWrap:"wrap",spacing:r?5:3,children:t.map((o,i)=>b.jsx(bme,{variant:"h6",target:"_blank",href:o.link,children:e(o.text)},i))})]})})}const Sme=j(Cn)`
+`,xme="/assets/Reference_Letter _Volodymyr_Kobylianskyi_Front-end-7bb3f24b.pdf",Cme="/assets/Bachelor_diploma_Volodymyr_Kobylianskyi_Front-end-18a8eef1.pdf";function Sme(){const[e]=so(),t=[{link:Xk,text:"documentsCV"},{link:xme,text:"documentsRecommendationLetter"},{link:Cme,text:"documentsDiploma"}],n=Tt(),r=wr(n.breakpoints.up("lg"));return b.jsx(Co,{id:"documentsSection",children:b.jsxs(vme,{children:[b.jsx(yme,{variant:"h2",align:"center",children:e("documentsTitle")}),b.jsx(Da,{direction:"row",justifyContent:"center",useFlexGap:!0,alignItems:"center",flexWrap:"wrap",spacing:r?5:3,children:t.map((o,i)=>b.jsx(bme,{variant:"h6",target:"_blank",href:o.link,children:e(o.text)},i))})]})})}const wme=j(Cn)`
     padding: 30px;
     background-color: ${({theme:e})=>e.palette.primary.light};
     margin-top: 40px;
@@ -774,7 +774,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
 
     ${({theme:e})=>({[e.breakpoints.up("lg")]:{padding:40}})}
-`,wme=j("img")`
+`,$me=j("img")`
     width: 100%;
     max-width: 180px;
     border-radius: 50%;
@@ -784,19 +784,19 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
     margin-right: auto;
 
     ${({theme:e})=>({[e.breakpoints.up("lg")]:{marginLeft:0}})}
-`,$me=j("div")`
+`,Pme=j("div")`
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 16px;
     margin-bottom: 8px;
     ${({theme:e})=>({[e.breakpoints.up("md")]:{justifyContent:"flex-start",alignItems:"flex-start"}})};
-`,Pme=j("img")`
+`,kme=j("img")`
     display: block;
     width: 30px;
     height: 30px;
     margin-right: 8px;
-`,kme=j(ut)`
+`,Tme=j(ut)`
     font-size: 24px;
     line-height: 30px;
     padding-bottom: 16px;
@@ -805,7 +805,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
     font-size: 22px;
     line-height: 30px;
     color: ${({theme:e})=>e.palette.secondary.main};
-`,Tme="/assets/pm-photo-46ff23f8.jpg",Rme="/assets/tech-lead-photo-02b8d78d.jpg",Eme=[{photo:Tme,title:"recommendationPmName",description:"recommendationPmPosition",email:"mailto:alekseykagan93@gmail.com",socialLink:"https://www.linkedin.com/in/oleksii-kahan/"},{photo:Rme,title:"recommendationTechLeadName",description:"recommendationTechLeadPosition",email:"mailto:y.dehurko@cex.io",socialLink:"https://www.linkedin.com/in/e-dehurko/"}];function Ime(){const[e]=so(),t=Tt(),n=wr(t.breakpoints.up("md")),r=wr(t.breakpoints.up("lg"));return b.jsx(Co,{children:b.jsxs(Sme,{id:"recommendationSection",children:[b.jsx(ut,{variant:"h2",align:"center",children:e("recommendationTitle")}),b.jsx(Da,{direction:r?"row":"column",justifyContent:"center",useFlexGap:!0,spacing:r?3:5,children:Eme.map((o,i)=>b.jsxs(pt,{container:!0,alignItems:"center",justifyContent:r?"flex-start":"center",spacing:3,children:[b.jsx(pt,{item:!0,xs:8,md:4,lg:5,children:b.jsx(wme,{src:o.photo,alt:o.photo})}),b.jsxs(pt,{item:!0,xs:12,md:8,lg:7,children:[b.jsx(kme,{textAlign:n?"left":"center",children:e(o.title)}),b.jsx(fw,{textAlign:n?"left":"center",children:e(o.description)}),b.jsxs($me,{children:[b.jsx(Pme,{src:wT,alt:"CEX.IO logo"}),b.jsx(fw,{children:"CEX.IO"})]}),b.jsxs(Da,{direction:"row",justifyContent:n?"left":"center",children:[b.jsx(mr,{sx:{marginLeft:r?"-8px":"0px",marginRight:"8px"},size:"large",target:"_blank",color:"primary",href:o.email,children:b.jsx(Em,{fontSize:"large"})}),b.jsx(mr,{size:"large",target:"_blank",color:"primary",href:o.socialLink,children:b.jsx(Tm,{fontSize:"large"})})]})]})]},i))})]})})}const _me=j(Cn)`
+`,Rme="/assets/pm-photo-46ff23f8.jpg",Eme="/assets/tech-lead-photo-02b8d78d.jpg",Ime=[{photo:Rme,title:"recommendationPmName",description:"recommendationPmPosition",email:"mailto:alekseykagan93@gmail.com",socialLink:"https://www.linkedin.com/in/oleksii-kahan/"},{photo:Eme,title:"recommendationTechLeadName",description:"recommendationTechLeadPosition",email:"mailto:y.dehurko@cex.io",socialLink:"https://www.linkedin.com/in/e-dehurko/"}];function _me(){const[e]=so(),t=Tt(),n=wr(t.breakpoints.up("md")),r=wr(t.breakpoints.up("lg"));return b.jsx(Co,{children:b.jsxs(wme,{id:"recommendationSection",children:[b.jsx(ut,{variant:"h2",align:"center",children:e("recommendationTitle")}),b.jsx(Da,{direction:r?"row":"column",justifyContent:"center",useFlexGap:!0,spacing:r?3:5,children:Ime.map((o,i)=>b.jsxs(pt,{container:!0,alignItems:"center",justifyContent:r?"flex-start":"center",spacing:3,children:[b.jsx(pt,{item:!0,xs:8,md:4,lg:5,children:b.jsx($me,{src:o.photo,alt:o.photo})}),b.jsxs(pt,{item:!0,xs:12,md:8,lg:7,children:[b.jsx(Tme,{textAlign:n?"left":"center",children:e(o.title)}),b.jsx(fw,{textAlign:n?"left":"center",children:e(o.description)}),b.jsxs(Pme,{children:[b.jsx(kme,{src:wT,alt:"CEX.IO logo"}),b.jsx(fw,{children:"CEX.IO"})]}),b.jsxs(Da,{direction:"row",justifyContent:n?"left":"center",children:[b.jsx(mr,{sx:{marginLeft:r?"-8px":"0px",marginRight:"8px"},size:"large",target:"_blank",color:"primary",href:o.email,children:b.jsx(Em,{fontSize:"large"})}),b.jsx(mr,{size:"large",target:"_blank",color:"primary",href:o.socialLink,children:b.jsx(Tm,{fontSize:"large"})})]})]})]},i))})]})})}const Ome=j(Cn)`
     padding: 30px;
     background-color: ${({theme:e})=>e.palette.primary.light};
     margin-top: 40px;
@@ -814,11 +814,11 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
     box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
 
     ${({theme:e})=>({[e.breakpoints.up("lg")]:{padding:40}})}
-`,Ome=j(ut)`
+`,Mme=j(ut)`
     color: ${({theme:e})=>e.palette.secondary.main};
-`;function Mme(){return b.jsx(Co,{children:b.jsx(_me,{children:b.jsxs(Ome,{variant:"body2",color:"white",align:"center",children:["Copyright © All Right Reserved ",new Date().getFullYear(),"."]})})})}const Lme=j(Cn)`
+`;function Lme(){return b.jsx(Co,{children:b.jsx(Ome,{children:b.jsxs(Mme,{variant:"body2",color:"white",align:"center",children:["Copyright © All Right Reserved ",new Date().getFullYear(),"."]})})})}const Ame=j(Cn)`
     background-color: ${({theme:e})=>e.palette.primary.dark};
     flex: 1;
     display: flex;
     flex-direction: column;
-`,ET=$.createContext({toggleColorMode:()=>{},mode:"dark"});function Ame(){const e=["dark","light"],t=()=>{const m=localStorage.getItem("mode");return!m||!e.includes(m)?(localStorage.setItem("mode",e[0]),e[0]):m},[n,r]=$.useState(t()),o=$.useMemo(()=>({toggleColorMode:()=>{r(m=>{const p=m===e[1]?e[0]:e[1];return localStorage.setItem("mode",p),p})},mode:n}),[]),i=kj(n),[a,s]=$.useState(!1),l=wr(i.breakpoints.up("sm")),c=256,d=()=>{s(!a)};return Ln.use(Sre).use(Ek).use(Ak).init({supportedLngs:["en","ua"],fallbackLng:"en",detection:{order:["cookie","localStorage","htmlTag","path","subdomain"],caches:["cookie"]},resources:{en:{translation:Cie},ua:{translation:Fae}}}),b.jsx($.Suspense,{fallback:"Loading...",children:b.jsx("div",{className:"App",children:b.jsx(ET.Provider,{value:o,children:b.jsxs(w6,{theme:i,children:[b.jsx(X8,{}),b.jsxs(Cn,{sx:{display:"flex"},children:[b.jsxs(Cn,{component:"nav",sx:{width:{sm:c},flexShrink:{sm:0}},children:[l?null:b.jsx(ew,{PaperProps:{style:{width:c}},variant:"temporary",open:a,onClose:d}),b.jsx(ew,{PaperProps:{style:{width:c}},sx:{display:{sm:"block",xs:"none"}}})]}),b.jsxs(Lme,{children:[b.jsx(vue,{onDrawerToggle:d}),b.jsx($ue,{}),b.jsx(Iue,{}),b.jsx(epe,{}),b.jsx(wpe,{}),b.jsx(Gpe,{}),b.jsx(eme,{}),b.jsx(Cme,{}),b.jsx(Ime,{}),b.jsx(hme,{}),b.jsx(Mme,{})]})]})]})})})})}Th.createRoot(document.getElementById("root")).render(b.jsx(qr.StrictMode,{children:b.jsx(Ame,{})}));
+`,ET=$.createContext({toggleColorMode:()=>{},mode:"dark"});function jme(){const e=["dark","light"],t=()=>{const m=localStorage.getItem("mode");return!m||!e.includes(m)?(localStorage.setItem("mode",e[0]),e[0]):m},[n,r]=$.useState(t()),o=$.useMemo(()=>({toggleColorMode:()=>{r(m=>{const p=m===e[1]?e[0]:e[1];return localStorage.setItem("mode",p),p})},mode:n}),[]),i=kj(n),[a,s]=$.useState(!1),l=wr(i.breakpoints.up("sm")),c=256,d=()=>{s(!a)};return Ln.use(Sre).use(Ek).use(Ak).init({supportedLngs:["en","ua"],fallbackLng:"en",detection:{order:["cookie","localStorage","htmlTag","path","subdomain"],caches:["cookie"]},resources:{en:{translation:Cie},ua:{translation:Fae}}}),b.jsx($.Suspense,{fallback:"Loading...",children:b.jsx("div",{className:"App",children:b.jsx(ET.Provider,{value:o,children:b.jsxs(w6,{theme:i,children:[b.jsx(X8,{}),b.jsxs(Cn,{sx:{display:"flex"},children:[b.jsxs(Cn,{component:"nav",sx:{width:{sm:c},flexShrink:{sm:0}},children:[l?null:b.jsx(ew,{PaperProps:{style:{width:c}},variant:"temporary",open:a,onClose:d}),b.jsx(ew,{PaperProps:{style:{width:c}},sx:{display:{sm:"block",xs:"none"}}})]}),b.jsxs(Ame,{children:[b.jsx(vue,{onDrawerToggle:d}),b.jsx($ue,{}),b.jsx(Iue,{}),b.jsx(epe,{}),b.jsx(wpe,{}),b.jsx(Gpe,{}),b.jsx(eme,{}),b.jsx(Sme,{}),b.jsx(_me,{}),b.jsx(hme,{}),b.jsx(Lme,{})]})]})]})})})})}Th.createRoot(document.getElementById("root")).render(b.jsx(qr.StrictMode,{children:b.jsx(jme,{})}));
