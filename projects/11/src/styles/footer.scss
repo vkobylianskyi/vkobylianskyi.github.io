@@ -1,235 +1,77 @@
 @import "fonts";
 @import "var";
 @import "base/mixins.scss";
-// TABLE CONTENTS
-//
-// App-chef
-// App-staff
-// App-gallery
-// App-form
-// App-contact-container
-// Top-button
 
+.footer {
+    background-color: $neutral-very-dark-violet;
+    &-container {
+        padding-top: 40px;
+        padding-bottom: 20px;
 
-footer {
-    color: #222222;
-    font-family: $serif-bold-font;
-}
-
-//------------------------------------
-//// App-staff
-//------------------------------------
-.app-staff {
-    text-transform: capitalize;
-    background: {
-        repeat: no-repeat;
-        position: top center;
-    }
-    margin-top: 60px;
-    text-align: center;
-    @include mq("lg") {
-        margin-top: 113px;
-    }
-    img {
-        @include mq(1200,
-        "max") {
-            height: 210px;
+        @include mq("phone") {
+            padding-top: 80px;
+            padding-bottom: 80px;
         }
     }
-    figcaption {
-        font: {
-            family: $serif-bold-font;
-            size: $font-sm-small;
-        }
-        color: $brown;
-        padding-top: 20px;
-    }
-    p {
-        font-family: $serif-reg-font;
-        font-size: 16px;
-        color: $grey;
-        margin-top: 14px;
-    }
-}
 
-//------------------------------------
-//// App-gallery
-//------------------------------------
-.gallery-block {
-    padding: {
-        top: 60px;
-    }
-    @include mq("lg") {
-        padding-top: 110px;
-    }
-    .app-gallery {
-        padding: {
-            top: 110px;
-            bottom: 60px;
-        }
-        @include mq("lg") {
-            padding: {
-                top: 60px;
+    &-block {
+        text-align: center;
+
+        &-brand-name {
+            color: $secondary-white-color;
+            user-select: none;
+            margin-bottom: 30px;
+            font: {
+                size: $font-lg;
             }
+            @include mq("phone") {
+              margin-bottom: 0;
+          }
         }
-        &-row {
-            margin-top: 0;
-            @include mq("lg") {
-                margin-top: 30px;
+
+        &-item {
+            font-size: $font-xs;
+            margin-bottom: 30px;
+            &__title {
+                padding-bottom: 12px;
+                color: $secondary-white-color;
             }
-        }
-        &-picture-item {
-            overflow: hidden;
-            transition: all .5s;
-            margin-top: 50px;
-            &:hover {
-                filter: blur(5px);
-                img {
-                    transform: scale(1.4);
+
+            &__link {
+                &:not(:last-of-type) {
+                    padding-bottom: 8px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $neutral-gray-color;
+                    transition: 0.5s;
+
+                    &:hover {
+                        color: $primary-cyan-color;
+                    }
                 }
             }
-            img {
-                transition: all .5s;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            @include mq("lg") {
-                margin: 0;
-            }
+            @include mq("phone") {
+              margin-bottom: 0;
+          }
         }
-    }
-}
 
-//------------------------------------
-//// App-form
-//------------------------------------
-.app-form {
-    background-color: rgba(38, 144, 168, 0.1);
-    position: relative;
-    color: $brown;
-    padding: {
-        top: 60px;
-        bottom: 0;
-    }
-    height: 100%;
-    @include mq("lg") {
-        padding: {
-            bottom: 110px;
-            top: 60px;
+        &-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            @include mq("phone") {
+              justify-content: space-between;
+              gap: 0;
+          }
         }
-    }
-    font: {
-        size: $font-xs-small;
-        family: $serif-bold-font;
-    }
-}
 
-//------------------------------------
-//// App-contact-container
-//------------------------------------
-.app-contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: {
-        right: 50px;
-        left: 50px;
-        bottom: 60px;
-    }
-    @include mq("lg") {
-        flex-direction: row;
-        padding: {
-            right: 200px;
-            left: 200px;
-            bottom: 0;
+        @include mq("phone") {
+            display: grid;
+            grid-template-columns: 300px 20% 20% 20% auto;
+            text-align: left;
         }
-    }
-    textarea {
-        resize: none;
-        width: 100%;
-        height: 208px;
-        padding: {
-            top: 20px;
-            right: 20px;
-        }
-    }
-}
-
-.app-form-control {
-    font: {
-        family: $serif-bold-font;
-        size: $font-xs-small;
-    }
-    outline: none;
-    border: none;
-    color: #222;
-    padding-left: 43px;
-    text-transform: uppercase;
-}
-
-input[type=text],
-input[type=email] {
-    width: 100%;
-    height: 66px;
-    line-height: 66px;
-    margin-bottom: 30px;
-    margin-top: 107px;
-    @include mq("lg") {
-        width: 48%;
-    }
-}
-
-input[type=email] {
-    margin-top: 0;
-    @include mq("lg") {
-        margin-top: 107px;
-    }
-}
-
-.under-footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    padding: {
-        right: 8px;
-        bottom: 42px;
-    }
-    @include mq("lg") {
-        margin-top: 75px;
-    }
-    i {
-        display: block;
-        @include square(42px);
-        border-radius: 50%;
-        background-color: $light-grey;
-        text-align: center;
-        color: #fff;
-        font-size: $font-xs-small;
-        line-height: 42px;
-        cursor: pointer;
-        margin-right: 8px;
-        transition: .5s;
-        &:last-child {
-            margin-right: 0;
-        }
-        &:hover {
-            background-color: $vanil;
-            transition: .5s;
-        }
-    }
-}
-
-.copyright {
-    text-align: center;
-    text-transform: capitalize;
-    color: $grey;
-    font-size: $font-xs-small;
-    font-family: $serif-reg-font;
-    padding-bottom: 42px;
-    span {
-        text-decoration: underline;
     }
 }
 
@@ -243,9 +85,8 @@ input[type=email] {
     line-height: 60px;
     cursor: pointer;
     text-align: center;
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
     display: none;
-    color: $grey;
     @include square(60px);
     position: fixed;
     bottom: 15%;
@@ -266,12 +107,12 @@ input[type=email] {
             animation: top-button 1.8s linear infinite;
         }
         &:after {
-            animation-delay: .3s;
+            animation-delay: 0.3s;
         }
         &:hover {
             will-change: transform;
             transform: scale(0.9, 0.9);
-            transition: .3s ease-out;
+            transition: 0.3s ease-out;
         }
     }
 }

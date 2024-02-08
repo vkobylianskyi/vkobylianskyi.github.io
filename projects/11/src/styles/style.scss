@@ -1,6 +1,13 @@
 @import "base/index.scss";
+@import "base/mixins.scss";
+@import "var";
+
+body {
+  font-family: $serif-reg-font;
+  background-color: $bg-color-white;
+}
+
 @import "components";
 @import "header.scss";
 @import "main.scss";
 @import "footer.scss";
-@import "ingridients.scss";

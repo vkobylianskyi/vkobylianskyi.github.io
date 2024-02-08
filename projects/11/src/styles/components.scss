@@ -1,121 +1,62 @@
 @import "var";
 @import "base/mixins.scss";
+
+.app-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: {
+        left: 15px;
+        right: 15px;
+        bottom: 40px;
+    }
+    @include mq("phone") {
+        padding-bottom: 80px;
+    }
+}
+
 .app-button {
     display: block;
     box-sizing: border-box;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font: {
         family: $serif-bold-font;
-        size: 24px
+        size: $font-xs;
     }
-    color: #fff;
-    background-color: #2690a8b8;
-    transition: .5s;
-    width: 400px;
-    height: 100px;
-    border-radius: 10px;
-    margin: 0 auto;
+    color: $secondary-white-color;
+    background-color: $primary-cyan-color;
+    transition: 0.5s;
+    height: 40px;
+    @include flex-center;
+    padding: {
+        left: 40px;
+        right: 40px;
+    }
+    border-radius: 20px;
+
     &-large {
         font: {
-            family: $serif-bold-font;
-            size: 14px
+            size: $font-sm;
         }
-        height: 50px;
-        width: 246px;
-        margin: {
-            top: 40px;
-            left: auto;
-            right: auto;
-        }
-    }
-    &-about {
-        margin: 60px auto;
-        @include mq("lg") {
-            margin: {
-                left: 86px;
-                top: 60px;
-                bottom: 30px;
-            }
-        }
-    }
-    &-chef {
-        margin: 60px auto;
-        @include mq("lg") {
-            margin: {
-                left: 0;
-            }
-        }
-    }
-    &-contact {
-        margin-bottom: 60px;
-        @include mq("lg") {
-            margin-bottom: 0;
-        }
+        height: 60px;
+        border-radius: 30px;
     }
     &:hover {
         color: black;
         border-radius: 15px;
-        background-color: $brown;
     }
 }
 
 .app-title {
-    font-family: $serif-bold-font;
+    font: {
+        family: $serif-bold-font;
+        size: $font-md;
+    }
     text-align: center;
-    height: 97px;
-    background: {
-        repeat: no-repeat;
-        position: center top;
-    }
-    position: relative;
-    &_dark {
-        background-image: url("../assets/img/dark_title_image.png");
+    color: $neutral-very-dark-blue-color;
 
-        &-section {
-            font-size: $font-xs-small;
-            color: #808369;
-            text-transform: uppercase;
-            padding-bottom: 5px;
-        }
-        &-description {
-            color: #434343;
-            text-transform: capitalize;
-            font: {
-                size: 24px;
-                weight: 700;
-            }
-            @include mq("md") {
-                font-size: 35px;
-            }
-        }
-    } 
-
-    &_white {
-        color: white;
-        background-image: url("../assets/img/white_title_image.png");
-    }
-    &-section {
-        font-size: $font-xs-small;
-        text-transform: uppercase;
-        padding-bottom: 5px;
-    }
-    &-description {
-        text-transform: capitalize;
+    @include mq("phone") {
         font: {
-            size: 24px;
-            weight: 700;
+            size: $font-lg;
         }
-        @include mq("md") {
-            font-size: 35px;
-        }
-    }
-    &:after {
-        @include pseudo;
-        width: 111px;
-        height: 2px;
-        background-color: #a7a99a;
-        bottom: -22px;
-        left: 50%;
-        margin-left: -55px;
     }
 }

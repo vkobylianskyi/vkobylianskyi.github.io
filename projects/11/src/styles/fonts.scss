@@ -1,16 +1,11 @@
 @import './base/mixins';
 
 @include fontFace(
-    '../assets/fonts/PTSerif-Regular',
-    'PTSerif-Regular'
+    '../assets/fonts/poppins-medium',
+    'Poppins-Medium'
 );
 
 @include fontFace(
-    '../assets/fonts/PTSerif-Bold',
-    'PTSerif-Bold'
-);
-
-@include fontFace(
-    '../assets/fonts/yellowtail-regular-webfont',
-    'yellowtailregular'
+    '../assets/fonts/poppins-bold',
+    'Poppins-Bold'
 );

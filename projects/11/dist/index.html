@@ -1,358 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Title</title>
+  <link href="bundle-styles.css" rel="stylesheet"></head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sensational Food</title>
-<link href="bundle-styles.css" rel="stylesheet"></head>
-
-<body>
-  <header class="container-fluid header">
-    <div class="header-top-line">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse app-nav" id="navbarNavDropdown">
-          <ul class="navbar-nav header-top-line__menu">
-            <li class="header-top-line__menu-item">
-              <img src="static/basket.png" alt="">
-            </li>
-            <li class="header-top-line__menu-item">
-              <a href="">Оренда альтанок</a>
-            </li>
-            <li class="header-top-line__menu-item">
-              <a href="#ingredients-section">Наші альтанки</a></li>
-            <li class="header-top-line__menu-item">
-              <a href="#about_us">Як доїхати</a>
-            </li>
-            <li class="header-top-line__menu-item">
-              <a href="#blog">Відгуки клієнтів</a>
-            </li>
-            <li class="header-top-line__menu-item">
-              <a href="#gallery">Фотогалерея</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <div class="container-fluid">
-      <div class="container">
-        <div class="row swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="border-radius: 4px;">
-              <div class="swiper-slide__text">
-                Оренда альтанок
-              </div>
-              <div class="swiper-slide__text">
-                Конче заспа
-              </div>
-              <button class="app-button app-button-large">
-                067-888-88-88
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__text">
-                Оренда альтанок
-              </div>
-              <div class="swiper-slide__text">
-                Конче заспа
-              </div>
-              <button class="app-button app-button-large">
-                067-888-88-88
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__text">
-                Оренда альтанок
-              </div>
-              <div class="swiper-slide__text">
-                Конче заспа
-              </div>
-              <button class="app-button app-button-large">
-                067-888-88-88
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide__text">
-                Оренда альтанок
-              </div>
-              <div class="swiper-slide__text">
-                Конче заспа
-              </div>
-              <button class="app-button app-button-large">
-                067-888-88-88
-              </button>
+  <body>
+    <header class="header app-container">
+      <div>
+        <nav class="header-navbar">
+          <button class="hamburger" aria-label="Menu" aria-controls="menu" aria-expanded="false">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          <div class="header-navbar-wrapper">
+            <ul class="header-navbar-wrapper__menu">
+              <li class="header-navbar-wrapper__menu-item">
+                <a href="#">Shortly
+              </li>
+              <li class="header-navbar-wrapper__menu-item">
+                <a href="#features">Features</a>
+              </li>
+              <li class="header-navbar-wrapper__menu-item">
+                <a href="#pricing">Pricing</a>
+              </li>
+              <li class="header-navbar-wrapper__menu-item">
+                <a href="#resources">Resources</a>
+              </li>
+            </ul>
+            <div class="header-auth-block">
+              <button class="header-auth-block__login-button">Login</button>
+              <button class="app-button">Sign Up</button>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-          <i class="fa fa-angle-down"></i>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <img class="main-info__picture" src="static/illustration-working.svg" />
+      <div class="app-container main-info-container">
+        <section class="main-info">
+          <h1 class="main-info__title">More than just shorter links</h1>
+          <p class="main-info__description">
+            Build your brand’s recognition and get detailed insights on how your links are
+            performing.
+          </p>
+          <button class="app-button app-button-large">Get started</button>
+        </section>
+        <section class="main-form">
+          <form class="main-form-block" action="/submit" method="post">
+            <label for="link"></label>
+            <input
+              type="text"
+              id="link"
+              placeholder="Shorten a link here..."
+              name="link"
+              required
+            />
+            <button class="app-button main-form-block__button" type="submit">Shorten it!</button>
+          </form>
+        </section>
+      </div>
+      <div class="main-statistics">
+        <section class="app-container">
+          <h2 class="app-title main-statistics-title">Advanced Statistics</h2>
+          <p class="main-statistics-description">
+            Track how you links are performing across the web with our advanced statistics
+            dashboard.
+          </p>
+          <div class="main-statistics-wrapper">
+            <div class="main-statistics-block">
+              <img
+                class="main-statistics-block__icon"
+                src="static/icon-brand-recognition.svg"
+              />
+              <h3 class="main-statistics-block__title">Brand Recognition</h3>
+              <p class="main-statistics-block__description">
+                Boost your brand recognition with each click. Generic links don’t mean a thing.
+                Branded links help instil confidence in your content.
+              </p>
+            </div>
+            <div class="main-statistics-block">
+              <img
+                class="main-statistics-block__icon"
+                src="static/icon-detailed-records.svg"
+              />
+              <h3 class="main-statistics-block__title">Detailed Records</h3>
+              <p class="main-statistics-block__description">
+                Gain insights into who is clicking your links. Knowing when and where people engage
+                with your content helps inform better decisions.
+              </p>
+            </div>
+            <div class="main-statistics-block">
+              <img
+                class="main-statistics-block__icon"
+                src="static/icon-fully-customizable.svg"
+              />
+              <h3 class="main-statistics-block__title">Fully Customizable</h3>
+              <p class="main-statistics-block__description">
+                Improve brand awareness and content discoverability through customizable links,
+                supercharging audience engagement.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="main-action">
+          <h2 class="app-title main-action-title">Boost your links today</h2>
+          <button class="app-button app-button-large main-action-button">Get Started</button>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="app-container footer-container">
+        <div class="footer-block">
+          <div class="footer-block-brand-name">Shortly</div>
+          <div class="footer-block-item">
+            <h4 class="footer-block-item__title">Features</h4>
+            <ul>
+              <li class="footer-block-item__link"><a href="#">Link Shortening</a></li>
+              <li class="footer-block-item__link"><a href="#">Branded Links</a></li>
+              <li class="footer-block-item__link"><a href="#">Analytics</a></li>
+            </ul>
+          </div>
+          <div class="footer-block-item">
+            <h4 class="footer-block-item__title">Resources</h4>
+            <ul>
+              <li class="footer-block-item__link"><a href="#">Blog</a></li>
+              <li class="footer-block-item__link"><a href="#">Developers</a></li>
+              <li class="footer-block-item__link"><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="footer-block-item">
+            <h4 class="footer-block-item__title">Company</h4>
+            <ul>
+              <li class="footer-block-item__link"><a href="#">About</a></li>
+              <li class="footer-block-item__link"><a href="#">Our Team</a></li>
+              <li class="footer-block-item__link"><a href="#">Careers Contact</a></li>
+            </ul>
+          </div>
+            <ul class="footer-block-social">
+              <li><a href="#"><img src="static/icon-facebook.svg" /></a></li>
+              <li><a href="#"><img src="static/icon-twitter.svg" /></a></li>
+              <li><a href="#"><img src="static/icon-pinterest.svg" /></a></li>
+              <li><a href="#"><img src="static/icon-instagram.svg" /></a></li>
+            </ul>
         </div>
       </div>
-    </div>
-  </header>
-  <main>
-    <div class="container">
-      <section class="ingridients-section" id="ingredients-section">
-        <div class="app-title app-title_dark">
-          <h2 class="app-title_dark-description">Наші альтанки</h2>
-        </div>
-        <div class="ingridients-item row">
-          <div class="ingridients-item__picture-block col-md-5 col-sm-12">
-            <div class="ingridients-item__picture">
-              <img src="static/gazebo.jpg" alt="" />
-            </div>
-          </div>
-          <div class="ingridients-item__description col-md-7 col-sm-12">
-            <div class="ingridients-item__sign">
-              Альтанка №1
-            </div>
-            <div class="app-text">
-              До 10 осіб
-            </div>
-            <div class="app-text app-text--bold">
-              Біля самого берега, до озера 5 м.
-            </div>
-            <div class="app-text app-text--bold" style="color:#2690A8">
-              Від 500 грн
-            </div>
-            <button class="app-button app-button-large" style="margin: 20px 0 0 0">
-              067-888-88-88
-            </button>
-          </div>
-        </div>
-        <div class="ingridients-item row">
-          <div class="ingridients-item__description col-md-7 col-sm-12">
-            <div class="ingridients-item__sign">
-              Альтанка №2
-            </div>
-            <div class="app-text">
-              До 4 осіб
-            </div>
-            <div class="app-text app-text--bold">
-              Біля самого берега, до озера 5 м.
-            </div>
-            <div class="app-text app-text--bold" style="color:#2690A8">
-              Від 500 грн
-            </div>
-            <button class="app-button app-button-large" style="margin: 20px 0 0 0">
-              067-888-88-88
-            </button>
-          </div>
-          <div class="ingridients-item__picture-block col-md-5 col-sm-12 order-first order-md-0">
-            <div class="ingridients-item__picture">
-              <img src="static/gazebo.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="ingridients-item row">
-          <div class="ingridients-item__picture-block col-md-5 col-sm-12">
-            <div class="ingridients-item__picture">
-              <img src="static/gazebo.jpg" alt="" />
-            </div>
-          </div>
-          <div class="ingridients-item__description col-md-7 col-sm-12">
-            <div class="ingridients-item__sign">
-              Альтанка №3
-            </div>
-            <div class="app-text">
-              До 10 осіб
-            </div>
-            <div class="app-text app-text--bold">
-              Біля самого берега, до озера 5 м.
-            </div>
-            <div class="app-text app-text--bold" style="color:#2690A8">
-              Від 500 грн
-            </div>
-            <button class="app-button app-button-large" style="margin: 20px 0 0 0">
-              067-888-88-88
-            </button>
-          </div>
-        </div>
-        <div class="ingridients-item row">
-          <div class="ingridients-item__description col-md-7 col-sm-12">
-            <div class="ingridients-item__sign">
-              Альтанка №4
-            </div>
-            <div class="app-text">
-              До 5 осіб
-            </div>
-            <div class="app-text app-text--bold">
-              Біля самого берега, до озера 5 м.
-            </div>
-            <div class="app-text app-text--bold" style="color:#2690A8">
-              Від 500 грн
-            </div>
-            <button class="app-button app-button-large" style="margin: 20px 0 0 0">
-              067-888-88-88
-            </button>
-          </div>
-          <div class="ingridients-item__picture-block col-md-5 col-sm-12 order-first order-md-0">
-            <div class="ingridients-item__picture">
-              <img src="static/gazebo.jpg" alt="" />
-              <div class="ingridients-item__picture-cap"></div>
-            </div>
-          </div>
-        </div>
-        <div class="ingridients-item row">
-          <div class="ingridients-item__picture-block col-md-5 col-sm-12">
-            <div class="ingridients-item__picture">
-              <img src="static/gazebo.jpg" alt="" />
-            </div>
-          </div>
-          <div class="ingridients-item__description col-md-7 col-sm-12">
-            <div class="ingridients-item__sign">
-              Альтанка №5
-            </div>
-            <div class="app-text">
-              До 7 осіб
-            </div>
-            <div class="app-text app-text--bold">
-              Біля самого берега, до озера 5 м.
-            </div>
-            <div class="app-text app-text--bold" style="color:#2690A8">
-              Від 500 грн
-            </div>
-            <button class="app-button app-button-large" style="margin: 20px 0 0 0">
-              067-888-88-88
-            </button>
-          </div>
-        </div>
-        <div class="ingridients-item row">
-          <div class="ingridients-item__description col-md-7 col-sm-12">
-            <div class="ingridients-item__sign">
-              Альтанка №6
-            </div>
-            <div class="app-text">
-              До 7 осіб
-            </div>
-            <div class="app-text app-text--bold">
-              Біля самого берега, до озера 5 м.
-            </div>
-            <div class="app-text app-text--bold" style="color:#2690A8">
-              Від 500 грн
-            </div>
-            <button class="app-button app-button-large" style="margin: 20px 0 0 0">
-              067-888-88-88
-            </button>
-          </div>
-          <div class="ingridients-item__picture-block col-md-5 col-sm-12 order-first order-md-0">
-            <div class="ingridients-item__picture">
-              <img src="static/gazebo.jpg" alt="" />
-            </div>
-          </div>
-        </div>
-        <div class="ingridients-item row">
-          <div class="ingridients-item__picture-block col-md-5 col-sm-12">
-            <div class="ingridients-item__picture ingridients-item__picture-wide">
-              <img src="static/gazebo.jpg" alt="" />
-            </div>
-          </div>
-          <div class="ingridients-item__description col-md-7 col-sm-12">
-            <div class="ingridients-item__sign">
-              Альтанка №7
-            </div>
-            <div class="app-text">
-              До 8 осіб
-            </div>
-            <div class="app-text app-text--bold">
-              Біля самого берега, до озера 5 м.
-            </div>
-            <div class="app-text app-text--bold" style="color:#2690A8">
-              Від 500 грн
-            </div>
-            <button class="app-button app-button-large" style="margin: 20px 0 0 0">
-              067-888-88-88
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="container-fluid about-block-container">
-      <div class="container about-block" id="about_us">
-        <div class="app-title app-title_dark">
-          <h2 class="app-title_dark-description">Як доїхати</h2>
-        </div>
-        <div class="ingridients-item row">
-          <div class="ingridients-item__picture-block col-md-5 col-sm-12">
-            <div class="ingridients-item__picture ingridients-item__picture-wide">
-              <img src="static/map.png" alt="" />
-            </div>
-          </div>
-          <div class="ingridients-item__description col-md-7 col-sm-12">
-            <div class="app-text">
-              Київ, пр. Генерала Ватутина, залив Десенка, через дорогу от SkyMoll
-            </div>
-            <div class="app-text" style="margin-top: 20px">
-              (096)-951-69-01<br>
-              (050) 353-05-32<br>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid app-testimonials">
-      <div class="container" id="blog">
-        <div class="app-title app-title_dark">
-          <h2 class="app-title_dark-description">Відгуки клієнтів</h2>
-        </div>
-        <div class="row">
-          <div class="col app-testimonials-description">
-            <p>Гарне місце для відпочинку в будь-який час року, є альтанки відкриті і закриті, з прекрасним видом на
-              правий берег.</p>
-            <i class="fa fa-angle-left left"></i>
-            <i class="fa fa-angle-right right"></i>
-            <div class="app-testimonials-quote">Іван та Ірина, Київ</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <div class="gallery-block" id="gallery">
-      <div class="app-title app-title_dark">
-        <h2 class="app-title_dark-description">Фото альтанок</h2>
-      </div>
-      <div class="container-fluid app-gallery">
-        <div class="row">
-          <div class="col-lg-8 col-md-12">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img src="static/image-1.jpg" alt="">
-              </div>
-              <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img src="static/image-2.jpg" alt="">
-              </div>
-            </div>
-            <div class="row app-gallery-row">
-              <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img src="static/image-3.jpg" alt="">
-              </div>
-              <div class="col-lg-6 col-md-12 app-gallery-picture-item"><img src="static/image-4.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-12 app-gallery-picture-item"><img src="static/image-5.jpg" alt=""></div>
-        </div>
-      </div>
-      <button class="app-button app-button-large">Подивитися ще</button>
-    </div>
-    <div class="under-footer">
-      <i class="fa fa-twitter"></i>
-      <i class="fa fa-facebook-f"></i>
-      <i class="fa fa-tumblr"></i>
-      <i class="fa fa-instagram"></i>
-    </div>
-    <div class="copyright">ancora © 2020 all rights reserved <span>terms of use</span> and <span>privacy
-        policy</span>
-    </div>
-  </footer>
-  <button class="top-button">
-    <i class="fa fa-angle-up"></i>
-  </button>
-  <script src="./app.js"></script>
-  <script src="https://kit.fontawesome.com/1ea376029d.js" crossorigin="anonymous"></script>
-<script type="text/javascript" src="bundle.js"></script></body>
-
+    </footer>
+    <button class="top-button">
+      <img src="static/arrow-chevron-up.svg">
+    </button>
+    <script src="./app.js"></script>
+  <script type="text/javascript" src="bundle.js"></script></body>
 </html>
