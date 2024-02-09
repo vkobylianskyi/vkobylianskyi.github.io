@@ -3,53 +3,179 @@
 @import "base/mixins.scss";
 
 .header {
-  padding-top: 20px;
+    padding-top: 20px;
 
-  &-navbar-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    &-navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    &__menu {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 32px;
+        &__menu {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 32px;
 
-      &-item {
-        &:first-of-type {
-          font-size: $font-md;
+            &-item {
+                &:first-of-type {
+                    font-size: $font-md;
+                }
+                a {
+                    text-decoration: none;
+                    color: $neutral-very-dark-blue-color;
+                    transition: 0.5s;
+
+                    &:hover {
+                        color: $primary-cyan-color;
+                    }
+                }
+            }
         }
-        a {
-          text-decoration: none;
-          color: $neutral-very-dark-blue-color;
-          transition: 0.5s;
+    }
 
-          &:hover {
-            color: $primary-cyan-color;
-          }
+    &-auth-block {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 32px;
+
+        &__login-button {
+            font: {
+                family: $serif-reg-font;
+                size: $font-sm;
+            }
+            color: $bg-color-white;
+            background-color: transparent;
+
+            @include mq("tablet-wide") {
+                color: $neutral-very-dark-blue-color;
+            }
         }
-      }
-    }
-  }
 
-  &-auth-block {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 32px;
-
-    &__login-button {
-      font: {
-        family: $serif-bold-font;
-      }
-      color: $neutral-very-dark-blue-color;
-      background-color: transparent;
+        &__sign-up-button {
+            width: 100%;
+            max-width: 264px;
+            margin: 0 auto;
+        }
     }
-  }
 }
 
-.hamburger-inner {
+.navbar {
+    position: relative;
+    @include mq("tablet-wide") {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.-logo {
+    display: flex;
+    align-items: center;
+    height: 40px;
+
+    img {
+        display: block;
+    }
+}
+
+.menu {
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    background-color: $primary-dark-violet-color;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 60px;
+    @include mq("tablet-wide") {
+        background-color: transparent;
+        position: static;
+        padding: 0;
+        align-items: center;
+    }
+}
+
+.menu-item {
+    text-align: center;
+    @include mq("tablet-wide") {
+        padding-left: 40px;
+    }
+
+    &:not(:last-of-type) {
+        padding-bottom: 40px;
+        @include mq("tablet-wide") {
+            padding-bottom: 0;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: $secondary-white-color;
+        font-size: $font-sm;
+        @include mq("tablet-wide") {
+            color: $neutral-very-dark-blue-color;
+        }
+    }
+
+    &__login-button {
+        position: relative;
+        text-align: center;
+        padding: {
+            top: 40px;
+            bottom: 40px;
+        }
+        @include mq("tablet-wide") {
+            padding: {
+                top: 0;
+                bottom: 0;
+            }
+            flex-grow: 1;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 2px;
+            top: 0;
+            width: 100%;
+            background-color: $bg-color-white;
+            @include mq("tablet-wide") {
+                display: none;
+            }
+        }
+    }
+}
+
+.hamburger-menu {
     display: none;
+    flex-direction: column;
     cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: $neutral-very-dark-blue-color;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+    }
 }

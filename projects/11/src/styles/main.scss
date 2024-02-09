@@ -1,17 +1,6 @@
 @import "fonts";
 @import "var";
 @import "base/mixins.scss";
-// TABLE CONTENTS
-//
-// App-catering
-// App-about
-// App-services
-// App-book
-// App-testimonials
-// App-blog
-//------------------------------------
-//App-catering
-//------------------------------------
 
 .main {
     position: relative;
@@ -23,11 +12,23 @@
             top: 60px;
             bottom: 154px;
         }
+        @include mq("tablet") {
+            width: 100%;
+            padding: {
+                top: 0;
+            }
+        }
+        @include mq("desktop") {
+            width: 60%;
+        }
 
         &-container {
             padding-bottom: 0;
             padding-top: 40px;
             position: relative;
+            @include mq("desktop") {
+                padding-top: 80px;
+            }
         }
 
         &__title {
@@ -35,8 +36,10 @@
             text-align: center;
             color: $neutral-very-dark-blue-color;
             padding-bottom: 20px;
-            @include mq("phone") {
+            @include mq("tablet") {
                 font-size: $font-xl;
+            }
+            @include mq("desktop") {
                 text-align: left;
             }
         }
@@ -48,8 +51,11 @@
             color: $neutral-grayish-violet-color;
             max-width: 100%;
             text-align: center;
-            @include mq("phone") {
+            @include mq("tablet") {
                 font-size: $font-xs;
+               
+            }
+            @include mq("desktop") {
                 text-align: left;
                 max-width: 80%;
             }
@@ -57,7 +63,7 @@
 
         &__button {
             margin: 0 auto;
-            @include mq("phone") {
+            @include mq("desktop") {
                 margin: 0;
             }
         }
@@ -67,19 +73,24 @@
             margin: 0 auto;
             display: block;
 
-            @include mq("phone") {
+            @include mq("tablet") {
+                display: none;
+            }
+            @include mq("desktop") {
+                display: block;
                 position: absolute;
                 right: -8%;
                 top: -0;
                 width: auto;
             }
         }
-        @include mq("phone") {
-            width: 60%;
-        }
     }
 
     &-form {
+        background-image: url("../assets/img/bg-shorten-mobile.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         background-color: $neutral-very-dark-blue-color;
         padding: 30px;
         border-radius: 8px;
@@ -88,8 +99,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
 
-        @include mq("phone") {
+        @include mq("tablet") {
             padding: 40px;
+            background-image: url("../assets/img/bg-shorten-desktop.svg");
         }
 
         &-block {
@@ -97,7 +109,7 @@
             justify-content: center;
             flex-direction: column;
 
-            @include mq("phone") {
+            @include mq("tablet") {
                 flex-direction: row;
             }
 
@@ -106,7 +118,7 @@
                 white-space: nowrap;
                 margin-top: 10px;
 
-                @include mq("phone") {
+                @include mq("tablet") {
                     margin-left: 30px;
                     margin-top: 0;
                 }
@@ -140,7 +152,7 @@
                 right: auto;
             }
 
-            @include mq("phone") {
+            @include mq("tablet") {
                 font: {
                     size: $font-sm;
                 }
@@ -149,7 +161,7 @@
 
         &-wrapper {
             margin-top: 80px;
-            @include mq("phone") {
+            @include mq("tablet-wide") {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: repeat(9, 1fr);
@@ -185,7 +197,7 @@
                     height: 80px;
                     width: 6px;
                     background-color: $primary-cyan-color;
-                    @include mq("phone") {
+                    @include mq("tablet-wide") {
                         height: 3px;
                         width: 40px;
                     }
@@ -194,7 +206,7 @@
                     left: 50%;
                     top: -80px;
                     transform: translateX(-50%);
-                    @include mq("phone") {
+                    @include mq("tablet-wide") {
                         left: -40px;
                         top: 30%;
                         transform: translateX(0);
@@ -204,7 +216,7 @@
                     left: 50%;
                     bottom: -80px;
                     transform: translateX(-50%);
-                    @include mq("phone") {
+                    @include mq("tablet-wide") {
                         right: -40px;
                         top: 30%;
                         left: 100%;
@@ -219,7 +231,7 @@
 
             &:not(:last-of-type) {
                 margin-bottom: 80px;
-                @include mq("phone") {
+                @include mq("tablet-wide") {
                     margin-bottom: 0;
                 }
             }
@@ -238,7 +250,7 @@
                     bottom: 20px;
                 }
                 border-radius: 50%;
-                @include mq("phone") {
+                @include mq("tablet-wide") {
                     left: 0;
                     transform: translate(40px, -50%);
                 }
@@ -260,7 +272,7 @@
                 color: $primary-dark-violet-color;
             }
 
-            @include mq("phone") {
+            @include mq("tablet") {
                 grid-row-start: 1;
                 grid-row-end: 9;
             }
@@ -272,11 +284,14 @@
             top: 60px;
             bottom: 60px;
         }
-        background-image: url("../assets/img/bg-boost-desktop.svg");
+        background-image: url("../assets/img/bg-boost-mobile.svg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         background-color: $neutral-very-dark-blue-color;
+        @include mq("tablet") {
+            background-image: url("../assets/img/bg-boost-desktop.svg");
+        }
 
         &-title {
             color: $secondary-white-color;

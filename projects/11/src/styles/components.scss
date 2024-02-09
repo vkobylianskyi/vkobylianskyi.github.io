@@ -9,7 +9,7 @@
         right: 15px;
         bottom: 40px;
     }
-    @include mq("phone") {
+    @include mq("tablet") {
         padding-bottom: 80px;
     }
 }
@@ -54,7 +54,7 @@
     text-align: center;
     color: $neutral-very-dark-blue-color;
 
-    @include mq("phone") {
+    @include mq("tablet") {
         font: {
             size: $font-lg;
         }

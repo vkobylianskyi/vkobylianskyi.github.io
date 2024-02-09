@@ -28,13 +28,9 @@ function onScrollWindow() {
     $(this).scrollTop() > 1000 ? topButton.fadeIn() : topButton.fadeOut();
 }
 
-const hamburgerMenu = document.querySelector('.hamburger-inner');
-const overlay = document.querySelector('.overlay');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menu = document.querySelector('.menu');
 
 hamburgerMenu.addEventListener('click', () => {
-    document.body.classList.toggle('menu-open');
-});
-
-overlay.addEventListener('click', () => {
-    document.body.classList.remove('menu-open');
+    menu.classList.toggle('active');
 });

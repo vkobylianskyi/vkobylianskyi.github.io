@@ -7,8 +7,7 @@
     &-container {
         padding-top: 40px;
         padding-bottom: 20px;
-
-        @include mq("phone") {
+        @include mq("tablet") {
             padding-top: 80px;
             padding-bottom: 80px;
         }
@@ -16,6 +15,13 @@
 
     &-block {
         text-align: center;
+        @include mq("tablet") {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: left;
+        }
 
         &-brand-name {
             color: $secondary-white-color;
@@ -24,22 +30,23 @@
             font: {
                 size: $font-lg;
             }
-            @include mq("phone") {
-              margin-bottom: 0;
-          }
+            @include mq("tablet") {
+                margin-bottom: 0;
+                width: 28%;
+            }
         }
 
         &-item {
             font-size: $font-xs;
             margin-bottom: 30px;
             &__title {
-                padding-bottom: 12px;
+                padding-bottom: 18px;
                 color: $secondary-white-color;
             }
 
             &__link {
                 &:not(:last-of-type) {
-                    padding-bottom: 8px;
+                    padding-bottom: 14px;
                 }
 
                 a {
@@ -52,25 +59,18 @@
                     }
                 }
             }
-            @include mq("phone") {
-              margin-bottom: 0;
-          }
+            @include mq("tablet") {
+                margin-bottom: 0;
+            }
         }
 
         &-social {
             display: flex;
             justify-content: center;
             gap: 20px;
-            @include mq("phone") {
-              justify-content: space-between;
-              gap: 0;
-          }
-        }
-
-        @include mq("phone") {
-            display: grid;
-            grid-template-columns: 300px 20% 20% 20% auto;
-            text-align: left;
+            @include mq("tablet") {
+                justify-content: space-between;
+            }
         }
     }
 }

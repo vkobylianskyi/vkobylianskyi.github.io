@@ -1,159 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Title</title>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="icon" href="./assets/img/favicon-32x32.png" type="image/png">
+        <title>Title</title>
+    </head>
 
-  <body>
-    <header class="header app-container">
-        <nav class="header-navbar">
-          <button class="hamburger" aria-label="Menu" aria-controls="menu" aria-expanded="false">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-          <div class="header-navbar-wrapper">
-            <ul class="header-navbar-wrapper__menu">
-              <li class="header-navbar-wrapper__menu-item">
-                <a href="#">Shortly</a>
-              </li>
-              <li class="header-navbar-wrapper__menu-item">
-                <a href="#features">Features</a>
-              </li>
-              <li class="header-navbar-wrapper__menu-item">
-                <a href="#pricing">Pricing</a>
-              </li>
-              <li class="header-navbar-wrapper__menu-item">
-                <a href="#resources">Resources</a>
-              </li>
-            </ul>
-            <div class="header-auth-block">
-              <button class="header-auth-block__login-button">Login</button>
-              <button class="app-button">Sign Up</button>
-            </div>
-          </div>
-        </nav>
-    </header>
-    <main class="main">
-      <img class="main-info__picture" src="./assets/img/illustration-working.svg" />
-      <div class="app-container main-info-container">
-        <section class="main-info">
-          <h1 class="main-info__title">More than just shorter links</h1>
-          <p class="main-info__description">
-            Build your brand’s recognition and get detailed insights on how your links are
-            performing.
-          </p>
-          <button class="app-button app-button-large main-info__button">Get started</button>
-        </section>
-        <section class="main-form">
-          <form class="main-form-block" action="/submit" method="post">
-            <label for="link"></label>
-            <input
-              type="text"
-              id="link"
-              placeholder="Shorten a link here..."
-              name="link"
-              required
+    <body>
+        <header class="header app-container">
+            <nav class="navbar">
+                <div class="header-logo"><img src="./assets/img/logo.svg" alt="logo" /></div>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#">Features</a></li>
+                    <li class="menu-item"><a href="#">Pricing</a></li>
+                    <li class="menu-item"><a href="#">Resources</a></li>
+                    <li class="menu-item menu-item__login-button">
+                        <button class="header-auth-block__login-button">
+                            Login
+                        </button>
+                    </li>
+                    <li class="menu-item"><button class="app-button header-auth-block__sign-up-button">Sign Up</button></li>
+                </ul>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+            <img
+                class="main-info__picture"
+                alt="main-picture"
+                src="./assets/img/illustration-working.svg"
             />
-            <button class="app-button main-form-block__button" type="submit">Shorten it!</button>
-          </form>
-        </section>
-      </div>
-      <div class="main-statistics">
-        <section class="app-container">
-          <h2 class="app-title main-statistics-title">Advanced Statistics</h2>
-          <p class="main-statistics-description">
-            Track how you links are performing across the web with our advanced statistics
-            dashboard.
-          </p>
-          <div class="main-statistics-wrapper">
-            <div class="main-statistics-block">
-              <img
-                class="main-statistics-block__icon"
-                src="./assets/img/icon-brand-recognition.svg"
-              />
-              <h3 class="main-statistics-block__title">Brand Recognition</h3>
-              <p class="main-statistics-block__description">
-                Boost your brand recognition with each click. Generic links don’t mean a thing.
-                Branded links help instil confidence in your content.
-              </p>
+            <div class="app-container main-info-container">
+                <section class="main-info">
+                    <h1 class="main-info__title">
+                        More than just shorter links
+                    </h1>
+                    <p class="main-info__description">
+                        Build your brand’s recognition and get detailed insights
+                        on how your links are performing.
+                    </p>
+                    <button
+                        class="app-button app-button-large main-info__button"
+                    >
+                        Get started
+                    </button>
+                </section>
+                <section class="main-form">
+                    <form
+                        class="main-form-block"
+                        action="/submit"
+                        method="post"
+                    >
+                        <label for="link"></label>
+                        <input
+                            type="text"
+                            id="link"
+                            placeholder="Shorten a link here..."
+                            name="link"
+                            required
+                        />
+                        <button
+                            class="app-button main-form-block__button"
+                            type="submit"
+                        >
+                            Shorten it!
+                        </button>
+                    </form>
+                </section>
             </div>
-            <div class="main-statistics-block">
-              <img
-                class="main-statistics-block__icon"
-                src="./assets/img/icon-detailed-records.svg"
-              />
-              <h3 class="main-statistics-block__title">Detailed Records</h3>
-              <p class="main-statistics-block__description">
-                Gain insights into who is clicking your links. Knowing when and where people engage
-                with your content helps inform better decisions.
-              </p>
+            <div class="main-statistics">
+                <section class="app-container">
+                    <h2 class="app-title main-statistics-title">
+                        Advanced Statistics
+                    </h2>
+                    <p class="main-statistics-description">
+                        Track how you links are performing across the web with
+                        our advanced statistics dashboard.
+                    </p>
+                    <div class="main-statistics-wrapper">
+                        <div class="main-statistics-block">
+                            <img
+                                class="main-statistics-block__icon"
+                                src="./assets/img/icon-brand-recognition.svg"
+                                alt="brand-recognition"
+                            />
+                            <h3 class="main-statistics-block__title">
+                                Brand Recognition
+                            </h3>
+                            <p class="main-statistics-block__description">
+                                Boost your brand recognition with each click.
+                                Generic links don’t mean a thing. Branded links
+                                help instil confidence in your content.
+                            </p>
+                        </div>
+                        <div class="main-statistics-block">
+                            <img
+                                class="main-statistics-block__icon"
+                                src="./assets/img/icon-detailed-records.svg"
+                                alt="detailed-records"
+                            />
+                            <h3 class="main-statistics-block__title">
+                                Detailed Records
+                            </h3>
+                            <p class="main-statistics-block__description">
+                                Gain insights into who is clicking your links.
+                                Knowing when and where people engage with your
+                                content helps inform better decisions.
+                            </p>
+                        </div>
+                        <div class="main-statistics-block">
+                            <img
+                                class="main-statistics-block__icon"
+                                src="./assets/img/icon-fully-customizable.svg"
+                                alt="fully-customizable"
+                            />
+                            <h3 class="main-statistics-block__title">
+                                Fully Customizable
+                            </h3>
+                            <p class="main-statistics-block__description">
+                                Improve brand awareness and content
+                                discoverability through customizable links,
+                                supercharging audience engagement.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="main-action">
+                    <h2 class="app-title main-action-title">
+                        Boost your links today
+                    </h2>
+                    <button
+                        class="app-button app-button-large main-action-button"
+                    >
+                        Get Started
+                    </button>
+                </section>
             </div>
-            <div class="main-statistics-block">
-              <img
-                class="main-statistics-block__icon"
-                src="./assets/img/icon-fully-customizable.svg"
-              />
-              <h3 class="main-statistics-block__title">Fully Customizable</h3>
-              <p class="main-statistics-block__description">
-                Improve brand awareness and content discoverability through customizable links,
-                supercharging audience engagement.
-              </p>
+        </main>
+        <footer class="footer">
+            <div class="app-container footer-container">
+                <div class="footer-block">
+                    <div class="footer-block-brand-name">Shortly</div>
+                    <div class="footer-block-item">
+                        <h4 class="footer-block-item__title">Features</h4>
+                        <ul>
+                            <li class="footer-block-item__link">
+                                <a href="#">Link Shortening</a>
+                            </li>
+                            <li class="footer-block-item__link">
+                                <a href="#">Branded Links</a>
+                            </li>
+                            <li class="footer-block-item__link">
+                                <a href="#">Analytics</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-block-item">
+                        <h4 class="footer-block-item__title">Resources</h4>
+                        <ul>
+                            <li class="footer-block-item__link">
+                                <a href="#">Blog</a>
+                            </li>
+                            <li class="footer-block-item__link">
+                                <a href="#">Developers</a>
+                            </li>
+                            <li class="footer-block-item__link">
+                                <a href="#">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-block-item">
+                        <h4 class="footer-block-item__title">Company</h4>
+                        <ul>
+                            <li class="footer-block-item__link">
+                                <a href="#">About</a>
+                            </li>
+                            <li class="footer-block-item__link">
+                                <a href="#">Our Team</a>
+                            </li>
+                            <li class="footer-block-item__link">
+                                <a href="#">Careers Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="footer-block-social">
+                        <li>
+                            <a href="#"
+                                ><img src="./assets/img/icon-facebook.svg"
+                                alt="facebook"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                ><img src="./assets/img/icon-twitter.svg"
+                                alt="twitter"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                ><img src="./assets/img/icon-pinterest.svg"
+                                alt="pinterest"
+                            /></a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                ><img src="./assets/img/icon-instagram.svg"
+                                alt="instagram"
+                            /></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </section>
-        <section class="main-action">
-          <h2 class="app-title main-action-title">Boost your links today</h2>
-          <button class="app-button app-button-large main-action-button">Get Started</button>
-        </section>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="app-container footer-container">
-        <div class="footer-block">
-          <div class="footer-block-brand-name">Shortly</div>
-          <div class="footer-block-item">
-            <h4 class="footer-block-item__title">Features</h4>
-            <ul>
-              <li class="footer-block-item__link"><a href="#">Link Shortening</a></li>
-              <li class="footer-block-item__link"><a href="#">Branded Links</a></li>
-              <li class="footer-block-item__link"><a href="#">Analytics</a></li>
-            </ul>
-          </div>
-          <div class="footer-block-item">
-            <h4 class="footer-block-item__title">Resources</h4>
-            <ul>
-              <li class="footer-block-item__link"><a href="#">Blog</a></li>
-              <li class="footer-block-item__link"><a href="#">Developers</a></li>
-              <li class="footer-block-item__link"><a href="#">Support</a></li>
-            </ul>
-          </div>
-          <div class="footer-block-item">
-            <h4 class="footer-block-item__title">Company</h4>
-            <ul>
-              <li class="footer-block-item__link"><a href="#">About</a></li>
-              <li class="footer-block-item__link"><a href="#">Our Team</a></li>
-              <li class="footer-block-item__link"><a href="#">Careers Contact</a></li>
-            </ul>
-          </div>
-            <ul class="footer-block-social">
-              <li><a href="#"><img src="./assets/img/icon-facebook.svg" /></a></li>
-              <li><a href="#"><img src="./assets/img/icon-twitter.svg" /></a></li>
-              <li><a href="#"><img src="./assets/img/icon-pinterest.svg" /></a></li>
-              <li><a href="#"><img src="./assets/img/icon-instagram.svg" /></a></li>
-            </ul>
-        </div>
-      </div>
-    </footer>
-    <button class="top-button">
-      <img src="./assets/img/arrow-chevron-up.svg">
-    </button>
-    <script src="./app.js"></script>
-  </body>
+        </footer>
+        <button class="top-button">
+            <img src="./assets/img/arrow-chevron-up.svg" alt="arrow-chevron-up" />
+        </button>
+        <script src="./app.js"></script>
+    </body>
 </html>
