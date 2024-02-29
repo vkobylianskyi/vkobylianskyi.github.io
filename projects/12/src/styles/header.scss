@@ -46,8 +46,6 @@
 
     &-block {
         &__item {
-            text-align: center;
-
             &:first-of-type {
                 margin: {
                     bottom: calculateRem(50px);
@@ -72,6 +70,7 @@
                 background-clip: text;
                 font-size: $font-lg;
                 line-height: 83%;
+                text-align: center;
             }
 
             &-title {
@@ -80,6 +79,18 @@
                 line-height: 90%;
                 margin-bottom: calculateRem(40px);
                 text-align: left;
+            }
+        }
+    }
+}
+
+@include mq("mobile") {
+    .header {
+        &-block {
+            &__item {
+                &-title {
+                  text-align: center;
+                }
             }
         }
     }
@@ -184,6 +195,10 @@
 
                 &:last-of-type {
                     order: 0;
+                }
+
+                &-title {
+                    text-align: left;
                 }
             }
         }
