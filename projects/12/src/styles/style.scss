@@ -3,13 +3,13 @@
 @import "var";
 
 body {
-    font-family: $serif-reg-font;
+    font-family: $serif-klapt-reg-font;
     background-color: $bg-color-dark;
     position: relative;
     overflow-x: hidden;
     padding: {
-        top: 30px;
-        bottom: 36px;
+        top: calculateRem(30px);
+        bottom: calculateRem(36px);
     }
 
     &::before,
@@ -17,8 +17,8 @@ body {
         position: absolute;
         content: "";
         z-index: -1;
-        width: 300px;
-        height: 500px;
+        width: calculateRem(300px);
+        height: calculateRem(500px);
         border-radius: 50%;
         filter: blur(40px);
         background: radial-gradient(
@@ -29,51 +29,51 @@ body {
     }
 
     &::before {
-        right: -150px;
-        top: -55px;
-
+        right: calculateRem(-150px);
+        top: calculateRem(-55px);
     }
 
     &::after {
-      left: -150px;
-      top: 111px;
+        left: calculateRem(-150px);
+        top: calculateRem(111px);
     }
 }
 
 @include mq("tablet") {
     body {
-      padding: {
-        top: 80px;
-    }
+        padding: {
+            top: calculateRem(80px);
+        }
+
         &::before,
         &::after {
-            width: 1000px;
-            height: 1000px;
+            width: calculateRem(1000px);
+            height: calculateRem(1000px);
             border-radius: 50%;
             filter: blur(200px);
         }
 
         &::before {
-            left: -108px;
+            left: calculateRem(-108px);
             right: auto;
-            top: 178px;
+            top: calculateRem(178px);
         }
 
         &::after {
-          left: auto;
-            right: -108px;
-            top: -390px;
+            left: auto;
+            right: calculateRem(-108px);
+            top: calculateRem(-390px);
         }
     }
 }
 
 @include mq("desktop") {
-  body {
-    padding: {
-      top: 126px;
-      bottom: 60px;
-  }
-  }
+    body {
+        padding: {
+            top: calculateRem(126px);
+            bottom: calculateRem(60px);
+        }
+    }
 }
 
 @import "components";

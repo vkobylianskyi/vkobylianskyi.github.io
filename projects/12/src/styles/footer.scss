@@ -3,19 +3,20 @@
 
 .footer {
     &-block {
-        max-width: 864px;
+        max-width: calculateRem(864px);
         margin: 0 auto;
-        font-family: $serif-medium-font;
+        font-family: $serif-klapt-medium-font;
+
         &__item {
             text-align: center;
-            font-size: 9px;
+            font-size: $font-xs;
             line-height: 140%;
             color: $primary-color;
             opacity: 0.3;
             text-transform: uppercase;
 
             &:last-of-type {
-                padding-top: 10px;
+                padding-top: calculateRem(10px);
             }
         }
     }

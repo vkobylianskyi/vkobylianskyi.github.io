@@ -4,16 +4,16 @@
 
 .main {
     padding: {
-        top: 70px;
-        bottom: 50px;
+        top: calculateRem(70px);
+        bottom: calculateRem(50px);
     }
 
     &-block {
         display: none;
 
         &-item {
-            &__wrapper {
-                margin-bottom: 30px;
+            &__picture-wrapper {
+                margin-bottom: calculateRem(30px);
                 position: relative;
 
                 &::after,
@@ -21,8 +21,8 @@
                     display: block;
                     position: absolute;
                     content: "";
-                    width: 100px;
-                    height: 90px;
+                    width: calculateRem(100px);
+                    height: calculateRem(90px);
                     background-color: $primary-color;
                 }
 
@@ -51,39 +51,44 @@
                     top: 0;
                     right: 0;
                 }
-            }
 
-            &__picture {
-                width: 100%;
-                display: block;
-                border: 6px solid $primary-color;
-                height: 300px;
-                object-fit: cover;
+                img {
+                    width: 100%;
+                    display: block;
+                    border: calculateRem(6px) solid $primary-color;
+                    height: calculateRem(300px);
+                    object-fit: cover;
+                }
             }
 
             &__title {
-                font-size: 36px;
+                font: {
+                    size: calculateRem(36px);
+                    family: $serif-klapt-bold-font;
+                }
                 line-height: 90%;
                 color: $primary-color;
                 text-transform: uppercase;
-                font-family: $serif-bold-font;
-                margin-bottom: 30px;
+                margin-bottom: calculateRem(30px);
+            }
+
+            &__description,
+            &__action {
+                font: {
+                    family: $serif-roboto-regular-font;
+                    size: calculateRem(18px);
+                }
+                line-height: 150%;
             }
 
             &__description {
-                font-family: $serif-roboto-regular-font;
-                font-size: 18px;
-                line-height: 150%;
                 color: $secondary-color;
-                margin-bottom: 16px;
-                height: 100px;
+                margin-bottom: calculateRem(16px);
+                height: calculateRem(100px);
                 overflow-y: hidden;
             }
 
             &__action {
-                font-family: $serif-roboto-regular-font;
-                font-size: 18px;
-                line-height: 150%;
                 text-decoration: underline;
                 color: $primary-color;
                 background-color: transparent;
@@ -95,35 +100,38 @@
 @include mq("tablet") {
     .main {
         padding: {
-            top: 100px;
-            bottom: 60px;
+            top: calculateRem(100px);
+            bottom: calculateRem(60px);
         }
+
         &-block {
             display: block;
+
             &-wrapper {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
+                gap: calculateRem(40px);
             }
 
             &-item {
-                &__wrapper {
-                    margin-bottom: 40px;
-                }
-                &__picture {
-                    height: 340px;
+                &__picture-wrapper {
+                    margin-bottom: calculateRem(40px);
+                    img {
+                        height: calculateRem(340px);
+                    }
                 }
 
                 &__title {
-                    margin-bottom: 30px;
+                    margin-bottom: calculateRem(30px);
+                }
+
+                &__description,
+                &__action {
+                    font-size: $font-sm;
                 }
 
                 &__description {
-                    font-size: 22px;
-                    margin-bottom: 20px;
-                }
-                &__action {
-                    font-size: 22px;
+                    margin-bottom: calculateRem(20px);
                 }
             }
         }

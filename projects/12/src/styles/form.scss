@@ -4,27 +4,27 @@
 
 .form {
     &-group {
-        margin-bottom: 30px;
+        margin-bottom: calculateRem(30px);
         position: relative;
     }
 
     &-input {
         width: 100%;
-        height: 73px;
-        border: 2px solid transparent;
+        height: calculateRem(73px);
+        border: calculateRem(2px) solid transparent;
         padding: {
-            top: 21px;
-            bottom: 21px;
-            left: 26px;
-            right: 26px;
+            top: calculateRem(21px);
+            bottom: calculateRem(21px);
+            left: calculateRem(26px);
+            right: calculateRem(26px);
         }
-        font-size: 18px;
+        font-size: calculateRem(18px);
         color: rgba(0, 0, 0, 0.7);
         background-color: $bg-form-color;
         transition: border-color 0.3s;
 
         &:-webkit-autofill {
-            -webkit-box-shadow: 0 0 0 50px $bg-form-color inset;
+            -webkit-box-shadow: 0 0 0 calculateRem(50px) $bg-form-color inset;
         }
 
         &:focus {
@@ -43,7 +43,7 @@
 
     &-image {
         position: absolute;
-        right: 26px;
+        right: calculateRem(26px);
         top: 50%;
         transform: translateY(-50%);
 
@@ -71,12 +71,14 @@
         backdrop-filter: blur(5px);
         background: rgba(0, 0, 0, 0.15);
         width: 100%;
-        font-size: 28px;
+        font: {
+            size: $font-md;
+            family: $serif-klapt-bold-font;
+        }
         line-height: 115%;
         text-transform: uppercase;
-        font-family: $serif-bold-font;
         color: $secondary-color;
-        height: 73px;
+        height: calculateRem(73px);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -90,10 +92,10 @@
         );
         cursor: pointer;
         padding: {
-            top: 18px;
-            bottom: 18px;
-            left: 43px;
-            right: 43px;
+            top: calculateRem(18px);
+            bottom: calculateRem(18px);
+            left: calculateRem(43px);
+            right: calculateRem(43px);
         }
         transition: box-shadow 0.3s;
 
@@ -110,11 +112,13 @@
 
     &-error-text {
         position: absolute;
-        font-size: 10px;
+        font: {
+            size: calculateRem(10px);
+            family: $serif-roboto-regular-font;
+        }
         line-height: 160%;
-        font-family: $serif-roboto-regular-font;
         color: $error-color;
-        padding-top: 7px;
+        padding-top: calculateRem(7px);
         display: none;
         text-transform: math-auto;
     }

@@ -3,7 +3,7 @@
 @import "base/mixins.scss";
 
 .header {
-    font-family: $serif-bold-font;
+    font-family: $serif-klapt-bold-font;
     text-transform: uppercase;
     position: relative;
 
@@ -35,10 +35,10 @@
     }
 
     &__logo {
-        height: 36px;
+        height: calculateRem(36px);
         display: block;
         margin: {
-            bottom: 50px;
+            bottom: calculateRem(50px);
             left: auto;
             right: auto;
         }
@@ -47,14 +47,15 @@
     &-block {
         &__item {
             text-align: center;
+
             &:first-of-type {
                 margin: {
-                    bottom: 50px;
+                    bottom: calculateRem(50px);
                 }
                 img {
                     margin: 0 auto;
                     width: 100%;
-                    max-width: 500px;
+                    max-width: calculateRem(500px);
                     display: block;
                 }
             }
@@ -65,19 +66,19 @@
                     rgb(255, 72, 0),
                     rgb(255, 255, 255)
                 );
-                margin-bottom: 14px;
+                margin-bottom: calculateRem(14px);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
-                font-size: 32px;
+                font-size: $font-lg;
                 line-height: 83%;
             }
 
             &-title {
                 color: $secondary-color;
-                font-size: 50px;
+                font-size: calculateRem(50px);
                 line-height: 90%;
-                margin-bottom: 40px;
+                margin-bottom: calculateRem(40px);
             }
         }
     }
@@ -86,9 +87,9 @@
 @include mq("tablet") {
     .header {
         &__logo {
-            height: 60px;
+            height: calculateRem(60px);
             margin: {
-                bottom: 70px;
+                bottom: calculateRem(70px);
             }
         }
 
@@ -99,19 +100,19 @@
                 }
 
                 &:last-of-type {
-                    max-width: 707px;
+                    max-width: calculateRem(707px);
                     margin: 0 auto;
                 }
 
                 &-subtitle {
-                    margin-bottom: 20px;
-                    font-size: 46px;
+                    margin-bottom: calculateRem(20px);
+                    font-size: calculateRem(46px);
                     line-height: 83%;
                 }
 
                 &-title {
-                    font-size: 72px;
-                    margin-bottom: 70px;
+                    font-size: $font-xl;
+                    margin-bottom: calculateRem(70px);
                 }
             }
         }
@@ -124,7 +125,7 @@
             position: absolute;
             right: auto;
             left: -10%;
-            top: 50px;
+            top: calculateRem(50px);
             width: auto;
             height: auto;
             transform: rotate(0deg);
@@ -145,7 +146,7 @@
             width: auto;
             height: auto;
             right: -13%;
-            bottom: 70px;
+            bottom: calculateRem(70px);
             left: auto;
             top: auto;
             transform: rotate(0deg);
@@ -159,22 +160,24 @@
         }
         &-block {
             display: grid;
-            grid-template-columns: 450px 6fr;
-            gap: 60px;
+            grid-template-columns: calculateRem(450px) 6fr;
+            gap: calculateRem(60px);
 
             &__item {
                 text-align: left;
+
                 &:first-of-type {
                     display: block;
                     order: 1;
                     width: 100%;
                     position: relative;
                     margin-bottom: 0;
+
                     img {
-                        max-width: 650px;
-                        width: 650px;
+                        max-width: calculateRem(650px);
+                        width: calculateRem(650px);
                         position: absolute;
-                        top: -165px;
+                        top: calculateRem(-165px);
                     }
                 }
 

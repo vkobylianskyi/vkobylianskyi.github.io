@@ -17,13 +17,13 @@ const swiper = new Swiper(".swiper-container", {
     modules: [Navigation, Pagination],
 });
 
-const panels = document.querySelectorAll(".main-block-item, .swiper-slide");
+const cards = document.querySelectorAll(".main-block-item, .swiper-slide");
 
-panels.forEach((panel) => {
-    const heading = panel.querySelector(".main-block-item__action");
+cards.forEach((panel) => {
+    const action = panel.querySelector(".main-block-item__action");
     const body = panel.querySelector(".main-block-item__description");
 
-    heading.addEventListener("click", () => {
+    action.addEventListener("click", () => {
         body.style.height = body.style.height === "auto" ? "100px" : "auto";
     });
 });
