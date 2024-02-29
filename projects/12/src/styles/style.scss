@@ -15,6 +15,7 @@ body {
     &::before,
     &::after {
         position: absolute;
+        overflow: hidden !important;
         content: "";
         z-index: -1;
         width: calculateRem(300px);
@@ -53,13 +54,13 @@ body {
             filter: blur(200px);
         }
 
-        &::before {
+        &::after {
             left: calculateRem(-108px);
             right: auto;
             top: calculateRem(178px);
         }
 
-        &::after {
+        &::before {
             left: auto;
             right: calculateRem(-108px);
             top: calculateRem(-390px);
