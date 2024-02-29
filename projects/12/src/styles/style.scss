@@ -12,11 +12,10 @@ body {
         bottom: calculateRem(36px);
     }
 
-    &::before,
-    &::after {
+    & .circle-left,
+    & .circle-right {
         position: absolute;
         overflow: hidden !important;
-        content: "";
         z-index: -1;
         width: calculateRem(300px);
         height: calculateRem(500px);
@@ -24,19 +23,18 @@ body {
         filter: blur(40px);
         background: radial-gradient(
             50% 50% at 50% 50%,
-            rgb(94, 255, 0),
+            rgb(0, 38, 255),
             rgba(255, 72, 0, 0) 100%
         );
     }
 
-    &::before {
+    & .circle-left {
         right: calculateRem(-150px);
         top: calculateRem(-55px);
         overflow: hidden !important;
-        clip-path: revert;
     }
 
-    &::after {
+    & .circle-right {
         left: calculateRem(-150px);
         top: calculateRem(111px);
     }
@@ -48,21 +46,21 @@ body {
             top: calculateRem(80px);
         }
 
-        &::before,
-        &::after {
+        & .circle-left,
+        & .circle-right {
             width: calculateRem(1000px);
             height: calculateRem(1000px);
             border-radius: 50%;
             filter: blur(200px);
         }
 
-        &::after {
+        & .circle-left {
             left: calculateRem(-108px);
             right: auto;
             top: calculateRem(178px);
         }
 
-        &::before {
+        & .circle-right {
             left: auto;
             right: calculateRem(-108px);
             top: calculateRem(-390px);
