@@ -6,8 +6,7 @@ body {
     font-family: $serif-klapt-reg-font;
     background-color: $bg-color-dark;
     position: relative;
-    overflow-x: hidden;
-    touch-action: pan-y;
+    overflow-x: hidden !important;
     padding: {
         top: calculateRem(30px);
         bottom: calculateRem(36px);
