@@ -29,10 +29,10 @@ body {
         );
     }
 
-    &::before {
-        right: calculateRem(-150px);
-        top: calculateRem(-55px);
-    }
+    // &::before {
+    //     right: calculateRem(-150px);
+    //     top: calculateRem(-55px);
+    // }
 
     &::after {
         left: calculateRem(-150px);
@@ -60,11 +60,11 @@ body {
             top: calculateRem(178px);
         }
 
-        &::before {
-            left: auto;
-            right: calculateRem(-108px);
-            top: calculateRem(-390px);
-        }
+        // &::before {
+        //     left: auto;
+        //     right: calculateRem(-108px);
+        //     top: calculateRem(-390px);
+        // }
     }
 }
 
