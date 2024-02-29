@@ -6,7 +6,6 @@ body {
     font-family: $serif-klapt-reg-font;
     background-color: $bg-color-dark;
     position: relative;
-    overflow-x: hidden !important;
     padding: {
         top: calculateRem(30px);
         bottom: calculateRem(36px);
@@ -17,7 +16,6 @@ body {
         position: absolute;
         content: "";
         display: block;
-        overflow: hidden !important;
         z-index: -1;
         width: calculateRem(300px);
         height: calculateRem(500px);
@@ -33,14 +31,12 @@ body {
     &::before {
         right: calculateRem(-150px);
         top: calculateRem(-55px);
-        overflow: hidden !important;
         clip-path: revert;
     }
 
     &::after {
         left: calculateRem(-150px);
         top: calculateRem(111px);
-        overflow: hidden !important;
     }
 }
 
