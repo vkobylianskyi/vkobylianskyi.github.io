@@ -7,6 +7,25 @@
     text-transform: uppercase;
     position: relative;
 
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        overflow: hidden !important;
+        z-index: -1;
+        width: calculateRem(300px);
+        height: calculateRem(500px);
+        border-radius: 50%;
+        filter: blur(40px);
+        background: radial-gradient(
+            50% 50% at 50% 50%,
+            rgb(255, 0, 0),
+            rgba(255, 72, 0, 0) 100%
+        );
+        right: calculateRem(-150px);
+        top: calculateRem(-55px);
+    }
+
     &__brand-arrow-icon {
         position: absolute;
         right: calculateRem(20px);
@@ -87,6 +106,17 @@
 
 @include mq("tablet") {
     .header {
+
+        &::before {
+            width: calculateRem(1000px);
+            height: calculateRem(1000px);
+            border-radius: 50%;
+            filter: blur(200px);
+            left: auto;
+            right: calculateRem(-108px);
+            top: calculateRem(-390px);
+        }
+
         &__logo {
             height: calculateRem(60px);
             margin: {

@@ -12,9 +12,10 @@ body {
         bottom: calculateRem(36px);
     }
 
-    & .circle-left,
-    & .circle-right {
+    &::after {
         position: absolute;
+        content: "";
+        display: block;
         overflow: hidden !important;
         z-index: -1;
         width: calculateRem(300px);
@@ -23,18 +24,19 @@ body {
         filter: blur(40px);
         background: radial-gradient(
             50% 50% at 50% 50%,
-            rgb(0, 38, 255),
+            rgb(94, 255, 0),
             rgba(255, 72, 0, 0) 100%
         );
     }
 
-    & .circle-left {
-        right: calculateRem(-150px);
-        top: calculateRem(-55px);
-        overflow: hidden !important;
-    }
+    // &::before {
+    //     right: calculateRem(-150px);
+    //     top: calculateRem(-55px);
+    //     overflow: hidden !important;
+    //     clip-path: revert;
+    // }
 
-    & .circle-right {
+    &::after {
         left: calculateRem(-150px);
         top: calculateRem(111px);
     }
@@ -46,25 +48,25 @@ body {
             top: calculateRem(80px);
         }
 
-        & .circle-left,
-        & .circle-right {
+        
+        &::after {
             width: calculateRem(1000px);
             height: calculateRem(1000px);
             border-radius: 50%;
             filter: blur(200px);
         }
 
-        & .circle-left {
+        &::after {
             left: calculateRem(-108px);
             right: auto;
             top: calculateRem(178px);
         }
 
-        & .circle-right {
-            left: auto;
-            right: calculateRem(-108px);
-            top: calculateRem(-390px);
-        }
+        // &::before {
+        //     left: auto;
+        //     right: calculateRem(-108px);
+        //     top: calculateRem(-390px);
+        // }
     }
 }
 
