@@ -6,6 +6,7 @@ body {
     font-family: $serif-klapt-reg-font;
     background-color: $bg-color-dark;
     position: relative;
+    overflow-x: hidden !important;
     padding: {
         top: calculateRem(30px);
         bottom: calculateRem(36px);
@@ -23,7 +24,7 @@ body {
         filter: blur(40px);
         background: radial-gradient(
             50% 50% at 50% 50%,
-            rgb(0, 255, 21),
+            rgb(255, 251, 0),
             rgba(255, 72, 0, 0) 100%
         );
     }
