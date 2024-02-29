@@ -30,7 +30,14 @@ function onScrollWindow() {
 
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const menu = document.querySelector('.menu');
+const body = document.querySelector('body');
 
 hamburgerMenu.addEventListener('click', () => {
     menu.classList.toggle('active');
+});
+
+body.addEventListener('click', (event) => {
+    if (!menu.contains(event.target) && !hamburgerMenu.contains(event.target)) {
+        menu.classList.remove('active');
+    }
 });

@@ -1,0 +1,22 @@
+@import "fonts";
+@import "var";
+
+.footer {
+    &-block {
+        max-width: 864px;
+        margin: 0 auto;
+        font-family: $serif-medium-font;
+        &__item {
+            text-align: center;
+            font-size: 9px;
+            line-height: 140%;
+            color: $primary-color;
+            opacity: 0.3;
+            text-transform: uppercase;
+
+            &:last-of-type {
+                padding-top: 10px;
+            }
+        }
+    }
+}

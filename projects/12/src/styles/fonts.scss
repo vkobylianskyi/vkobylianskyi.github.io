@@ -1,0 +1,21 @@
+@import './base/mixins';
+
+@include fontFace(
+    '../assets/fonts/klapt_cyrillic_bold',
+    'Klapt-Cyrillic-Bold'
+);
+
+@include fontFace(
+    '../assets/fonts/klapt_cyrillic_medium',
+    'Klapt-Cyrillic-Medium'
+);
+
+@include fontFace(
+    '../assets/fonts/klapt_cyrillic_regular',
+    'Klapt-Cyrillic-Regular'
+);
+
+@include fontFace(
+    '../assets/fonts/roboto-regular',
+    'Roboto-Regular'
+);

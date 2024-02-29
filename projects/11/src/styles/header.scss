@@ -5,76 +5,46 @@
 .header {
     padding-top: 20px;
 
-    &-navbar-wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &__menu {
+    &-navbar {
+        position: relative;
+        @include mq("tablet-wide") {
             display: flex;
             align-items: center;
-            justify-content: flex-start;
-            gap: 32px;
+        }
 
-            &-item {
-                &:first-of-type {
-                    font-size: $font-md;
-                }
-                a {
-                    text-decoration: none;
-                    color: $neutral-very-dark-blue-color;
-                    transition: 0.5s;
+        &__logo {
+            display: flex;
+            align-items: center;
+            height: 40px;
 
-                    &:hover {
-                        color: $primary-cyan-color;
-                    }
-                }
+            img {
+                display: block;
             }
         }
     }
 
-    &-auth-block {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 32px;
+    &-login-button {
+        font: {
+            family: $serif-reg-font;
+            size: $font-sm;
+        }
+        color: $bg-color-white;
+        background-color: transparent;
 
-        &__login-button {
-            font: {
-                family: $serif-reg-font;
-                size: $font-sm;
-            }
-            color: $bg-color-white;
-            background-color: transparent;
+        @include mq("tablet-wide") {
+            color: $neutral-very-dark-blue-color;
+            transition: 0.5s;
 
-            @include mq("tablet-wide") {
-                color: $neutral-very-dark-blue-color;
+            &:hover {
+                color: $primary-cyan-color;
             }
         }
-
-        &__sign-up-button {
-            width: 100%;
-            max-width: 264px;
-            margin: 0 auto;
-        }
     }
-}
 
-.navbar {
-    position: relative;
-    @include mq("tablet-wide") {
-        display: flex;
-        align-items: center;
-    }
-}
-
-.-logo {
-    display: flex;
-    align-items: center;
-    height: 40px;
-
-    img {
-        display: block;
+    &-sign-up-button {
+        width: 100%;
+        max-width: 264px;
+        margin: 0 auto;
     }
 }
 
@@ -114,10 +84,14 @@
         font-size: $font-sm;
         @include mq("tablet-wide") {
             color: $neutral-very-dark-blue-color;
+            transition: 0.5s;
+            &:hover {
+                color: $primary-cyan-color;
+            }
         }
     }
 
-    &__login-button {
+    &__login-button-wrapper {
         position: relative;
         text-align: center;
         padding: {

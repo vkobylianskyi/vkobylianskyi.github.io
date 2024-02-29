@@ -1,0 +1,125 @@
+@import "fonts";
+@import "var";
+@import "base/mixins.scss";
+
+.form {
+    &-group {
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    &-input {
+        width: 100%;
+        height: 73px;
+        border: 2px solid transparent;
+        padding: {
+            top: 21px;
+            bottom: 21px;
+            left: 26px;
+            right: 26px;
+        }
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.7);
+        background-color: $bg-form-color;
+        transition: border-color 0.3s;
+
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 50px $bg-form-color inset;
+        }
+
+        &:focus {
+            background-color: $bg-form-color;
+            outline: none;
+        }
+
+        &.valid {
+            border-color: $success-color;
+        }
+
+        &.invalid {
+            border-color: $error-color;
+        }
+    }
+
+    &-image {
+        position: absolute;
+        right: 26px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.valid * {
+            stroke: $success-color;
+        }
+
+        &.invalid * {
+            stroke: $error-color;
+        }
+
+        &.valid {
+            border-color: $success-color;
+        }
+
+        &.disabled {
+            background-color: $primary-color;
+            cursor: not-allowed;
+        }
+    }
+
+    &-button {
+        box-shadow: inset 0px 0px 36px 0px $secondary-color,
+            inset 0px 0px 16px 0px $secondary-color;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.15);
+        width: 100%;
+        font-size: 28px;
+        line-height: 115%;
+        text-transform: uppercase;
+        font-family: $serif-bold-font;
+        color: $secondary-color;
+        height: 73px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(
+            100% 0,
+            100% calc(100% - 16px),
+            calc(100% - 16px) 100%,
+            0 100%,
+            0 16px,
+            16px 0
+        );
+        cursor: pointer;
+        padding: {
+            top: 18px;
+            bottom: 18px;
+            left: 43px;
+            right: 43px;
+        }
+        transition: box-shadow 0.3s;
+
+        &:hover {
+            box-shadow: inset 0 0 60px 0 $secondary-color,
+                inset 0 0 24px 0 $secondary-color;
+        }
+
+        &:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+    }
+
+    &-error-text {
+        position: absolute;
+        font-size: 10px;
+        line-height: 160%;
+        font-family: $serif-roboto-regular-font;
+        color: $error-color;
+        padding-top: 7px;
+        display: none;
+        text-transform: math-auto;
+    }
+
+    &-input.invalid + .form-error-text {
+        display: block;
+    }
+}

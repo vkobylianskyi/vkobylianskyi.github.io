@@ -1,0 +1,131 @@
+@import "fonts";
+@import "var";
+@import "base/mixins.scss";
+
+.main {
+    padding: {
+        top: 70px;
+        bottom: 50px;
+    }
+
+    &-block {
+        display: none;
+
+        &-item {
+            &__wrapper {
+                margin-bottom: 30px;
+                position: relative;
+
+                &::after,
+                &::before {
+                    display: block;
+                    position: absolute;
+                    content: "";
+                    width: 100px;
+                    height: 90px;
+                    background-color: $primary-color;
+                }
+
+                &::after {
+                    clip-path: polygon(
+                        20px 20px,
+                        20px 78px,
+                        88px 78px,
+                        100% 100%,
+                        0 100%,
+                        0 0
+                    );
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &::before {
+                    clip-path: polygon(
+                        100% 0,
+                        100% 100%,
+                        80px 70px,
+                        80px 12px,
+                        12px 12px,
+                        0 0
+                    );
+                    top: 0;
+                    right: 0;
+                }
+            }
+
+            &__picture {
+                width: 100%;
+                display: block;
+                border: 6px solid $primary-color;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            &__title {
+                font-size: 36px;
+                line-height: 90%;
+                color: $primary-color;
+                text-transform: uppercase;
+                font-family: $serif-bold-font;
+                margin-bottom: 30px;
+            }
+
+            &__description {
+                font-family: $serif-roboto-regular-font;
+                font-size: 18px;
+                line-height: 150%;
+                color: $secondary-color;
+                margin-bottom: 16px;
+                height: 100px;
+                overflow-y: hidden;
+            }
+
+            &__action {
+                font-family: $serif-roboto-regular-font;
+                font-size: 18px;
+                line-height: 150%;
+                text-decoration: underline;
+                color: $primary-color;
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+@include mq("tablet") {
+    .main {
+        padding: {
+            top: 100px;
+            bottom: 60px;
+        }
+        &-block {
+            display: block;
+            &-wrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            &-item {
+                &__wrapper {
+                    margin-bottom: 40px;
+                }
+                &__picture {
+                    height: 340px;
+                }
+
+                &__title {
+                    margin-bottom: 30px;
+                }
+
+                &__description {
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                }
+                &__action {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

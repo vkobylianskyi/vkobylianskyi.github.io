@@ -1,0 +1,187 @@
+@import "fonts";
+@import "var";
+@import "base/mixins.scss";
+
+.header {
+    font-family: $serif-bold-font;
+    text-transform: uppercase;
+    position: relative;
+
+    &__brand-arrow-icon {
+        position: absolute;
+        right: calculateRem(20px);
+        top: calculateRem(220px);
+        transform: rotate(180deg);
+        height: 64px;
+        width: 32px;
+    }
+
+    &__brand-rectangle-icon {
+        position: absolute;
+        left: calculateRem(30px);
+        top: calculateRem(322px);
+        transform: rotate(90deg);
+        width: calculateRem(64px);
+        height: calculateRem(12px);
+    }
+
+    &__brand-trapezium-icon {
+        position: absolute;
+        width: 88px;
+        height: calculateRem(56px);
+        left: -24px;
+        top: 0;
+        transform: rotate(-180deg);
+    }
+
+    &__logo {
+        height: 36px;
+        display: block;
+        margin: {
+            bottom: 50px;
+            left: auto;
+            right: auto;
+        }
+    }
+
+    &-block {
+        &__item {
+            text-align: center;
+            &:first-of-type {
+                margin: {
+                    bottom: 50px;
+                }
+                img {
+                    margin: 0 auto;
+                    width: 100%;
+                    max-width: 500px;
+                    display: block;
+                }
+            }
+
+            &-subtitle {
+                background: linear-gradient(
+                    180deg,
+                    rgb(255, 72, 0),
+                    rgb(255, 255, 255)
+                );
+                margin-bottom: 14px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                font-size: 32px;
+                line-height: 83%;
+            }
+
+            &-title {
+                color: $secondary-color;
+                font-size: 50px;
+                line-height: 90%;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@include mq("tablet") {
+    .header {
+        &__logo {
+            height: 60px;
+            margin: {
+                bottom: 70px;
+            }
+        }
+
+        &-block {
+            &__item {
+                &:first-of-type {
+                    display: none;
+                }
+
+                &:last-of-type {
+                    max-width: 707px;
+                    margin: 0 auto;
+                }
+
+                &-subtitle {
+                    margin-bottom: 20px;
+                    font-size: 46px;
+                    line-height: 83%;
+                }
+
+                &-title {
+                    font-size: 72px;
+                    margin-bottom: 70px;
+                }
+            }
+        }
+    }
+}
+
+@include mq("desktop") {
+    .header {
+        &__brand-arrow-icon {
+            position: absolute;
+            right: auto;
+            left: -10%;
+            top: 50px;
+            width: auto;
+            height: auto;
+            transform: rotate(0deg);
+        }
+
+        &__brand-rectangle-icon {
+            position: absolute;
+            width: auto;
+            height: auto;
+            left: calc(50% - 8px);
+            bottom: 6px;
+            top: auto;
+            transform: rotate(0deg);
+        }
+
+        &__brand-trapezium-icon {
+            position: absolute;
+            width: auto;
+            height: auto;
+            right: -13%;
+            bottom: 70px;
+            left: auto;
+            top: auto;
+            transform: rotate(0deg);
+        }
+
+        &__logo {
+            margin: {
+                left: 0;
+                right: 0;
+            }
+        }
+        &-block {
+            display: grid;
+            grid-template-columns: 450px 6fr;
+            gap: 60px;
+
+            &__item {
+                text-align: left;
+                &:first-of-type {
+                    display: block;
+                    order: 1;
+                    width: 100%;
+                    position: relative;
+                    margin-bottom: 0;
+                    img {
+                        max-width: 650px;
+                        width: 650px;
+                        position: absolute;
+                        top: -165px;
+                    }
+                }
+
+                &:last-of-type {
+                    order: 0;
+                }
+            }
+        }
+    }
+}

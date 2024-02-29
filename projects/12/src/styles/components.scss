@@ -1,0 +1,17 @@
+@import "base/mixins.scss";
+
+.app-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: {
+        left: 30px;
+        right: 30px;
+    }
+
+    @include mq("tablet") {
+        padding: {
+            left: 40px;
+            right: 40px;
+        }
+    }
+}

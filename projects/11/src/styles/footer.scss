@@ -71,6 +71,15 @@
             @include mq("tablet") {
                 justify-content: space-between;
             }
+            &__item {
+                a {
+                    display: block;
+                    &:hover svg path {
+                        fill: $primary-cyan-color;
+                        transition: 0.5s;
+                    }
+                }
+            }
         }
     }
 }

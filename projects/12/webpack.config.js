@@ -53,7 +53,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(jpg|png|gif|woff|eot|ttf|svg|woff2)$/,
+                test: /\.(jpg|png|gif|woff|eot|ttf|svg|webp|woff2)$/,
                 use: [
                     {
                         loader: "file-loader",
@@ -79,9 +79,6 @@ module.exports = {
                           },
                           gifsicle: {
                             interlaced: false,
-                          },
-                          webp: {
-                            quality: 75
                           }
                         }
                     }
