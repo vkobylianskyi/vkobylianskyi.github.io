@@ -92,6 +92,11 @@
                 text-decoration: underline;
                 color: $primary-color;
                 background-color: transparent;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $secondary-color;
+                }
             }
         }
     }
