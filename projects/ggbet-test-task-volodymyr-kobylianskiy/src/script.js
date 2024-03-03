@@ -1,8 +1,7 @@
 import Swiper from "swiper";
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from "swiper/modules";
 import "./styles/style.scss";
 import "swiper/swiper.scss";
-
 
 const swiper = new Swiper(".swiper-container", {
     cssMode: true,
@@ -79,28 +78,39 @@ emailInput.addEventListener("input", function () {
     }
 });
 
-
-let brandArrowFigure = document.querySelector('.header__brand-arrow-icon');
-let brandRectangleFigure = document.querySelector('.header__brand-rectangle-icon');
-let brandTrapeziumFigure = document.querySelector('.header__brand-trapezium-icon');
-let mainPictureFigure = document.querySelector('.main-picture');
+let mainPictureFirstItem = document.querySelector(
+    " .main-picture-wrapper__item-first"
+);
+let mainPictureSecondItem = document.querySelector(
+    ".main-picture-wrapper__item-second"
+);
+let mainPictureThirdItem = document.querySelector(
+    ".main-picture-wrapper__item-third"
+);
+let mainPictureFourthItem = document.querySelector(
+    ".main-picture-wrapper__item-fourth"
+);
 
 function handleMouseMove(e) {
     if (window.innerWidth > 1200) {
         let x = e.clientX / window.innerWidth;
-        let y = e.clientY / window.innerHeight;  
+        let y = e.clientY / window.innerHeight;
 
-        brandArrowFigure.style.transform = 'translate(-' + x * 25 + 'px, -' + y * 25 + 'px)';
-        brandRectangleFigure.style.transform = 'translate(+' + x * 5 + 'px, -' + y * 5 + 'px)';
-        brandTrapeziumFigure.style.transform = 'translate(-' + x * 15 + 'px, -' + y * 15 + 'px)';
-        mainPictureFigure.style.transform = 'translate(-' + x * 30 + 'px, -' + y * 10 + 'px)';
+        mainPictureFirstItem.style.transform =
+            "translate(-" + x * 25 + "px, -" + y * 25 + "px)";
+        mainPictureSecondItem.style.transform =
+            "translate(+" + x * 15 + "px, -" + y * 15 + "px)";
+        mainPictureThirdItem.style.transform =
+            "translate(-" + x * 15 + "px, -" + y * 15 + "px)";
+        mainPictureFourthItem.style.transform =
+            "translate(-" + x * 30 + "px, -" + y * 10 + "px)";
     } else {
-        brandArrowFigure.style.transform = '';
-        brandRectangleFigure.style.transform = '';
-        brandTrapeziumFigure.style.transform = '';
-        mainPictureFigure.style.transform = '';
+        mainPictureFirstItem.style.transform = "";
+        mainPictureSecondItem.style.transform = "";
+        mainPictureThirdItem.style.transform = "";
+        mainPictureFourthItem.style.transform = "";
     }
 }
 
-window.addEventListener('mousemove', handleMouseMove);
-window.addEventListener('resize', handleMouseMove);
+window.addEventListener("mousemove", handleMouseMove);
+window.addEventListener("resize", handleMouseMove);

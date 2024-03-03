@@ -50,6 +50,10 @@
                 margin: {
                     bottom: calculateRem(50px);
                 }
+
+                .main-picture-wrapper {
+                    display: none;
+                }
                 img {
                     margin: 0 auto;
                     width: 100%;
@@ -89,7 +93,7 @@
         &-block {
             &__item {
                 &-title {
-                  text-align: center;
+                    text-align: center;
                 }
             }
         }
@@ -184,17 +188,51 @@
                     width: 100%;
                     position: relative;
                     margin-bottom: 0;
+                    max-width: calculateRem(650px);
+                    width: calculateRem(650px);
+                    top: calculateRem(-165px);
+
+                    .main-picture-wrapper {
+                        width: calculateRem(614px);
+                        height: calculateRem(540px);
+                        display: block;
+
+                        &__item-first,
+                        &__item-second,
+                        &__item-third,
+                        &__item-fourth {
+                            position: absolute;
+                            display: block;
+                        }
+
+                        &__item-first {
+                            width: calculateRem(387px);
+                            top: 0;
+                            right: calculateRem(107px);
+                        }
+
+                        &__item-second {
+                            width: calculateRem(200px);
+                            right: 0;
+                            top: calculateRem(60px);
+                        }
+
+                        &__item-third {
+                            width: calculateRem(183px);
+                            top: calculateRem(60px);
+                            left: 0;
+                        }
+
+                        &__item-fourth {
+                            width: calculateRem(346px);
+                            bottom: 0;
+                            right: calculateRem(134px);
+                        }
+                    }
 
                     img {
-                        max-width: calculateRem(650px);
-                        width: calculateRem(650px);
-                        position: absolute;
-                        top: calculateRem(-165px);
+                        display: none;
                     }
-                }
-
-                &:last-of-type {
-                    order: 0;
                 }
 
                 &-title {
