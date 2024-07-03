@@ -16,6 +16,7 @@ import {
 import { Box, Grid, List, ListItem, ListItemIcon, Typography, useMediaQuery, useTheme } from "@mui/material";
 
 import cexLogo from "../assets/img/cex-logo.svg";
+import ggLogo from "../assets/img/gg-logo.svg";
 import etLogo from "../assets/img/etc-logo.svg";
 
 export default function Experience() {
@@ -84,6 +85,32 @@ export default function Experience() {
                         },
                     }}
                 >
+                    <Box>
+                        <ExperienceGridWrapper container spacing={4} alignItems={"center"}>
+                            <Grid item xs={3} md={2} lg={1}>
+                                <ExperienceImage src={ggLogo} alt="GG.BET logo" />
+                            </Grid>
+                            <Grid item xs={9} md={10} lg={11}>
+                                <ExperienceTitle>GG.BET</ExperienceTitle>
+                            </Grid>
+                        </ExperienceGridWrapper>
+                        <Grid container spacing={7}>
+                            <ExperienceListGrid item xs={12} md={10} lg={11} justifyContent={"center"}>
+                                <ExperienceSubtitle>{t("welcomeDevelop")} (HTML/CSS coder)</ExperienceSubtitle>
+                                <ExperienceDate>{t("ggExperienceDate")}</ExperienceDate>
+                                <List>
+                                    {cexExperience.map((listItem, index) => (
+                                        <ListItem key={index}>
+                                            <ListItemIcon>
+                                                <ExperienceListItemCircle></ExperienceListItemCircle>
+                                            </ListItemIcon>
+                                            <ExperienceListItemText>{t(listItem)}</ExperienceListItemText>
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            </ExperienceListGrid>
+                        </Grid>
+                    </Box>
                     <Box>
                         <ExperienceGridWrapper container spacing={4} alignItems={"center"}>
                             <Grid item xs={3} md={2} lg={1}>

@@ -34,7 +34,7 @@ export const DocumentsLink = styled(Link)`
     font-size: 16px;
     position: relative;
     text-align: center;
-    width: 225px;
+    width: 226px;
 
     &:hover::after {
         content: "";
