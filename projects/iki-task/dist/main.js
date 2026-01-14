@@ -47,7 +47,7 @@ window.addEventListener("load", () => {
     const email = document.getElementById("email").value;
     button.disabled = true;
     button.innerHTML = `
-            <img src="src/assets/img/spinner.svg" alt="Loading" class="form-block-spinner">
+            <img src="./images/spinner.svg" alt="Loading" class="form-block-spinner">
         `;
     try {
       await fetch(SCRIPT_URL, {
@@ -61,7 +61,7 @@ window.addEventListener("load", () => {
       button.disabled = false;
       button.style.backgroundColor = "";
       button.innerHTML = ` All done!
-            <img src="src/assets/img/success.svg" alt="Done" class="form-block-success">
+            <img src="./images/success.svg" alt="Done" class="form-block-success">
         `;
       setTimeout(() => {
         button.innerHTML = originalButtonText;
