@@ -40,14 +40,16 @@ window.addEventListener("load", () => {
   document.getElementById("year").innerHTML = (/* @__PURE__ */ new Date()).getFullYear();
   const form = document.getElementById("emailForm");
   const button = document.getElementById("form-button");
+  const emailInput = document.getElementById("email");
+  document.querySelector(".input-group-icon");
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwy11WGWDkjot1dTTK8U_E0fWP-5tL_fLwkHrjr-jISIUd5cbfcaH4WvqWMNls37hwj/exec";
-  const originalButtonText = button.textContent.trim();
   form.addEventListener("submit", async function(e) {
     e.preventDefault();
-    const email = document.getElementById("email").value;
+    const email = emailInput.value;
+    form.classList.add("submitting");
     button.disabled = true;
     button.innerHTML = `
-            <img src="./images/spinner.svg" alt="Loading" class="form-block-spinner">
+            <img src="src/assets/img/spinner.svg" alt="Loading" class="form-block-spinner">
         `;
     try {
       await fetch(SCRIPT_URL, {
@@ -61,16 +63,24 @@ window.addEventListener("load", () => {
       button.disabled = false;
       button.style.backgroundColor = "";
       button.innerHTML = ` All done!
-            <img src="./images/success.svg" alt="Done" class="form-block-success">
-        `;
-      setTimeout(() => {
-        button.innerHTML = originalButtonText;
-      }, 2200);
+        <img src="src/assets/img/success.svg" alt="Done" class="form-block-success">
+    `;
       form.reset();
+      form.classList.add("submitted");
+      form.classList.remove("submitting");
+      emailInput.blur();
+      emailInput.style.caretColor = "transparent";
+      setTimeout(() => {
+        emailInput.blur();
+        emailInput.style.caretColor = "transparent";
+      }, 10);
     } catch (err) {
       button.innerHTML = "Error. Try again";
+      form.classList.remove("submitting");
+      form.classList.remove("submitted");
+      emailInput.style.caretColor = "";
       setTimeout(() => {
-        button.innerHTML = originalButtonText;
+        button.innerHTML = "Sign up for updates";
         button.style.backgroundColor = "";
         button.disabled = false;
       }, 3e3);
@@ -79,14 +89,15 @@ window.addEventListener("load", () => {
   });
   function scrollToFormAndFocus() {
     const form2 = document.getElementById("emailForm");
-    const emailInput = document.getElementById("email");
-    if (!form2 || !emailInput) return;
+    const emailInput2 = document.getElementById("email");
+    if (!form2 || !emailInput2) return;
     form2.scrollIntoView({
       behavior: "smooth",
       block: "center"
     });
     setTimeout(() => {
-      emailInput.focus();
+      emailInput2.focus();
+      emailInput2.style.caretColor = "";
     }, 600);
   }
   (_a = document.querySelector(".header__button")) == null ? void 0 : _a.addEventListener("click", function(e) {
@@ -96,5 +107,20 @@ window.addEventListener("load", () => {
   (_b = document.querySelector(".main__button")) == null ? void 0 : _b.addEventListener("click", function(e) {
     e.preventDefault();
     scrollToFormAndFocus();
+  });
+  emailInput.addEventListener("focus", function() {
+    form.classList.remove("submitted");
+    this.style.caretColor = "";
+  });
+  emailInput.addEventListener("blur", function() {
+  });
+  form.addEventListener("click", function(e) {
+    if (form.classList.contains("submitted")) {
+      form.classList.remove("submitted");
+      emailInput.focus();
+      emailInput.style.caretColor = "";
+    }
+  });
+  emailInput.addEventListener("input", function() {
   });
 });
