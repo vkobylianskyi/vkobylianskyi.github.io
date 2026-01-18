@@ -238,6 +238,7 @@ body {
   bottom: -9rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
 }
 .main__top-block-task-first {
   width: 40rem;
