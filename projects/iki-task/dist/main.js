@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
     const button = document.getElementById("form-button");
     const emailInput = document.getElementById("email");
     document.querySelector(".input-group-icon");
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwy11WGWDkjot1dTTK8U_E0fWP-5tL_fLwkHrjr-jISIUd5cbfcaH4WvqWMNls37hwj/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw2Aajfk1nsL5OImd9Rls0Rtfb2LGMKjL-fcqYJcaXb5DN_vhffnv_jd6KoSXFIQPwg/exec";
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
         const email = emailInput.value;

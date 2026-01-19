@@ -6,9 +6,8 @@ window.addEventListener("load", () => {
     const form = document.getElementById("emailForm");
     const button = document.getElementById("form-button");
     const emailInput = document.getElementById("email");
-    const icon = document.querySelector(".input-group-icon");
 
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwy11WGWDkjot1dTTK8U_E0fWP-5tL_fLwkHrjr-jISIUd5cbfcaH4WvqWMNls37hwj/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw2Aajfk1nsL5OImd9Rls0Rtfb2LGMKjL-fcqYJcaXb5DN_vhffnv_jd6KoSXFIQPwg/exec";
 
     // ── ЛОГІКА ФОРМИ ─────────────────────────────────────────────────────
     form.addEventListener("submit", async function (e) {
@@ -16,7 +15,6 @@ window.addEventListener("load", () => {
 
         const email = emailInput.value;
 
-        // Додаємо клас submitting для приховування іконки під час відправки
         form.classList.add("submitting");
 
         button.disabled = true;
@@ -65,8 +63,6 @@ window.addEventListener("load", () => {
             form.classList.remove("submitting");
             // Не встановлюємо opacity тут - лише клас
             form.classList.remove("submitted");
-
-            // Повертаємо нормальну каретку при помилці
             emailInput.style.caretColor = "";
 
             setTimeout(() => {
