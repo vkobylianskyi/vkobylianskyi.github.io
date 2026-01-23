@@ -15,16 +15,6 @@ body.lang-ua .ua {
     display: inline;
 }
 
-.preloader {
-    position: fixed;
-    inset: 0;
-    z-index: 999999;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-}
-
 .preloader.visible {
     display: flex;
 }
@@ -39,23 +29,6 @@ body.lang-ua .ua {
     to {
         transform: rotate(360deg);
     }
-}
-
-.page-content.preloader-active {
-    overflow: hidden !important;
-    pointer-events: none !important;
-    user-select: none;
-    filter: blur(3px);
-    transition: filter 0.4s ease;
-}
-
-
-.page-content.preloader-active::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 255, 255, 0.75);
-    z-index: 9998;
 }
 
 .lang-switcher {

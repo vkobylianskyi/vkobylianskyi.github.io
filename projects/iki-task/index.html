@@ -13,7 +13,13 @@
                 margin: 0;
                 visibility: hidden;
                 background: #fff;
+            }
+
+            body.preloader-active {
                 overflow: hidden;
+                height: 100vh;
+                position: fixed;
+                width: 100%;
             }
 
             .preloader {
@@ -23,7 +29,18 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: rgba(255, 255, 255, 0.3);
+                opacity: 0;
+                visibility: hidden;
+                transition:
+                    opacity 0.3s ease,
+                    visibility 0.3s ease;
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                background: rgba(255, 255, 255, 0.5);
+            }
+            .preloader.visible {
+                opacity: 1;
+                visibility: visible;
             }
 
             .preloader__spinner {
@@ -40,7 +57,6 @@
 
             body.loaded {
                 visibility: visible;
-                overflow: auto;
             }
 
             body:not(.loaded) .page-content {

@@ -3,21 +3,21 @@ import "../styles/main.scss";
 window.addEventListener("load", () => {
     const preloader = document.querySelector(".preloader");
     const pageContent = document.querySelector(".page-content");
-    const langOptions = document.querySelectorAll(".lang-option");
     const body = document.body;
+    const langOptions = document.querySelectorAll(".lang-option");
 
     function showPreloader() {
-        if (preloader && pageContent) {
+        if (preloader && pageContent && body) {
+            body.classList.add("preloader-active");
             preloader.classList.add("visible");
-            pageContent.classList.add("preloader-active");
         }
     }
 
-    function hidePreloader(delay = 500) {
-        if (preloader && pageContent) {
+    function hidePreloader(delay = 300) {
+        if (preloader && pageContent && body) {
             setTimeout(() => {
                 preloader.classList.remove("visible");
-                pageContent.classList.remove("preloader-active");
+                body.classList.remove("preloader-active");
             }, delay);
         }
     }
@@ -90,16 +90,13 @@ window.addEventListener("load", () => {
         emailInput.addEventListener("input", () => {});
     }
 
-    // ────────────────────────────────────────────────
-    // Прокрутка до форми
-    // ────────────────────────────────────────────────
     function scrollToFormAndFocus() {
         if (!form || !emailInput) return;
         form.scrollIntoView({ behavior: "smooth", block: "center" });
         setTimeout(() => {
             emailInput.focus();
             emailInput.style.caretColor = "";
-        }, 600);
+        }, 300);
     }
 
     document.querySelector(".header__button")?.addEventListener("click", (e) => {
@@ -112,9 +109,6 @@ window.addEventListener("load", () => {
         scrollToFormAndFocus();
     });
 
-    // ────────────────────────────────────────────────
-    // Мови + плейсхолдери
-    // ────────────────────────────────────────────────
     function updatePlaceholders() {
         const lang = body.classList.contains("lang-ua") ? "ua" : "en";
         document.querySelectorAll("input[data-en][data-ua]").forEach((input) => {
@@ -152,7 +146,9 @@ window.addEventListener("load", () => {
 
             updatePlaceholders();
 
-            hidePreloader(500);
+            setTimeout(() => {
+                hidePreloader();
+            }, 300);
         });
     });
 });
