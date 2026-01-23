@@ -37,10 +37,19 @@ body {
     padding: 0 8px;
 }
 
+.page-content {
+    position: relative;
+}
+
 .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: #ffffff;
     padding: {
-        top: 3.2rem;
-        bottom: 4.8rem;
+        top: 16px;
+        bottom: 16px;
     }
 
     &__block {
@@ -626,8 +635,6 @@ input {
     }
 
     .header {
-        padding-bottom: 2.4rem;
-
         &__button {
             font-size: 18px;
             border-radius: 12px;
@@ -893,11 +900,6 @@ input {
         max-width: 1360px;
     }
     .header {
-        padding: {
-            top: 24px;
-            bottom: 24px;
-        }
-
         &__block {
             &-logo {
                 font: {
