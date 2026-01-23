@@ -8,6 +8,45 @@
         <link rel="icon" type="image/png" href="src/assets/img/favicon.png" />
         <meta property="og:title" content="Iky Task" key="title" />
         <meta property="og:image" content="src/assets/img/preview-image.jpg" />
+        <style>
+            body {
+                margin: 0;
+                visibility: hidden;
+                background: #fff;
+                overflow: hidden;
+            }
+
+            .preloader {
+                position: fixed;
+                inset: 0;
+                z-index: 999999;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: rgba(255, 255, 255, 0.3);
+            }
+
+            .preloader__spinner {
+                width: 50px;
+                height: 50px;
+                animation: spin 5s linear infinite;
+            }
+
+            @keyframes spin {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            body.loaded {
+                visibility: visible;
+                overflow: auto;
+            }
+
+            body:not(.loaded) .page-content {
+                display: none;
+            }
+        </style>
     </head>
     <body>
         <div class="preloader">

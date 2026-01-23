@@ -6,9 +6,6 @@ window.addEventListener("load", () => {
     const langOptions = document.querySelectorAll(".lang-option");
     const body = document.body;
 
-    // ────────────────────────────────────────────────
-    // Функції прелоадера (тільки через клас)
-    // ────────────────────────────────────────────────
     function showPreloader() {
         if (preloader && pageContent) {
             preloader.classList.add("visible");
@@ -25,17 +22,10 @@ window.addEventListener("load", () => {
         }
     }
 
-    // ────────────────────────────────────────────────
-    // Початковий показ прелоадера (він уже в DOM)
-    // ────────────────────────────────────────────────
     showPreloader();
 
-    // рік
     document.getElementById("year")?.replaceChildren(new Date().getFullYear());
 
-    // ────────────────────────────────────────────────
-    // Форма підписки
-    // ────────────────────────────────────────────────
     const form = document.getElementById("emailForm");
     const submitBtn = document.getElementById("form-button");
     const emailInput = document.getElementById("email");
@@ -141,6 +131,7 @@ window.addEventListener("load", () => {
     });
 
     updatePlaceholders();
+    body.classList.add("loaded");
     hidePreloader(600);
 
     langOptions.forEach((option) => {

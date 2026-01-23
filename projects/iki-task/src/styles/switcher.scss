@@ -18,17 +18,21 @@ body.lang-ua .ua {
 .preloader {
     position: fixed;
     inset: 0;
+    z-index: 999999;
     display: none;
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    z-index: 9999;
+}
+
+.preloader.visible {
+    display: flex;
 }
 
 .preloader__spinner {
     width: 50px;
     height: 50px;
-    animation: spin 5s linear infinite; // швидше зазвичай виглядає краще
+    animation: spin 5s linear infinite;
 }
 
 @keyframes spin {
@@ -37,32 +41,20 @@ body.lang-ua .ua {
     }
 }
 
-.preloader[hidden],
-.preloader.hide {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.preloader.visible {
-    display: flex;
-}
-
 .page-content.preloader-active {
     overflow: hidden !important;
-    height: 100vh !important;
-    position: fixed;
-    width: 100%;
-    pointer-events: none;
+    pointer-events: none !important;
     user-select: none;
     filter: blur(3px);
     transition: filter 0.4s ease;
 }
 
+
 .page-content.preloader-active::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.75);
     z-index: 9998;
 }
 
