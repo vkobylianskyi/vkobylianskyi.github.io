@@ -9,7 +9,6 @@ window.addEventListener("load", () => {
 
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw2Aajfk1nsL5OImd9Rls0Rtfb2LGMKjL-fcqYJcaXb5DN_vhffnv_jd6KoSXFIQPwg/exec";
 
-    // ── ЛОГІКА ФОРМИ ─────────────────────────────────────────────────────
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
@@ -75,7 +74,6 @@ window.addEventListener("load", () => {
         }
     });
 
-    // ── СКРОЛ ДО ФОРМИ ──────────────────────────────────────────────────
     function scrollToFormAndFocus() {
         const form = document.getElementById("emailForm");
         const emailInput = document.getElementById("email");
@@ -104,10 +102,8 @@ window.addEventListener("load", () => {
         scrollToFormAndFocus();
     });
 
-    // ── ДОДАТКОВА ЛОГІКА ДЛЯ ІКОНКИ ─────────────────────────────────────
     emailInput.addEventListener("focus", function () {
         form.classList.remove("submitted");
-        // При фокусі повертаємо нормальну каретку
         this.style.caretColor = "";
     });
 
@@ -116,7 +112,6 @@ window.addEventListener("load", () => {
         // Все контролюється через CSS класи
     });
 
-    // Додатково: при кліку на форму після успішної відправки
     form.addEventListener("click", function (e) {
         if (form.classList.contains("submitted")) {
             // Якщо клікнули на форму в стані submitted
@@ -131,5 +126,34 @@ window.addEventListener("load", () => {
     emailInput.addEventListener("input", function () {
         // Ця подія потрібна для оновлення стану :not(:placeholder-shown)
         // Нічого не робимо, просто даємо тригер CSS
+    });
+
+    const body = document.body;
+    const langOptions = document.querySelectorAll(".lang-option");
+
+    // Початкова мова
+    const currentLang = localStorage.getItem("lang") || "ua";
+    body.classList.add(`lang-${currentLang}`);
+
+    langOptions.forEach((option) => {
+        const isActive = option.dataset.lang === currentLang;
+        option.classList.toggle("curr", isActive);
+    });
+
+    langOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+            const selectedLang = option.dataset.lang;
+            if (option.classList.contains("curr")) return;
+
+            body.classList.remove("lang-en", "lang-ua");
+            body.classList.add(`lang-${selectedLang}`);
+
+            localStorage.setItem("lang", selectedLang);
+
+            // Оновлюємо кнопки
+            langOptions.forEach((opt) => {
+                opt.classList.toggle("curr", opt.dataset.lang === selectedLang);
+            });
+        });
     });
 });
