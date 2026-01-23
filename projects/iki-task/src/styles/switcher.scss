@@ -7,7 +7,6 @@
     display: none;
 }
 
-/* Показуємо тільки потрібний, коли є клас на body */
 body.lang-en .en {
     display: inline;
 }
@@ -17,18 +16,54 @@ body.lang-ua .ua {
 }
 
 .preloader {
-    width: 5em;
-    height: 5em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    z-index: 6;
-}
-.preloader.hide {
+    position: fixed;
+    inset: 0;
     display: none;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.preloader__spinner {
+    width: 50px;
+    height: 50px;
+    animation: spin 5s linear infinite; // швидше зазвичай виглядає краще
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.preloader[hidden],
+.preloader.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preloader.visible {
+    display: flex;
+}
+
+.page-content.preloader-active {
+    overflow: hidden !important;
+    height: 100vh !important;
+    position: fixed;
+    width: 100%;
+    pointer-events: none;
+    user-select: none;
+    filter: blur(3px);
+    transition: filter 0.4s ease;
+}
+
+.page-content.preloader-active::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 9998;
 }
 
 .lang-switcher {
@@ -87,7 +122,7 @@ body.lang-ua .ua {
         background: transparent;
         color: #504023;
     }
-    
+
     &.curr {
         background: #504023;
         color: white;

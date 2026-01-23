@@ -1,11 +1,41 @@
 import "../styles/main.scss";
 
 window.addEventListener("load", () => {
-    const yearEl = document.getElementById("year");
-    if (yearEl) {
-        yearEl.textContent = new Date().getFullYear();
+    const preloader = document.querySelector(".preloader");
+    const pageContent = document.querySelector(".page-content");
+    const langOptions = document.querySelectorAll(".lang-option");
+    const body = document.body;
+
+    // ────────────────────────────────────────────────
+    // Функції прелоадера (тільки через клас)
+    // ────────────────────────────────────────────────
+    function showPreloader() {
+        if (preloader && pageContent) {
+            preloader.classList.add("visible");
+            pageContent.classList.add("preloader-active");
+        }
     }
 
+    function hidePreloader(delay = 500) {
+        if (preloader && pageContent) {
+            setTimeout(() => {
+                preloader.classList.remove("visible");
+                pageContent.classList.remove("preloader-active");
+            }, delay);
+        }
+    }
+
+    // ────────────────────────────────────────────────
+    // Початковий показ прелоадера (він уже в DOM)
+    // ────────────────────────────────────────────────
+    showPreloader();
+
+    // рік
+    document.getElementById("year")?.replaceChildren(new Date().getFullYear());
+
+    // ────────────────────────────────────────────────
+    // Форма підписки
+    // ────────────────────────────────────────────────
     const form = document.getElementById("emailForm");
     const submitBtn = document.getElementById("form-button");
     const emailInput = document.getElementById("email");
@@ -15,15 +45,12 @@ window.addEventListener("load", () => {
 
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-
             const email = emailInput.value.trim();
             if (!email) return;
 
             form.classList.add("submitting");
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `
-                <img src="src/assets/img/spinner.svg" alt="Loading..." class="form-block-spinner">
-            `;
+            submitBtn.innerHTML = `<img src="src/assets/img/spinner.svg" alt="Loading..." class="form-block-spinner">`;
 
             try {
                 await fetch(SCRIPT_URL, {
@@ -34,10 +61,7 @@ window.addEventListener("load", () => {
                 });
 
                 submitBtn.disabled = false;
-                submitBtn.innerHTML = `
-                    All done!
-                    <img src="src/assets/img/success.svg" alt="Success" class="form-block-success">
-                `;
+                submitBtn.innerHTML = `All done! <img src="src/assets/img/success.svg" alt="Success" class="form-block-success">`;
 
                 form.reset();
                 form.classList.add("submitted");
@@ -46,15 +70,11 @@ window.addEventListener("load", () => {
                 emailInput.blur();
                 emailInput.style.caretColor = "transparent";
 
-                setTimeout(() => {
-                    emailInput.blur();
-                    emailInput.style.caretColor = "transparent";
-                }, 50);
+                setTimeout(() => emailInput.blur(), 50);
             } catch (err) {
                 console.error("Submit error:", err);
                 submitBtn.innerHTML = "Error. Try again";
-                form.classList.remove("submitting");
-                form.classList.remove("submitted");
+                form.classList.remove("submitting", "submitted");
                 emailInput.style.caretColor = "";
 
                 setTimeout(() => {
@@ -64,13 +84,11 @@ window.addEventListener("load", () => {
             }
         });
 
-        // ─── Повернення нормального стану при фокусі ───
         emailInput.addEventListener("focus", () => {
             form.classList.remove("submitted");
             emailInput.style.caretColor = "";
         });
 
-        // Клік по формі після успіху → редагувати знову
         form.addEventListener("click", (e) => {
             if (form.classList.contains("submitted") && e.target !== submitBtn) {
                 form.classList.remove("submitted");
@@ -79,7 +97,6 @@ window.addEventListener("load", () => {
             }
         });
 
-        // тригер :placeholder-shown
         emailInput.addEventListener("input", () => {});
     }
 
@@ -106,16 +123,10 @@ window.addEventListener("load", () => {
     });
 
     // ────────────────────────────────────────────────
-    // Перемикач мов + placeholder
+    // Мови + плейсхолдери
     // ────────────────────────────────────────────────
-    const body = document.body;
-    const langOptions = document.querySelectorAll(".lang-option");
-
-    // Функція оновлення placeholder-ів
     function updatePlaceholders() {
-        const isUa = body.classList.contains("lang-ua");
-        const lang = isUa ? "ua" : "en";
-
+        const lang = body.classList.contains("lang-ua") ? "ua" : "en";
         document.querySelectorAll("input[data-en][data-ua]").forEach((input) => {
             input.placeholder = input.dataset[lang];
         });
@@ -125,32 +136,32 @@ window.addEventListener("load", () => {
     let currentLang = localStorage.getItem("lang") || "ua";
     body.classList.add(`lang-${currentLang}`);
 
-    // Початкове встановлення стану кнопок і placeholder
-    langOptions.forEach((option) => {
-        option.classList.toggle("curr", option.dataset.lang === currentLang);
+    langOptions.forEach((opt) => {
+        opt.classList.toggle("curr", opt.dataset.lang === currentLang);
     });
 
-    updatePlaceholders(); // одразу після завантаження
+    updatePlaceholders();
+    hidePreloader(600);
 
-    // Обробник кліку по кнопці мови
     langOptions.forEach((option) => {
         option.addEventListener("click", () => {
             const selectedLang = option.dataset.lang;
             if (option.classList.contains("curr")) return;
 
-            // змінюємо мову
+            showPreloader();
+
             body.classList.remove("lang-en", "lang-ua");
             body.classList.add(`lang-${selectedLang}`);
 
             localStorage.setItem("lang", selectedLang);
 
-            // оновлюємо активний стан кнопок
             langOptions.forEach((opt) => {
                 opt.classList.toggle("curr", opt.dataset.lang === selectedLang);
             });
 
-            // оновлюємо placeholder-и
             updatePlaceholders();
+
+            hidePreloader(500);
         });
     });
 });
